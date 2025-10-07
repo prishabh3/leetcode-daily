@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 2,
+  "id": "1612",
+  "title": "Avoid Flood in The City",
+  "slug": "avoid-flood-in-the-city",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T07:49:48.218Z",
+  "lastSyncedAt": "2026-10-25T07:49:48.216Z",
+  "solutions": {
+    "python3/solution": {
+      "language": "python3",
+      "approachName": "solution",
+      "filePath": "problems/1612-avoid-flood-in-the-city/python3/solution.py",
+      "submissionId": "1794703316",
+      "contentHash": "53ce6b4f220782cb512bbfa90d1f5672ac954371afcfce9c6f0bbe4110906fa0",
+      "syncedAt": "2026-10-25T07:49:48.216Z",
+      "runtime": "154 ms",
+      "memory": "34.2 MB"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}

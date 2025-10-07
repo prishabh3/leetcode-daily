@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 2,
+  "id": "0794",
+  "title": "Swim in Rising Water",
+  "slug": "swim-in-rising-water",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T07:49:48.626Z",
+  "lastSyncedAt": "2026-10-25T07:49:48.625Z",
+  "solutions": {
+    "python3/solution": {
+      "language": "python3",
+      "approachName": "solution",
+      "filePath": "problems/0794-swim-in-rising-water/python3/solution.py",
+      "submissionId": "1794705287",
+      "contentHash": "ac12d4d25ba1f0e34501d0c92193f270cd45fd14f898d588929c76298996a309",
+      "syncedAt": "2026-10-25T07:49:48.625Z",
+      "runtime": "23 ms",
+      "memory": "18.3 MB"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}

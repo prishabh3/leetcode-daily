@@ -10,24 +10,25 @@
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-4-blue)]()
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-6-blue)]()
 
-- **Total Problems Tracked**: **4**
-- **Distinct Problems Tracked**: **4**
-- **Total Solutions & Historical Versions**: **8**
+- **Total Problems Tracked**: **6**
+- **Distinct Problems Tracked**: **6**
+- **Total Solutions & Historical Versions**: **10**
 - **Profiles**: [LeetCode](https://leetcode.com)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **2** |
-| 🟡 Medium | **2** |
+| 🟡 Medium | **4** |
 | 🔴 Hard | **0** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
 | C++ | `4` |
+| Python 3 | `2` |
 
 ### 🏷️ Topic Tags
 _No topic tags recorded yet._
@@ -42,13 +43,15 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [0794. Swim in Rising Water](./problems/0794-swim-in-rising-water) | Medium | Python 3 | [solution.py](./problems/0794-swim-in-rising-water/python3/solution.py) |
+| [1612. Avoid Flood in The City](./problems/1612-avoid-flood-in-the-city) | Medium | Python 3 | [solution.py](./problems/1612-avoid-flood-in-the-city/python3/solution.py) |
 | [0595. Big Countries](./problems/0595-big-countries) | Easy | C++ | [solution.cpp](./problems/0595-big-countries/cpp/solution.cpp) |
 | [0178. Rank Scores](./problems/0178-rank-scores) | Medium | C++ | [solution.cpp](./problems/0178-rank-scores/cpp/solution.cpp) |
 | [0013. Roman to Integer](./problems/0013-roman-to-integer) | Easy | C++ | [solution.cpp](./problems/0013-roman-to-integer/cpp/solution.cpp) |
 | [0094. Binary Tree Inorder Traversal](./problems/0094-binary-tree-inorder-traversal) | Medium | C++ | [solution.cpp](./problems/0094-binary-tree-inorder-traversal/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (4)</strong></summary>
+<summary><strong>View All Tracked Problems (6)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -56,12 +59,14 @@ _No topic tags recorded yet._
 | 0094 | [Binary Tree Inorder Traversal](./problems/0094-binary-tree-inorder-traversal) | Medium | [`C++`](./problems/0094-binary-tree-inorder-traversal/cpp) | - | [Notes](./problems/0094-binary-tree-inorder-traversal/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0178 | [Rank Scores](./problems/0178-rank-scores) | Medium | [`C++`](./problems/0178-rank-scores/cpp) | - | [Notes](./problems/0178-rank-scores/notes.md) | 2026-10-25 | `2026-10-27` |
 | 0595 | [Big Countries](./problems/0595-big-countries) | Easy | [`C++`](./problems/0595-big-countries/cpp) | - | [Notes](./problems/0595-big-countries/notes.md) | 2026-10-25 | `2026-10-27` |
+| 0794 | [Swim in Rising Water](./problems/0794-swim-in-rising-water) | Medium | [`Python 3`](./problems/0794-swim-in-rising-water/python3) | - | [Notes](./problems/0794-swim-in-rising-water/notes.md) | 2026-10-25 | `2026-10-25` |
+| 1612 | [Avoid Flood in The City](./problems/1612-avoid-flood-in-the-city) | Medium | [`Python 3`](./problems/1612-avoid-flood-in-the-city/python3) | - | [Notes](./problems/1612-avoid-flood-in-the-city/notes.md) | 2026-10-25 | `2026-10-25` |
 
 </details>
 
 ---
 
-_Last synchronized via LC-Sync: `2026-10-25T07:47:45.778Z`_
+_Last synchronized via LC-Sync: `2026-10-25T07:49:48.629Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout
