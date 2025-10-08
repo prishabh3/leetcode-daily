@@ -1,0 +1,32 @@
+{
+  "confidenceRating": 3,
+  "difficulty": "Unknown",
+  "failedRecallCount": 0,
+  "firstTrackedAt": "2026-10-25T07:49:57.533Z",
+  "id": "2392",
+  "lastSyncedAt": "2026-10-25T09:33:03.243Z",
+  "nextReviewDate": "2026-10-27",
+  "patterns": [],
+  "reviewHistory": [],
+  "reviewsCount": 0,
+  "schemaVersion": 2,
+  "slug": "successful-pairs-of-spells-and-potions",
+  "solutions": {
+    "python3/solution": {
+      "language": "python3",
+      "approachName": "solution",
+      "filePath": "problems/2392-successful-pairs-of-spells-and-potions/python3/solution.py",
+      "submissionId": "1795152126",
+      "contentHash": "2a6f4ff80bdc3bcf9d270036b51616cf8bf82d2f971de5c7d4f55e15f7cf3e45",
+      "syncedAt": "2026-10-25T09:33:03.243Z",
+      "runtime": "155 ms",
+      "memory": "42.7 MB",
+      "rawPlatformLanguage": "python3"
+    }
+  },
+  "tags": [],
+  "title": "Successful Pairs of Spells and Potions",
+  "url": "",
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "python3"
+}

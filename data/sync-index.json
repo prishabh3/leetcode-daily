@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T09:32:10.121Z",
+  "lastUpdated": "2026-10-25T09:33:03.252Z",
   "totalProblems": 8,
   "totalSubmissions": 12,
   "submissions": {
@@ -27,6 +27,18 @@
       "contentHash": "ac12d4d25ba1f0e34501d0c92193f270cd45fd14f898d588929c76298996a309",
       "syncedAt": "2026-10-25T07:49:48.625Z",
       "filePath": "solutions/0794-swim-in-rising-water/python3/solution.py"
+    },
+    "1795152126": {
+      "problemId": "2392",
+      "slug": "successful-pairs-of-spells-and-potions",
+      "title": "Successful Pairs of Spells and Potions",
+      "difficulty": "Medium",
+      "language": "python3",
+      "approachName": "solution",
+      "submissionId": "1795152126",
+      "contentHash": "2a6f4ff80bdc3bcf9d270036b51616cf8bf82d2f971de5c7d4f55e15f7cf3e45",
+      "syncedAt": "2026-10-25T09:33:03.243Z",
+      "filePath": "problems/2392-successful-pairs-of-spells-and-potions/python3/solution.py"
     },
     "2181124556": {
       "problemId": "0094",
@@ -132,35 +144,9 @@
       "contentHash": "3d573f5ceeac8a630bd70d096ba811590fa89bce59437c4df0eaf03c282dbe62",
       "syncedAt": "2026-10-25T08:29:56.926Z",
       "filePath": "problems/1407-top-travellers/cpp/solution.cpp"
-    },
-    "queries-quality-and-percentage-5a452459503b": {
-      "problemId": "1211",
-      "slug": "queries-quality-and-percentage",
-      "title": "Queries Quality and Percentage",
-      "difficulty": "Easy",
-      "language": "cpp",
-      "approachName": "solution",
-      "contentHash": "5a452459503be70d2ed2fca46dd91e05e820a957f175686a77d03fff80f664fe",
-      "syncedAt": "2026-10-25T09:32:10.121Z",
-      "filePath": "problems/1211-queries-quality-and-percentage/cpp/solution.cpp"
     }
   },
   "problems": {
-    "1211": {
-      "id": "1211",
-      "title": "Queries Quality and Percentage",
-      "slug": "queries-quality-and-percentage",
-      "difficulty": "Easy",
-      "languages": [
-        "cpp"
-      ],
-      "approachesCount": 1,
-      "lastSyncedAt": "2026-10-25T09:32:10.121Z",
-      "confidenceRating": 3,
-      "nextReviewDate": "2026-10-27",
-      "tags": [],
-      "patterns": []
-    },
     "1407": {
       "id": "1407",
       "title": "Top Travellers",
@@ -186,6 +172,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T07:49:48.216Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "2392": {
+      "id": "2392",
+      "title": "Successful Pairs of Spells and Potions",
+      "slug": "successful-pairs-of-spells-and-potions",
+      "difficulty": "Medium",
+      "languages": [
+        "python3"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T09:33:03.243Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],
