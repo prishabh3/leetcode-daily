@@ -1,0 +1,32 @@
+{
+  "confidenceRating": 3,
+  "difficulty": "Unknown",
+  "failedRecallCount": 0,
+  "firstTrackedAt": "2026-10-25T09:33:23.932Z",
+  "id": "0002",
+  "lastSyncedAt": "2026-10-25T10:42:04.527Z",
+  "nextReviewDate": "2026-10-27",
+  "patterns": [],
+  "rawPlatformLanguage": "c",
+  "reviewHistory": [],
+  "reviewsCount": 0,
+  "schemaVersion": 2,
+  "slug": "add-two-numbers",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0002-add-two-numbers/cpp/solution.cpp",
+      "submissionId": "1930096802",
+      "contentHash": "0a0404bb54cdd38768022a9a5999afda9b8ef7bbcafd136cfbd47cc6e6b68881",
+      "syncedAt": "2026-10-25T10:42:04.527Z",
+      "runtime": "4 ms",
+      "memory": "12.7 MB",
+      "rawPlatformLanguage": "c"
+    }
+  },
+  "tags": [],
+  "title": "Add Two Numbers",
+  "url": "",
+  "verifiedComplexity": false
+}

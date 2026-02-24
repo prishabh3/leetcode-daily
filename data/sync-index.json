@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:41:06.808Z",
-  "totalProblems": 9,
-  "totalSubmissions": 13,
+  "lastUpdated": "2026-10-25T10:42:04.535Z",
+  "totalProblems": 10,
+  "totalSubmissions": 14,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -39,6 +39,18 @@
       "contentHash": "2a6f4ff80bdc3bcf9d270036b51616cf8bf82d2f971de5c7d4f55e15f7cf3e45",
       "syncedAt": "2026-10-25T09:33:03.243Z",
       "filePath": "problems/2392-successful-pairs-of-spells-and-potions/python3/solution.py"
+    },
+    "1930096802": {
+      "problemId": "0002",
+      "slug": "add-two-numbers",
+      "title": "Add Two Numbers",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "1930096802",
+      "contentHash": "0a0404bb54cdd38768022a9a5999afda9b8ef7bbcafd136cfbd47cc6e6b68881",
+      "syncedAt": "2026-10-25T10:42:04.527Z",
+      "filePath": "problems/0002-add-two-numbers/cpp/solution.cpp"
     },
     "2181124556": {
       "problemId": "0094",
@@ -290,6 +302,21 @@
       "lastSyncedAt": "2026-10-25T10:41:06.808Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-27",
+      "tags": [],
+      "patterns": []
+    },
+    "0002": {
+      "id": "0002",
+      "title": "Add Two Numbers",
+      "slug": "add-two-numbers",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:42:04.527Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
       "tags": [],
       "patterns": []
     }
