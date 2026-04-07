@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "0004",
+  "title": "Median of Two Sorted Arrays",
+  "slug": "median-of-two-sorted-arrays",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:42:12.174Z",
+  "lastSyncedAt": "2026-10-25T10:42:12.172Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0004-median-of-two-sorted-arrays/cpp/solution.cpp",
+      "submissionId": "1971389570",
+      "contentHash": "0c6e3b4931136ed34094b582b5b7d6d95912897b7af3ed0f189107b6d041fd90",
+      "syncedAt": "2026-10-25T10:42:12.172Z",
+      "runtime": "0 ms",
+      "memory": "12 MB",
+      "rawPlatformLanguage": "c"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "c"
+}
