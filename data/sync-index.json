@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:42:12.181Z",
-  "totalProblems": 11,
-  "totalSubmissions": 15,
+  "lastUpdated": "2026-10-25T10:42:18.762Z",
+  "totalProblems": 12,
+  "totalSubmissions": 16,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -63,6 +63,18 @@
       "contentHash": "0c6e3b4931136ed34094b582b5b7d6d95912897b7af3ed0f189107b6d041fd90",
       "syncedAt": "2026-10-25T10:42:12.172Z",
       "filePath": "problems/0004-median-of-two-sorted-arrays/cpp/solution.cpp"
+    },
+    "2156354725": {
+      "problemId": "1046",
+      "slug": "max-consecutive-ones-iii",
+      "title": "Max Consecutive Ones III",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2156354725",
+      "contentHash": "cf1576a9de1147226168ec323b73db116ba766e0aef3261d93dd20ea9d2c5245",
+      "syncedAt": "2026-10-25T10:42:18.754Z",
+      "filePath": "problems/1046-max-consecutive-ones-iii/cpp/solution.cpp"
     },
     "2181124556": {
       "problemId": "0094",
@@ -182,6 +194,21 @@
     }
   },
   "problems": {
+    "1046": {
+      "id": "1046",
+      "title": "Max Consecutive Ones III",
+      "slug": "max-consecutive-ones-iii",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:42:18.754Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
     "1407": {
       "id": "1407",
       "title": "Top Travellers",
