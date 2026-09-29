@@ -1,0 +1,13 @@
+{
+  "submissionId": "2157474859",
+  "problemTitle": "Two Sum",
+  "slug": "two-sum",
+  "verdict": "Accepted",
+  "language": "cpp",
+  "rawPlatformLanguage": "cpp",
+  "submittedAt": "2026-09-29T18:29:15.000Z",
+  "importedAt": "2026-10-25T10:42:26.230Z",
+  "runtime": "1 ms",
+  "memory": "14.9 MB",
+  "contentHash": "51a516313f0f4587f3955ce39d6f0586cc5e8b877f39d58f35d3138c416d7471"
+}

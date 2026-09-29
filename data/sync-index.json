@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:42:18.762Z",
-  "totalProblems": 12,
-  "totalSubmissions": 16,
+  "lastUpdated": "2026-10-25T10:42:26.246Z",
+  "totalProblems": 14,
+  "totalSubmissions": 19,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -75,6 +75,42 @@
       "contentHash": "cf1576a9de1147226168ec323b73db116ba766e0aef3261d93dd20ea9d2c5245",
       "syncedAt": "2026-10-25T10:42:18.754Z",
       "filePath": "problems/1046-max-consecutive-ones-iii/cpp/solution.cpp"
+    },
+    "2157474859": {
+      "problemId": "0001",
+      "slug": "two-sum",
+      "title": "Two Sum",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "sub-2157474859",
+      "submissionId": "2157474859",
+      "contentHash": "51a516313f0f4587f3955ce39d6f0586cc5e8b877f39d58f35d3138c416d7471",
+      "syncedAt": "2026-10-25T10:42:26.230Z",
+      "filePath": "problems/0001-two-sum/history/2157474859/solution.cpp"
+    },
+    "2157475181": {
+      "problemId": "0001",
+      "slug": "two-sum",
+      "title": "Two Sum",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2157475181",
+      "contentHash": "51a516313f0f4587f3955ce39d6f0586cc5e8b877f39d58f35d3138c416d7471",
+      "syncedAt": "2026-10-25T10:42:26.230Z",
+      "filePath": "problems/0001-two-sum/cpp/solution.cpp"
+    },
+    "2157477125": {
+      "problemId": "1737",
+      "slug": "maximum-nesting-depth-of-the-parentheses",
+      "title": "Maximum Nesting Depth of the Parentheses",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2157477125",
+      "contentHash": "4b6c5b1a4dfe49c43169940ec5537533e6f40b4e85dd0ffa8b38e33b4e561be7",
+      "syncedAt": "2026-10-25T10:42:26.240Z",
+      "filePath": "problems/1737-maximum-nesting-depth-of-the-parentheses/cpp/solution.cpp"
     },
     "2181124556": {
       "problemId": "0094",
@@ -239,6 +275,21 @@
       "tags": [],
       "patterns": []
     },
+    "1737": {
+      "id": "1737",
+      "title": "Maximum Nesting Depth of the Parentheses",
+      "slug": "maximum-nesting-depth-of-the-parentheses",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:42:26.240Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
     "2392": {
       "id": "2392",
       "title": "Successful Pairs of Spells and Potions",
@@ -369,6 +420,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:42:12.172Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "0001": {
+      "id": "0001",
+      "title": "Two Sum",
+      "slug": "two-sum",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 2,
+      "lastSyncedAt": "2026-10-25T10:42:26.230Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],

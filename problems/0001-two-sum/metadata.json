@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "0001",
+  "title": "Two Sum",
+  "slug": "two-sum",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:42:26.233Z",
+  "lastSyncedAt": "2026-10-25T10:42:26.230Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0001-two-sum/cpp/solution.cpp",
+      "submissionId": "2157475181",
+      "contentHash": "51a516313f0f4587f3955ce39d6f0586cc5e8b877f39d58f35d3138c416d7471",
+      "syncedAt": "2026-10-25T10:42:26.230Z",
+      "runtime": "0 ms",
+      "memory": "14.8 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
