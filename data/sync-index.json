@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:42:26.246Z",
-  "totalProblems": 14,
-  "totalSubmissions": 19,
+  "lastUpdated": "2026-10-25T10:42:37.453Z",
+  "totalProblems": 16,
+  "totalSubmissions": 21,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -111,6 +111,30 @@
       "contentHash": "4b6c5b1a4dfe49c43169940ec5537533e6f40b4e85dd0ffa8b38e33b4e561be7",
       "syncedAt": "2026-10-25T10:42:26.240Z",
       "filePath": "problems/1737-maximum-nesting-depth-of-the-parentheses/cpp/solution.cpp"
+    },
+    "2158459027": {
+      "problemId": "0015",
+      "slug": "3sum",
+      "title": "3Sum",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2158459027",
+      "contentHash": "679b2fb7b52e84e35f3d6ed0e0fd421b1e8dd4f45c2e24b2026957c089597301",
+      "syncedAt": "2026-10-25T10:42:37.437Z",
+      "filePath": "problems/0015-3sum/cpp/solution.cpp"
+    },
+    "2158461715": {
+      "problemId": "1208",
+      "slug": "maximum-nesting-depth-of-two-valid-parentheses-strings",
+      "title": "Maximum Nesting Depth of Two Valid Parentheses Strings",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2158461715",
+      "contentHash": "7bf10b05b04075f5126620d44e09d5d609962a1f6b64e197ab7d562ff3934300",
+      "syncedAt": "2026-10-25T10:42:37.446Z",
+      "filePath": "problems/1208-maximum-nesting-depth-of-two-valid-parentheses-strings/cpp/solution.cpp"
     },
     "2181124556": {
       "problemId": "0094",
@@ -240,6 +264,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:42:18.754Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "1208": {
+      "id": "1208",
+      "title": "Maximum Nesting Depth of Two Valid Parentheses Strings",
+      "slug": "maximum-nesting-depth-of-two-valid-parentheses-strings",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:42:37.446Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],
@@ -435,6 +474,21 @@
       ],
       "approachesCount": 2,
       "lastSyncedAt": "2026-10-25T10:42:26.230Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "0015": {
+      "id": "0015",
+      "title": "3Sum",
+      "slug": "3sum",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:42:37.437Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],

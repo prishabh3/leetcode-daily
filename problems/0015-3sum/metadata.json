@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "0015",
+  "title": "3Sum",
+  "slug": "3sum",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:42:37.440Z",
+  "lastSyncedAt": "2026-10-25T10:42:37.437Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0015-3sum/cpp/solution.cpp",
+      "submissionId": "2158459027",
+      "contentHash": "679b2fb7b52e84e35f3d6ed0e0fd421b1e8dd4f45c2e24b2026957c089597301",
+      "syncedAt": "2026-10-25T10:42:37.437Z",
+      "runtime": "47 ms",
+      "memory": "29 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "1208",
+  "title": "Maximum Nesting Depth of Two Valid Parentheses Strings",
+  "slug": "maximum-nesting-depth-of-two-valid-parentheses-strings",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:42:37.448Z",
+  "lastSyncedAt": "2026-10-25T10:42:37.446Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/1208-maximum-nesting-depth-of-two-valid-parentheses-strings/cpp/solution.cpp",
+      "submissionId": "2158461715",
+      "contentHash": "7bf10b05b04075f5126620d44e09d5d609962a1f6b64e197ab7d562ff3934300",
+      "syncedAt": "2026-10-25T10:42:37.446Z",
+      "runtime": "0 ms",
+      "memory": "10.6 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
