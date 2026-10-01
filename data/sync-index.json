@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:42:37.453Z",
-  "totalProblems": 16,
-  "totalSubmissions": 21,
+  "lastUpdated": "2026-10-25T10:42:46.207Z",
+  "totalProblems": 17,
+  "totalSubmissions": 22,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -135,6 +135,18 @@
       "contentHash": "7bf10b05b04075f5126620d44e09d5d609962a1f6b64e197ab7d562ff3934300",
       "syncedAt": "2026-10-25T10:42:37.446Z",
       "filePath": "problems/1208-maximum-nesting-depth-of-two-valid-parentheses-strings/cpp/solution.cpp"
+    },
+    "2159418692": {
+      "problemId": "0020",
+      "slug": "valid-parentheses",
+      "title": "Valid Parentheses",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2159418692",
+      "contentHash": "dacd6486254caa3c7967a09d04e2a33ffddafb0baec786894c602c756c59626c",
+      "syncedAt": "2026-10-25T10:42:46.197Z",
+      "filePath": "problems/0020-valid-parentheses/cpp/solution.cpp"
     },
     "2181124556": {
       "problemId": "0094",
@@ -489,6 +501,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:42:37.437Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "0020": {
+      "id": "0020",
+      "title": "Valid Parentheses",
+      "slug": "valid-parentheses",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:42:46.197Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],

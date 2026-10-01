@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "0020",
+  "title": "Valid Parentheses",
+  "slug": "valid-parentheses",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:42:46.199Z",
+  "lastSyncedAt": "2026-10-25T10:42:46.197Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0020-valid-parentheses/cpp/solution.cpp",
+      "submissionId": "2159418692",
+      "contentHash": "dacd6486254caa3c7967a09d04e2a33ffddafb0baec786894c602c756c59626c",
+      "syncedAt": "2026-10-25T10:42:46.197Z",
+      "runtime": "1 ms",
+      "memory": "8.7 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
