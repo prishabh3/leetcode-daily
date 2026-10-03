@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "0032",
+  "title": "Longest Valid Parentheses",
+  "slug": "longest-valid-parentheses",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:42:59.295Z",
+  "lastSyncedAt": "2026-10-25T10:42:59.292Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0032-longest-valid-parentheses/cpp/solution.cpp",
+      "submissionId": "2161389401",
+      "contentHash": "53af4329aa48d228e6751bd8604dfc755f9c70ed3d752616c1fefbc4137e486d",
+      "syncedAt": "2026-10-25T10:42:59.292Z",
+      "runtime": "0 ms",
+      "memory": "11.8 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
