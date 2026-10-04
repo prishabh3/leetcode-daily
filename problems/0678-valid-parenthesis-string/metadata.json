@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "0678",
+  "title": "Valid Parenthesis String",
+  "slug": "valid-parenthesis-string",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:43:05.966Z",
+  "lastSyncedAt": "2026-10-25T10:43:05.964Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0678-valid-parenthesis-string/cpp/solution.cpp",
+      "submissionId": "2161845327",
+      "contentHash": "020333cd2d453501963a390ca4585b657eb1e8be35140c35b733845eaef72ce1",
+      "syncedAt": "2026-10-25T10:43:05.964Z",
+      "runtime": "0 ms",
+      "memory": "8.1 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

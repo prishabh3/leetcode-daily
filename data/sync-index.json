@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:42:59.303Z",
-  "totalProblems": 19,
-  "totalSubmissions": 24,
+  "lastUpdated": "2026-10-25T10:43:05.974Z",
+  "totalProblems": 20,
+  "totalSubmissions": 25,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -171,6 +171,18 @@
       "contentHash": "53af4329aa48d228e6751bd8604dfc755f9c70ed3d752616c1fefbc4137e486d",
       "syncedAt": "2026-10-25T10:42:59.292Z",
       "filePath": "problems/0032-longest-valid-parentheses/cpp/solution.cpp"
+    },
+    "2161845327": {
+      "problemId": "0678",
+      "slug": "valid-parenthesis-string",
+      "title": "Valid Parenthesis String",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2161845327",
+      "contentHash": "020333cd2d453501963a390ca4585b657eb1e8be35140c35b733845eaef72ce1",
+      "syncedAt": "2026-10-25T10:43:05.964Z",
+      "filePath": "problems/0678-valid-parenthesis-string/cpp/solution.cpp"
     },
     "2181124556": {
       "problemId": "0094",
@@ -570,6 +582,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:42:59.292Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "0678": {
+      "id": "0678",
+      "title": "Valid Parenthesis String",
+      "slug": "valid-parenthesis-string",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:43:05.964Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],
