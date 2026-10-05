@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "0886",
+  "title": "Score of Parentheses",
+  "slug": "score-of-parentheses",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:43:13.135Z",
+  "lastSyncedAt": "2026-10-25T10:43:13.132Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0886-score-of-parentheses/cpp/solution.cpp",
+      "submissionId": "2162688886",
+      "contentHash": "11df352f8e6aece0b85e55b146ec7909df0937c9cb9e80684d5bb7fdb1847fc5",
+      "syncedAt": "2026-10-25T10:43:13.132Z",
+      "runtime": "0 ms",
+      "memory": "8 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

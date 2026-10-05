@@ -9,11 +9,11 @@
 
 ## LeetCode Stats
 
-[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792924986)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792924993)](https://leetcode.com/u/prishabh3/)
 
 ## Submission Activity
 
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792924986)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792924993)](https://leetcode.com/u/prishabh3/)
 
 ## 📊 Repository Progress
 
@@ -21,23 +21,23 @@
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-20-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-22-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **20**
-- **Total Accepted Submissions**: **25**
-- **Repository Solutions & Historical Versions**: **25** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **22**
+- **Total Accepted Submissions**: **27**
+- **Repository Solutions & Historical Versions**: **27** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **4** |
-| 🟡 Medium | **16** |
+| 🟡 Medium | **18** |
 | 🔴 Hard | **0** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `14` |
+| C++ | `16` |
 | SQL | `3` |
 | Python 3 | `3` |
 
@@ -54,17 +54,17 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [0089. Gray Code](./problems/0089-gray-code) | Medium | C++ | [solution.cpp](./problems/0089-gray-code/cpp/solution.cpp) |
+| [0886. Score of Parentheses](./problems/0886-score-of-parentheses) | Medium | C++ | [solution.cpp](./problems/0886-score-of-parentheses/cpp/solution.cpp) |
 | [0678. Valid Parenthesis String](./problems/0678-valid-parenthesis-string) | Medium | C++ | [solution.cpp](./problems/0678-valid-parenthesis-string/cpp/solution.cpp) |
 | [0032. Longest Valid Parentheses](./problems/0032-longest-valid-parentheses) | Medium | C++ | [solution.cpp](./problems/0032-longest-valid-parentheses/cpp/solution.cpp) |
 | [0022. Generate Parentheses](./problems/0022-generate-parentheses) | Medium | C++ | [solution.cpp](./problems/0022-generate-parentheses/cpp/solution.cpp) |
 | [0020. Valid Parentheses](./problems/0020-valid-parentheses) | Medium | C++ | [solution.cpp](./problems/0020-valid-parentheses/cpp/solution.cpp) |
 | [1208. Maximum Nesting Depth of Two Valid Parentheses Strings](./problems/1208-maximum-nesting-depth-of-two-valid-parentheses-strings) | Medium | C++ | [solution.cpp](./problems/1208-maximum-nesting-depth-of-two-valid-parentheses-strings/cpp/solution.cpp) |
 | [0015. 3Sum](./problems/0015-3sum) | Medium | C++ | [solution.cpp](./problems/0015-3sum/cpp/solution.cpp) |
-| [1737. Maximum Nesting Depth of the Parentheses](./problems/1737-maximum-nesting-depth-of-the-parentheses) | Medium | C++ | [solution.cpp](./problems/1737-maximum-nesting-depth-of-the-parentheses/cpp/solution.cpp) |
-| [0001. Two Sum](./problems/0001-two-sum) | Medium | C++ | [solution.cpp](./problems/0001-two-sum/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (20)</strong></summary>
+<summary><strong>View All Tracked Problems (22)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -76,12 +76,14 @@ _No topic tags recorded yet._
 | 0020 | [Valid Parentheses](./problems/0020-valid-parentheses) | Medium | [`C++`](./problems/0020-valid-parentheses/cpp) | - | [Notes](./problems/0020-valid-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0022 | [Generate Parentheses](./problems/0022-generate-parentheses) | Medium | [`C++`](./problems/0022-generate-parentheses/cpp) | - | [Notes](./problems/0022-generate-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0032 | [Longest Valid Parentheses](./problems/0032-longest-valid-parentheses) | Medium | [`C++`](./problems/0032-longest-valid-parentheses/cpp) | - | [Notes](./problems/0032-longest-valid-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
+| 0089 | [Gray Code](./problems/0089-gray-code) | Medium | [`C++`](./problems/0089-gray-code/cpp) | - | [Notes](./problems/0089-gray-code/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0094 | [Binary Tree Inorder Traversal](./problems/0094-binary-tree-inorder-traversal) | Medium | [`C++`](./problems/0094-binary-tree-inorder-traversal/cpp) | - | [Notes](./problems/0094-binary-tree-inorder-traversal/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0178 | [Rank Scores](./problems/0178-rank-scores) | Medium | [`SQL`](./problems/0178-rank-scores/sql) | - | [Notes](./problems/0178-rank-scores/notes.md) | 2026-10-25 | `2026-10-27` |
 | 0197 | [Rising Temperature](./problems/0197-rising-temperature) | Easy | [`SQL`](./problems/0197-rising-temperature/sql) | - | [Notes](./problems/0197-rising-temperature/notes.md) | 2026-10-25 | `2026-10-27` |
 | 0595 | [Big Countries](./problems/0595-big-countries) | Easy | [`SQL`](./problems/0595-big-countries/sql) | - | [Notes](./problems/0595-big-countries/notes.md) | 2026-10-25 | `2026-10-27` |
 | 0678 | [Valid Parenthesis String](./problems/0678-valid-parenthesis-string) | Medium | [`C++`](./problems/0678-valid-parenthesis-string/cpp) | - | [Notes](./problems/0678-valid-parenthesis-string/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0794 | [Swim in Rising Water](./problems/0794-swim-in-rising-water) | Medium | [`Python 3`](./problems/0794-swim-in-rising-water/python3) | - | [Notes](./problems/0794-swim-in-rising-water/notes.md) | 2026-10-25 | `2026-10-25` |
+| 0886 | [Score of Parentheses](./problems/0886-score-of-parentheses) | Medium | [`C++`](./problems/0886-score-of-parentheses/cpp) | - | [Notes](./problems/0886-score-of-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1046 | [Max Consecutive Ones III](./problems/1046-max-consecutive-ones-iii) | Medium | [`C++`](./problems/1046-max-consecutive-ones-iii/cpp) | - | [Notes](./problems/1046-max-consecutive-ones-iii/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1208 | [Maximum Nesting Depth of Two Valid Parentheses Strings](./problems/1208-maximum-nesting-depth-of-two-valid-parentheses-strings) | Medium | [`C++`](./problems/1208-maximum-nesting-depth-of-two-valid-parentheses-strings/cpp) | - | [Notes](./problems/1208-maximum-nesting-depth-of-two-valid-parentheses-strings/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1407 | [Top Travellers](./problems/1407-top-travellers) | Easy | [`C++`](./problems/1407-top-travellers/cpp) | - | [Notes](./problems/1407-top-travellers/notes.md) | 2026-10-25 | `2026-10-27` |
@@ -93,7 +95,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-10-25T10:43:05.974Z`_
+_Last synchronized via LC-Sync: `2026-10-25T10:43:13.150Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

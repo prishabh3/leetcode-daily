@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:43:05.974Z",
-  "totalProblems": 20,
-  "totalSubmissions": 25,
+  "lastUpdated": "2026-10-25T10:43:13.150Z",
+  "totalProblems": 22,
+  "totalSubmissions": 27,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -183,6 +183,30 @@
       "contentHash": "020333cd2d453501963a390ca4585b657eb1e8be35140c35b733845eaef72ce1",
       "syncedAt": "2026-10-25T10:43:05.964Z",
       "filePath": "problems/0678-valid-parenthesis-string/cpp/solution.cpp"
+    },
+    "2162688886": {
+      "problemId": "0886",
+      "slug": "score-of-parentheses",
+      "title": "Score of Parentheses",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2162688886",
+      "contentHash": "11df352f8e6aece0b85e55b146ec7909df0937c9cb9e80684d5bb7fdb1847fc5",
+      "syncedAt": "2026-10-25T10:43:13.132Z",
+      "filePath": "problems/0886-score-of-parentheses/cpp/solution.cpp"
+    },
+    "2163442392": {
+      "problemId": "0089",
+      "slug": "gray-code",
+      "title": "Gray Code",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2163442392",
+      "contentHash": "0854f3b140dfb64de1c2a67acae8e53281594945b80b43d39d91120e5fbbde3f",
+      "syncedAt": "2026-10-25T10:43:13.142Z",
+      "filePath": "problems/0089-gray-code/cpp/solution.cpp"
     },
     "2181124556": {
       "problemId": "0094",
@@ -597,6 +621,36 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:43:05.964Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "0886": {
+      "id": "0886",
+      "title": "Score of Parentheses",
+      "slug": "score-of-parentheses",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:43:13.132Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "0089": {
+      "id": "0089",
+      "title": "Gray Code",
+      "slug": "gray-code",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:43:13.142Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],
