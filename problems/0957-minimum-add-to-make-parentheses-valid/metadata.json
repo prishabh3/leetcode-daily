@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "0957",
+  "title": "Minimum Add to Make Parentheses Valid",
+  "slug": "minimum-add-to-make-parentheses-valid",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:43:21.221Z",
+  "lastSyncedAt": "2026-10-25T10:43:21.217Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0957-minimum-add-to-make-parentheses-valid/cpp/solution.cpp",
+      "submissionId": "2163763811",
+      "contentHash": "43e1ed3a7f5d53a27e1fc29a65109e0fd1a9c5b49fa92ea19a3e91abe89aa899",
+      "syncedAt": "2026-10-25T10:43:21.217Z",
+      "runtime": "0 ms",
+      "memory": "8.3 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

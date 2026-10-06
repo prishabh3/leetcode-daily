@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:43:13.150Z",
-  "totalProblems": 22,
-  "totalSubmissions": 27,
+  "lastUpdated": "2026-10-25T10:43:21.229Z",
+  "totalProblems": 23,
+  "totalSubmissions": 28,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -207,6 +207,18 @@
       "contentHash": "0854f3b140dfb64de1c2a67acae8e53281594945b80b43d39d91120e5fbbde3f",
       "syncedAt": "2026-10-25T10:43:13.142Z",
       "filePath": "problems/0089-gray-code/cpp/solution.cpp"
+    },
+    "2163763811": {
+      "problemId": "0957",
+      "slug": "minimum-add-to-make-parentheses-valid",
+      "title": "Minimum Add to Make Parentheses Valid",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2163763811",
+      "contentHash": "43e1ed3a7f5d53a27e1fc29a65109e0fd1a9c5b49fa92ea19a3e91abe89aa899",
+      "syncedAt": "2026-10-25T10:43:21.217Z",
+      "filePath": "problems/0957-minimum-add-to-make-parentheses-valid/cpp/solution.cpp"
     },
     "2181124556": {
       "problemId": "0094",
@@ -651,6 +663,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:43:13.142Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "0957": {
+      "id": "0957",
+      "title": "Minimum Add to Make Parentheses Valid",
+      "slug": "minimum-add-to-make-parentheses-valid",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:43:21.217Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],
