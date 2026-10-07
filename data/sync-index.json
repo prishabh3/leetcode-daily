@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:43:21.229Z",
-  "totalProblems": 23,
-  "totalSubmissions": 28,
+  "lastUpdated": "2026-10-25T10:43:28.199Z",
+  "totalProblems": 24,
+  "totalSubmissions": 29,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -219,6 +219,18 @@
       "contentHash": "43e1ed3a7f5d53a27e1fc29a65109e0fd1a9c5b49fa92ea19a3e91abe89aa899",
       "syncedAt": "2026-10-25T10:43:21.217Z",
       "filePath": "problems/0957-minimum-add-to-make-parentheses-valid/cpp/solution.cpp"
+    },
+    "2164885447": {
+      "problemId": "0301",
+      "slug": "remove-invalid-parentheses",
+      "title": "Remove Invalid Parentheses",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2164885447",
+      "contentHash": "4dc20c24f6f68493ef245e3a46f42100c3c8b45ed04178b45fe92cb165f05a1d",
+      "syncedAt": "2026-10-25T10:43:28.189Z",
+      "filePath": "problems/0301-remove-invalid-parentheses/cpp/solution.cpp"
     },
     "2181124556": {
       "problemId": "0094",
@@ -678,6 +690,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:43:21.217Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "0301": {
+      "id": "0301",
+      "title": "Remove Invalid Parentheses",
+      "slug": "remove-invalid-parentheses",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:43:28.189Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],

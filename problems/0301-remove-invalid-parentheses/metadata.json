@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "0301",
+  "title": "Remove Invalid Parentheses",
+  "slug": "remove-invalid-parentheses",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:43:28.192Z",
+  "lastSyncedAt": "2026-10-25T10:43:28.189Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0301-remove-invalid-parentheses/cpp/solution.cpp",
+      "submissionId": "2164885447",
+      "contentHash": "4dc20c24f6f68493ef245e3a46f42100c3c8b45ed04178b45fe92cb165f05a1d",
+      "syncedAt": "2026-10-25T10:43:28.189Z",
+      "runtime": "55 ms",
+      "memory": "20.3 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
