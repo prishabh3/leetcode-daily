@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "1648",
+  "title": "Minimum Insertions to Balance a Parentheses String",
+  "slug": "minimum-insertions-to-balance-a-parentheses-string",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:43:42.010Z",
+  "lastSyncedAt": "2026-10-25T10:43:42.007Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/1648-minimum-insertions-to-balance-a-parentheses-string/cpp/solution.cpp",
+      "submissionId": "2166850878",
+      "contentHash": "bd71a59778440666c3196c921bdabc8b3d6386cc4446e5570a4fac11b0c7cd52",
+      "syncedAt": "2026-10-25T10:43:42.007Z",
+      "runtime": "3 ms",
+      "memory": "15.6 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

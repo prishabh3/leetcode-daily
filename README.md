@@ -9,11 +9,11 @@
 
 ## LeetCode Stats
 
-[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925015)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925022)](https://leetcode.com/u/prishabh3/)
 
 ## Submission Activity
 
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925015)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925022)](https://leetcode.com/u/prishabh3/)
 
 ## 📊 Repository Progress
 
@@ -21,23 +21,23 @@
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-25-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-27-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **25**
-- **Total Accepted Submissions**: **30**
-- **Repository Solutions & Historical Versions**: **30** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **27**
+- **Total Accepted Submissions**: **32**
+- **Repository Solutions & Historical Versions**: **32** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **4** |
-| 🟡 Medium | **21** |
+| 🟡 Medium | **23** |
 | 🔴 Hard | **0** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `19` |
+| C++ | `21` |
 | SQL | `3` |
 | Python 3 | `3` |
 
@@ -54,17 +54,17 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [1791. Richest Customer Wealth](./problems/1791-richest-customer-wealth) | Medium | C++ | [solution.cpp](./problems/1791-richest-customer-wealth/cpp/solution.cpp) |
+| [1648. Minimum Insertions to Balance a Parentheses String](./problems/1648-minimum-insertions-to-balance-a-parentheses-string) | Medium | C++ | [solution.cpp](./problems/1648-minimum-insertions-to-balance-a-parentheses-string/cpp/solution.cpp) |
 | [1078. Remove Outermost Parentheses](./problems/1078-remove-outermost-parentheses) | Medium | C++ | [solution.cpp](./problems/1078-remove-outermost-parentheses/cpp/solution.cpp) |
 | [0301. Remove Invalid Parentheses](./problems/0301-remove-invalid-parentheses) | Medium | C++ | [solution.cpp](./problems/0301-remove-invalid-parentheses/cpp/solution.cpp) |
 | [0957. Minimum Add to Make Parentheses Valid](./problems/0957-minimum-add-to-make-parentheses-valid) | Medium | C++ | [solution.cpp](./problems/0957-minimum-add-to-make-parentheses-valid/cpp/solution.cpp) |
 | [0089. Gray Code](./problems/0089-gray-code) | Medium | C++ | [solution.cpp](./problems/0089-gray-code/cpp/solution.cpp) |
 | [0886. Score of Parentheses](./problems/0886-score-of-parentheses) | Medium | C++ | [solution.cpp](./problems/0886-score-of-parentheses/cpp/solution.cpp) |
 | [0678. Valid Parenthesis String](./problems/0678-valid-parenthesis-string) | Medium | C++ | [solution.cpp](./problems/0678-valid-parenthesis-string/cpp/solution.cpp) |
-| [0032. Longest Valid Parentheses](./problems/0032-longest-valid-parentheses) | Medium | C++ | [solution.cpp](./problems/0032-longest-valid-parentheses/cpp/solution.cpp) |
-| [0022. Generate Parentheses](./problems/0022-generate-parentheses) | Medium | C++ | [solution.cpp](./problems/0022-generate-parentheses/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (25)</strong></summary>
+<summary><strong>View All Tracked Problems (27)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -91,14 +91,16 @@ _No topic tags recorded yet._
 | 1208 | [Maximum Nesting Depth of Two Valid Parentheses Strings](./problems/1208-maximum-nesting-depth-of-two-valid-parentheses-strings) | Medium | [`C++`](./problems/1208-maximum-nesting-depth-of-two-valid-parentheses-strings/cpp) | - | [Notes](./problems/1208-maximum-nesting-depth-of-two-valid-parentheses-strings/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1407 | [Top Travellers](./problems/1407-top-travellers) | Easy | [`C++`](./problems/1407-top-travellers/cpp) | - | [Notes](./problems/1407-top-travellers/notes.md) | 2026-10-25 | `2026-10-27` |
 | 1612 | [Avoid Flood in The City](./problems/1612-avoid-flood-in-the-city) | Medium | [`Python 3`](./problems/1612-avoid-flood-in-the-city/python3) | - | [Notes](./problems/1612-avoid-flood-in-the-city/notes.md) | 2026-10-25 | `2026-10-25` |
+| 1648 | [Minimum Insertions to Balance a Parentheses String](./problems/1648-minimum-insertions-to-balance-a-parentheses-string) | Medium | [`C++`](./problems/1648-minimum-insertions-to-balance-a-parentheses-string/cpp) | - | [Notes](./problems/1648-minimum-insertions-to-balance-a-parentheses-string/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1737 | [Maximum Nesting Depth of the Parentheses](./problems/1737-maximum-nesting-depth-of-the-parentheses) | Medium | [`C++`](./problems/1737-maximum-nesting-depth-of-the-parentheses/cpp) | - | [Notes](./problems/1737-maximum-nesting-depth-of-the-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
+| 1791 | [Richest Customer Wealth](./problems/1791-richest-customer-wealth) | Medium | [`C++`](./problems/1791-richest-customer-wealth/cpp) | - | [Notes](./problems/1791-richest-customer-wealth/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2392 | [Successful Pairs of Spells and Potions](./problems/2392-successful-pairs-of-spells-and-potions) | Medium | [`Python 3`](./problems/2392-successful-pairs-of-spells-and-potions/python3) | - | [Notes](./problems/2392-successful-pairs-of-spells-and-potions/notes.md) | 2026-10-25 | `2026-10-25` |
 
 </details>
 
 ---
 
-_Last synchronized via LC-Sync: `2026-10-25T10:43:34.645Z`_
+_Last synchronized via LC-Sync: `2026-10-25T10:43:42.027Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout
