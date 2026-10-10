@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:43:42.027Z",
-  "totalProblems": 27,
-  "totalSubmissions": 32,
+  "lastUpdated": "2026-10-25T10:43:50.611Z",
+  "totalProblems": 28,
+  "totalSubmissions": 33,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -268,6 +268,18 @@
       "syncedAt": "2026-10-25T10:43:42.019Z",
       "filePath": "problems/1791-richest-customer-wealth/cpp/solution.cpp"
     },
+    "2167839649": {
+      "problemId": "2418",
+      "slug": "minimum-sum-of-squared-difference",
+      "title": "Minimum Sum of Squared Difference",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2167839649",
+      "contentHash": "70dbac468016e89b1a73e93521a9952f2f10094822579e2a443d1b5b39145afd",
+      "syncedAt": "2026-10-25T10:43:50.598Z",
+      "filePath": "problems/2418-minimum-sum-of-squared-difference/cpp/solution.cpp"
+    },
     "2181124556": {
       "problemId": "0094",
       "slug": "binary-tree-inorder-traversal",
@@ -516,6 +528,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T09:33:03.243Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "2418": {
+      "id": "2418",
+      "title": "Minimum Sum of Squared Difference",
+      "slug": "minimum-sum-of-squared-difference",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:43:50.598Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],

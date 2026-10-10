@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "2418",
+  "title": "Minimum Sum of Squared Difference",
+  "slug": "minimum-sum-of-squared-difference",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:43:50.601Z",
+  "lastSyncedAt": "2026-10-25T10:43:50.598Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/2418-minimum-sum-of-squared-difference/cpp/solution.cpp",
+      "submissionId": "2167839649",
+      "contentHash": "70dbac468016e89b1a73e93521a9952f2f10094822579e2a443d1b5b39145afd",
+      "syncedAt": "2026-10-25T10:43:50.598Z",
+      "runtime": "12 ms",
+      "memory": "131.2 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
