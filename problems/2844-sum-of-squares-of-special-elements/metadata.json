@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "2844",
+  "title": "Sum of Squares of Special Elements ",
+  "slug": "sum-of-squares-of-special-elements",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:43:57.354Z",
+  "lastSyncedAt": "2026-10-25T10:43:57.350Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/2844-sum-of-squares-of-special-elements/cpp/solution.cpp",
+      "submissionId": "2168905128",
+      "contentHash": "b5ecea89756866f85c2370a92cab064e0f4a25ae5d897be2100f8a83d648675f",
+      "syncedAt": "2026-10-25T10:43:57.350Z",
+      "runtime": "1 ms",
+      "memory": "40.1 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

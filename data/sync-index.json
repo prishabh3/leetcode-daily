@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:43:50.611Z",
-  "totalProblems": 28,
-  "totalSubmissions": 33,
+  "lastUpdated": "2026-10-25T10:43:57.363Z",
+  "totalProblems": 29,
+  "totalSubmissions": 34,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -280,6 +280,18 @@
       "syncedAt": "2026-10-25T10:43:50.598Z",
       "filePath": "problems/2418-minimum-sum-of-squared-difference/cpp/solution.cpp"
     },
+    "2168905128": {
+      "problemId": "2844",
+      "slug": "sum-of-squares-of-special-elements",
+      "title": "Sum of Squares of Special Elements ",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2168905128",
+      "contentHash": "b5ecea89756866f85c2370a92cab064e0f4a25ae5d897be2100f8a83d648675f",
+      "syncedAt": "2026-10-25T10:43:57.350Z",
+      "filePath": "problems/2844-sum-of-squares-of-special-elements/cpp/solution.cpp"
+    },
     "2181124556": {
       "problemId": "0094",
       "slug": "binary-tree-inorder-traversal",
@@ -543,6 +555,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:43:50.598Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "2844": {
+      "id": "2844",
+      "title": "Sum of Squares of Special Elements ",
+      "slug": "sum-of-squares-of-special-elements",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:43:57.350Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],
