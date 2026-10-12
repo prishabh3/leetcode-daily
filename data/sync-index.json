@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:43:57.363Z",
-  "totalProblems": 29,
-  "totalSubmissions": 34,
+  "lastUpdated": "2026-10-25T10:44:04.546Z",
+  "totalProblems": 30,
+  "totalSubmissions": 35,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -292,6 +292,18 @@
       "syncedAt": "2026-10-25T10:43:57.350Z",
       "filePath": "problems/2844-sum-of-squares-of-special-elements/cpp/solution.cpp"
     },
+    "2169778242": {
+      "problemId": "3153",
+      "slug": "apply-operations-on-array-to-maximize-sum-of-squares",
+      "title": "Apply Operations on Array to Maximize Sum of Squares",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2169778242",
+      "contentHash": "cb2bffe9ebc5888f47c3146485f0890e8333a434c3959733e17ea54336c56772",
+      "syncedAt": "2026-10-25T10:44:04.534Z",
+      "filePath": "problems/3153-apply-operations-on-array-to-maximize-sum-of-squares/cpp/solution.cpp"
+    },
     "2181124556": {
       "problemId": "0094",
       "slug": "binary-tree-inorder-traversal",
@@ -570,6 +582,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:43:57.350Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "3153": {
+      "id": "3153",
+      "title": "Apply Operations on Array to Maximize Sum of Squares",
+      "slug": "apply-operations-on-array-to-maximize-sum-of-squares",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:44:04.534Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],
