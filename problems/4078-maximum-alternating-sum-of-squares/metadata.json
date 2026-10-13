@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "4078",
+  "title": "Maximum Alternating Sum of Squares",
+  "slug": "maximum-alternating-sum-of-squares",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:44:12.424Z",
+  "lastSyncedAt": "2026-10-25T10:44:12.420Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/4078-maximum-alternating-sum-of-squares/cpp/solution.cpp",
+      "submissionId": "2170750682",
+      "contentHash": "2d71cdf8411f115e3266c1b45debe4a67e1b081ef1e63e66996f9217106df6dd",
+      "syncedAt": "2026-10-25T10:44:12.420Z",
+      "runtime": "60 ms",
+      "memory": "191.5 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

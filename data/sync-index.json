@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:44:04.546Z",
-  "totalProblems": 30,
-  "totalSubmissions": 35,
+  "lastUpdated": "2026-10-25T10:44:12.442Z",
+  "totalProblems": 32,
+  "totalSubmissions": 37,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -304,6 +304,30 @@
       "syncedAt": "2026-10-25T10:44:04.534Z",
       "filePath": "problems/3153-apply-operations-on-array-to-maximize-sum-of-squares/cpp/solution.cpp"
     },
+    "2170750682": {
+      "problemId": "4078",
+      "slug": "maximum-alternating-sum-of-squares",
+      "title": "Maximum Alternating Sum of Squares",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2170750682",
+      "contentHash": "2d71cdf8411f115e3266c1b45debe4a67e1b081ef1e63e66996f9217106df6dd",
+      "syncedAt": "2026-10-25T10:44:12.420Z",
+      "filePath": "problems/4078-maximum-alternating-sum-of-squares/cpp/solution.cpp"
+    },
+    "2171530654": {
+      "problemId": "0228",
+      "slug": "summary-ranges",
+      "title": "Summary Ranges",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2171530654",
+      "contentHash": "7494c65f32a1340d1f6b83f8c68103973c91139ef35d2d89effc66f366aa6530",
+      "syncedAt": "2026-10-25T10:44:12.433Z",
+      "filePath": "problems/0228-summary-ranges/cpp/solution.cpp"
+    },
     "2181124556": {
       "problemId": "0094",
       "slug": "binary-tree-inorder-traversal",
@@ -602,6 +626,21 @@
       "tags": [],
       "patterns": []
     },
+    "4078": {
+      "id": "4078",
+      "title": "Maximum Alternating Sum of Squares",
+      "slug": "maximum-alternating-sum-of-squares",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:44:12.420Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
     "0013": {
       "id": "0013",
       "title": "Roman to Integer",
@@ -867,6 +906,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:43:28.189Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "0228": {
+      "id": "0228",
+      "title": "Summary Ranges",
+      "slug": "summary-ranges",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:44:12.433Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],
