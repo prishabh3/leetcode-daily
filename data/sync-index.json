@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:44:12.442Z",
-  "totalProblems": 32,
-  "totalSubmissions": 37,
+  "lastUpdated": "2026-10-25T10:44:22.064Z",
+  "totalProblems": 34,
+  "totalSubmissions": 39,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -328,6 +328,30 @@
       "syncedAt": "2026-10-25T10:44:12.433Z",
       "filePath": "problems/0228-summary-ranges/cpp/solution.cpp"
     },
+    "2171731297": {
+      "problemId": "4084",
+      "slug": "maximize-sum-of-squares-of-digits",
+      "title": "Maximize Sum of Squares of Digits",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2171731297",
+      "contentHash": "7b2cc313295c6718d1965ae61e44f53d66ce8977b0142bb98c715dd805b47e9b",
+      "syncedAt": "2026-10-25T10:44:22.040Z",
+      "filePath": "problems/4084-maximize-sum-of-squares-of-digits/cpp/solution.cpp"
+    },
+    "2172240602": {
+      "problemId": "0448",
+      "slug": "find-all-numbers-disappeared-in-an-array",
+      "title": "Find All Numbers Disappeared in an Array",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2172240602",
+      "contentHash": "71bd71011fd3ac4e80d5c19f5d445189c32db3a86bdb9409345be8ee97fcdd81",
+      "syncedAt": "2026-10-25T10:44:22.054Z",
+      "filePath": "problems/0448-find-all-numbers-disappeared-in-an-array/cpp/solution.cpp"
+    },
     "2181124556": {
       "problemId": "0094",
       "slug": "binary-tree-inorder-traversal",
@@ -641,6 +665,21 @@
       "tags": [],
       "patterns": []
     },
+    "4084": {
+      "id": "4084",
+      "title": "Maximize Sum of Squares of Digits",
+      "slug": "maximize-sum-of-squares-of-digits",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:44:22.040Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
     "0013": {
       "id": "0013",
       "title": "Roman to Integer",
@@ -921,6 +960,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:44:12.433Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "0448": {
+      "id": "0448",
+      "title": "Find All Numbers Disappeared in an Array",
+      "slug": "find-all-numbers-disappeared-in-an-array",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:44:22.054Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],

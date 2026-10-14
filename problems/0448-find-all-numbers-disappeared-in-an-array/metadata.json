@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "0448",
+  "title": "Find All Numbers Disappeared in an Array",
+  "slug": "find-all-numbers-disappeared-in-an-array",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:44:22.057Z",
+  "lastSyncedAt": "2026-10-25T10:44:22.054Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0448-find-all-numbers-disappeared-in-an-array/cpp/solution.cpp",
+      "submissionId": "2172240602",
+      "contentHash": "71bd71011fd3ac4e80d5c19f5d445189c32db3a86bdb9409345be8ee97fcdd81",
+      "syncedAt": "2026-10-25T10:44:22.054Z",
+      "runtime": "4 ms",
+      "memory": "52.9 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
