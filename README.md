@@ -9,11 +9,11 @@
 
 ## LeetCode Stats
 
-[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925062)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925071)](https://leetcode.com/u/prishabh3/)
 
 ## Submission Activity
 
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925062)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925071)](https://leetcode.com/u/prishabh3/)
 
 ## 📊 Repository Progress
 
@@ -21,23 +21,23 @@
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-34-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-36-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **34**
-- **Total Accepted Submissions**: **39**
-- **Repository Solutions & Historical Versions**: **39** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **36**
+- **Total Accepted Submissions**: **42**
+- **Repository Solutions & Historical Versions**: **42** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **4** |
-| 🟡 Medium | **30** |
+| 🟡 Medium | **32** |
 | 🔴 Hard | **0** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `28` |
+| C++ | `30` |
 | SQL | `3` |
 | Python 3 | `3` |
 
@@ -54,17 +54,17 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [0026. Remove Duplicates from Sorted Array](./problems/0026-remove-duplicates-from-sorted-array) | Medium | C++ | [solution.cpp](./problems/0026-remove-duplicates-from-sorted-array/cpp/solution.cpp) |
+| [3163. Subarrays Distinct Element Sum of Squares I](./problems/3163-subarrays-distinct-element-sum-of-squares-i) | Medium | C++ | [solution.cpp](./problems/3163-subarrays-distinct-element-sum-of-squares-i/cpp/solution.cpp) |
 | [0448. Find All Numbers Disappeared in an Array](./problems/0448-find-all-numbers-disappeared-in-an-array) | Medium | C++ | [solution.cpp](./problems/0448-find-all-numbers-disappeared-in-an-array/cpp/solution.cpp) |
 | [4084. Maximize Sum of Squares of Digits](./problems/4084-maximize-sum-of-squares-of-digits) | Medium | C++ | [solution.cpp](./problems/4084-maximize-sum-of-squares-of-digits/cpp/solution.cpp) |
 | [0228. Summary Ranges](./problems/0228-summary-ranges) | Medium | C++ | [solution.cpp](./problems/0228-summary-ranges/cpp/solution.cpp) |
 | [4078. Maximum Alternating Sum of Squares](./problems/4078-maximum-alternating-sum-of-squares) | Medium | C++ | [solution.cpp](./problems/4078-maximum-alternating-sum-of-squares/cpp/solution.cpp) |
 | [3153. Apply Operations on Array to Maximize Sum of Squares](./problems/3153-apply-operations-on-array-to-maximize-sum-of-squares) | Medium | C++ | [solution.cpp](./problems/3153-apply-operations-on-array-to-maximize-sum-of-squares/cpp/solution.cpp) |
 | [2844. Sum of Squares of Special Elements ](./problems/2844-sum-of-squares-of-special-elements) | Medium | C++ | [solution.cpp](./problems/2844-sum-of-squares-of-special-elements/cpp/solution.cpp) |
-| [2418. Minimum Sum of Squared Difference](./problems/2418-minimum-sum-of-squared-difference) | Medium | C++ | [solution.cpp](./problems/2418-minimum-sum-of-squared-difference/cpp/solution.cpp) |
-| [1791. Richest Customer Wealth](./problems/1791-richest-customer-wealth) | Medium | C++ | [solution.cpp](./problems/1791-richest-customer-wealth/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (34)</strong></summary>
+<summary><strong>View All Tracked Problems (36)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -75,6 +75,7 @@ _No topic tags recorded yet._
 | 0015 | [3Sum](./problems/0015-3sum) | Medium | [`C++`](./problems/0015-3sum/cpp) | - | [Notes](./problems/0015-3sum/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0020 | [Valid Parentheses](./problems/0020-valid-parentheses) | Medium | [`C++`](./problems/0020-valid-parentheses/cpp) | - | [Notes](./problems/0020-valid-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0022 | [Generate Parentheses](./problems/0022-generate-parentheses) | Medium | [`C++`](./problems/0022-generate-parentheses/cpp) | - | [Notes](./problems/0022-generate-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
+| 0026 | [Remove Duplicates from Sorted Array](./problems/0026-remove-duplicates-from-sorted-array) | Medium | [`C++`](./problems/0026-remove-duplicates-from-sorted-array/cpp) | - | [Notes](./problems/0026-remove-duplicates-from-sorted-array/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0032 | [Longest Valid Parentheses](./problems/0032-longest-valid-parentheses) | Medium | [`C++`](./problems/0032-longest-valid-parentheses/cpp) | - | [Notes](./problems/0032-longest-valid-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0089 | [Gray Code](./problems/0089-gray-code) | Medium | [`C++`](./problems/0089-gray-code/cpp) | - | [Notes](./problems/0089-gray-code/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0094 | [Binary Tree Inorder Traversal](./problems/0094-binary-tree-inorder-traversal) | Medium | [`C++`](./problems/0094-binary-tree-inorder-traversal/cpp) | - | [Notes](./problems/0094-binary-tree-inorder-traversal/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -100,6 +101,7 @@ _No topic tags recorded yet._
 | 2418 | [Minimum Sum of Squared Difference](./problems/2418-minimum-sum-of-squared-difference) | Medium | [`C++`](./problems/2418-minimum-sum-of-squared-difference/cpp) | - | [Notes](./problems/2418-minimum-sum-of-squared-difference/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2844 | [Sum of Squares of Special Elements ](./problems/2844-sum-of-squares-of-special-elements) | Medium | [`C++`](./problems/2844-sum-of-squares-of-special-elements/cpp) | - | [Notes](./problems/2844-sum-of-squares-of-special-elements/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3153 | [Apply Operations on Array to Maximize Sum of Squares](./problems/3153-apply-operations-on-array-to-maximize-sum-of-squares) | Medium | [`C++`](./problems/3153-apply-operations-on-array-to-maximize-sum-of-squares/cpp) | - | [Notes](./problems/3153-apply-operations-on-array-to-maximize-sum-of-squares/notes.md) | 2026-10-25 | `2026-10-25` |
+| 3163 | [Subarrays Distinct Element Sum of Squares I](./problems/3163-subarrays-distinct-element-sum-of-squares-i) | Medium | [`C++`](./problems/3163-subarrays-distinct-element-sum-of-squares-i/cpp) | - | [Notes](./problems/3163-subarrays-distinct-element-sum-of-squares-i/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4078 | [Maximum Alternating Sum of Squares](./problems/4078-maximum-alternating-sum-of-squares) | Medium | [`C++`](./problems/4078-maximum-alternating-sum-of-squares/cpp) | - | [Notes](./problems/4078-maximum-alternating-sum-of-squares/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4084 | [Maximize Sum of Squares of Digits](./problems/4084-maximize-sum-of-squares-of-digits) | Medium | [`C++`](./problems/4084-maximize-sum-of-squares-of-digits/cpp) | - | [Notes](./problems/4084-maximize-sum-of-squares-of-digits/notes.md) | 2026-10-25 | `2026-10-25` |
 
@@ -107,7 +109,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-10-25T10:44:22.064Z`_
+_Last synchronized via LC-Sync: `2026-10-25T10:44:31.063Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

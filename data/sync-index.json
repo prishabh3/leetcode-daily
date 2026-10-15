@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:44:22.064Z",
-  "totalProblems": 34,
-  "totalSubmissions": 39,
+  "lastUpdated": "2026-10-25T10:44:31.063Z",
+  "totalProblems": 36,
+  "totalSubmissions": 42,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -352,6 +352,42 @@
       "syncedAt": "2026-10-25T10:44:22.054Z",
       "filePath": "problems/0448-find-all-numbers-disappeared-in-an-array/cpp/solution.cpp"
     },
+    "2172644701": {
+      "problemId": "3163",
+      "slug": "subarrays-distinct-element-sum-of-squares-i",
+      "title": "Subarrays Distinct Element Sum of Squares I",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2172644701",
+      "contentHash": "723ab6153dc41342a4030175d0703de778414583cd9b1b0d4d1cbf2011951ab6",
+      "syncedAt": "2026-10-25T10:44:31.037Z",
+      "filePath": "problems/3163-subarrays-distinct-element-sum-of-squares-i/cpp/solution.cpp"
+    },
+    "2173023924": {
+      "problemId": "0026",
+      "slug": "remove-duplicates-from-sorted-array",
+      "title": "Remove Duplicates from Sorted Array",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "sub-2173023924",
+      "submissionId": "2173023924",
+      "contentHash": "d1fa01441f1b92795d14281b14b1a8a86e47486ab2d893f8e4115760a57bb606",
+      "syncedAt": "2026-10-25T10:44:31.053Z",
+      "filePath": "problems/0026-remove-duplicates-from-sorted-array/history/2173023924/solution.cpp"
+    },
+    "2173024112": {
+      "problemId": "0026",
+      "slug": "remove-duplicates-from-sorted-array",
+      "title": "Remove Duplicates from Sorted Array",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2173024112",
+      "contentHash": "d1fa01441f1b92795d14281b14b1a8a86e47486ab2d893f8e4115760a57bb606",
+      "syncedAt": "2026-10-25T10:44:31.053Z",
+      "filePath": "problems/0026-remove-duplicates-from-sorted-array/cpp/solution.cpp"
+    },
     "2181124556": {
       "problemId": "0094",
       "slug": "binary-tree-inorder-traversal",
@@ -645,6 +681,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:44:04.534Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "3163": {
+      "id": "3163",
+      "title": "Subarrays Distinct Element Sum of Squares I",
+      "slug": "subarrays-distinct-element-sum-of-squares-i",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:44:31.037Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],
@@ -975,6 +1026,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:44:22.054Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "0026": {
+      "id": "0026",
+      "title": "Remove Duplicates from Sorted Array",
+      "slug": "remove-duplicates-from-sorted-array",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 2,
+      "lastSyncedAt": "2026-10-25T10:44:31.053Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],

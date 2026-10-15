@@ -1,0 +1,13 @@
+{
+  "submissionId": "2173023924",
+  "problemTitle": "Remove Duplicates from Sorted Array",
+  "slug": "remove-duplicates-from-sorted-array",
+  "verdict": "Accepted",
+  "language": "cpp",
+  "rawPlatformLanguage": "cpp",
+  "submittedAt": "2026-10-15T13:05:52.000Z",
+  "importedAt": "2026-10-25T10:44:31.053Z",
+  "runtime": "0 ms",
+  "memory": "22.3 MB",
+  "contentHash": "d1fa01441f1b92795d14281b14b1a8a86e47486ab2d893f8e4115760a57bb606"
+}
