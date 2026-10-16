@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "3139",
+  "title": "Subarrays Distinct Element Sum of Squares II",
+  "slug": "subarrays-distinct-element-sum-of-squares-ii",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:44:41.199Z",
+  "lastSyncedAt": "2026-10-25T10:44:41.194Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/3139-subarrays-distinct-element-sum-of-squares-ii/cpp/solution.cpp",
+      "submissionId": "2173494673",
+      "contentHash": "4d3283cf9f3c629d442bbfd88f9d4c59aa609bdb5b41c3e5255b7396df21edab",
+      "syncedAt": "2026-10-25T10:44:41.194Z",
+      "runtime": "334 ms",
+      "memory": "148.7 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

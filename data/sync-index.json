@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:44:31.063Z",
-  "totalProblems": 36,
-  "totalSubmissions": 42,
+  "lastUpdated": "2026-10-25T10:44:41.208Z",
+  "totalProblems": 37,
+  "totalSubmissions": 43,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -388,6 +388,18 @@
       "syncedAt": "2026-10-25T10:44:31.053Z",
       "filePath": "problems/0026-remove-duplicates-from-sorted-array/cpp/solution.cpp"
     },
+    "2173494673": {
+      "problemId": "3139",
+      "slug": "subarrays-distinct-element-sum-of-squares-ii",
+      "title": "Subarrays Distinct Element Sum of Squares II",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2173494673",
+      "contentHash": "4d3283cf9f3c629d442bbfd88f9d4c59aa609bdb5b41c3e5255b7396df21edab",
+      "syncedAt": "2026-10-25T10:44:41.194Z",
+      "filePath": "problems/3139-subarrays-distinct-element-sum-of-squares-ii/cpp/solution.cpp"
+    },
     "2181124556": {
       "problemId": "0094",
       "slug": "binary-tree-inorder-traversal",
@@ -666,6 +678,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:43:57.350Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "3139": {
+      "id": "3139",
+      "title": "Subarrays Distinct Element Sum of Squares II",
+      "slug": "subarrays-distinct-element-sum-of-squares-ii",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:44:41.194Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],
