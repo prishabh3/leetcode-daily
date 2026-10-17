@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:44:41.208Z",
-  "totalProblems": 37,
-  "totalSubmissions": 43,
+  "lastUpdated": "2026-10-25T10:44:47.866Z",
+  "totalProblems": 38,
+  "totalSubmissions": 44,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -400,6 +400,18 @@
       "syncedAt": "2026-10-25T10:44:41.194Z",
       "filePath": "problems/3139-subarrays-distinct-element-sum-of-squares-ii/cpp/solution.cpp"
     },
+    "2174377123": {
+      "problemId": "3847",
+      "slug": "minimum-swaps-to-sort-by-digit-sum",
+      "title": "Minimum Swaps to Sort by Digit Sum",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2174377123",
+      "contentHash": "b9d3820cb79f2d10b692fab9dbe01eaebc60c47c2b0cce200098d82cd261bfe2",
+      "syncedAt": "2026-10-25T10:44:47.851Z",
+      "filePath": "problems/3847-minimum-swaps-to-sort-by-digit-sum/cpp/solution.cpp"
+    },
     "2181124556": {
       "problemId": "0094",
       "slug": "binary-tree-inorder-traversal",
@@ -723,6 +735,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:44:31.037Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "3847": {
+      "id": "3847",
+      "title": "Minimum Swaps to Sort by Digit Sum",
+      "slug": "minimum-swaps-to-sort-by-digit-sum",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:44:47.851Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],

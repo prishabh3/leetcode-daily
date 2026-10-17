@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "3847",
+  "title": "Minimum Swaps to Sort by Digit Sum",
+  "slug": "minimum-swaps-to-sort-by-digit-sum",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:44:47.855Z",
+  "lastSyncedAt": "2026-10-25T10:44:47.851Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/3847-minimum-swaps-to-sort-by-digit-sum/cpp/solution.cpp",
+      "submissionId": "2174377123",
+      "contentHash": "b9d3820cb79f2d10b692fab9dbe01eaebc60c47c2b0cce200098d82cd261bfe2",
+      "syncedAt": "2026-10-25T10:44:47.851Z",
+      "runtime": "211 ms",
+      "memory": "145 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
