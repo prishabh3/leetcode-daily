@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:44:56.391Z",
-  "totalProblems": 42,
-  "totalSubmissions": 50,
+  "lastUpdated": "2026-10-25T10:45:11.523Z",
+  "totalProblems": 43,
+  "totalSubmissions": 51,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -484,6 +484,18 @@
       "syncedAt": "2026-10-25T10:44:56.384Z",
       "filePath": "problems/4456-last-visited-cell-in-a-directional-grid/cpp/solution.cpp"
     },
+    "2175033266": {
+      "problemId": "3769",
+      "slug": "minimum-interval-selection-to-cover-target-intervals",
+      "title": "Minimum Interval Selection to Cover Target Intervals",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2175033266",
+      "contentHash": "d62102d36e9e56371a154e26fc4973a56e956bbec057dd16c480ad114947b7fd",
+      "syncedAt": "2026-10-25T10:45:11.506Z",
+      "filePath": "problems/3769-minimum-interval-selection-to-cover-target-intervals/cpp/solution.cpp"
+    },
     "2181124556": {
       "problemId": "0094",
       "slug": "binary-tree-inorder-traversal",
@@ -822,6 +834,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:44:31.037Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "3769": {
+      "id": "3769",
+      "title": "Minimum Interval Selection to Cover Target Intervals",
+      "slug": "minimum-interval-selection-to-cover-target-intervals",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:45:11.506Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],

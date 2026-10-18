@@ -9,11 +9,11 @@
 
 ## LeetCode Stats
 
-[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925096)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925112)](https://leetcode.com/u/prishabh3/)
 
 ## Submission Activity
 
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925096)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925112)](https://leetcode.com/u/prishabh3/)
 
 ## 📊 Repository Progress
 
@@ -21,23 +21,23 @@
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-42-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-43-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **42**
-- **Total Accepted Submissions**: **50**
-- **Repository Solutions & Historical Versions**: **50** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **43**
+- **Total Accepted Submissions**: **51**
+- **Repository Solutions & Historical Versions**: **51** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **4** |
-| 🟡 Medium | **38** |
+| 🟡 Medium | **39** |
 | 🔴 Hard | **0** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `36` |
+| C++ | `37` |
 | SQL | `3` |
 | Python 3 | `3` |
 
@@ -54,6 +54,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [3769. Minimum Interval Selection to Cover Target Intervals](./problems/3769-minimum-interval-selection-to-cover-target-intervals) | Medium | C++ | [solution.cpp](./problems/3769-minimum-interval-selection-to-cover-target-intervals/cpp/solution.cpp) |
 | [4456. Last Visited Cell in a Directional Grid](./problems/4456-last-visited-cell-in-a-directional-grid) | Medium | C++ | [solution.cpp](./problems/4456-last-visited-cell-in-a-directional-grid/cpp/solution.cpp) |
 | [3968. Find Root of a Colored Tree](./problems/3968-find-root-of-a-colored-tree) | Medium | C++ | [solution.cpp](./problems/3968-find-root-of-a-colored-tree/cpp/solution.cpp) |
 | [4430. Minimum Deletions to Make Array Sharp](./problems/4430-minimum-deletions-to-make-array-sharp) | Medium | C++ | [solution.cpp](./problems/4430-minimum-deletions-to-make-array-sharp/cpp/solution.cpp) |
@@ -61,10 +62,9 @@ _No topic tags recorded yet._
 | [3847. Minimum Swaps to Sort by Digit Sum](./problems/3847-minimum-swaps-to-sort-by-digit-sum) | Medium | C++ | [solution.cpp](./problems/3847-minimum-swaps-to-sort-by-digit-sum/cpp/solution.cpp) |
 | [3139. Subarrays Distinct Element Sum of Squares II](./problems/3139-subarrays-distinct-element-sum-of-squares-ii) | Medium | C++ | [solution.cpp](./problems/3139-subarrays-distinct-element-sum-of-squares-ii/cpp/solution.cpp) |
 | [0026. Remove Duplicates from Sorted Array](./problems/0026-remove-duplicates-from-sorted-array) | Medium | C++ | [solution.cpp](./problems/0026-remove-duplicates-from-sorted-array/cpp/solution.cpp) |
-| [3163. Subarrays Distinct Element Sum of Squares I](./problems/3163-subarrays-distinct-element-sum-of-squares-i) | Medium | C++ | [solution.cpp](./problems/3163-subarrays-distinct-element-sum-of-squares-i/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (42)</strong></summary>
+<summary><strong>View All Tracked Problems (43)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -104,6 +104,7 @@ _No topic tags recorded yet._
 | 3139 | [Subarrays Distinct Element Sum of Squares II](./problems/3139-subarrays-distinct-element-sum-of-squares-ii) | Medium | [`C++`](./problems/3139-subarrays-distinct-element-sum-of-squares-ii/cpp) | - | [Notes](./problems/3139-subarrays-distinct-element-sum-of-squares-ii/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3153 | [Apply Operations on Array to Maximize Sum of Squares](./problems/3153-apply-operations-on-array-to-maximize-sum-of-squares) | Medium | [`C++`](./problems/3153-apply-operations-on-array-to-maximize-sum-of-squares/cpp) | - | [Notes](./problems/3153-apply-operations-on-array-to-maximize-sum-of-squares/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3163 | [Subarrays Distinct Element Sum of Squares I](./problems/3163-subarrays-distinct-element-sum-of-squares-i) | Medium | [`C++`](./problems/3163-subarrays-distinct-element-sum-of-squares-i/cpp) | - | [Notes](./problems/3163-subarrays-distinct-element-sum-of-squares-i/notes.md) | 2026-10-25 | `2026-10-25` |
+| 3769 | [Minimum Interval Selection to Cover Target Intervals](./problems/3769-minimum-interval-selection-to-cover-target-intervals) | Medium | [`C++`](./problems/3769-minimum-interval-selection-to-cover-target-intervals/cpp) | - | [Notes](./problems/3769-minimum-interval-selection-to-cover-target-intervals/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3847 | [Minimum Swaps to Sort by Digit Sum](./problems/3847-minimum-swaps-to-sort-by-digit-sum) | Medium | [`C++`](./problems/3847-minimum-swaps-to-sort-by-digit-sum/cpp) | - | [Notes](./problems/3847-minimum-swaps-to-sort-by-digit-sum/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3968 | [Find Root of a Colored Tree](./problems/3968-find-root-of-a-colored-tree) | Medium | [`C++`](./problems/3968-find-root-of-a-colored-tree/cpp) | - | [Notes](./problems/3968-find-root-of-a-colored-tree/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4078 | [Maximum Alternating Sum of Squares](./problems/4078-maximum-alternating-sum-of-squares) | Medium | [`C++`](./problems/4078-maximum-alternating-sum-of-squares/cpp) | - | [Notes](./problems/4078-maximum-alternating-sum-of-squares/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -115,7 +116,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-10-25T10:44:56.391Z`_
+_Last synchronized via LC-Sync: `2026-10-25T10:45:11.523Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

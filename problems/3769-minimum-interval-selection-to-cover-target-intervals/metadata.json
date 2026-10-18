@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "3769",
+  "title": "Minimum Interval Selection to Cover Target Intervals",
+  "slug": "minimum-interval-selection-to-cover-target-intervals",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:45:11.512Z",
+  "lastSyncedAt": "2026-10-25T10:45:11.506Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/3769-minimum-interval-selection-to-cover-target-intervals/cpp/solution.cpp",
+      "submissionId": "2175033266",
+      "contentHash": "d62102d36e9e56371a154e26fc4973a56e956bbec057dd16c480ad114947b7fd",
+      "syncedAt": "2026-10-25T10:45:11.506Z",
+      "runtime": "148 ms",
+      "memory": "228.1 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
