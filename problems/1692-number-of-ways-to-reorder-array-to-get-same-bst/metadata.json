@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "1692",
+  "title": "Number of Ways to Reorder Array to Get Same BST",
+  "slug": "number-of-ways-to-reorder-array-to-get-same-bst",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:44:56.357Z",
+  "lastSyncedAt": "2026-10-25T10:44:56.352Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/1692-number-of-ways-to-reorder-array-to-get-same-bst/cpp/solution.cpp",
+      "submissionId": "2174958725",
+      "contentHash": "b9eae09171886e21a511d76583121eb88f75069961d36fc3bed4fd59e80a6035",
+      "syncedAt": "2026-10-25T10:44:56.352Z",
+      "runtime": "260 ms",
+      "memory": "297.7 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

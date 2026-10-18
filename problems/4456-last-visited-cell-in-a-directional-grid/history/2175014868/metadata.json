@@ -1,0 +1,13 @@
+{
+  "submissionId": "2175014868",
+  "problemTitle": "Last Visited Cell in a Directional Grid",
+  "slug": "last-visited-cell-in-a-directional-grid",
+  "verdict": "Accepted",
+  "language": "cpp",
+  "rawPlatformLanguage": "cpp",
+  "submittedAt": "2026-10-18T02:58:34.000Z",
+  "importedAt": "2026-10-25T10:44:56.384Z",
+  "runtime": "13 ms",
+  "memory": "128.8 MB",
+  "contentHash": "5069d5f21a807e33090aea8d95b39552ea74d0e32d1b23b17ed194a89acfc953"
+}

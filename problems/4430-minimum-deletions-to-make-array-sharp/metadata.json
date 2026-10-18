@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "4430",
+  "title": "Minimum Deletions to Make Array Sharp",
+  "slug": "minimum-deletions-to-make-array-sharp",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:44:56.370Z",
+  "lastSyncedAt": "2026-10-25T10:44:56.367Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/4430-minimum-deletions-to-make-array-sharp/cpp/solution.cpp",
+      "submissionId": "2175010427",
+      "contentHash": "852c85d53a787f2f19456d434d16a2baaac01cc8c4a54895d75f9857527c84f6",
+      "syncedAt": "2026-10-25T10:44:56.367Z",
+      "runtime": "2 ms",
+      "memory": "31.1 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

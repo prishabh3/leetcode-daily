@@ -1,0 +1,13 @@
+{
+  "submissionId": "2175013393",
+  "problemTitle": "Find Root of a Colored Tree",
+  "slug": "find-root-of-a-colored-tree",
+  "verdict": "Accepted",
+  "language": "cpp",
+  "rawPlatformLanguage": "cpp",
+  "submittedAt": "2026-10-18T02:57:25.000Z",
+  "importedAt": "2026-10-25T10:44:56.377Z",
+  "runtime": "18 ms",
+  "memory": "235.2 MB",
+  "contentHash": "b819e03890e1f02172d077185bdacba4998b08295e4510fc3d96acb100c659c4"
+}
