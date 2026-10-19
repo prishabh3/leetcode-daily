@@ -9,11 +9,11 @@
 
 ## LeetCode Stats
 
-[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925112)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925118)](https://leetcode.com/u/prishabh3/)
 
 ## Submission Activity
 
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925112)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925118)](https://leetcode.com/u/prishabh3/)
 
 ## 📊 Repository Progress
 
@@ -21,23 +21,23 @@
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-43-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-44-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **43**
-- **Total Accepted Submissions**: **51**
-- **Repository Solutions & Historical Versions**: **51** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **44**
+- **Total Accepted Submissions**: **52**
+- **Repository Solutions & Historical Versions**: **52** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **4** |
-| 🟡 Medium | **39** |
+| 🟡 Medium | **40** |
 | 🔴 Hard | **0** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `37` |
+| C++ | `38` |
 | SQL | `3` |
 | Python 3 | `3` |
 
@@ -54,6 +54,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [2210. Find Target Indices After Sorting Array](./problems/2210-find-target-indices-after-sorting-array) | Medium | C++ | [solution.cpp](./problems/2210-find-target-indices-after-sorting-array/cpp/solution.cpp) |
 | [3769. Minimum Interval Selection to Cover Target Intervals](./problems/3769-minimum-interval-selection-to-cover-target-intervals) | Medium | C++ | [solution.cpp](./problems/3769-minimum-interval-selection-to-cover-target-intervals/cpp/solution.cpp) |
 | [4456. Last Visited Cell in a Directional Grid](./problems/4456-last-visited-cell-in-a-directional-grid) | Medium | C++ | [solution.cpp](./problems/4456-last-visited-cell-in-a-directional-grid/cpp/solution.cpp) |
 | [3968. Find Root of a Colored Tree](./problems/3968-find-root-of-a-colored-tree) | Medium | C++ | [solution.cpp](./problems/3968-find-root-of-a-colored-tree/cpp/solution.cpp) |
@@ -61,10 +62,9 @@ _No topic tags recorded yet._
 | [1692. Number of Ways to Reorder Array to Get Same BST](./problems/1692-number-of-ways-to-reorder-array-to-get-same-bst) | Medium | C++ | [solution.cpp](./problems/1692-number-of-ways-to-reorder-array-to-get-same-bst/cpp/solution.cpp) |
 | [3847. Minimum Swaps to Sort by Digit Sum](./problems/3847-minimum-swaps-to-sort-by-digit-sum) | Medium | C++ | [solution.cpp](./problems/3847-minimum-swaps-to-sort-by-digit-sum/cpp/solution.cpp) |
 | [3139. Subarrays Distinct Element Sum of Squares II](./problems/3139-subarrays-distinct-element-sum-of-squares-ii) | Medium | C++ | [solution.cpp](./problems/3139-subarrays-distinct-element-sum-of-squares-ii/cpp/solution.cpp) |
-| [0026. Remove Duplicates from Sorted Array](./problems/0026-remove-duplicates-from-sorted-array) | Medium | C++ | [solution.cpp](./problems/0026-remove-duplicates-from-sorted-array/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (43)</strong></summary>
+<summary><strong>View All Tracked Problems (44)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -98,6 +98,7 @@ _No topic tags recorded yet._
 | 1692 | [Number of Ways to Reorder Array to Get Same BST](./problems/1692-number-of-ways-to-reorder-array-to-get-same-bst) | Medium | [`C++`](./problems/1692-number-of-ways-to-reorder-array-to-get-same-bst/cpp) | - | [Notes](./problems/1692-number-of-ways-to-reorder-array-to-get-same-bst/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1737 | [Maximum Nesting Depth of the Parentheses](./problems/1737-maximum-nesting-depth-of-the-parentheses) | Medium | [`C++`](./problems/1737-maximum-nesting-depth-of-the-parentheses/cpp) | - | [Notes](./problems/1737-maximum-nesting-depth-of-the-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1791 | [Richest Customer Wealth](./problems/1791-richest-customer-wealth) | Medium | [`C++`](./problems/1791-richest-customer-wealth/cpp) | - | [Notes](./problems/1791-richest-customer-wealth/notes.md) | 2026-10-25 | `2026-10-25` |
+| 2210 | [Find Target Indices After Sorting Array](./problems/2210-find-target-indices-after-sorting-array) | Medium | [`C++`](./problems/2210-find-target-indices-after-sorting-array/cpp) | - | [Notes](./problems/2210-find-target-indices-after-sorting-array/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2392 | [Successful Pairs of Spells and Potions](./problems/2392-successful-pairs-of-spells-and-potions) | Medium | [`Python 3`](./problems/2392-successful-pairs-of-spells-and-potions/python3) | - | [Notes](./problems/2392-successful-pairs-of-spells-and-potions/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2418 | [Minimum Sum of Squared Difference](./problems/2418-minimum-sum-of-squared-difference) | Medium | [`C++`](./problems/2418-minimum-sum-of-squared-difference/cpp) | - | [Notes](./problems/2418-minimum-sum-of-squared-difference/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2844 | [Sum of Squares of Special Elements ](./problems/2844-sum-of-squares-of-special-elements) | Medium | [`C++`](./problems/2844-sum-of-squares-of-special-elements/cpp) | - | [Notes](./problems/2844-sum-of-squares-of-special-elements/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -116,7 +117,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-10-25T10:45:11.523Z`_
+_Last synchronized via LC-Sync: `2026-10-25T10:45:18.587Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout
