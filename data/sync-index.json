@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:45:26.065Z",
-  "totalProblems": 45,
-  "totalSubmissions": 53,
+  "lastUpdated": "2026-10-25T10:45:32.964Z",
+  "totalProblems": 46,
+  "totalSubmissions": 54,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -520,6 +520,18 @@
       "syncedAt": "2026-10-25T10:45:26.045Z",
       "filePath": "problems/4257-sum-of-sortable-integers/cpp/solution.cpp"
     },
+    "2177554565": {
+      "problemId": "4220",
+      "slug": "minimum-operations-to-sort-a-string",
+      "title": "Minimum Operations to Sort a String",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2177554565",
+      "contentHash": "54aba6e29ff33771370537f7d385e6e52d11da0df333b58c782af81c4adfed6c",
+      "syncedAt": "2026-10-25T10:45:32.946Z",
+      "filePath": "problems/4220-minimum-operations-to-sort-a-string/cpp/solution.cpp"
+    },
     "2181124556": {
       "problemId": "0094",
       "slug": "binary-tree-inorder-traversal",
@@ -948,6 +960,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:44:22.040Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "4220": {
+      "id": "4220",
+      "title": "Minimum Operations to Sort a String",
+      "slug": "minimum-operations-to-sort-a-string",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:45:32.946Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],

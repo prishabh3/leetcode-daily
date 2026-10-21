@@ -9,11 +9,11 @@
 
 ## LeetCode Stats
 
-[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925126)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925133)](https://leetcode.com/u/prishabh3/)
 
 ## Submission Activity
 
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925126)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925133)](https://leetcode.com/u/prishabh3/)
 
 ## 📊 Repository Progress
 
@@ -21,23 +21,23 @@
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-45-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-46-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **45**
-- **Total Accepted Submissions**: **53**
-- **Repository Solutions & Historical Versions**: **53** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **46**
+- **Total Accepted Submissions**: **54**
+- **Repository Solutions & Historical Versions**: **54** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **4** |
-| 🟡 Medium | **41** |
+| 🟡 Medium | **42** |
 | 🔴 Hard | **0** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `39` |
+| C++ | `40` |
 | SQL | `3` |
 | Python 3 | `3` |
 
@@ -54,6 +54,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [4220. Minimum Operations to Sort a String](./problems/4220-minimum-operations-to-sort-a-string) | Medium | C++ | [solution.cpp](./problems/4220-minimum-operations-to-sort-a-string/cpp/solution.cpp) |
 | [4257. Sum of Sortable Integers](./problems/4257-sum-of-sortable-integers) | Medium | C++ | [solution.cpp](./problems/4257-sum-of-sortable-integers/cpp/solution.cpp) |
 | [2210. Find Target Indices After Sorting Array](./problems/2210-find-target-indices-after-sorting-array) | Medium | C++ | [solution.cpp](./problems/2210-find-target-indices-after-sorting-array/cpp/solution.cpp) |
 | [3769. Minimum Interval Selection to Cover Target Intervals](./problems/3769-minimum-interval-selection-to-cover-target-intervals) | Medium | C++ | [solution.cpp](./problems/3769-minimum-interval-selection-to-cover-target-intervals/cpp/solution.cpp) |
@@ -61,10 +62,9 @@ _No topic tags recorded yet._
 | [3968. Find Root of a Colored Tree](./problems/3968-find-root-of-a-colored-tree) | Medium | C++ | [solution.cpp](./problems/3968-find-root-of-a-colored-tree/cpp/solution.cpp) |
 | [4430. Minimum Deletions to Make Array Sharp](./problems/4430-minimum-deletions-to-make-array-sharp) | Medium | C++ | [solution.cpp](./problems/4430-minimum-deletions-to-make-array-sharp/cpp/solution.cpp) |
 | [1692. Number of Ways to Reorder Array to Get Same BST](./problems/1692-number-of-ways-to-reorder-array-to-get-same-bst) | Medium | C++ | [solution.cpp](./problems/1692-number-of-ways-to-reorder-array-to-get-same-bst/cpp/solution.cpp) |
-| [3847. Minimum Swaps to Sort by Digit Sum](./problems/3847-minimum-swaps-to-sort-by-digit-sum) | Medium | C++ | [solution.cpp](./problems/3847-minimum-swaps-to-sort-by-digit-sum/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (45)</strong></summary>
+<summary><strong>View All Tracked Problems (46)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -110,6 +110,7 @@ _No topic tags recorded yet._
 | 3968 | [Find Root of a Colored Tree](./problems/3968-find-root-of-a-colored-tree) | Medium | [`C++`](./problems/3968-find-root-of-a-colored-tree/cpp) | - | [Notes](./problems/3968-find-root-of-a-colored-tree/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4078 | [Maximum Alternating Sum of Squares](./problems/4078-maximum-alternating-sum-of-squares) | Medium | [`C++`](./problems/4078-maximum-alternating-sum-of-squares/cpp) | - | [Notes](./problems/4078-maximum-alternating-sum-of-squares/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4084 | [Maximize Sum of Squares of Digits](./problems/4084-maximize-sum-of-squares-of-digits) | Medium | [`C++`](./problems/4084-maximize-sum-of-squares-of-digits/cpp) | - | [Notes](./problems/4084-maximize-sum-of-squares-of-digits/notes.md) | 2026-10-25 | `2026-10-25` |
+| 4220 | [Minimum Operations to Sort a String](./problems/4220-minimum-operations-to-sort-a-string) | Medium | [`C++`](./problems/4220-minimum-operations-to-sort-a-string/cpp) | - | [Notes](./problems/4220-minimum-operations-to-sort-a-string/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4257 | [Sum of Sortable Integers](./problems/4257-sum-of-sortable-integers) | Medium | [`C++`](./problems/4257-sum-of-sortable-integers/cpp) | - | [Notes](./problems/4257-sum-of-sortable-integers/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4430 | [Minimum Deletions to Make Array Sharp](./problems/4430-minimum-deletions-to-make-array-sharp) | Medium | [`C++`](./problems/4430-minimum-deletions-to-make-array-sharp/cpp) | - | [Notes](./problems/4430-minimum-deletions-to-make-array-sharp/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4456 | [Last Visited Cell in a Directional Grid](./problems/4456-last-visited-cell-in-a-directional-grid) | Medium | [`C++`](./problems/4456-last-visited-cell-in-a-directional-grid/cpp) | - | [Notes](./problems/4456-last-visited-cell-in-a-directional-grid/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -118,7 +119,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-10-25T10:45:26.065Z`_
+_Last synchronized via LC-Sync: `2026-10-25T10:45:32.964Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

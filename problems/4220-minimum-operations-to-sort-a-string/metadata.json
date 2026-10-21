@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "4220",
+  "title": "Minimum Operations to Sort a String",
+  "slug": "minimum-operations-to-sort-a-string",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:45:32.951Z",
+  "lastSyncedAt": "2026-10-25T10:45:32.946Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/4220-minimum-operations-to-sort-a-string/cpp/solution.cpp",
+      "submissionId": "2177554565",
+      "contentHash": "54aba6e29ff33771370537f7d385e6e52d11da0df333b58c782af81c4adfed6c",
+      "syncedAt": "2026-10-25T10:45:32.946Z",
+      "runtime": "6 ms",
+      "memory": "27.4 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
