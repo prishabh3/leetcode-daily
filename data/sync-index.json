@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:45:32.964Z",
-  "totalProblems": 46,
-  "totalSubmissions": 54,
+  "lastUpdated": "2026-10-25T10:45:39.786Z",
+  "totalProblems": 47,
+  "totalSubmissions": 55,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -532,6 +532,18 @@
       "syncedAt": "2026-10-25T10:45:32.946Z",
       "filePath": "problems/4220-minimum-operations-to-sort-a-string/cpp/solution.cpp"
     },
+    "2178470100": {
+      "problemId": "4184",
+      "slug": "minimum-operations-to-sort-a-permutation",
+      "title": "Minimum Operations to Sort a Permutation",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2178470100",
+      "contentHash": "d28a13f6638620b78990da44a95cc0fc0d820116ffc9d89576f72b411cb9f17a",
+      "syncedAt": "2026-10-25T10:45:39.769Z",
+      "filePath": "problems/4184-minimum-operations-to-sort-a-permutation/cpp/solution.cpp"
+    },
     "2181124556": {
       "problemId": "0094",
       "slug": "binary-tree-inorder-traversal",
@@ -960,6 +972,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:44:22.040Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "4184": {
+      "id": "4184",
+      "title": "Minimum Operations to Sort a Permutation",
+      "slug": "minimum-operations-to-sort-a-permutation",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:45:39.769Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],
