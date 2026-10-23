@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "3950",
+  "title": "Maximum K to Sort a Permutation",
+  "slug": "maximum-k-to-sort-a-permutation",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:45:46.427Z",
+  "lastSyncedAt": "2026-10-25T10:45:46.422Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/3950-maximum-k-to-sort-a-permutation/cpp/solution.cpp",
+      "submissionId": "2179272856",
+      "contentHash": "e924cfa03453d9bbc8cc3fe0da4eb8ece1ec22ccb66c983bec1bbe3bcaf01427",
+      "syncedAt": "2026-10-25T10:45:46.422Z",
+      "runtime": "3 ms",
+      "memory": "152.5 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

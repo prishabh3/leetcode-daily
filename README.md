@@ -9,11 +9,11 @@
 
 ## LeetCode Stats
 
-[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925140)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925146)](https://leetcode.com/u/prishabh3/)
 
 ## Submission Activity
 
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925140)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925146)](https://leetcode.com/u/prishabh3/)
 
 ## 📊 Repository Progress
 
@@ -21,23 +21,23 @@
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-47-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-48-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **47**
-- **Total Accepted Submissions**: **55**
-- **Repository Solutions & Historical Versions**: **55** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **48**
+- **Total Accepted Submissions**: **56**
+- **Repository Solutions & Historical Versions**: **56** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **4** |
-| 🟡 Medium | **43** |
+| 🟡 Medium | **44** |
 | 🔴 Hard | **0** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `41` |
+| C++ | `42` |
 | SQL | `3` |
 | Python 3 | `3` |
 
@@ -54,6 +54,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [3950. Maximum K to Sort a Permutation](./problems/3950-maximum-k-to-sort-a-permutation) | Medium | C++ | [solution.cpp](./problems/3950-maximum-k-to-sort-a-permutation/cpp/solution.cpp) |
 | [4184. Minimum Operations to Sort a Permutation](./problems/4184-minimum-operations-to-sort-a-permutation) | Medium | C++ | [solution.cpp](./problems/4184-minimum-operations-to-sort-a-permutation/cpp/solution.cpp) |
 | [4220. Minimum Operations to Sort a String](./problems/4220-minimum-operations-to-sort-a-string) | Medium | C++ | [solution.cpp](./problems/4220-minimum-operations-to-sort-a-string/cpp/solution.cpp) |
 | [4257. Sum of Sortable Integers](./problems/4257-sum-of-sortable-integers) | Medium | C++ | [solution.cpp](./problems/4257-sum-of-sortable-integers/cpp/solution.cpp) |
@@ -61,10 +62,9 @@ _No topic tags recorded yet._
 | [3769. Minimum Interval Selection to Cover Target Intervals](./problems/3769-minimum-interval-selection-to-cover-target-intervals) | Medium | C++ | [solution.cpp](./problems/3769-minimum-interval-selection-to-cover-target-intervals/cpp/solution.cpp) |
 | [4456. Last Visited Cell in a Directional Grid](./problems/4456-last-visited-cell-in-a-directional-grid) | Medium | C++ | [solution.cpp](./problems/4456-last-visited-cell-in-a-directional-grid/cpp/solution.cpp) |
 | [3968. Find Root of a Colored Tree](./problems/3968-find-root-of-a-colored-tree) | Medium | C++ | [solution.cpp](./problems/3968-find-root-of-a-colored-tree/cpp/solution.cpp) |
-| [4430. Minimum Deletions to Make Array Sharp](./problems/4430-minimum-deletions-to-make-array-sharp) | Medium | C++ | [solution.cpp](./problems/4430-minimum-deletions-to-make-array-sharp/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (47)</strong></summary>
+<summary><strong>View All Tracked Problems (48)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -107,6 +107,7 @@ _No topic tags recorded yet._
 | 3163 | [Subarrays Distinct Element Sum of Squares I](./problems/3163-subarrays-distinct-element-sum-of-squares-i) | Medium | [`C++`](./problems/3163-subarrays-distinct-element-sum-of-squares-i/cpp) | - | [Notes](./problems/3163-subarrays-distinct-element-sum-of-squares-i/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3769 | [Minimum Interval Selection to Cover Target Intervals](./problems/3769-minimum-interval-selection-to-cover-target-intervals) | Medium | [`C++`](./problems/3769-minimum-interval-selection-to-cover-target-intervals/cpp) | - | [Notes](./problems/3769-minimum-interval-selection-to-cover-target-intervals/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3847 | [Minimum Swaps to Sort by Digit Sum](./problems/3847-minimum-swaps-to-sort-by-digit-sum) | Medium | [`C++`](./problems/3847-minimum-swaps-to-sort-by-digit-sum/cpp) | - | [Notes](./problems/3847-minimum-swaps-to-sort-by-digit-sum/notes.md) | 2026-10-25 | `2026-10-25` |
+| 3950 | [Maximum K to Sort a Permutation](./problems/3950-maximum-k-to-sort-a-permutation) | Medium | [`C++`](./problems/3950-maximum-k-to-sort-a-permutation/cpp) | - | [Notes](./problems/3950-maximum-k-to-sort-a-permutation/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3968 | [Find Root of a Colored Tree](./problems/3968-find-root-of-a-colored-tree) | Medium | [`C++`](./problems/3968-find-root-of-a-colored-tree/cpp) | - | [Notes](./problems/3968-find-root-of-a-colored-tree/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4078 | [Maximum Alternating Sum of Squares](./problems/4078-maximum-alternating-sum-of-squares) | Medium | [`C++`](./problems/4078-maximum-alternating-sum-of-squares/cpp) | - | [Notes](./problems/4078-maximum-alternating-sum-of-squares/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4084 | [Maximize Sum of Squares of Digits](./problems/4084-maximize-sum-of-squares-of-digits) | Medium | [`C++`](./problems/4084-maximize-sum-of-squares-of-digits/cpp) | - | [Notes](./problems/4084-maximize-sum-of-squares-of-digits/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -120,7 +121,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-10-25T10:45:39.786Z`_
+_Last synchronized via LC-Sync: `2026-10-25T10:45:46.438Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout
