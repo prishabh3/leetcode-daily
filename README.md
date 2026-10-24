@@ -9,11 +9,11 @@
 
 ## LeetCode Stats
 
-[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925146)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925155)](https://leetcode.com/u/prishabh3/)
 
 ## Submission Activity
 
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925146)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925155)](https://leetcode.com/u/prishabh3/)
 
 ## 📊 Repository Progress
 
@@ -21,23 +21,23 @@
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-48-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-53-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **48**
-- **Total Accepted Submissions**: **56**
-- **Repository Solutions & Historical Versions**: **56** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **53**
+- **Total Accepted Submissions**: **61**
+- **Repository Solutions & Historical Versions**: **61** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **4** |
-| 🟡 Medium | **44** |
+| 🟡 Medium | **49** |
 | 🔴 Hard | **0** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `42` |
+| C++ | `47` |
 | SQL | `3` |
 | Python 3 | `3` |
 
@@ -54,17 +54,17 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [4403. Count Magical Substring Pairs II](./problems/4403-count-magical-substring-pairs-ii) | Medium | C++ | [solution.cpp](./problems/4403-count-magical-substring-pairs-ii/cpp/solution.cpp) |
+| [4402. Count Magical Substring Pairs I](./problems/4402-count-magical-substring-pairs-i) | Medium | C++ | [solution.cpp](./problems/4402-count-magical-substring-pairs-i/cpp/solution.cpp) |
+| [4391. Count Subarrays With Loose Bounds](./problems/4391-count-subarrays-with-loose-bounds) | Medium | C++ | [solution.cpp](./problems/4391-count-subarrays-with-loose-bounds/cpp/solution.cpp) |
+| [4436. Difference Between Peaks and Valleys](./problems/4436-difference-between-peaks-and-valleys) | Medium | C++ | [solution.cpp](./problems/4436-difference-between-peaks-and-valleys/cpp/solution.cpp) |
+| [2496. Count Days Spent Together](./problems/2496-count-days-spent-together) | Medium | C++ | [solution.cpp](./problems/2496-count-days-spent-together/cpp/solution.cpp) |
 | [3950. Maximum K to Sort a Permutation](./problems/3950-maximum-k-to-sort-a-permutation) | Medium | C++ | [solution.cpp](./problems/3950-maximum-k-to-sort-a-permutation/cpp/solution.cpp) |
 | [4184. Minimum Operations to Sort a Permutation](./problems/4184-minimum-operations-to-sort-a-permutation) | Medium | C++ | [solution.cpp](./problems/4184-minimum-operations-to-sort-a-permutation/cpp/solution.cpp) |
 | [4220. Minimum Operations to Sort a String](./problems/4220-minimum-operations-to-sort-a-string) | Medium | C++ | [solution.cpp](./problems/4220-minimum-operations-to-sort-a-string/cpp/solution.cpp) |
-| [4257. Sum of Sortable Integers](./problems/4257-sum-of-sortable-integers) | Medium | C++ | [solution.cpp](./problems/4257-sum-of-sortable-integers/cpp/solution.cpp) |
-| [2210. Find Target Indices After Sorting Array](./problems/2210-find-target-indices-after-sorting-array) | Medium | C++ | [solution.cpp](./problems/2210-find-target-indices-after-sorting-array/cpp/solution.cpp) |
-| [3769. Minimum Interval Selection to Cover Target Intervals](./problems/3769-minimum-interval-selection-to-cover-target-intervals) | Medium | C++ | [solution.cpp](./problems/3769-minimum-interval-selection-to-cover-target-intervals/cpp/solution.cpp) |
-| [4456. Last Visited Cell in a Directional Grid](./problems/4456-last-visited-cell-in-a-directional-grid) | Medium | C++ | [solution.cpp](./problems/4456-last-visited-cell-in-a-directional-grid/cpp/solution.cpp) |
-| [3968. Find Root of a Colored Tree](./problems/3968-find-root-of-a-colored-tree) | Medium | C++ | [solution.cpp](./problems/3968-find-root-of-a-colored-tree/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (48)</strong></summary>
+<summary><strong>View All Tracked Problems (53)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -101,6 +101,7 @@ _No topic tags recorded yet._
 | 2210 | [Find Target Indices After Sorting Array](./problems/2210-find-target-indices-after-sorting-array) | Medium | [`C++`](./problems/2210-find-target-indices-after-sorting-array/cpp) | - | [Notes](./problems/2210-find-target-indices-after-sorting-array/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2392 | [Successful Pairs of Spells and Potions](./problems/2392-successful-pairs-of-spells-and-potions) | Medium | [`Python 3`](./problems/2392-successful-pairs-of-spells-and-potions/python3) | - | [Notes](./problems/2392-successful-pairs-of-spells-and-potions/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2418 | [Minimum Sum of Squared Difference](./problems/2418-minimum-sum-of-squared-difference) | Medium | [`C++`](./problems/2418-minimum-sum-of-squared-difference/cpp) | - | [Notes](./problems/2418-minimum-sum-of-squared-difference/notes.md) | 2026-10-25 | `2026-10-25` |
+| 2496 | [Count Days Spent Together](./problems/2496-count-days-spent-together) | Medium | [`C++`](./problems/2496-count-days-spent-together/cpp) | - | [Notes](./problems/2496-count-days-spent-together/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2844 | [Sum of Squares of Special Elements ](./problems/2844-sum-of-squares-of-special-elements) | Medium | [`C++`](./problems/2844-sum-of-squares-of-special-elements/cpp) | - | [Notes](./problems/2844-sum-of-squares-of-special-elements/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3139 | [Subarrays Distinct Element Sum of Squares II](./problems/3139-subarrays-distinct-element-sum-of-squares-ii) | Medium | [`C++`](./problems/3139-subarrays-distinct-element-sum-of-squares-ii/cpp) | - | [Notes](./problems/3139-subarrays-distinct-element-sum-of-squares-ii/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3153 | [Apply Operations on Array to Maximize Sum of Squares](./problems/3153-apply-operations-on-array-to-maximize-sum-of-squares) | Medium | [`C++`](./problems/3153-apply-operations-on-array-to-maximize-sum-of-squares/cpp) | - | [Notes](./problems/3153-apply-operations-on-array-to-maximize-sum-of-squares/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -114,14 +115,18 @@ _No topic tags recorded yet._
 | 4184 | [Minimum Operations to Sort a Permutation](./problems/4184-minimum-operations-to-sort-a-permutation) | Medium | [`C++`](./problems/4184-minimum-operations-to-sort-a-permutation/cpp) | - | [Notes](./problems/4184-minimum-operations-to-sort-a-permutation/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4220 | [Minimum Operations to Sort a String](./problems/4220-minimum-operations-to-sort-a-string) | Medium | [`C++`](./problems/4220-minimum-operations-to-sort-a-string/cpp) | - | [Notes](./problems/4220-minimum-operations-to-sort-a-string/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4257 | [Sum of Sortable Integers](./problems/4257-sum-of-sortable-integers) | Medium | [`C++`](./problems/4257-sum-of-sortable-integers/cpp) | - | [Notes](./problems/4257-sum-of-sortable-integers/notes.md) | 2026-10-25 | `2026-10-25` |
+| 4391 | [Count Subarrays With Loose Bounds](./problems/4391-count-subarrays-with-loose-bounds) | Medium | [`C++`](./problems/4391-count-subarrays-with-loose-bounds/cpp) | - | [Notes](./problems/4391-count-subarrays-with-loose-bounds/notes.md) | 2026-10-25 | `2026-10-25` |
+| 4402 | [Count Magical Substring Pairs I](./problems/4402-count-magical-substring-pairs-i) | Medium | [`C++`](./problems/4402-count-magical-substring-pairs-i/cpp) | - | [Notes](./problems/4402-count-magical-substring-pairs-i/notes.md) | 2026-10-25 | `2026-10-25` |
+| 4403 | [Count Magical Substring Pairs II](./problems/4403-count-magical-substring-pairs-ii) | Medium | [`C++`](./problems/4403-count-magical-substring-pairs-ii/cpp) | - | [Notes](./problems/4403-count-magical-substring-pairs-ii/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4430 | [Minimum Deletions to Make Array Sharp](./problems/4430-minimum-deletions-to-make-array-sharp) | Medium | [`C++`](./problems/4430-minimum-deletions-to-make-array-sharp/cpp) | - | [Notes](./problems/4430-minimum-deletions-to-make-array-sharp/notes.md) | 2026-10-25 | `2026-10-25` |
+| 4436 | [Difference Between Peaks and Valleys](./problems/4436-difference-between-peaks-and-valleys) | Medium | [`C++`](./problems/4436-difference-between-peaks-and-valleys/cpp) | - | [Notes](./problems/4436-difference-between-peaks-and-valleys/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4456 | [Last Visited Cell in a Directional Grid](./problems/4456-last-visited-cell-in-a-directional-grid) | Medium | [`C++`](./problems/4456-last-visited-cell-in-a-directional-grid/cpp) | - | [Notes](./problems/4456-last-visited-cell-in-a-directional-grid/notes.md) | 2026-10-25 | `2026-10-25` |
 
 </details>
 
 ---
 
-_Last synchronized via LC-Sync: `2026-10-25T10:45:46.438Z`_
+_Last synchronized via LC-Sync: `2026-10-25T10:45:55.151Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:45:46.438Z",
-  "totalProblems": 48,
-  "totalSubmissions": 56,
+  "lastUpdated": "2026-10-25T10:45:55.151Z",
+  "totalProblems": 53,
+  "totalSubmissions": 61,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -556,6 +556,66 @@
       "syncedAt": "2026-10-25T10:45:46.422Z",
       "filePath": "problems/3950-maximum-k-to-sort-a-permutation/cpp/solution.cpp"
     },
+    "2180321466": {
+      "problemId": "2496",
+      "slug": "count-days-spent-together",
+      "title": "Count Days Spent Together",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2180321466",
+      "contentHash": "1c426817c17b57b4126d2cf04b2d67e49aaff238e8ef8c551a17cc03cf125b67",
+      "syncedAt": "2026-10-25T10:45:55.103Z",
+      "filePath": "problems/2496-count-days-spent-together/cpp/solution.cpp"
+    },
+    "2180521241": {
+      "problemId": "4436",
+      "slug": "difference-between-peaks-and-valleys",
+      "title": "Difference Between Peaks and Valleys",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2180521241",
+      "contentHash": "9a942a04fe191960ba52e3dc21f693d252f0aaab06f08da0a57489c25c9085cf",
+      "syncedAt": "2026-10-25T10:45:55.120Z",
+      "filePath": "problems/4436-difference-between-peaks-and-valleys/cpp/solution.cpp"
+    },
+    "2180528134": {
+      "problemId": "4391",
+      "slug": "count-subarrays-with-loose-bounds",
+      "title": "Count Subarrays With Loose Bounds",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2180528134",
+      "contentHash": "1e75c18d7af06c5dc55c2e38b2d27223395d5112ca123ad2ef193f7ecbbe17bc",
+      "syncedAt": "2026-10-25T10:45:55.130Z",
+      "filePath": "problems/4391-count-subarrays-with-loose-bounds/cpp/solution.cpp"
+    },
+    "2180531363": {
+      "problemId": "4402",
+      "slug": "count-magical-substring-pairs-i",
+      "title": "Count Magical Substring Pairs I",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2180531363",
+      "contentHash": "ac4e0473c8e137d6b8fdf11d16fc2cd8f0c6eff8dce83f7844be238765066c57",
+      "syncedAt": "2026-10-25T10:45:55.138Z",
+      "filePath": "problems/4402-count-magical-substring-pairs-i/cpp/solution.cpp"
+    },
+    "2180533774": {
+      "problemId": "4403",
+      "slug": "count-magical-substring-pairs-ii",
+      "title": "Count Magical Substring Pairs II",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2180533774",
+      "contentHash": "f0771e4dd85c31e9c00740203a05f3774a11c6a4dd3cb0fb204390ef0bf06511",
+      "syncedAt": "2026-10-25T10:45:55.145Z",
+      "filePath": "problems/4403-count-magical-substring-pairs-ii/cpp/solution.cpp"
+    },
     "2181124556": {
       "problemId": "0094",
       "slug": "binary-tree-inorder-traversal",
@@ -854,6 +914,21 @@
       "tags": [],
       "patterns": []
     },
+    "2496": {
+      "id": "2496",
+      "title": "Count Days Spent Together",
+      "slug": "count-days-spent-together",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:45:55.103Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
     "2844": {
       "id": "2844",
       "title": "Sum of Squares of Special Elements ",
@@ -1049,6 +1124,51 @@
       "tags": [],
       "patterns": []
     },
+    "4391": {
+      "id": "4391",
+      "title": "Count Subarrays With Loose Bounds",
+      "slug": "count-subarrays-with-loose-bounds",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:45:55.130Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "4402": {
+      "id": "4402",
+      "title": "Count Magical Substring Pairs I",
+      "slug": "count-magical-substring-pairs-i",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:45:55.138Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "4403": {
+      "id": "4403",
+      "title": "Count Magical Substring Pairs II",
+      "slug": "count-magical-substring-pairs-ii",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:45:55.145Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
     "4430": {
       "id": "4430",
       "title": "Minimum Deletions to Make Array Sharp",
@@ -1059,6 +1179,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:44:56.367Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "4436": {
+      "id": "4436",
+      "title": "Difference Between Peaks and Valleys",
+      "slug": "difference-between-peaks-and-valleys",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:45:55.120Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],

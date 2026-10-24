@@ -1,0 +1,32 @@
+{
+  "confidenceRating": 3,
+  "difficulty": "Unknown",
+  "failedRecallCount": 0,
+  "firstTrackedAt": "2026-10-25T07:12:56.980Z",
+  "id": "4391",
+  "lastSyncedAt": "2026-10-25T10:45:55.130Z",
+  "nextReviewDate": "2026-10-27",
+  "patterns": [],
+  "reviewHistory": [],
+  "reviewsCount": 0,
+  "schemaVersion": 2,
+  "slug": "count-subarrays-with-loose-bounds",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/4391-count-subarrays-with-loose-bounds/cpp/solution.cpp",
+      "submissionId": "2180528134",
+      "contentHash": "1e75c18d7af06c5dc55c2e38b2d27223395d5112ca123ad2ef193f7ecbbe17bc",
+      "syncedAt": "2026-10-25T10:45:55.130Z",
+      "runtime": "8 ms",
+      "memory": "312.8 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "tags": [],
+  "title": "Count Subarrays With Loose Bounds",
+  "url": "",
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

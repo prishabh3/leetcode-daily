@@ -1,0 +1,32 @@
+{
+  "confidenceRating": 3,
+  "difficulty": "Unknown",
+  "failedRecallCount": 0,
+  "firstTrackedAt": "2026-10-25T07:12:57.368Z",
+  "id": "4436",
+  "lastSyncedAt": "2026-10-25T10:45:55.120Z",
+  "nextReviewDate": "2026-10-27",
+  "patterns": [],
+  "reviewHistory": [],
+  "reviewsCount": 0,
+  "schemaVersion": 2,
+  "slug": "difference-between-peaks-and-valleys",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/4436-difference-between-peaks-and-valleys/cpp/solution.cpp",
+      "submissionId": "2180521241",
+      "contentHash": "9a942a04fe191960ba52e3dc21f693d252f0aaab06f08da0a57489c25c9085cf",
+      "syncedAt": "2026-10-25T10:45:55.120Z",
+      "runtime": "1 ms",
+      "memory": "31.4 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "tags": [],
+  "title": "Difference Between Peaks and Valleys",
+  "url": "",
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

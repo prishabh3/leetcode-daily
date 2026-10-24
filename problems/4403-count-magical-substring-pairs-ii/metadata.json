@@ -1,0 +1,32 @@
+{
+  "confidenceRating": 3,
+  "difficulty": "Unknown",
+  "failedRecallCount": 0,
+  "firstTrackedAt": "2026-10-25T07:12:56.353Z",
+  "id": "4403",
+  "lastSyncedAt": "2026-10-25T10:45:55.145Z",
+  "nextReviewDate": "2026-10-27",
+  "patterns": [],
+  "reviewHistory": [],
+  "reviewsCount": 0,
+  "schemaVersion": 2,
+  "slug": "count-magical-substring-pairs-ii",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/4403-count-magical-substring-pairs-ii/cpp/solution.cpp",
+      "submissionId": "2180533774",
+      "contentHash": "f0771e4dd85c31e9c00740203a05f3774a11c6a4dd3cb0fb204390ef0bf06511",
+      "syncedAt": "2026-10-25T10:45:55.145Z",
+      "runtime": "449 ms",
+      "memory": "317.4 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "tags": [],
+  "title": "Count Magical Substring Pairs II",
+  "url": "",
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

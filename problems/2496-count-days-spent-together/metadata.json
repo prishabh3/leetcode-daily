@@ -1,0 +1,32 @@
+{
+  "confidenceRating": 3,
+  "difficulty": "Unknown",
+  "failedRecallCount": 0,
+  "firstTrackedAt": "2026-10-25T07:12:57.643Z",
+  "id": "2496",
+  "lastSyncedAt": "2026-10-25T10:45:55.103Z",
+  "nextReviewDate": "2026-10-27",
+  "patterns": [],
+  "reviewHistory": [],
+  "reviewsCount": 0,
+  "schemaVersion": 2,
+  "slug": "count-days-spent-together",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/2496-count-days-spent-together/cpp/solution.cpp",
+      "submissionId": "2180321466",
+      "contentHash": "1c426817c17b57b4126d2cf04b2d67e49aaff238e8ef8c551a17cc03cf125b67",
+      "syncedAt": "2026-10-25T10:45:55.103Z",
+      "runtime": "0 ms",
+      "memory": "8 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "tags": [],
+  "title": "Count Days Spent Together",
+  "url": "",
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
