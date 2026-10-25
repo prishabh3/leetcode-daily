@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "1211",
+  "title": "Queries Quality and Percentage",
+  "slug": "queries-quality-and-percentage",
+  "url": "https://leetcode.com/problems/queries-quality-and-percentage/",
+  "difficulty": "Easy",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T09:32:10.402Z",
+  "lastSyncedAt": "2026-10-25T09:32:10.121Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/1211-queries-quality-and-percentage/cpp/solution.cpp",
+      "contentHash": "5a452459503be70d2ed2fca46dd91e05e820a957f175686a77d03fff80f664fe",
+      "syncedAt": "2026-10-25T09:32:10.121Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-10-25",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}

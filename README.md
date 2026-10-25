@@ -5,7 +5,15 @@
 <!-- lc-sync:start -->
 ## 🔗 LeetCode Profile
 
-[LeetCode](https://leetcode.com)
+[prishabh3](https://leetcode.com/u/prishabh3/)
+
+## LeetCode Stats
+
+[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792920730)](https://leetcode.com/u/prishabh3/)
+
+## Submission Activity
+
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792920730)](https://leetcode.com/u/prishabh3/)
 
 ## 📊 Repository Progress
 
@@ -13,23 +21,23 @@
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-7-blue)]() [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-8-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **7**
-- **Total Accepted Submissions**: **11**
-- **Repository Solutions & Historical Versions**: **11** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **8**
+- **Total Accepted Submissions**: **12**
+- **Repository Solutions & Historical Versions**: **12** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
-| 🟢 Easy | **3** |
+| 🟢 Easy | **4** |
 | 🟡 Medium | **4** |
 | 🔴 Hard | **0** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `3` |
+| C++ | `4` |
 | SQL | `2` |
 | Python 3 | `2` |
 
@@ -46,6 +54,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [1211. Queries Quality and Percentage](./problems/1211-queries-quality-and-percentage) | Easy | C++ | [solution.cpp](./problems/1211-queries-quality-and-percentage/cpp/solution.cpp) |
 | [1407. Top Travellers](./problems/1407-top-travellers) | Easy | C++ | [solution.cpp](./problems/1407-top-travellers/cpp/solution.cpp) |
 | [0794. Swim in Rising Water](./problems/0794-swim-in-rising-water) | Medium | Python 3 | [solution.py](./problems/0794-swim-in-rising-water/python3/solution.py) |
 | [1612. Avoid Flood in The City](./problems/1612-avoid-flood-in-the-city) | Medium | Python 3 | [solution.py](./problems/1612-avoid-flood-in-the-city/python3/solution.py) |
@@ -55,7 +64,7 @@ _No topic tags recorded yet._
 | [0094. Binary Tree Inorder Traversal](./problems/0094-binary-tree-inorder-traversal) | Medium | C++ | [solution.cpp](./problems/0094-binary-tree-inorder-traversal/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (7)</strong></summary>
+<summary><strong>View All Tracked Problems (8)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -64,6 +73,7 @@ _No topic tags recorded yet._
 | 0178 | [Rank Scores](./problems/0178-rank-scores) | Medium | [`SQL`](./problems/0178-rank-scores/sql) | - | [Notes](./problems/0178-rank-scores/notes.md) | 2026-10-25 | `2026-10-27` |
 | 0595 | [Big Countries](./problems/0595-big-countries) | Easy | [`SQL`](./problems/0595-big-countries/sql) | - | [Notes](./problems/0595-big-countries/notes.md) | 2026-10-25 | `2026-10-27` |
 | 0794 | [Swim in Rising Water](./problems/0794-swim-in-rising-water) | Medium | [`Python 3`](./problems/0794-swim-in-rising-water/python3) | - | [Notes](./problems/0794-swim-in-rising-water/notes.md) | 2026-10-25 | `2026-10-25` |
+| 1211 | [Queries Quality and Percentage](./problems/1211-queries-quality-and-percentage) | Easy | [`C++`](./problems/1211-queries-quality-and-percentage/cpp) | - | [Notes](./problems/1211-queries-quality-and-percentage/notes.md) | 2026-10-25 | `2026-10-27` |
 | 1407 | [Top Travellers](./problems/1407-top-travellers) | Easy | [`C++`](./problems/1407-top-travellers/cpp) | - | [Notes](./problems/1407-top-travellers/notes.md) | 2026-10-25 | `2026-10-27` |
 | 1612 | [Avoid Flood in The City](./problems/1612-avoid-flood-in-the-city) | Medium | [`Python 3`](./problems/1612-avoid-flood-in-the-city/python3) | - | [Notes](./problems/1612-avoid-flood-in-the-city/notes.md) | 2026-10-25 | `2026-10-25` |
 
@@ -71,7 +81,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-10-25T08:29:56.926Z`_
+_Last synchronized via LC-Sync: `2026-10-25T09:32:10.121Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

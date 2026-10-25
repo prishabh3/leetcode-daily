@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T08:29:56.926Z",
-  "totalProblems": 7,
-  "totalSubmissions": 11,
+  "lastUpdated": "2026-10-25T09:32:10.121Z",
+  "totalProblems": 8,
+  "totalSubmissions": 12,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -132,9 +132,35 @@
       "contentHash": "3d573f5ceeac8a630bd70d096ba811590fa89bce59437c4df0eaf03c282dbe62",
       "syncedAt": "2026-10-25T08:29:56.926Z",
       "filePath": "problems/1407-top-travellers/cpp/solution.cpp"
+    },
+    "queries-quality-and-percentage-5a452459503b": {
+      "problemId": "1211",
+      "slug": "queries-quality-and-percentage",
+      "title": "Queries Quality and Percentage",
+      "difficulty": "Easy",
+      "language": "cpp",
+      "approachName": "solution",
+      "contentHash": "5a452459503be70d2ed2fca46dd91e05e820a957f175686a77d03fff80f664fe",
+      "syncedAt": "2026-10-25T09:32:10.121Z",
+      "filePath": "problems/1211-queries-quality-and-percentage/cpp/solution.cpp"
     }
   },
   "problems": {
+    "1211": {
+      "id": "1211",
+      "title": "Queries Quality and Percentage",
+      "slug": "queries-quality-and-percentage",
+      "difficulty": "Easy",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T09:32:10.121Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-27",
+      "tags": [],
+      "patterns": []
+    },
     "1407": {
       "id": "1407",
       "title": "Top Travellers",
