@@ -1,5 +1,6 @@
 import { GitHubSettings } from '../types/settings';
 import { GitHubError, sanitizeErrorSecret } from './rate-limiter';
+import { base64ToUtf8, utf8ToBase64 } from '../utils/encoding';
 
 export interface RepoTestResult {
   success: boolean;
@@ -161,7 +162,7 @@ export class GitHubClient {
         `/repos/${owner}/${repo}/contents/${filePath}?ref=${encodeURIComponent(branch || 'main')}`
       );
       if (res && res.content) {
-        const decoded = atob(res.content.replace(/\s/g, ''));
+        const decoded = base64ToUtf8(res.content);
         return {
           content: decoded,
           sha: res.sha,
@@ -181,7 +182,7 @@ export class GitHubClient {
     const { owner, repo, branch } = this.settings;
     const body: Record<string, any> = {
       message: commitMessage,
-      content: btoa(unescape(encodeURIComponent(content))),
+      content: utf8ToBase64(content),
       branch: branch || 'main',
     };
     if (existingSha) {

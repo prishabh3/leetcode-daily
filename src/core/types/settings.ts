@@ -8,8 +8,18 @@ export interface GitHubSettings {
   authorEmail?: string;
 }
 
+export interface LastSyncInfo {
+  status: 'synced' | 'failed' | 'duplicate';
+  timestamp: string;
+  problemTitle?: string;
+  commitSha?: string;
+  error?: string;
+}
+
 export interface SyncPreferences {
-  autoOpenReview: boolean;
+  autoSyncOnAccepted: boolean;
+  reviewBeforeSync: boolean;
+  autoOpenReview?: boolean; // legacy compatibility
   generateReadme: boolean;
   generateProgressSvg: boolean;
   defaultLanguage: string;
@@ -20,6 +30,7 @@ export interface AppSettings {
   github: GitHubSettings;
   preferences: SyncPreferences;
   leetcodeProfileUsername?: string;
+  lastSyncInfo?: LastSyncInfo;
 }
 
 export const DEFAULT_SETTINGS: AppSettings = {
@@ -31,7 +42,8 @@ export const DEFAULT_SETTINGS: AppSettings = {
     defaultPathPrefix: 'problems',
   },
   preferences: {
-    autoOpenReview: true,
+    autoSyncOnAccepted: true,
+    reviewBeforeSync: false,
     generateReadme: true,
     generateProgressSvg: true,
     defaultLanguage: 'cpp',

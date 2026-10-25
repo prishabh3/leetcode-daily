@@ -3,6 +3,7 @@ import { SyncIndex } from '../types/sync-index';
 import { SyncQueueItem } from '../types/sync-queue';
 import { SubmissionDraft } from '../types/submission';
 import { ProblemMetadata } from '../types/problem';
+import { HistoricalImportCheckpoint } from '../types/historical-import';
 import { migrateSyncIndex } from './schema-migration';
 
 export interface StorageSchema {
@@ -11,6 +12,7 @@ export interface StorageSchema {
   sync_queue: SyncQueueItem[];
   active_draft: SubmissionDraft | null;
   problems_cache: Record<string, ProblemMetadata>;
+  historical_checkpoint: HistoricalImportCheckpoint | null;
 }
 
 class StorageManager {
@@ -67,16 +69,41 @@ class StorageManager {
   async getSettings(): Promise<AppSettings> {
     const s = await this.get('settings');
     if (!s) return { ...DEFAULT_SETTINGS };
+
+    // Migrate or map preferences cleanly
+    const savedPrefs = s.preferences || {};
+    const autoSyncOnAccepted =
+      savedPrefs.autoSyncOnAccepted !== undefined
+        ? savedPrefs.autoSyncOnAccepted
+        : true; // Enabled by default for automatic workflow
+
+    const reviewBeforeSync =
+      savedPrefs.reviewBeforeSync !== undefined
+        ? savedPrefs.reviewBeforeSync
+        : false; // Disabled by default for automatic workflow
+
     return {
       ...DEFAULT_SETTINGS,
       ...s,
       github: { ...DEFAULT_SETTINGS.github, ...s.github },
-      preferences: { ...DEFAULT_SETTINGS.preferences, ...s.preferences },
+      preferences: {
+        ...DEFAULT_SETTINGS.preferences,
+        ...savedPrefs,
+        autoSyncOnAccepted,
+        reviewBeforeSync,
+      },
+      lastSyncInfo: s.lastSyncInfo,
     };
   }
 
   async saveSettings(settings: AppSettings): Promise<void> {
     await this.set('settings', settings);
+  }
+
+  async updateLastSyncInfo(info: AppSettings['lastSyncInfo']): Promise<void> {
+    const settings = await this.getSettings();
+    settings.lastSyncInfo = info;
+    await this.saveSettings(settings);
   }
 
   async getSyncIndex(): Promise<SyncIndex> {
@@ -115,6 +142,22 @@ class StorageManager {
     cache[meta.id] = meta;
     cache[meta.slug] = meta;
     await this.set('problems_cache', cache);
+  }
+
+  async getHistoricalCheckpoint(): Promise<HistoricalImportCheckpoint | null> {
+    return this.get('historical_checkpoint');
+  }
+
+  async saveHistoricalCheckpoint(checkpoint: HistoricalImportCheckpoint | null): Promise<void> {
+    if (checkpoint === null) {
+      await this.remove('historical_checkpoint');
+    } else {
+      await this.set('historical_checkpoint', checkpoint);
+    }
+  }
+
+  async clearHistoricalCheckpoint(): Promise<void> {
+    await this.remove('historical_checkpoint');
   }
 }
 

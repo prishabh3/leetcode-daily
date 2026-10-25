@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Build outputs (kept locally for unpacked Chrome extension loading)
+# Uncomment if building purely in CI releases:
+# dist/
+
+# Vitest and Vite cache
+.vite/
+node_modules/.vite/
+
+# Logs and environment files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov

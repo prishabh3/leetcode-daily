@@ -3,13 +3,14 @@ import { storage } from '../../core/storage/chrome-storage';
 import { AppSettings, DEFAULT_SETTINGS } from '../../core/types/settings';
 import { SyncIndex } from '../../core/types/sync-index';
 import { SyncQueueItem } from '../../core/types/sync-queue';
-import { SubmissionDraft } from '../../core/types/submission';
+import { SubmissionDraft, PlatformSubmission } from '../../core/types/submission';
 import { RevisionQueueView } from './components/RevisionQueueView';
 import { ProblemList } from './components/ProblemList';
 import { NotesEditor } from './components/NotesEditor';
 import { ManualImportModal } from './components/ManualImportModal';
 import { SyncQueueStatus } from './components/SyncQueueStatus';
 import { AnalyticsView } from './components/AnalyticsView';
+import { HistoricalImportWizard } from './components/HistoricalImportWizard';
 
 type Tab = 'revision' | 'catalog' | 'queue' | 'analytics';
 
@@ -30,6 +31,8 @@ export const DashboardApp: React.FC = () => {
   // Modals state
   const [selectedProblemId, setSelectedProblemId] = useState<string | null>(null);
   const [showManualImport, setShowManualImport] = useState(false);
+  const [showHistoricalImport, setShowHistoricalImport] = useState(false);
+  const [importDraft, setImportDraft] = useState<PlatformSubmission | null>(null);
   const [loading, setLoading] = useState(true);
 
   const loadAllData = async () => {
@@ -43,20 +46,28 @@ export const DashboardApp: React.FC = () => {
     setSyncQueue(q);
     setDraft(d);
     setLoading(false);
+    return d;
   };
 
   useEffect(() => {
-    loadAllData();
-
-    // Check hash for direct tab navigation (e.g. #/manual-import, #/review)
-    const hash = window.location.hash;
-    if (hash.includes('manual-import') || hash.includes('review')) {
-      setShowManualImport(true);
-    } else if (hash.includes('catalog')) {
-      setActiveTab('catalog');
-    } else if (hash.includes('revision')) {
-      setActiveTab('revision');
-    }
+    loadAllData().then((loadedDraft) => {
+      // Check hash for direct tab navigation
+      const hash = window.location.hash;
+      if (hash.includes('historical-import')) {
+        setShowHistoricalImport(true);
+      } else if (hash.includes('manual-import')) {
+        setImportDraft(null);
+        setShowManualImport(true);
+      } else if (hash.includes('review') && loadedDraft) {
+        // Only open review dialog if there is an actual detected draft awaiting review
+        setImportDraft(loadedDraft);
+        setShowManualImport(true);
+      } else if (hash.includes('catalog')) {
+        setActiveTab('catalog');
+      } else if (hash.includes('revision')) {
+        setActiveTab('revision');
+      }
+    });
   }, []);
 
   const openSettings = () => {
@@ -65,6 +76,18 @@ export const DashboardApp: React.FC = () => {
     } else {
       window.open('options.html');
     }
+  };
+
+  const handleReviewDetected = () => {
+    if (draft) {
+      setImportDraft(draft);
+      setShowManualImport(true);
+    }
+  };
+
+  const handleOpenExplicitManualImport = () => {
+    setImportDraft(null);
+    setShowManualImport(true);
   };
 
   if (loading) {
@@ -111,6 +134,15 @@ export const DashboardApp: React.FC = () => {
             </button>
           )}
 
+          <button
+            className="primary"
+            onClick={() => setShowHistoricalImport(true)}
+            style={{ padding: '6px 14px', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '6px' }}
+          >
+            <span>📥</span>
+            <span>Import Historical Submissions</span>
+          </button>
+
           <button onClick={openSettings} style={{ padding: '6px 12px', fontSize: '13px' }}>
             ⚙️ Settings
           </button>
@@ -140,7 +172,7 @@ export const DashboardApp: React.FC = () => {
             <button
               className="primary"
               style={{ fontSize: '12px', padding: '5px 12px' }}
-              onClick={() => setShowManualImport(true)}
+              onClick={handleReviewDetected}
             >
               Review & Sync Now →
             </button>
@@ -209,7 +241,7 @@ export const DashboardApp: React.FC = () => {
           <ProblemList
             problems={problemArray}
             onOpenProblem={(id) => setSelectedProblemId(id)}
-            onOpenManualImport={() => setShowManualImport(true)}
+            onOpenManualImport={handleOpenExplicitManualImport}
           />
         )}
 
@@ -234,8 +266,22 @@ export const DashboardApp: React.FC = () => {
       {/* Manual Import Modal */}
       {showManualImport && (
         <ManualImportModal
-          onClose={() => setShowManualImport(false)}
+          initialDraft={importDraft}
+          onClose={() => {
+            setShowManualImport(false);
+            setImportDraft(null);
+          }}
           onSuccess={loadAllData}
+        />
+      )}
+
+      {/* Historical Import Wizard Modal */}
+      {showHistoricalImport && (
+        <HistoricalImportWizard
+          settings={settings}
+          syncIndex={syncIndex}
+          onClose={() => setShowHistoricalImport(false)}
+          onImportComplete={loadAllData}
         />
       )}
     </div>

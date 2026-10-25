@@ -93,6 +93,74 @@ export function getNotesFilePath(
   return `${prefix}${dir}/notes.md`;
 }
 
+/**
+ * Generates relative historical solution path for non-canonical/older accepted solutions
+ * Example: problems/0013-roman-to-integer/history/123456789/solution.cpp
+ */
+export function getHistoricalSolutionFilePath(
+  problemId: string | number,
+  slug: string,
+  submissionId: string | number,
+  language: SupportedLanguage,
+  basePrefix: string = 'problems'
+): string {
+  const dir = getProblemDirectory(problemId, slug);
+  const ext = getFileExtension(language);
+  const safeSubId = sanitizeSlug(String(submissionId));
+  const prefix = basePrefix ? `${sanitizeSlug(basePrefix)}/` : '';
+  return `${prefix}${dir}/history/${safeSubId}/solution.${ext}`;
+}
+
+/**
+ * Generates relative historical metadata file path
+ * Example: problems/0013-roman-to-integer/history/123456789/metadata.json
+ */
+export function getHistoricalMetadataFilePath(
+  problemId: string | number,
+  slug: string,
+  submissionId: string | number,
+  basePrefix: string = 'problems'
+): string {
+  const dir = getProblemDirectory(problemId, slug);
+  const safeSubId = sanitizeSlug(String(submissionId));
+  const prefix = basePrefix ? `${sanitizeSlug(basePrefix)}/` : '';
+  return `${prefix}${dir}/history/${safeSubId}/metadata.json`;
+}
+
+/**
+ * Generates relative attempt solution path for unsuccessful attempts (Mode C)
+ * Example: problems/0013-roman-to-integer/attempts/123456789/attempt.cpp
+ */
+export function getAttemptSolutionFilePath(
+  problemId: string | number,
+  slug: string,
+  submissionId: string | number,
+  language: SupportedLanguage,
+  basePrefix: string = 'problems'
+): string {
+  const dir = getProblemDirectory(problemId, slug);
+  const ext = getFileExtension(language);
+  const safeSubId = sanitizeSlug(String(submissionId));
+  const prefix = basePrefix ? `${sanitizeSlug(basePrefix)}/` : '';
+  return `${prefix}${dir}/attempts/${safeSubId}/attempt.${ext}`;
+}
+
+/**
+ * Generates relative attempt metadata path for unsuccessful attempts
+ * Example: problems/0013-roman-to-integer/attempts/123456789/metadata.json
+ */
+export function getAttemptMetadataFilePath(
+  problemId: string | number,
+  slug: string,
+  submissionId: string | number,
+  basePrefix: string = 'problems'
+): string {
+  const dir = getProblemDirectory(problemId, slug);
+  const safeSubId = sanitizeSlug(String(submissionId));
+  const prefix = basePrefix ? `${sanitizeSlug(basePrefix)}/` : '';
+  return `${prefix}${dir}/attempts/${safeSubId}/metadata.json`;
+}
+
 export const SYNC_INDEX_PATH = 'data/sync-index.json';
 export const PROGRESS_SVG_PATH = 'assets/progress.svg';
 export const README_PATH = 'README.md';

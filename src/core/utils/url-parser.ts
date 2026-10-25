@@ -15,8 +15,8 @@ export function parseLeetCodeUrl(rawUrl: string): ParsedProblemUrl {
   }
 
   try {
-    const url = new URL(rawUrl);
-    if (!url.hostname.includes('leetcode.com') && !url.hostname.includes('leetcode.cn')) {
+    const url = new URL(rawUrl, 'https://leetcode.com');
+    if (!url.hostname.includes('leetcode.com') && !url.hostname.includes('leetcode.cn') && !url.hostname.includes('localhost')) {
       return { isValid: false, slug: '', inferredTitle: '' };
     }
 

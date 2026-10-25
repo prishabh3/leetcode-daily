@@ -179,6 +179,13 @@ export const PopupApp: React.FC = () => {
         >
           Manual Solution Import
         </button>
+
+        <button
+          style={{ width: '100%', fontSize: '12px' }}
+          onClick={() => openTab('/historical-import')}
+        >
+          📥 Import Historical Submissions
+        </button>
       </div>
 
       {/* Footer Info */}

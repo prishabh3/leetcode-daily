@@ -66,6 +66,11 @@ export const mockChromeStorageLocal = {
   tabs: {
     query: vi.fn(),
     sendMessage: vi.fn(),
+    create: vi.fn(),
+  },
+  action: {
+    setBadgeText: vi.fn(),
+    setBadgeBackgroundColor: vi.fn(),
   },
 };
 

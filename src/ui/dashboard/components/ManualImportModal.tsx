@@ -8,19 +8,20 @@ import { syncQueueManager } from '../../../core/sync/sync-queue-manager';
 import { GitHubClient } from '../../../core/github/client';
 
 interface Props {
+  initialDraft?: PlatformSubmission | null;
   onClose: () => void;
   onSuccess: () => void;
 }
 
-export const ManualImportModal: React.FC<Props> = ({ onClose, onSuccess }) => {
-  const [code, setCode] = useState('');
-  const [url, setUrl] = useState('');
-  const [title, setTitle] = useState('');
-  const [problemId, setProblemId] = useState('');
-  const [difficulty, setDifficulty] = useState<ProblemDifficulty>('Medium');
-  const [language, setLanguage] = useState<SupportedLanguage>('cpp');
+export const ManualImportModal: React.FC<Props> = ({ initialDraft, onClose, onSuccess }) => {
+  const [code, setCode] = useState(initialDraft?.code || '');
+  const [url, setUrl] = useState(initialDraft?.url || '');
+  const [title, setTitle] = useState(initialDraft?.problemTitle || '');
+  const [problemId, setProblemId] = useState(initialDraft?.problemId || '');
+  const [difficulty, setDifficulty] = useState<ProblemDifficulty>(initialDraft?.difficulty || 'Medium');
+  const [language, setLanguage] = useState<SupportedLanguage>(initialDraft?.language || 'cpp');
   const [approachName, setApproachName] = useState('solution');
-  const [submissionId, setSubmissionId] = useState('');
+  const [submissionId, setSubmissionId] = useState(initialDraft?.submissionId || '');
   const [timeComplexity, setTimeComplexity] = useState('');
   const [spaceComplexity, setSpaceComplexity] = useState('');
   const [confidence, setConfidence] = useState(4);
@@ -130,6 +131,9 @@ export const ManualImportModal: React.FC<Props> = ({ onClose, onSuccess }) => {
         const client = new GitHubClient(settings);
         await syncQueueManager.processQueue(client);
       }
+
+      // Clear draft upon successful manual sync
+      await storage.setActiveDraft(null);
 
       onSuccess();
       onClose();

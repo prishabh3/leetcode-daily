@@ -224,6 +224,52 @@ export const OptionsApp: React.FC = () => {
             </code>
           </div>
 
+          {/* Last Synchronization Status */}
+          {settings.lastSyncInfo && (
+            <div
+              style={{
+                marginTop: '16px',
+                padding: '10px 14px',
+                borderRadius: 'var(--radius-md)',
+                backgroundColor:
+                  settings.lastSyncInfo.status === 'synced'
+                    ? 'rgba(35, 134, 54, 0.1)'
+                    : settings.lastSyncInfo.status === 'duplicate'
+                    ? 'rgba(88, 166, 255, 0.1)'
+                    : 'rgba(218, 54, 51, 0.1)',
+                border: '1px solid',
+                borderColor:
+                  settings.lastSyncInfo.status === 'synced'
+                    ? 'var(--accent-green)'
+                    : settings.lastSyncInfo.status === 'duplicate'
+                    ? 'var(--accent-blue)'
+                    : 'var(--accent-red)',
+                fontSize: '12px',
+              }}
+            >
+              <strong>Last Synchronization:</strong>{' '}
+              {settings.lastSyncInfo.status === 'synced' && (
+                <span style={{ color: 'var(--accent-green)' }}>
+                  ✓ Successfully synced {settings.lastSyncInfo.problemTitle || 'solution'} (commit:{' '}
+                  <code>{settings.lastSyncInfo.commitSha?.slice(0, 7) || 'latest'}</code>) at{' '}
+                  {new Date(settings.lastSyncInfo.timestamp).toLocaleString()}
+                </span>
+              )}
+              {settings.lastSyncInfo.status === 'duplicate' && (
+                <span style={{ color: 'var(--accent-blue)' }}>
+                  ℹ️ Duplicate detected: {settings.lastSyncInfo.problemTitle || 'solution'} was already
+                  up to date at {new Date(settings.lastSyncInfo.timestamp).toLocaleString()}
+                </span>
+              )}
+              {settings.lastSyncInfo.status === 'failed' && (
+                <span style={{ color: 'var(--accent-red)' }}>
+                  ✗ Failed: {settings.lastSyncInfo.error || 'Unknown error'} at{' '}
+                  {new Date(settings.lastSyncInfo.timestamp).toLocaleString()}
+                </span>
+              )}
+            </div>
+          )}
+
           {/* Test Connection Button & Result */}
           <div style={{ marginTop: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
             <button
@@ -341,16 +387,33 @@ export const OptionsApp: React.FC = () => {
             <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
               <input
                 type="checkbox"
-                checked={settings.preferences.autoOpenReview}
+                checked={settings.preferences.autoSyncOnAccepted}
                 onChange={(e) =>
                   setSettings({
                     ...settings,
-                    preferences: { ...settings.preferences, autoOpenReview: e.target.checked },
+                    preferences: { ...settings.preferences, autoSyncOnAccepted: e.target.checked },
                   })
                 }
                 style={{ width: 'auto' }}
               />
-              Auto-open review journal when an accepted submission is detected on LeetCode
+              <span>
+                <strong>Automatic sync on Accepted</strong> (Upload directly to GitHub in the background without prompts)
+              </span>
+            </label>
+
+            <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
+              <input
+                type="checkbox"
+                checked={settings.preferences.reviewBeforeSync}
+                onChange={(e) =>
+                  setSettings({
+                    ...settings,
+                    preferences: { ...settings.preferences, reviewBeforeSync: e.target.checked },
+                  })
+                }
+                style={{ width: 'auto' }}
+              />
+              Review before syncing (Require manual review and confirmation before each commit)
             </label>
           </div>
         </div>
@@ -359,6 +422,29 @@ export const OptionsApp: React.FC = () => {
         <div style={{ display: 'flex', justifyContent: 'flex-start', gap: '12px' }}>
           <button type="submit" className="primary" style={{ padding: '8px 24px', fontSize: '14px' }}>
             Save Settings
+          </button>
+        </div>
+
+        {/* Historical Submissions Import */}
+        <div className="card" style={{ marginTop: '20px', borderColor: 'var(--accent-blue)', backgroundColor: 'rgba(88, 166, 255, 0.05)' }}>
+          <h3 style={{ fontSize: '15px', fontWeight: 600, marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            📥 Import Historical LeetCode Submissions
+          </h3>
+          <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '14px' }}>
+            Backfill your previous solutions and attempts from your LeetCode account into your GitHub repository with atomic batch commits.
+          </p>
+          <button
+            type="button"
+            className="primary"
+            onClick={() => {
+              const url = typeof chrome !== 'undefined' && chrome.runtime?.getURL
+                ? chrome.runtime.getURL('dashboard.html#/historical-import')
+                : 'dashboard.html#/historical-import';
+              window.open(url, '_blank');
+            }}
+            style={{ padding: '7px 18px', fontSize: '13px' }}
+          >
+            Launch Historical Import Wizard →
           </button>
         </div>
 

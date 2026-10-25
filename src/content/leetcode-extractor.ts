@@ -2,8 +2,29 @@ import { PlatformSubmission, ProblemDifficulty, SupportedLanguage } from '../cor
 import { parseLeetCodeUrl } from '../core/utils/url-parser';
 import { normalizeLanguage } from '../core/utils/languages';
 
+export type SubmissionVerdict =
+  | 'PENDING'
+  | 'ACCEPTED'
+  | 'WRONG_ANSWER'
+  | 'TIME_LIMIT_EXCEEDED'
+  | 'MEMORY_LIMIT_EXCEEDED'
+  | 'RUNTIME_ERROR'
+  | 'COMPILE_ERROR'
+  | 'OUTPUT_LIMIT_EXCEEDED'
+  | 'UNKNOWN';
+
+export interface VerdictDetails {
+  verdict: SubmissionVerdict;
+  rawText: string;
+  isTerminal: boolean; // true if a final verdict has been reached
+  isAccepted: boolean;
+  runtime?: string;
+  memory?: string;
+  submissionId?: string;
+}
+
 /**
- * Extracts submission details from the LeetCode DOM
+ * Extracts page and problem metadata from the LeetCode DOM
  */
 export function extractLeetCodePageData(): Partial<PlatformSubmission> {
   const currentUrl = window.location.href;
@@ -15,13 +36,13 @@ export function extractLeetCodePageData(): Partial<PlatformSubmission> {
   let difficulty: ProblemDifficulty = 'Unknown';
 
   // 1. Extract Title & ID from DOM
-  // Modern LeetCode often has: "1. Two Sum" inside an element or breadcrumb
   const titleSelectors = [
     'div[data-cy="question-title"]',
     'a[href*="/problems/"]',
     'span.text-title-large',
     '.text-title-large',
     'h4[data-cy="question-title"]',
+    '[data-track-load="description_content"] h4',
   ];
 
   for (const sel of titleSelectors) {
@@ -33,7 +54,7 @@ export function extractLeetCodePageData(): Partial<PlatformSubmission> {
         problemId = match[1];
         title = match[2].trim();
         break;
-      } else if (text.length > 2 && text.length < 80) {
+      } else if (text.length > 2 && text.length < 90 && !text.includes('\n')) {
         title = text;
       }
     }
@@ -44,11 +65,9 @@ export function extractLeetCodePageData(): Partial<PlatformSubmission> {
   const medEl = document.querySelector('.text-yellow, .text-difficulty-medium, [data-degree="medium"]');
   const hardEl = document.querySelector('.text-pink, .text-difficulty-hard, [data-degree="hard"]');
 
-  if (easyEl || document.body.innerText.includes('Easy')) {
-    if (document.querySelector('.text-olive, [data-degree="easy"]')) difficulty = 'Easy';
-  }
-  if (medEl || document.querySelector('.text-yellow, [data-degree="medium"]')) difficulty = 'Medium';
-  if (hardEl || document.querySelector('.text-pink, [data-degree="hard"]')) difficulty = 'Hard';
+  if (easyEl || document.querySelector('.text-olive, [data-degree="easy"]')) difficulty = 'Easy';
+  else if (medEl || document.querySelector('.text-yellow, [data-degree="medium"]')) difficulty = 'Medium';
+  else if (hardEl || document.querySelector('.text-pink, [data-degree="hard"]')) difficulty = 'Hard';
 
   // 3. Extract Programming Language
   let language: SupportedLanguage = 'cpp';
@@ -57,6 +76,7 @@ export function extractLeetCodePageData(): Partial<PlatformSubmission> {
     'div[data-cy="lang-select"]',
     'button[data-state]',
     '.ant-select-selection-item',
+    '[data-e2e-locator="console-lang-select"]',
   ];
 
   for (const sel of langSelectors) {
@@ -70,15 +90,8 @@ export function extractLeetCodePageData(): Partial<PlatformSubmission> {
     }
   }
 
-  // 4. Extract Code from Monaco Editor
-  let code = '';
-  // Try monaco models via DOM or window
-  const monacoLines = document.querySelectorAll('.monaco-editor .view-lines .view-line');
-  if (monacoLines && monacoLines.length > 0) {
-    const lines: string[] = [];
-    monacoLines.forEach((l) => lines.push(l.textContent || ''));
-    code = lines.join('\n');
-  }
+  // 4. Extract Code from editor
+  const code = extractCodeFromDom();
 
   return {
     problemId,
@@ -92,45 +105,120 @@ export function extractLeetCodePageData(): Partial<PlatformSubmission> {
 }
 
 /**
- * Checks if the current view shows an Accepted submission result
+ * Extracts source code from visible Monaco editor or submission view
  */
-export function checkSubmissionAccepted(): {
-  isAccepted: boolean;
-  runtime?: string;
-  memory?: string;
-  submissionId?: string;
-} {
-  // Look for elements with "Accepted"
-  const acceptedSelectors = [
+export function extractCodeFromDom(): string {
+  // Check submission detail code element first
+  const submissionCodeEl = document.querySelector(
+    '.submission-code pre, [data-e2e-locator="submission-code"] pre, pre code'
+  );
+  if (submissionCodeEl && submissionCodeEl.textContent && submissionCodeEl.textContent.trim().length > 5) {
+    return submissionCodeEl.textContent.trim();
+  }
+
+  // Extract from Monaco editor view lines
+  const monacoLines = document.querySelectorAll('.monaco-editor .view-lines .view-line');
+  if (monacoLines && monacoLines.length > 0) {
+    const lines: string[] = [];
+    monacoLines.forEach((l) => lines.push(l.textContent || ''));
+    const full = lines.join('\n').trim();
+    if (full.length > 0) return full;
+  }
+
+  // Fallback to Monaco input textarea if present
+  const textarea = document.querySelector<HTMLTextAreaElement>('.monaco-editor textarea.inputarea');
+  if (textarea && textarea.value && textarea.value.trim().length > 5) {
+    return textarea.value.trim();
+  }
+
+  return '';
+}
+
+/**
+ * Robustly inspects the page to detect the definitive verdict of a submission
+ */
+export function detectSubmissionVerdict(): VerdictDetails {
+  const resultSelectors = [
     'span[data-e2e-locator="submission-result"]',
     'div[data-e2e-locator="submission-result"]',
+    '[data-e2e-locator="submission-result"]',
     'span.text-green-s',
     'div.text-green-s',
+    'span.text-red-s',
+    'div.text-red-s',
   ];
 
+  let foundText = '';
+  for (const sel of resultSelectors) {
+    const el = document.querySelector(sel);
+    if (el && el.textContent) {
+      const t = el.textContent.trim();
+      if (t) {
+        foundText = t;
+        break;
+      }
+    }
+  }
+
+  // Fallback: search visible badges/headings for known verdict text
+  if (!foundText) {
+    const candidates = Array.from(document.querySelectorAll('span, div, h3, h4'));
+    for (const c of candidates) {
+      const txt = c.textContent?.trim() || '';
+      if (
+        txt === 'Accepted' ||
+        txt === 'Wrong Answer' ||
+        txt === 'Time Limit Exceeded' ||
+        txt === 'Memory Limit Exceeded' ||
+        txt === 'Runtime Error' ||
+        txt === 'Compile Error' ||
+        txt === 'Compilation Error' ||
+        txt === 'Pending' ||
+        txt === 'Judging'
+      ) {
+        foundText = txt;
+        break;
+      }
+    }
+  }
+
+  const clean = foundText.toLowerCase();
+
+  let verdict: SubmissionVerdict = 'UNKNOWN';
+  let isTerminal = false;
   let isAccepted = false;
+
+  if (clean.includes('pending') || clean.includes('judging')) {
+    verdict = 'PENDING';
+    isTerminal = false;
+  } else if (clean.includes('accepted')) {
+    verdict = 'ACCEPTED';
+    isTerminal = true;
+    isAccepted = true;
+  } else if (clean.includes('wrong answer')) {
+    verdict = 'WRONG_ANSWER';
+    isTerminal = true;
+  } else if (clean.includes('time limit exceeded')) {
+    verdict = 'TIME_LIMIT_EXCEEDED';
+    isTerminal = true;
+  } else if (clean.includes('memory limit exceeded')) {
+    verdict = 'MEMORY_LIMIT_EXCEEDED';
+    isTerminal = true;
+  } else if (clean.includes('runtime error')) {
+    verdict = 'RUNTIME_ERROR';
+    isTerminal = true;
+  } else if (clean.includes('compile error') || clean.includes('compilation error')) {
+    verdict = 'COMPILE_ERROR';
+    isTerminal = true;
+  } else if (clean.includes('output limit exceeded')) {
+    verdict = 'OUTPUT_LIMIT_EXCEEDED';
+    isTerminal = true;
+  }
+
+  // Extract runtime & memory
   let runtime: string | undefined;
   let memory: string | undefined;
-  let submissionId: string | undefined;
 
-  for (const sel of acceptedSelectors) {
-    const el = document.querySelector(sel);
-    if (el && el.textContent?.trim().toLowerCase() === 'accepted') {
-      isAccepted = true;
-      break;
-    }
-  }
-
-  // Check generic elements if data attributes changed
-  if (!isAccepted) {
-    const spans = Array.from(document.querySelectorAll('span, div'));
-    const acceptedSpan = spans.find((s) => s.textContent?.trim() === 'Accepted');
-    if (acceptedSpan) {
-      isAccepted = true;
-    }
-  }
-
-  // Extract runtime & memory if visible
   const runtimeEl = document.querySelector('[data-e2e-locator="submission-runtime"]');
   if (runtimeEl && runtimeEl.textContent) {
     runtime = runtimeEl.textContent.trim();
@@ -141,11 +229,45 @@ export function checkSubmissionAccepted(): {
     memory = memoryEl.textContent.trim();
   }
 
-  // Check URL for submission ID
+  // Extract submission ID from URL or DOM links
+  let submissionId: string | undefined;
   const urlParsed = parseLeetCodeUrl(window.location.href);
   if (urlParsed.submissionId) {
     submissionId = urlParsed.submissionId;
+  } else {
+    // Check links pointing to /submissions/detail/{id} or /submissions/{id}
+    const subLink = document.querySelector<HTMLAnchorElement>('a[href*="/submissions/"]');
+    if (subLink && subLink.href) {
+      const match = subLink.href.match(/\/submissions\/(?:detail\/)?(\d+)/);
+      if (match) submissionId = match[1];
+    }
   }
 
-  return { isAccepted, runtime, memory, submissionId };
+  return {
+    verdict,
+    rawText: foundText,
+    isTerminal,
+    isAccepted,
+    runtime,
+    memory,
+    submissionId,
+  };
+}
+
+/**
+ * Legacy compatibility wrapper
+ */
+export function checkSubmissionAccepted(): {
+  isAccepted: boolean;
+  runtime?: string;
+  memory?: string;
+  submissionId?: string;
+} {
+  const v = detectSubmissionVerdict();
+  return {
+    isAccepted: v.isAccepted,
+    runtime: v.runtime,
+    memory: v.memory,
+    submissionId: v.submissionId,
+  };
 }

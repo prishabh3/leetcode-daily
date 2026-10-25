@@ -123,6 +123,17 @@ flowchart TD
 - Uses deterministic sentinel markers `<!-- lc-sync:start -->` and `<!-- lc-sync:end -->`.
 - Preserves all manual notes, personal roadmaps, and custom sections written before or after the markers.
 
+### 2.6 Historical Submission Import & Batch Backfill Engine
+- Located in `src/core/leetcode/historical-adapter.ts` and `src/core/sync/historical-importer.ts`.
+- **Authenticated Adapter**: Uses the active LeetCode browser session to query paginated submissions via GraphQL `submissionList` with fallback to REST `api/submissions/`.
+- **Three Import Modes**:
+  1. **Mode A (All Accepted)**: Backfills every accepted historical submission. The most recent accepted submission sits at the canonical path `problems/{id}-{slug}/{lang}/solution.{ext}`, while older accepted attempts or alternative solutions are preserved under `problems/{id}-{slug}/history/{submission-id}/solution.{ext}` with isolated metadata.
+  2. **Mode B (Latest Accepted)**: Imports only the latest accepted version per problem-language combination for a compact repository.
+  3. **Mode C (All Attempts)**: Optional opt-in to import unsuccessful attempts (Wrong Answer, Time Limit Exceeded, Runtime Error). Unsuccessful code is stored separately under `problems/{id}-{slug}/attempts/{submission-id}/attempt.{ext}` and never overwrites canonical solutions.
+- **Bounded Batch Commits**: File updates are grouped into bounded batches (5-10 submissions) committed atomically via the GitHub Git Database API, preventing commit spam or gigantic single payloads.
+- **Resumability & Checkpointing**: Persists state in `chrome.storage.local` after each batch, enabling seamless resume after browser or network interruptions.
+- **Data Integrity**: Preserves original LeetCode submission timestamps in metadata, while Git commit dates honestly reflect when LC-Sync imported the files.
+
 ---
 
 ## 3. Data Storage & Schema Evolution

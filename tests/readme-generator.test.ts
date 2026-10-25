@@ -84,4 +84,37 @@ ${LC_SYNC_END_MARKER}${customFooter}`;
     expect(updatedReadme).not.toContain('old auto generated content');
     expect(updatedReadme).toContain('Two Sum');
   });
+
+  it('generates deterministic output for identical input records', () => {
+    const run1 = generateReadme(null, mockIndex, { repoName: 'leetcode-daily' });
+    const run2 = generateReadme(null, mockIndex, { repoName: 'leetcode-daily' });
+    expect(run1).toBe(run2);
+  });
+
+  it('keeps software README and solutions README strictly separate', () => {
+    const solutionsReadme = generateReadme(null, mockIndex, { repoName: 'my-solutions' });
+    expect(solutionsReadme).toContain('# my-solutions');
+    expect(solutionsReadme).toContain('Problem Directory');
+    // Solutions README does not include internal extension source tree
+    expect(solutionsReadme).not.toContain('src/background');
+    expect(solutionsReadme).not.toContain('npm run build');
+  });
+
+  it('preserves Unicode arrows, emojis, and em-dashes across upload preparation', () => {
+    const originalWithUnicode = `# My Solutions — Road to Senior Engineer 🚀
+• Dynamic Programming → Hard
+• Graph Algorithms → Medium
+🟢 Easy | 🟡 Medium | 🔴 Hard
+
+${LC_SYNC_START_MARKER}
+old
+${LC_SYNC_END_MARKER}
+`;
+    const readme = generateReadme(originalWithUnicode, mockIndex, { repoName: 'my-solutions' });
+    expect(readme).toContain('Road to Senior Engineer 🚀');
+    expect(readme).toContain('• Dynamic Programming → Hard');
+    expect(readme).not.toContain('â');
+    expect(readme).not.toContain('ðŸ');
+    expect(readme).not.toContain('\uFFFD');
+  });
 });
