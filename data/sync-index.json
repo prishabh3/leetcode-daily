@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T06:16:25.425Z",
-  "totalProblems": 1,
-  "totalSubmissions": 1,
+  "lastUpdated": "2026-10-25T07:10:40.482Z",
+  "totalProblems": 2,
+  "totalSubmissions": 2,
   "submissions": {
     "2181143273": {
       "problemId": "0013",
@@ -15,6 +15,17 @@
       "contentHash": "2f8dba4983fb812bc8b5d485b5093dbca3cbfd3a757b702d3da111e38b549d40",
       "syncedAt": "2026-10-25T06:16:25.425Z",
       "filePath": "problems/0013-roman-to-integer/cpp/solution.cpp"
+    },
+    "rank-scores-a592f06bef0a": {
+      "problemId": "0178",
+      "slug": "rank-scores",
+      "title": "Rank Scores",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "contentHash": "a592f06bef0a64be855452b0340d13c771c3156fe108bd36364afa027dd8e47b",
+      "syncedAt": "2026-10-25T07:10:40.482Z",
+      "filePath": "problems/0178-rank-scores/cpp/solution.cpp"
     }
   },
   "problems": {
@@ -28,6 +39,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T06:16:25.425Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-27",
+      "tags": [],
+      "patterns": []
+    },
+    "0178": {
+      "id": "0178",
+      "title": "Rank Scores",
+      "slug": "rank-scores",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T07:10:40.482Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-27",
       "tags": [],

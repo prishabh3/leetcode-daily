@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "0178",
+  "title": "Rank Scores",
+  "slug": "rank-scores",
+  "url": "https://leetcode.com/problems/rank-scores/",
+  "difficulty": "Medium",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T07:10:40.790Z",
+  "lastSyncedAt": "2026-10-25T07:10:40.482Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0178-rank-scores/cpp/solution.cpp",
+      "contentHash": "a592f06bef0a64be855452b0340d13c771c3156fe108bd36364afa027dd8e47b",
+      "syncedAt": "2026-10-25T07:10:40.482Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-10-25",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}
