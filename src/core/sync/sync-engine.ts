@@ -271,7 +271,7 @@ export async function executeSyncItem(
   const fileChanges: FileChange[] = [
     {
       path: solutionRelPath,
-      content: submission.code,
+      content: submission.code ?? '',
     },
     {
       path: metadataRelPath,

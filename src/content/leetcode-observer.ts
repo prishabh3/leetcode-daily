@@ -45,6 +45,7 @@ export class LeetCodeObserver {
   private hasAttachedClickListener: boolean = false;
   private activeSubmission: PlatformSubmission | null = null;
   private activeTimers: any[] = [];
+  private syncTimeoutTimer: any = null;
 
   private popstateHandler: (() => void) | null = null;
   private clickHandler: ((e: MouseEvent) => void) | null = null;
@@ -81,6 +82,10 @@ export class LeetCodeObserver {
       clearTimeout(t);
     }
     this.activeTimers = [];
+    if (this.syncTimeoutTimer) {
+      clearTimeout(this.syncTimeoutTimer);
+      this.syncTimeoutTimer = null;
+    }
   }
 
   private safeTimeout(fn: () => void, ms: number): any {
@@ -181,6 +186,11 @@ export class LeetCodeObserver {
       if (onlyBadge) return;
 
       this.checkUrlChange();
+
+      // If currently syncing or synced, ignore DOM mutations
+      if (this.state === 'SYNCING' || this.state === 'SYNCED') {
+        return;
+      }
 
       // Only check verdicts if we are waiting for a verdict
       // OR on a direct submission URL
@@ -283,6 +293,49 @@ export class LeetCodeObserver {
           text: `Syncing ${submission.problemTitle}...`,
         });
 
+        // Clear any previous timeout
+        if (this.syncTimeoutTimer) {
+          clearTimeout(this.syncTimeoutTimer);
+        }
+
+        // Set defensive timeout (25 seconds) to prevent frozen "Syncing..." UI
+        this.syncTimeoutTimer = setTimeout(async () => {
+          if (this.state === 'SYNCING') {
+            console.warn('[LC-Sync] Sync operation timed out waiting for feedback.');
+
+            let resolvedFromStorage = false;
+            try {
+              if (typeof chrome !== 'undefined' && chrome.storage?.local) {
+                const data = await chrome.storage.local.get(['lc_sync_last_sync']);
+                const last = data?.lc_sync_last_sync;
+                if (last && last.problemTitle === submission.problemTitle) {
+                  if (last.status === 'synced' || last.status === 'duplicate') {
+                    resolvedFromStorage = true;
+                    this.handleSyncFeedback({
+                      success: true,
+                      status: 'SYNCED',
+                      isDuplicate: last.status === 'duplicate',
+                      commitSha: last.commitSha,
+                      problemTitle: submission.problemTitle,
+                    });
+                  }
+                }
+              }
+            } catch {
+              // fallback
+            }
+
+            if (!resolvedFromStorage && this.state === 'SYNCING') {
+              this.handleSyncFeedback({
+                success: false,
+                status: 'FAILED',
+                error: 'Sync timed out. Click Retry or check settings.',
+                actionRequired: 'RETRY',
+              });
+            }
+          }
+        }, 25000);
+
         // Trigger automatic sync via callback
         if (this.onAcceptedCallback) {
           this.onAcceptedCallback(submission, (feedback) => {
@@ -299,6 +352,11 @@ export class LeetCodeObserver {
   }
 
   public handleSyncFeedback(feedback: SyncFeedback): void {
+    if (this.syncTimeoutTimer) {
+      clearTimeout(this.syncTimeoutTimer);
+      this.syncTimeoutTimer = null;
+    }
+
     if (feedback.status === 'SYNCED') {
       this.state = 'SYNCED';
       if (feedback.isDuplicate) {
@@ -354,11 +412,26 @@ export class LeetCodeObserver {
 
   private retryActiveSubmission(): void {
     if (!this.activeSubmission) return;
+    this.lastProcessedKey = '';
     this.state = 'SYNCING';
     this.updateBadge({
       type: 'syncing',
       text: `Retrying ${this.activeSubmission.problemTitle}...`,
     });
+
+    if (this.syncTimeoutTimer) {
+      clearTimeout(this.syncTimeoutTimer);
+    }
+    this.syncTimeoutTimer = setTimeout(() => {
+      if (this.state === 'SYNCING') {
+        this.handleSyncFeedback({
+          success: false,
+          status: 'FAILED',
+          error: 'Sync retry timed out. Click Retry again or check dashboard.',
+          actionRequired: 'RETRY',
+        });
+      }
+    }, 25000);
 
     if (this.onAcceptedCallback) {
       this.onAcceptedCallback(this.activeSubmission, (feedback) => {

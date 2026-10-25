@@ -83,9 +83,21 @@ export function extractLeetCodePageData(): Partial<PlatformSubmission> {
     const el = document.querySelector(sel);
     if (el && el.textContent) {
       const normalized = normalizeLanguage(el.textContent);
-      if (normalized) {
+      if (normalized && normalized !== 'unknown') {
         language = normalized;
         break;
+      }
+    }
+  }
+
+  // Also inspect Monaco editor's data-mode-id attribute if available
+  const monacoModeEl = document.querySelector('.monaco-editor[data-mode-id], [data-mode-id]');
+  if (monacoModeEl) {
+    const mode = monacoModeEl.getAttribute('data-mode-id');
+    if (mode) {
+      const normalizedMode = normalizeLanguage(mode);
+      if (normalizedMode && normalizedMode !== 'unknown') {
+        language = normalizedMode;
       }
     }
   }
@@ -108,15 +120,7 @@ export function extractLeetCodePageData(): Partial<PlatformSubmission> {
  * Extracts source code from visible Monaco editor or submission view
  */
 export function extractCodeFromDom(): string {
-  // Check submission detail code element first
-  const submissionCodeEl = document.querySelector(
-    '.submission-code pre, [data-e2e-locator="submission-code"] pre, pre code'
-  );
-  if (submissionCodeEl && submissionCodeEl.textContent && submissionCodeEl.textContent.trim().length > 5) {
-    return submissionCodeEl.textContent.trim();
-  }
-
-  // Extract from Monaco editor view lines
+  // 1. Check Monaco editor view lines first if present on problem solving page
   const monacoLines = document.querySelectorAll('.monaco-editor .view-lines .view-line');
   if (monacoLines && monacoLines.length > 0) {
     const lines: string[] = [];
@@ -125,10 +129,26 @@ export function extractCodeFromDom(): string {
     if (full.length > 0) return full;
   }
 
-  // Fallback to Monaco input textarea if present
+  // 2. Fallback to Monaco input textarea if present
   const textarea = document.querySelector<HTMLTextAreaElement>('.monaco-editor textarea.inputarea');
   if (textarea && textarea.value && textarea.value.trim().length > 5) {
     return textarea.value.trim();
+  }
+
+  // 3. Check submission detail code container (strictly scoped, no generic 'pre code' which matches problem descriptions)
+  const submissionDetailSelectors = [
+    '.submission-code pre',
+    '[data-e2e-locator="submission-code"] pre',
+    '[data-cy="submission-code"] pre',
+    '.submission-detail pre code',
+    '#submission-code pre',
+  ];
+
+  for (const sel of submissionDetailSelectors) {
+    const el = document.querySelector(sel);
+    if (el && el.textContent && el.textContent.trim().length > 5) {
+      return el.textContent.trim();
+    }
   }
 
   return '';

@@ -8,6 +8,7 @@ import { checkSubmissionDuplicate } from './deduplication';
 
 export class SyncQueueManager {
   private isProcessing = false;
+  private activeProcessingPromise: Promise<void> | null = null;
 
   /**
    * Enqueues a new submission for synchronization
@@ -65,9 +66,29 @@ export class SyncQueueManager {
   }
 
   /**
-   * Processes all pending items in the queue
+   * Processes all pending items in the queue, optionally prioritizing a specific item
    */
-  async processQueue(client?: GitHubClient): Promise<void> {
+  async processQueue(client?: GitHubClient, priorityItemId?: string): Promise<void> {
+    if (this.isProcessing) {
+      if (this.activeProcessingPromise) {
+        try {
+          await this.activeProcessingPromise;
+        } catch {
+          // ignore previous run errors to allow next processing
+        }
+      }
+    }
+
+    const runPromise = this._executeQueue(client, priorityItemId);
+    this.activeProcessingPromise = runPromise;
+    try {
+      await runPromise;
+    } finally {
+      this.activeProcessingPromise = null;
+    }
+  }
+
+  private async _executeQueue(client?: GitHubClient, priorityItemId?: string): Promise<void> {
     if (this.isProcessing) return;
     this.isProcessing = true;
 
@@ -80,6 +101,16 @@ export class SyncQueueManager {
       }
 
       const queue = await storage.getSyncQueue();
+
+      // If a priority item was requested, place it at the front if pending
+      if (priorityItemId) {
+        const priorityIndex = queue.findIndex((q) => q.id === priorityItemId);
+        if (priorityIndex > 0) {
+          const [pItem] = queue.splice(priorityIndex, 1);
+          queue.unshift(pItem);
+          await storage.saveSyncQueue(queue);
+        }
+      }
 
       for (let i = 0; i < queue.length; i++) {
         const item = queue[i];
@@ -94,7 +125,18 @@ export class SyncQueueManager {
         await storage.saveSyncQueue(queue);
 
         try {
-          const result = await executeSyncItem(item, activeClient);
+          // Execute with defensive 30s timeout per item
+          let timeoutTimer: any;
+          const syncPromise = executeSyncItem(item, activeClient);
+          const timeoutPromise = new Promise<never>((_, reject) => {
+            timeoutTimer = setTimeout(() => {
+              reject(new Error('Sync operation timed out after 30 seconds'));
+            }, 30000);
+          });
+
+          const result = await Promise.race([syncPromise, timeoutPromise]).finally(() => {
+            clearTimeout(timeoutTimer);
+          });
 
           if (result.success) {
             item.status = 'Synced';

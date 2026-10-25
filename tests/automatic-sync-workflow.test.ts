@@ -446,4 +446,109 @@ describe('Automatic LeetCode-to-GitHub Sync Workflow & Regression Suite', () => 
 
     observer.stop();
   });
+
+  // 15. Extracts code from Monaco editor on SQL problems rather than problem description tables
+  it('15. Extracts code from Monaco editor on SQL problems rather than problem description tables', () => {
+    document.body.innerHTML = `
+      <div data-cy="question-title">196. Delete Duplicate Emails</div>
+      <div class="text-olive">Easy</div>
+      <div data-cy="lang-select">MySQL</div>
+      <div class="description_content">
+        <pre><code>+----+------------------+
+| id | email            |
++----+------------------+
+| 1  | john@example.com |
++----+------------------+</code></pre>
+      </div>
+      <div class="monaco-editor" data-mode-id="sql">
+        <div class="view-lines">
+          <div class="view-line">DELETE p1 FROM Person p1, Person p2 WHERE p1.email = p2.email AND p1.id > p2.id;</div>
+        </div>
+      </div>
+    `;
+
+    const pageData = extractLeetCodePageData();
+    expect(pageData.problemTitle).toBe('Delete Duplicate Emails');
+    expect(pageData.problemId).toBe('196');
+    expect(pageData.language).toBe('sql');
+    expect(pageData.code).toContain('DELETE p1 FROM Person p1');
+    expect(pageData.code).not.toContain('+----+------------------+');
+  });
+
+  // 16. Observer transitions from SYNCING to failure with retry on timeout
+  it('16. Observer transitions from SYNCING to failure with retry on timeout', async () => {
+    vi.useFakeTimers();
+
+    document.body.innerHTML = `
+      <div data-cy="question-title">196. Delete Duplicate Emails</div>
+      <div class="monaco-editor">
+        <div class="view-lines"><div class="view-line">DELETE FROM Person;</div></div>
+      </div>
+      <button data-e2e-locator="console-submit-button">Submit</button>
+      <div data-e2e-locator="submission-result" class="text-green-s">Accepted</div>
+    `;
+
+    // onAccepted never invokes callback to simulate network stall
+    const onAccepted = vi.fn((_sub: PlatformSubmission, _onFb) => {});
+
+    const observer = new LeetCodeObserver(onAccepted);
+    observer.start();
+
+    document.querySelector('button')!.click();
+    document.body.appendChild(document.createElement('div'));
+
+    // Advance to trigger observer mutation check
+    await vi.advanceTimersByTimeAsync(50);
+
+    const badge = document.getElementById('lc-sync-floating-badge');
+    expect(badge?.textContent).toContain('Syncing Delete Duplicate Emails...');
+
+    // Advance past 25s timeout
+    await vi.advanceTimersByTimeAsync(26000);
+
+    expect(badge?.textContent).toContain('Sync timed out');
+    expect(badge?.textContent).toContain('Retry');
+
+    observer.stop();
+    vi.useRealTimers();
+  });
+
+  // 17. Observer ignores DOM mutations while in SYNCING state
+  it('17. Observer ignores DOM mutations while in SYNCING state', async () => {
+    document.body.innerHTML = `
+      <div data-cy="question-title">196. Delete Duplicate Emails</div>
+      <div class="monaco-editor">
+        <div class="view-lines"><div class="view-line">DELETE FROM Person;</div></div>
+      </div>
+      <button data-e2e-locator="console-submit-button">Submit</button>
+      <div data-e2e-locator="submission-result" class="text-green-s">Accepted</div>
+    `;
+
+    let callCount = 0;
+    const onAccepted = vi.fn((_sub: PlatformSubmission, _onFb) => {
+      callCount++;
+    });
+
+    const observer = new LeetCodeObserver(onAccepted);
+    observer.start();
+
+    document.querySelector('button')!.click();
+    document.body.appendChild(document.createElement('div'));
+    await new Promise((r) => setTimeout(r, 50));
+
+    expect(callCount).toBe(1);
+
+    // Fire more DOM changes while state is SYNCING
+    for (let i = 0; i < 5; i++) {
+      const el = document.createElement('div');
+      el.textContent = `extra-${i}`;
+      document.body.appendChild(el);
+    }
+    await new Promise((r) => setTimeout(r, 50));
+
+    // Must still be 1 call!
+    expect(callCount).toBe(1);
+
+    observer.stop();
+  });
 });

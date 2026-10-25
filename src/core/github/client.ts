@@ -25,7 +25,10 @@ export class GitHubClient {
     this.settings = settings;
   }
 
-  private async request<T = any>(endpoint: string, options: RequestInit = {}): Promise<T> {
+  private async request<T = any>(
+    endpoint: string,
+    options: RequestInit & { timeoutMs?: number } = {}
+  ): Promise<T> {
     const token = this.settings.token?.trim();
     if (!token) {
       throw new GitHubError('GitHub access token is missing or empty. Please configure in settings.', 401);
@@ -40,18 +43,28 @@ export class GitHubClient {
     headers.set('Cache-Control', 'no-cache, no-store, max-age=0, must-revalidate');
     headers.set('Pragma', 'no-cache');
 
+    const timeoutMs = options.timeoutMs ?? 20000;
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
     let response: Response;
     try {
       response = await fetch(url, {
         cache: 'no-store',
         ...options,
+        signal: controller.signal,
         headers,
       });
     } catch (err: any) {
+      if (err?.name === 'AbortError') {
+        throw new GitHubError(`GitHub API request timed out after ${timeoutMs / 1000}s (${endpoint})`, 408);
+      }
       throw new GitHubError(
         `Network error connecting to GitHub: ${sanitizeErrorSecret(err?.message || 'Check network')}`,
         0
       );
+    } finally {
+      clearTimeout(timeoutId);
     }
 
     if (!response.ok) {

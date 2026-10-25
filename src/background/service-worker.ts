@@ -49,9 +49,18 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
               confidence: settings.preferences.defaultConfidence ?? 3,
             });
 
-            // Process sync immediately
+            // Process sync immediately prioritizing this submission
             const client = new GitHubClient(settings.github);
-            await syncQueueManager.processQueue(client);
+            try {
+              let timeoutTimer: any;
+              const queuePromise = syncQueueManager.processQueue(client, queueItem.id);
+              const timeoutPromise = new Promise<void>((_, reject) => {
+                timeoutTimer = setTimeout(() => reject(new Error('Sync operation timed out after 25s')), 25000);
+              });
+              await Promise.race([queuePromise, timeoutPromise]).finally(() => clearTimeout(timeoutTimer));
+            } catch (queueErr) {
+              console.warn('[LC-Sync] Background processQueue error:', queueErr);
+            }
 
             // Fetch processed queue item
             const queue = await storage.getSyncQueue();
@@ -191,6 +200,17 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
     }
   };
 
-  handleAsync().then(sendResponse);
+  handleAsync()
+    .then((res) => {
+      sendResponse(res);
+    })
+    .catch((err: any) => {
+      console.error('[LC-Sync Worker Uncaught Error]', err);
+      sendResponse({
+        success: false,
+        status: 'FAILED',
+        error: err?.message || 'Unexpected background worker error',
+      });
+    });
   return true; // Keep message channel open for async response
 });

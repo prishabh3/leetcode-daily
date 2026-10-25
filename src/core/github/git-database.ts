@@ -25,9 +25,24 @@ export interface AtomicCommitOptions {
 class BranchWriteLock {
   private queue = new Map<string, Promise<any>>();
 
-  async acquire<T>(key: string, task: () => Promise<T>): Promise<T> {
+  async acquire<T>(key: string, task: () => Promise<T>, timeoutMs: number = 45000): Promise<T> {
     const previous = this.queue.get(key) || Promise.resolve();
-    const chain = previous.then(() => task(), () => task());
+
+    let timeoutTimer: any;
+    const taskWithTimeout = async (): Promise<T> => {
+      return Promise.race([
+        task(),
+        new Promise<T>((_, reject) => {
+          timeoutTimer = setTimeout(() => {
+            reject(new GitHubError(`Lock timeout after ${timeoutMs / 1000}s waiting for branch write lock (${key})`, 408));
+          }, timeoutMs);
+        }),
+      ]).finally(() => {
+        clearTimeout(timeoutTimer);
+      });
+    };
+
+    const chain = previous.then(() => taskWithTimeout(), () => taskWithTimeout());
     this.queue.set(key, chain);
 
     try {
