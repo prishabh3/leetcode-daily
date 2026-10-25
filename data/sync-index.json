@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "lastUpdated": "2026-10-25T06:16:25.425Z",
+  "totalProblems": 1,
+  "totalSubmissions": 1,
+  "submissions": {
+    "2181143273": {
+      "problemId": "0013",
+      "slug": "roman-to-integer",
+      "title": "Roman to Integer",
+      "difficulty": "Easy",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2181143273",
+      "contentHash": "2f8dba4983fb812bc8b5d485b5093dbca3cbfd3a757b702d3da111e38b549d40",
+      "syncedAt": "2026-10-25T06:16:25.425Z",
+      "filePath": "problems/0013-roman-to-integer/cpp/solution.cpp"
+    }
+  },
+  "problems": {
+    "0013": {
+      "id": "0013",
+      "title": "Roman to Integer",
+      "slug": "roman-to-integer",
+      "difficulty": "Easy",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T06:16:25.425Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-27",
+      "tags": [],
+      "patterns": []
+    }
+  }
+}

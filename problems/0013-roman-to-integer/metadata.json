@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "id": "0013",
+  "title": "Roman to Integer",
+  "slug": "roman-to-integer",
+  "url": "https://leetcode.com/problems/roman-to-integer/submissions/2181143273/",
+  "difficulty": "Easy",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T06:16:25.715Z",
+  "lastSyncedAt": "2026-10-25T06:16:25.425Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0013-roman-to-integer/cpp/solution.cpp",
+      "submissionId": "2181143273",
+      "contentHash": "2f8dba4983fb812bc8b5d485b5093dbca3cbfd3a757b702d3da111e38b549d40",
+      "syncedAt": "2026-10-25T06:16:25.425Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-10-25",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}
