@@ -78,6 +78,53 @@ export const PopupApp: React.FC = () => {
         </button>
       </div>
 
+      {/* LeetCode Verification Status Banner */}
+      {!settings.leetcodeVerified ? (
+        <div
+          style={{
+            backgroundColor: 'rgba(255, 161, 22, 0.12)',
+            border: '1px solid #ffa116',
+            borderRadius: 'var(--radius-md)',
+            padding: '8px 12px',
+            fontSize: '12px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
+          <div>
+            <strong style={{ color: '#ffa116' }}>🌐 Verify LeetCode</strong>
+            <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+              Connect your account to link live statistics.
+            </div>
+          </div>
+          <button
+            onClick={openOptions}
+            style={{ padding: '3px 8px', fontSize: '11px', backgroundColor: '#ffa116', color: '#000', fontWeight: 600, border: 'none', cursor: 'pointer' }}
+          >
+            Verify
+          </button>
+        </div>
+      ) : (
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            backgroundColor: 'var(--bg-secondary)',
+            padding: '6px 12px',
+            borderRadius: 'var(--radius-md)',
+            border: '1px solid var(--border-color)',
+            fontSize: '11px',
+          }}
+        >
+          <span style={{ color: 'var(--text-secondary)' }}>LeetCode Profile</span>
+          <span style={{ color: 'var(--accent-green)', fontWeight: 600 }}>
+            ✓ @{settings.leetcodeProfileUsername}
+          </span>
+        </div>
+      )}
+
       {/* GitHub Repository Status Pill */}
       <div
         style={{

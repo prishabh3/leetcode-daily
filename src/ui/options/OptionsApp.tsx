@@ -276,10 +276,231 @@ export const OptionsApp: React.FC = () => {
       )}
 
       <form onSubmit={handleSave} style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+        {/* 1. LeetCode Account Verification Card (Start) */}
+        <div className="card" style={{ borderLeft: '4px solid #ffa116' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+            <h2 style={{ fontSize: '16px', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span>1. LeetCode Account Verification</span>
+            </h2>
+            <div style={{ display: 'flex', gap: '8px' }}>
+              <select
+                value={settings.leetcodeSite || 'us'}
+                onChange={(e) =>
+                  setSettings({
+                    ...settings,
+                    leetcodeSite: e.target.value as 'us' | 'cn',
+                  })
+                }
+                style={{ fontSize: '12px', padding: '4px 8px' }}
+              >
+                <option value="us">LeetCode Global (leetcode.com)</option>
+                <option value="cn">LeetCode CN (leetcode.cn)</option>
+              </select>
+            </div>
+          </div>
+
+          <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '14px' }}>
+            Verify your LeetCode account at the start to link live statistics, submission heatmaps, and automatic problem synchronization.
+          </p>
+
+          {/* Active Connection Status Badge */}
+          {settings.leetcodeVerified && settings.leetcodeProfileUsername ? (
+            <div
+              style={{
+                padding: '12px 14px',
+                borderRadius: 'var(--radius-md)',
+                backgroundColor: 'rgba(35, 134, 54, 0.1)',
+                border: '1px solid var(--accent-green)',
+                marginBottom: '14px',
+              }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <span style={{ color: 'var(--accent-green)', fontWeight: 600, fontSize: '13px' }}>
+                    ✓ Connected & Verified
+                  </span>
+                  <strong style={{ color: 'var(--accent-blue)', fontSize: '13px' }}>
+                    @{settings.leetcodeProfileUsername}
+                  </strong>
+                  <span style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                    ({settings.leetcodeSite === 'cn' ? 'leetcode.cn' : 'leetcode.com'})
+                  </span>
+                </div>
+                <div style={{ display: 'flex', gap: '6px' }}>
+                  <button
+                    type="button"
+                    onClick={() => checkLeetCodeSession(false)}
+                    disabled={isDetectingSession}
+                    style={{ fontSize: '11px', padding: '3px 8px' }}
+                  >
+                    {isDetectingSession ? 'Refreshing...' : '🔄 Refresh Stats'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleDisconnectLeetCode}
+                    style={{ fontSize: '11px', padding: '3px 8px', backgroundColor: 'transparent', borderColor: 'var(--border-color)' }}
+                  >
+                    🔌 Disconnect
+                  </button>
+                </div>
+              </div>
+
+              {settings.leetcodeAccountStats ? (
+                <div style={{ fontSize: '12px', color: 'var(--text-primary)', marginTop: '4px' }}>
+                  <strong>{settings.leetcodeAccountStats.totalSolved}</strong> total solved:
+                  <span style={{ color: '#238636', marginLeft: '6px' }}>🟢 {settings.leetcodeAccountStats.easySolved} Easy</span>
+                  <span style={{ color: '#d29922', marginLeft: '6px' }}>🟡 {settings.leetcodeAccountStats.mediumSolved} Medium</span>
+                  <span style={{ color: '#da3633', marginLeft: '6px' }}>🔴 {settings.leetcodeAccountStats.hardSolved} Hard</span>
+                  {settings.leetcodeAccountStats.ranking && (
+                    <span style={{ color: 'var(--text-secondary)', marginLeft: '8px' }}>
+                      • Ranking: #{settings.leetcodeAccountStats.ranking}
+                    </span>
+                  )}
+                </div>
+              ) : (
+                <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                  Session verified. Solved count will be refreshed on next sync.
+                </div>
+              )}
+            </div>
+          ) : (
+            <div
+              style={{
+                padding: '12px 14px',
+                borderRadius: 'var(--radius-md)',
+                backgroundColor: 'var(--bg-secondary)',
+                border: '1px solid var(--border-color)',
+                marginBottom: '14px',
+              }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div>
+                  <div style={{ fontSize: '13px', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '2px' }}>
+                    Not Connected to LeetCode
+                  </div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                    Sign in to your account to link live statistics without entering passwords.
+                  </div>
+                </div>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  <button
+                    type="button"
+                    onClick={handleConnectLeetCode}
+                    style={{ backgroundColor: 'var(--accent-blue)', color: '#fff', border: 'none', fontWeight: 600 }}
+                  >
+                    🔗 Connect LeetCode
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => checkLeetCodeSession(false)}
+                    disabled={isDetectingSession}
+                  >
+                    {isDetectingSession ? 'Detecting...' : '⚡ Check Session'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Account Mismatch Warning */}
+          {settings.leetcodeConnection?.username &&
+            settings.leetcodeProfileUsername &&
+            settings.leetcodeConnection.username.toLowerCase() !== settings.leetcodeProfileUsername.toLowerCase() && (
+              <div
+                style={{
+                  padding: '8px 12px',
+                  borderRadius: 'var(--radius-md)',
+                  backgroundColor: 'rgba(210, 153, 34, 0.1)',
+                  border: '1px solid var(--accent-yellow)',
+                  fontSize: '12px',
+                  color: 'var(--accent-yellow)',
+                  marginBottom: '10px',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}
+              >
+                <span>
+                  ⚠️ <strong>Account Mismatch:</strong> Manual profile "@
+                  {settings.leetcodeProfileUsername}" differs from active browser session "@
+                  {settings.leetcodeConnection.username}".
+                </span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSettings((prev) => ({
+                      ...prev,
+                      leetcodeProfileUsername: settings.leetcodeConnection!.username,
+                      leetcodeVerified: true,
+                      leetcodeAccountStats: settings.leetcodeConnection!.stats,
+                    }));
+                  }}
+                  style={{ fontSize: '11px', padding: '2px 8px' }}
+                >
+                  Use Signed-in Account
+                </button>
+              </div>
+            )}
+
+          {/* Fallback Manual Profile URL Input */}
+          <div style={{ marginTop: '10px' }}>
+            <label style={{ fontSize: '12px', fontWeight: 500, display: 'block', marginBottom: '4px' }}>
+              LeetCode Profile URL or Username
+            </label>
+            <div style={{ display: 'flex', gap: '8px', marginBottom: '6px' }}>
+              <input
+                type="text"
+                placeholder="e.g. tourist or https://leetcode.com/u/tourist/"
+                value={settings.leetcodeProfileUsername || ''}
+                onChange={(e) =>
+                  setSettings({
+                    ...settings,
+                    leetcodeProfileUsername: e.target.value,
+                  })
+                }
+                style={{ flex: 1, fontFamily: 'var(--font-mono)', fontSize: '12px' }}
+              />
+              <button
+                type="button"
+                onClick={handleVerifyLeetCodeProfile}
+                disabled={lcVerification.checking || !settings.leetcodeProfileUsername?.trim()}
+                style={{ flexShrink: 0, fontSize: '12px' }}
+              >
+                {lcVerification.checking ? 'Verifying...' : '🔍 Verify Account'}
+              </button>
+            </div>
+
+            {settings.leetcodeProfileUsername &&
+              extractLeetCodeUsername(settings.leetcodeProfileUsername) &&
+              extractLeetCodeUsername(settings.leetcodeProfileUsername) !== settings.leetcodeProfileUsername.trim() && (
+                <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginBottom: '4px' }}>
+                  Parsed handle: <strong style={{ color: 'var(--accent-blue)' }}>{extractLeetCodeUsername(settings.leetcodeProfileUsername)}</strong>
+                </div>
+              )}
+          </div>
+
+          {lcVerification.result && (
+            <div
+              style={{
+                fontSize: '12px',
+                fontWeight: 500,
+                color: lcVerification.isError ? 'var(--accent-red)' : 'var(--accent-green)',
+                marginTop: '6px',
+              }}
+            >
+              {lcVerification.result}
+            </div>
+          )}
+
+          <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '10px', lineHeight: '1.4' }}>
+            🔒 <strong>Security & Permissions:</strong> LC-Sync never asks for your password or stores session cookies. It relies on standard browser credentials to query your public problem-solving progress directly from LeetCode.
+          </div>
+        </div>
+
         {/* GitHub Authentication Card */}
         <div className="card">
           <h2 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px' }}>
-            1. GitHub Authentication
+            2. GitHub Authentication
           </h2>
           <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '16px' }}>
             LC-Sync connects directly to GitHub from your browser. We recommend using a{' '}
@@ -317,7 +538,7 @@ export const OptionsApp: React.FC = () => {
         {/* Repository Configuration Card */}
         <div className="card">
           <h2 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px' }}>
-            2. Destination Repository
+            3. Destination Repository
           </h2>
           <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '16px' }}>
             Specify the repository where your LeetCode solutions, notes, and dashboards will be stored.
@@ -485,7 +706,7 @@ export const OptionsApp: React.FC = () => {
         {/* Git Author & Sync Preferences */}
         <div className="card">
           <h2 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '16px' }}>
-            3. Git Commit Details & Automation Preferences
+            4. Git Commit Details & Automation Preferences
           </h2>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
@@ -521,227 +742,6 @@ export const OptionsApp: React.FC = () => {
                   })
                 }
               />
-            </div>
-          </div>
-
-          {/* LeetCode Account Connection Card */}
-          <div style={{ marginBottom: '20px', padding: '16px', backgroundColor: 'var(--bg-primary)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-              <label style={{ fontSize: '14px', fontWeight: 600, display: 'block' }}>
-                🌐 LeetCode Account Connection
-              </label>
-              <div style={{ display: 'flex', gap: '8px' }}>
-                <select
-                  value={settings.leetcodeSite || 'us'}
-                  onChange={(e) =>
-                    setSettings({
-                      ...settings,
-                      leetcodeSite: e.target.value as 'us' | 'cn',
-                    })
-                  }
-                  style={{ fontSize: '12px', padding: '4px 8px' }}
-                >
-                  <option value="us">LeetCode Global (leetcode.com)</option>
-                  <option value="cn">LeetCode CN (leetcode.cn)</option>
-                </select>
-              </div>
-            </div>
-
-            <p style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '14px' }}>
-              Connect your authenticated browser session to display your actual LeetCode account statistics and activity heatmap in your repository README.
-            </p>
-
-            {/* Active Connection Status Badge */}
-            {settings.leetcodeVerified && settings.leetcodeProfileUsername ? (
-              <div
-                style={{
-                  padding: '12px 14px',
-                  borderRadius: 'var(--radius-md)',
-                  backgroundColor: 'rgba(35, 134, 54, 0.1)',
-                  border: '1px solid var(--accent-green)',
-                  marginBottom: '14px',
-                }}
-              >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span style={{ color: 'var(--accent-green)', fontWeight: 600, fontSize: '13px' }}>
-                      ✓ Connected & Verified
-                    </span>
-                    <strong style={{ color: 'var(--accent-blue)', fontSize: '13px' }}>
-                      @{settings.leetcodeProfileUsername}
-                    </strong>
-                    <span style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
-                      ({settings.leetcodeSite === 'cn' ? 'leetcode.cn' : 'leetcode.com'})
-                    </span>
-                  </div>
-                  <div style={{ display: 'flex', gap: '6px' }}>
-                    <button
-                      type="button"
-                      onClick={() => checkLeetCodeSession(false)}
-                      disabled={isDetectingSession}
-                      style={{ fontSize: '11px', padding: '3px 8px' }}
-                    >
-                      {isDetectingSession ? 'Refreshing...' : '🔄 Refresh Stats'}
-                    </button>
-                    <button
-                      type="button"
-                      onClick={handleDisconnectLeetCode}
-                      style={{ fontSize: '11px', padding: '3px 8px', backgroundColor: 'transparent', borderColor: 'var(--border-color)' }}
-                    >
-                      🔌 Disconnect
-                    </button>
-                  </div>
-                </div>
-
-                {settings.leetcodeAccountStats ? (
-                  <div style={{ fontSize: '12px', color: 'var(--text-primary)', marginTop: '4px' }}>
-                    <strong>{settings.leetcodeAccountStats.totalSolved}</strong> total solved:
-                    <span style={{ color: '#238636', marginLeft: '6px' }}>🟢 {settings.leetcodeAccountStats.easySolved} Easy</span>
-                    <span style={{ color: '#d29922', marginLeft: '6px' }}>🟡 {settings.leetcodeAccountStats.mediumSolved} Medium</span>
-                    <span style={{ color: '#da3633', marginLeft: '6px' }}>🔴 {settings.leetcodeAccountStats.hardSolved} Hard</span>
-                    {settings.leetcodeAccountStats.ranking && (
-                      <span style={{ color: 'var(--text-secondary)', marginLeft: '8px' }}>
-                        • Ranking: #{settings.leetcodeAccountStats.ranking}
-                      </span>
-                    )}
-                  </div>
-                ) : (
-                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
-                    Session verified. Solved count will be refreshed on next sync.
-                  </div>
-                )}
-              </div>
-            ) : (
-              <div
-                style={{
-                  padding: '12px 14px',
-                  borderRadius: 'var(--radius-md)',
-                  backgroundColor: 'var(--bg-secondary)',
-                  border: '1px solid var(--border-color)',
-                  marginBottom: '14px',
-                }}
-              >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div>
-                    <div style={{ fontSize: '13px', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '2px' }}>
-                      Not Connected to LeetCode
-                    </div>
-                    <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
-                      Sign in to your account to link live statistics without entering passwords.
-                    </div>
-                  </div>
-                  <div style={{ display: 'flex', gap: '8px' }}>
-                    <button
-                      type="button"
-                      onClick={handleConnectLeetCode}
-                      style={{ backgroundColor: 'var(--accent-blue)', color: '#fff', border: 'none', fontWeight: 600 }}
-                    >
-                      🔗 Connect LeetCode
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => checkLeetCodeSession(false)}
-                      disabled={isDetectingSession}
-                    >
-                      {isDetectingSession ? 'Detecting...' : '⚡ Check Session'}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Account Mismatch Warning */}
-            {settings.leetcodeConnection?.username &&
-              settings.leetcodeProfileUsername &&
-              settings.leetcodeConnection.username.toLowerCase() !== settings.leetcodeProfileUsername.toLowerCase() && (
-                <div
-                  style={{
-                    padding: '8px 12px',
-                    borderRadius: 'var(--radius-md)',
-                    backgroundColor: 'rgba(210, 153, 34, 0.1)',
-                    border: '1px solid var(--accent-yellow)',
-                    fontSize: '12px',
-                    color: 'var(--accent-yellow)',
-                    marginBottom: '10px',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                  }}
-                >
-                  <span>
-                    ⚠️ <strong>Account Mismatch:</strong> Manual profile "@
-                    {settings.leetcodeProfileUsername}" differs from active browser session "@
-                    {settings.leetcodeConnection.username}".
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSettings((prev) => ({
-                        ...prev,
-                        leetcodeProfileUsername: settings.leetcodeConnection!.username,
-                        leetcodeVerified: true,
-                        leetcodeAccountStats: settings.leetcodeConnection!.stats,
-                      }));
-                    }}
-                    style={{ fontSize: '11px', padding: '2px 8px' }}
-                  >
-                    Use Signed-in Account
-                  </button>
-                </div>
-              )}
-
-            {/* Fallback Manual Profile URL Input */}
-            <div style={{ marginTop: '10px' }}>
-              <label style={{ fontSize: '12px', fontWeight: 500, display: 'block', marginBottom: '4px' }}>
-                Fallback Profile URL or Username
-              </label>
-              <div style={{ display: 'flex', gap: '8px', marginBottom: '6px' }}>
-                <input
-                  type="text"
-                  placeholder="e.g. tourist or https://leetcode.com/u/tourist/"
-                  value={settings.leetcodeProfileUsername || ''}
-                  onChange={(e) =>
-                    setSettings({
-                      ...settings,
-                      leetcodeProfileUsername: e.target.value,
-                    })
-                  }
-                  style={{ flex: 1, fontFamily: 'var(--font-mono)', fontSize: '12px' }}
-                />
-                <button
-                  type="button"
-                  onClick={handleVerifyLeetCodeProfile}
-                  disabled={lcVerification.checking || !settings.leetcodeProfileUsername?.trim()}
-                  style={{ flexShrink: 0, fontSize: '12px' }}
-                >
-                  {lcVerification.checking ? 'Verifying...' : '🔍 Verify Handle'}
-                </button>
-              </div>
-
-              {settings.leetcodeProfileUsername &&
-                extractLeetCodeUsername(settings.leetcodeProfileUsername) &&
-                extractLeetCodeUsername(settings.leetcodeProfileUsername) !== settings.leetcodeProfileUsername.trim() && (
-                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginBottom: '4px' }}>
-                    Parsed handle: <strong style={{ color: 'var(--accent-blue)' }}>{extractLeetCodeUsername(settings.leetcodeProfileUsername)}</strong>
-                  </div>
-                )}
-            </div>
-
-            {lcVerification.result && (
-              <div
-                style={{
-                  fontSize: '12px',
-                  fontWeight: 500,
-                  color: lcVerification.isError ? 'var(--accent-red)' : 'var(--accent-green)',
-                  marginTop: '6px',
-                }}
-              >
-                {lcVerification.result}
-              </div>
-            )}
-
-            <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '10px', lineHeight: '1.4' }}>
-              🔒 <strong>Security & Permissions:</strong> LC-Sync never asks for your password or stores session cookies. It relies on standard browser credentials to query your public problem-solving progress directly from LeetCode.
             </div>
           </div>
 

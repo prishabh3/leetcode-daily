@@ -177,21 +177,21 @@ ${LC_SYNC_END_MARKER}
   it('renders verified account statistics breakdown in LeetCode Account section', () => {
     const readme = generateReadme(null, mockIndex, {
       repoName: 'leetcode-daily',
-      leetcodeUsername: 'prishabh',
+      leetcodeUsername: 'octocat',
       leetcodeVerified: true,
       leetcodeAccountStats: {
-        totalSolved: 20,
-        easySolved: 15,
-        mediumSolved: 4,
-        hardSolved: 1,
-        ranking: 4525348,
+        totalSolved: 100,
+        easySolved: 50,
+        mediumSolved: 40,
+        hardSolved: 10,
+        ranking: 54321,
       },
       cacheBuster: 12345,
     });
 
     expect(readme).toContain('## 🌐 LeetCode Account');
-    expect(readme).toContain('- **Total Solved on LeetCode**: **20** (🟢 Easy: **15** • 🟡 Medium: **4** • 🔴 Hard: **1**)');
-    expect(readme).toContain('• Ranking: `#4525348`');
+    expect(readme).toContain('- **Total Solved on LeetCode**: **100** (🟢 Easy: **50** • 🟡 Medium: **40** • 🔴 Hard: **10**)');
+    expect(readme).toContain('• Ranking: `#54321`');
     expect(readme).toContain('## 📊 LC-Sync Repository');
     expect(readme).toContain('- **Distinct Problems Tracked**: **2**');
   });

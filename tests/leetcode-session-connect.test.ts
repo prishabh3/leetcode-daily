@@ -22,9 +22,8 @@ describe('LeetCode Authenticated Session Connection & Verification Suite', () =>
             data: {
               userStatus: {
                 isSignedIn: true,
-                username: 'prishabh',
-                realName: 'prishabh',
-                userSlug: 'prishabh',
+                username: 'test_coder',
+                userSlug: 'test_coder',
               },
             },
           }),
@@ -37,16 +36,16 @@ describe('LeetCode Authenticated Session Connection & Verification Suite', () =>
           json: async () => ({
             data: {
               matchedUser: {
-                username: 'prishabh',
+                username: 'test_coder',
                 profile: {
-                  ranking: 4525348,
+                  ranking: 100000,
                 },
                 submitStatsGlobal: {
                   acSubmissionNum: [
-                    { difficulty: 'All', count: 20 },
-                    { difficulty: 'Easy', count: 15 },
-                    { difficulty: 'Medium', count: 4 },
-                    { difficulty: 'Hard', count: 1 },
+                    { difficulty: 'All', count: 50 },
+                    { difficulty: 'Easy', count: 20 },
+                    { difficulty: 'Medium', count: 20 },
+                    { difficulty: 'Hard', count: 10 },
                   ],
                 },
               },
@@ -60,14 +59,14 @@ describe('LeetCode Authenticated Session Connection & Verification Suite', () =>
     try {
       const identity = await adapter.checkAuthenticatedIdentity();
       expect(identity.status).toBe('CONNECTED');
-      expect(identity.username).toBe('prishabh');
+      expect(identity.username).toBe('test_coder');
       expect(identity.authMethod).toBe('session');
       expect(identity.stats).toBeDefined();
-      expect(identity.stats?.totalSolved).toBe(20);
-      expect(identity.stats?.easySolved).toBe(15);
-      expect(identity.stats?.mediumSolved).toBe(4);
-      expect(identity.stats?.hardSolved).toBe(1);
-      expect(identity.stats?.ranking).toBe(4525348);
+      expect(identity.stats?.totalSolved).toBe(50);
+      expect(identity.stats?.easySolved).toBe(20);
+      expect(identity.stats?.mediumSolved).toBe(20);
+      expect(identity.stats?.hardSolved).toBe(10);
+      expect(identity.stats?.ranking).toBe(100000);
     } finally {
       globalThis.fetch = originalFetch;
     }
@@ -127,7 +126,7 @@ describe('LeetCode Authenticated Session Connection & Verification Suite', () =>
           json: async () => ({
             data: {
               userStatus: loggedIn
-                ? { isSignedIn: true, username: 'prishabh', userSlug: 'prishabh' }
+                ? { isSignedIn: true, username: 'test_coder', userSlug: 'test_coder' }
                 : { isSignedIn: false },
             },
           }),
@@ -139,7 +138,7 @@ describe('LeetCode Authenticated Session Connection & Verification Suite', () =>
         json: async () => ({
           data: {
             matchedUser: {
-              username: 'prishabh',
+              username: 'test_coder',
               submitStatsGlobal: {
                 acSubmissionNum: [{ difficulty: 'All', count: 20 }],
               },
@@ -160,7 +159,7 @@ describe('LeetCode Authenticated Session Connection & Verification Suite', () =>
       // Second attempt: now connected
       const attempt2 = await adapter.checkAuthenticatedIdentity();
       expect(attempt2.status).toBe('CONNECTED');
-      expect(attempt2.username).toBe('prishabh');
+      expect(attempt2.username).toBe('test_coder');
       expect(attempt2.stats?.totalSolved).toBe(20);
     } finally {
       globalThis.fetch = originalFetch;
@@ -173,14 +172,14 @@ describe('LeetCode Authenticated Session Connection & Verification Suite', () =>
       easySolved: 15,
       mediumSolved: 4,
       hardSolved: 1,
-      ranking: 4525348,
+      ranking: 100000,
     };
 
-    const svg = generateLeetCodeStatsSvg('prishabh', stats, 'us');
+    const svg = generateLeetCodeStatsSvg('test_coder', stats, 'us');
     expect(svg).toContain('<svg');
     expect(svg).toContain('LeetCode Account Stats');
-    expect(svg).toContain('@prishabh');
-    expect(svg).toContain('Rank #4525348');
+    expect(svg).toContain('@test_coder');
+    expect(svg).toContain('Rank #100000');
     expect(svg).toContain('15'); // Easy
     expect(svg).toContain('4');  // Medium
     expect(svg).toContain('1');  // Hard
