@@ -18,6 +18,83 @@ export interface AtomicCommitOptions {
 }
 
 /**
+ * In-memory serialization lock for destination branch writes.
+ * Serializes all commits on the same repository branch so live sync and historical import
+ * cannot race against each other.
+ */
+class BranchWriteLock {
+  private queue = new Map<string, Promise<any>>();
+
+  async acquire<T>(key: string, task: () => Promise<T>): Promise<T> {
+    const previous = this.queue.get(key) || Promise.resolve();
+    const chain = previous.then(() => task(), () => task());
+    this.queue.set(key, chain);
+
+    try {
+      return await chain;
+    } finally {
+      if (this.queue.get(key) === chain) {
+        this.queue.delete(key);
+      }
+    }
+  }
+}
+
+export const branchLock = new BranchWriteLock();
+
+/**
+ * Fetches the current branch HEAD commit SHA bypassing browser and intermediary HTTP caches.
+ */
+export async function fetchBranchHead(
+  client: GitHubClient,
+  owner: string,
+  repo: string,
+  branch: string
+): Promise<string | null> {
+  const cacheBuster = Date.now();
+  const noCacheHeaders = {
+    'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate',
+    Pragma: 'no-cache',
+  };
+
+  try {
+    const refData = await client.rawRequest(
+      `/repos/${owner}/${repo}/git/ref/heads/${encodeURIComponent(branch)}?_ts=${cacheBuster}`,
+      { headers: noCacheHeaders }
+    );
+    if (refData?.object?.sha) {
+      return refData.object.sha;
+    }
+    if (Array.isArray(refData) && refData[0]?.object?.sha) {
+      return refData[0].object.sha;
+    }
+  } catch (err: any) {
+    if (err.status !== 404) {
+      // Try fallback to /git/refs/heads/${branch}
+      try {
+        const altRef = await client.rawRequest(
+          `/repos/${owner}/${repo}/git/refs/heads/${encodeURIComponent(branch)}?_ts=${cacheBuster}`,
+          { headers: noCacheHeaders }
+        );
+        if (Array.isArray(altRef) && altRef[0]?.object?.sha) {
+          return altRef[0].object.sha;
+        }
+        if (altRef?.object?.sha) {
+          return altRef.object.sha;
+        }
+      } catch {
+        // continue to 404 check
+      }
+    }
+    if (err.status === 404) {
+      return null;
+    }
+    throw err;
+  }
+  return null;
+}
+
+/**
  * Executes an atomic multi-file commit via Git Database API with concurrency conflict retries
  */
 export async function createAtomicCommit(
@@ -25,30 +102,37 @@ export async function createAtomicCommit(
   options: AtomicCommitOptions
 ): Promise<string> {
   const { owner, repo, branch = 'main' } = client.rawSettings;
+  const lockKey = `${owner}/${repo}/${branch}`;
+
+  return branchLock.acquire(lockKey, async () => {
+    return executeAtomicCommitInternal(client, options, owner, repo, branch);
+  });
+}
+
+async function executeAtomicCommitInternal(
+  client: GitHubClient,
+  options: AtomicCommitOptions,
+  owner: string,
+  repo: string,
+  branch: string
+): Promise<string> {
   const maxRetries = options.maxRetries ?? 5;
 
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      // 1. Get branch reference to find latest commit
-      let baseCommitSha: string | null = null;
-      try {
-        const refData = await client.rawRequest(
-          `/repos/${owner}/${repo}/git/ref/heads/${encodeURIComponent(branch)}`
-        );
-        baseCommitSha = refData.object.sha;
-      } catch (refErr: any) {
-        if (refErr.status === 404) {
-          // Branch doesn't exist yet: check if default branch exists or repo is empty
+      // 1. Get branch reference to find latest commit (bypass cache)
+      let baseCommitSha: string | null = await fetchBranchHead(client, owner, repo, branch);
+
+      if (!baseCommitSha) {
+        // Branch doesn't exist yet: check if default branch exists or repo is empty
+        try {
           const repoData = await client.rawRequest(`/repos/${owner}/${repo}`);
           const defaultBranch = repoData.default_branch;
 
           if (defaultBranch && defaultBranch !== branch) {
-            try {
-              const defaultRef = await client.rawRequest(
-                `/repos/${owner}/${repo}/git/ref/heads/${encodeURIComponent(defaultBranch)}`
-              );
-              baseCommitSha = defaultRef.object.sha;
-              // Create the target branch pointing to default branch commit
+            const defaultSha = await fetchBranchHead(client, owner, repo, defaultBranch);
+            if (defaultSha) {
+              baseCommitSha = defaultSha;
               await client.rawRequest(`/repos/${owner}/${repo}/git/refs`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -57,18 +141,15 @@ export async function createAtomicCommit(
                   sha: baseCommitSha,
                 }),
               });
-            } catch {
-              baseCommitSha = null;
             }
           }
-        } else {
-          throw refErr;
+        } catch (initErr: any) {
+          if (initErr.status !== 404) throw initErr;
         }
       }
 
       // If repository has no commits yet (brand new empty repository)
       if (!baseCommitSha) {
-        // Initialize with first file using contents API, which creates the initial commit and branch
         if (options.files.length > 0) {
           const first = options.files[0];
           const initialSha = await client.putSingleFile(
@@ -76,21 +157,19 @@ export async function createAtomicCommit(
             first.content,
             `chore(init): initial commit for LC-Sync`
           );
-          // If only 1 file was needed, we are done
           if (options.files.length === 1) {
             return initialSha;
           }
-          // If multiple files, now baseCommitSha exists, continue to commit the rest
-          const newRef = await client.rawRequest(
-            `/repos/${owner}/${repo}/git/ref/heads/${encodeURIComponent(branch)}`
-          );
-          baseCommitSha = newRef.object.sha;
+          baseCommitSha = await fetchBranchHead(client, owner, repo, branch);
+          if (!baseCommitSha) {
+            throw new GitHubError('Failed to initialize branch head for empty repository.', 500);
+          }
         } else {
           throw new GitHubError('No files provided for commit.', 400);
         }
       }
 
-      // 2. Get base tree SHA from base commit
+      // 2. Get base tree SHA from fresh base commit
       const baseCommit = await client.rawRequest(
         `/repos/${owner}/${repo}/git/commits/${baseCommitSha}`
       );
@@ -121,7 +200,7 @@ export async function createAtomicCommit(
         });
       }
 
-      // 4. Create new Git tree based on base tree
+      // 4. Create new Git tree based on fresh base tree
       const newTree = await client.rawRequest(`/repos/${owner}/${repo}/git/trees`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -131,7 +210,7 @@ export async function createAtomicCommit(
         }),
       });
 
-      // 5. Create new Git commit
+      // 5. Create new Git commit with fresh baseCommitSha as parent
       const commitBody: Record<string, any> = {
         message: options.message,
         tree: newTree.sha,
@@ -167,17 +246,26 @@ export async function createAtomicCommit(
       });
 
       // 6. Update branch reference to point to new commit
-      await client.rawRequest(
-        `/repos/${owner}/${repo}/git/refs/heads/${encodeURIComponent(branch)}`,
-        {
-          method: 'PATCH',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            sha: newCommit.sha,
-            force: false,
-          }),
+      try {
+        await client.rawRequest(
+          `/repos/${owner}/${repo}/git/refs/heads/${encodeURIComponent(branch)}`,
+          {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              sha: newCommit.sha,
+              force: false,
+            }),
+          }
+        );
+      } catch (patchErr: any) {
+        // Before concluding failure, verify if the branch was actually updated
+        const confirmedHead = await fetchBranchHead(client, owner, repo, branch);
+        if (confirmedHead === newCommit.sha) {
+          return newCommit.sha;
         }
-      );
+        throw patchErr;
+      }
 
       return newCommit.sha;
     } catch (err: any) {
@@ -185,25 +273,22 @@ export async function createAtomicCommit(
         err?.status === 422 ||
         (err?.message && err.message.toLowerCase().includes('not a fast forward'));
 
-      const isConflict =
-        err?.status === 409 || isNonFastForward;
+      const isConflict = err?.status === 409 || isNonFastForward;
 
       if (isConflict && attempt < maxRetries) {
-        // Exponential backoff: 1s, 2s, 4s, 8s, 16s
-        const backoffMs = Math.pow(2, attempt - 1) * 1000;
+        const backoffMs = Math.min(1000 * Math.pow(2, attempt - 1), 8000);
+        console.warn(
+          `[createAtomicCommit] Attempt ${attempt} failed with non-fast-forward conflict. Retrying in ${backoffMs}ms with refreshed branch HEAD...`
+        );
         await new Promise((r) => setTimeout(r, backoffMs));
-
-        if (isNonFastForward) {
-          // Non-fast-forward: the branch moved ahead while we were building the commit.
-          // The next loop iteration will re-fetch the current HEAD SHA from scratch,
-          // ensuring the refreshed parent is used for the new tree and commit.
-          continue;
-        }
         continue;
       }
       throw err;
     }
   }
 
-  throw new GitHubError(`Failed to complete atomic commit after ${maxRetries} attempts due to conflicts.`, 409);
+  throw new GitHubError(
+    `Failed to complete atomic commit on '${branch}' after ${maxRetries} attempts due to non-fast-forward conflicts.`,
+    409
+  );
 }

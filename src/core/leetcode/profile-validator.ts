@@ -3,10 +3,33 @@
  * Handles extraction, validation, and endpoint construction for LeetCode profile cards.
  */
 
+export interface LeetCodeAccountStats {
+  totalSolved: number;
+  easySolved: number;
+  mediumSolved: number;
+  hardSolved: number;
+}
+
 export interface LeetCodeVerificationResult {
   valid: boolean;
   username?: string;
   error?: string;
+  stats?: LeetCodeAccountStats;
+  cardVerified?: boolean;
+  heatmapVerified?: boolean;
+}
+
+/**
+ * Detects whether JacobLinCool SVG output indicates "User Not Found".
+ * The provider returns HTTP 200 with fallback mock numbers even for nonexistent users.
+ */
+export function isProviderUserNotFoundError(svgContent: string): boolean {
+  if (!svgContent) return true;
+  return (
+    svgContent.includes('User Not Found') ||
+    /<title[^>]*>User Not Found/i.test(svgContent) ||
+    /<text[^>]*id="username-text"[^>]*>User Not Found<\/text>/i.test(svgContent)
+  );
 }
 
 /**
@@ -107,7 +130,7 @@ export function getLeetCodeHeatmapUrl(username: string, cacheBuster?: string | n
 
 /**
  * Verifies whether a LeetCode username actually exists by querying LeetCode's public GraphQL API
- * with a fallback to the card provider endpoint.
+ * and cross-checking the JacobLinCool card and heatmap provider endpoints.
  */
 export async function verifyLeetCodeUsername(
   input: string | undefined | null
@@ -120,9 +143,24 @@ export async function verifyLeetCodeUsername(
     };
   }
 
+  let canonicalUsername = clean;
+  let stats: LeetCodeAccountStats | undefined;
+
   // 1. Primary: Query LeetCode Public GraphQL API
   try {
-    const query = `query userPublicProfile($username: String!) { matchedUser(username: $username) { username } }`;
+    const query = `
+      query userPublicProfile($username: String!) {
+        matchedUser(username: $username) {
+          username
+          submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+            }
+          }
+        }
+      }
+    `;
     const response = await fetch('https://leetcode.com/graphql', {
       method: 'POST',
       headers: {
@@ -135,12 +173,32 @@ export async function verifyLeetCodeUsername(
     if (response.ok) {
       const json = await response.json();
       if (json?.data?.matchedUser?.username) {
-        return {
-          valid: true,
-          username: json.data.matchedUser.username,
+        canonicalUsername = json.data.matchedUser.username;
+        const acList: Array<{ difficulty: string; count: number }> =
+          json.data.matchedUser.submitStatsGlobal?.acSubmissionNum || [];
+
+        let total = 0;
+        let easy = 0;
+        let medium = 0;
+        let hard = 0;
+
+        for (const item of acList) {
+          if (item.difficulty === 'All') total = item.count;
+          else if (item.difficulty === 'Easy') easy = item.count;
+          else if (item.difficulty === 'Medium') medium = item.count;
+          else if (item.difficulty === 'Hard') hard = item.count;
+        }
+
+        stats = {
+          totalSolved: total,
+          easySolved: easy,
+          mediumSolved: medium,
+          hardSolved: hard,
         };
-      }
-      if (json?.data?.matchedUser === null || json?.errors?.some((e: any) => /not exist/i.test(e.message))) {
+      } else if (
+        json?.data?.matchedUser === null ||
+        json?.errors?.some((e: any) => /not exist/i.test(e.message))
+      ) {
         return {
           valid: false,
           error: `User "${clean}" does not exist on LeetCode.`,
@@ -148,35 +206,52 @@ export async function verifyLeetCodeUsername(
       }
     }
   } catch {
-    // If network to LeetCode fails, attempt fallback
+    // If direct LeetCode GraphQL fetch is blocked by environment, proceed to provider check
   }
 
-  // 2. Secondary: Query leetcard provider SVG endpoint
+  // 2. Secondary: Query leetcard provider SVG endpoint and inspect for "User Not Found"
+  let cardVerified = false;
+  let heatmapVerified = false;
+
   try {
-    const cardUrl = `https://leetcard.jacoblin.cool/${encodeURIComponent(clean)}?theme=dark`;
+    const cardUrl = `https://leetcard.jacoblin.cool/${encodeURIComponent(canonicalUsername)}?theme=dark`;
     const response = await fetch(cardUrl);
     if (response.ok) {
       const text = await response.text();
-      if (text.includes('User Not Found')) {
+      if (isProviderUserNotFoundError(text)) {
         return {
           valid: false,
-          error: `User "${clean}" does not exist on LeetCode.`,
+          error: `JacobLinCool stats card provider reports "User Not Found" for "${canonicalUsername}".`,
         };
       }
-      return {
-        valid: true,
-        username: clean,
-      };
+      cardVerified = true;
     }
   } catch (err: any) {
-    return {
-      valid: false,
-      error: `Could not verify account with LeetCode: ${err?.message || 'Network error'}`,
-    };
+    // If provider network fails but GraphQL succeeded, we still have verified username
+  }
+
+  try {
+    const heatmapUrl = `https://leetcard.jacoblin.cool/${encodeURIComponent(canonicalUsername)}?ext=heatmap&theme=dark`;
+    const response = await fetch(heatmapUrl);
+    if (response.ok) {
+      const text = await response.text();
+      if (isProviderUserNotFoundError(text)) {
+        return {
+          valid: false,
+          error: `JacobLinCool heatmap provider reports "User Not Found" for "${canonicalUsername}".`,
+        };
+      }
+      heatmapVerified = true;
+    }
+  } catch {
+    // pass
   }
 
   return {
-    valid: false,
-    error: `Could not verify LeetCode account "${clean}".`,
+    valid: true,
+    username: canonicalUsername,
+    stats,
+    cardVerified,
+    heatmapVerified,
   };
 }

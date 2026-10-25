@@ -1,5 +1,5 @@
 import { GitHubClient, FileChange } from '../github/client';
-import { createAtomicCommit, AtomicCommitOptions } from '../github/git-database';
+import { createAtomicCommit } from '../github/git-database';
 import { LeetCodeHistoricalAdapter } from '../leetcode/historical-adapter';
 import {
   HistoricalImportConfig,
@@ -35,6 +35,216 @@ import { formatNotesMarkdown, parseNotesMarkdown } from '../generator/template';
 import { migrateProblemMetadata } from '../storage/schema-migration';
 import { calculateNextReview } from '../revision/scheduler';
 import { storage } from '../storage/chrome-storage';
+
+/**
+ * Builds all file changes (solution file, metadata.json, notes.md) and updates in-memory syncIndex
+ * for a single historical submission.
+ */
+async function buildSubmissionFileChanges(
+  sub: RawHistoricalSubmission,
+  code: string,
+  problemId: string,
+  tags: string[],
+  syncIndex: SyncIndex,
+  isCanonicalLatest: boolean,
+  basePrefix: string
+): Promise<FileChange[]> {
+  const fileChanges: FileChange[] = [];
+  const lang: SupportedLanguage = sub.normalizedLanguage || 'unknown';
+  const cleanProblemId = formatProblemId(problemId || '0');
+  const contentHash = await computeContentHash(code);
+  const isAccepted = sub.statusDisplay === 'Accepted';
+
+  let solutionPath: string;
+  let metadataPath: string;
+
+  if (!isAccepted) {
+    solutionPath = getAttemptSolutionFilePath(cleanProblemId, sub.titleSlug, sub.id, lang, basePrefix);
+    metadataPath = getAttemptMetadataFilePath(cleanProblemId, sub.titleSlug, sub.id, basePrefix);
+  } else if (isCanonicalLatest) {
+    solutionPath = getSolutionFilePath(cleanProblemId, sub.titleSlug, lang, 'solution', basePrefix);
+    metadataPath = getMetadataFilePath(cleanProblemId, sub.titleSlug, basePrefix);
+  } else {
+    solutionPath = getHistoricalSolutionFilePath(cleanProblemId, sub.titleSlug, sub.id, lang, basePrefix);
+    metadataPath = getHistoricalMetadataFilePath(cleanProblemId, sub.titleSlug, sub.id, basePrefix);
+  }
+
+  fileChanges.push({ path: solutionPath, content: code });
+
+  const originalIsoDate = sub.timestamp > 0 ? new Date(sub.timestamp * 1000).toISOString() : new Date().toISOString();
+  const importNowIsoDate = new Date().toISOString();
+
+  const solutionRecord: SolutionRecord = {
+    language: lang,
+    approachName: isCanonicalLatest ? 'solution' : `submission-${sub.id}`,
+    filePath: solutionPath,
+    submissionId: sub.id,
+    contentHash,
+    syncedAt: importNowIsoDate,
+    runtime: sub.runtime,
+    memory: sub.memory,
+    rawPlatformLanguage: sub.lang || undefined,
+    languageDialect: getLanguageDialect(sub.lang || '') || undefined,
+  };
+
+  if (isCanonicalLatest) {
+    let existingMeta = await storage.getProblemMetadata(cleanProblemId);
+    if (!existingMeta) {
+      existingMeta = migrateProblemMetadata(null, cleanProblemId, sub.titleSlug);
+    }
+    const reviewCalc = calculateNextReview(3, existingMeta.reviewsCount || 0, 0);
+    const updatedMeta: ProblemMetadata = {
+      ...existingMeta,
+      id: cleanProblemId,
+      title: sub.title || existingMeta.title,
+      slug: sub.titleSlug,
+      difficulty: sub.difficulty || existingMeta.difficulty || 'Medium',
+      tags: Array.from(new Set([...existingMeta.tags, ...tags])),
+      firstTrackedAt: existingMeta.firstTrackedAt || originalIsoDate,
+      lastSyncedAt: importNowIsoDate,
+      solutions: {
+        ...existingMeta.solutions,
+        [`${lang}/solution`]: solutionRecord,
+      },
+      nextReviewDate: reviewCalc.nextReviewDate,
+      rawPlatformLanguage: sub.lang || existingMeta.rawPlatformLanguage,
+      languageDialect: getLanguageDialect(sub.lang || '') || existingMeta.languageDialect,
+    };
+
+    fileChanges.push({
+      path: metadataPath,
+      content: JSON.stringify(updatedMeta, null, 2),
+    });
+
+    const notesPath = getNotesFilePath(cleanProblemId, sub.titleSlug, basePrefix);
+    const existingNotes = formatNotesMarkdown(updatedMeta, parseNotesMarkdown(''));
+    fileChanges.push({
+      path: notesPath,
+      content: existingNotes,
+    });
+
+    await storage.saveProblemMetadata(updatedMeta);
+  } else {
+    const versionMeta = {
+      submissionId: sub.id,
+      problemTitle: sub.title,
+      slug: sub.titleSlug,
+      verdict: sub.statusDisplay,
+      language: lang,
+      rawPlatformLanguage: sub.lang || undefined,
+      languageDialect: getLanguageDialect(sub.lang || '') || undefined,
+      submittedAt: originalIsoDate,
+      importedAt: importNowIsoDate,
+      runtime: sub.runtime,
+      memory: sub.memory,
+      contentHash,
+    };
+    fileChanges.push({
+      path: metadataPath,
+      content: JSON.stringify(versionMeta, null, 2),
+    });
+  }
+
+  // Update syncIndex in memory
+  const indexEntry: SyncIndexEntry = {
+    problemId: cleanProblemId,
+    slug: sub.titleSlug,
+    title: sub.title,
+    difficulty: sub.difficulty || 'Medium',
+    language: lang,
+    approachName: isCanonicalLatest ? 'solution' : `sub-${sub.id}`,
+    submissionId: sub.id,
+    contentHash,
+    syncedAt: importNowIsoDate,
+    filePath: solutionPath,
+  };
+  syncIndex.submissions[sub.id] = indexEntry;
+
+  const existingProblemSummary = syncIndex.problems[cleanProblemId];
+  const existingLanguages = existingProblemSummary?.languages || [];
+  const updatedLanguages = Array.from(new Set([...existingLanguages, lang]));
+
+  const problemSummary: ProblemSummaryEntry = {
+    id: cleanProblemId,
+    title: sub.title,
+    slug: sub.titleSlug,
+    difficulty: sub.difficulty || existingProblemSummary?.difficulty || 'Medium',
+    languages: updatedLanguages,
+    approachesCount: (existingProblemSummary?.approachesCount || 0) + 1,
+    lastSyncedAt: importNowIsoDate,
+    confidenceRating: existingProblemSummary?.confidenceRating || 3,
+    nextReviewDate: existingProblemSummary?.nextReviewDate || new Date().toISOString().split('T')[0],
+    tags: Array.from(new Set([...(existingProblemSummary?.tags || []), ...tags])),
+    patterns: existingProblemSummary?.patterns || [],
+  };
+  syncIndex.problems[cleanProblemId] = problemSummary;
+
+  return fileChanges;
+}
+
+/**
+ * Builds auxiliary repository tracking files: sync-index.json, README.md, and progress.svg
+ */
+async function buildAuxiliaryFiles(
+  client: GitHubClient,
+  syncIndex: SyncIndex,
+  basePrefix: string
+): Promise<FileChange[]> {
+  syncIndex.totalProblems = Object.keys(syncIndex.problems).length;
+  syncIndex.totalSubmissions = Object.keys(syncIndex.submissions).length;
+  syncIndex.lastUpdated = new Date().toISOString();
+
+  let existingReadme: string | null = null;
+  try {
+    const remoteReadme = await client.getFileContent(README_PATH);
+    existingReadme = remoteReadme?.content || null;
+  } catch {
+    // ignore
+  }
+
+  const appSettings = await storage.getSettings();
+  const cleanLeetCodeUser = extractLeetCodeUsername(appSettings?.leetcodeProfileUsername);
+  const cacheBuster = Math.floor(Date.now() / 1000);
+
+  const generatedReadme = generateReadme(existingReadme, syncIndex, {
+    repoName: client.rawSettings.repo,
+    githubUsername: client.rawSettings.owner,
+    leetcodeUsername: cleanLeetCodeUser || undefined,
+    basePrefix,
+    cacheBuster,
+  });
+
+  let easyCount = 0;
+  let mediumCount = 0;
+  let hardCount = 0;
+  const languagesCount: Record<string, number> = {};
+  for (const p of Object.values(syncIndex.problems)) {
+    if (p.difficulty === 'Easy') easyCount++;
+    else if (p.difficulty === 'Medium') mediumCount++;
+    else if (p.difficulty === 'Hard') hardCount++;
+    for (const l of p.languages) {
+      languagesCount[l] = (languagesCount[l] || 0) + 1;
+    }
+  }
+
+  const progressStats: ProgressStats = {
+    totalTracked: syncIndex.totalProblems,
+    totalSubmissions: syncIndex.totalSubmissions,
+    easyCount,
+    mediumCount,
+    hardCount,
+    languagesCount,
+    reviewsCompleted: 0,
+  };
+
+  const generatedSvg = generateProgressSvg(progressStats);
+
+  return [
+    { path: SYNC_INDEX_PATH, content: JSON.stringify(syncIndex, null, 2) },
+    { path: README_PATH, content: generatedReadme },
+    { path: PROGRESS_SVG_PATH, content: generatedSvg },
+  ];
+}
 
 export interface CancelToken {
   isCancelled: boolean;
@@ -317,8 +527,12 @@ export async function executeHistoricalImport(
     }
 
     const currentBatch = batches[batchIdx];
-    const fileChanges: FileChange[] = [];
-    const batchProcessedIds: string[] = [];
+    const eligibleSubmissionsInBatch: Array<{
+      sub: RawHistoricalSubmission;
+      code: string;
+      problemId: string;
+      tags: string[];
+    }> = [];
 
     onProgress?.({
       status: 'importing',
@@ -333,17 +547,34 @@ export async function executeHistoricalImport(
       message: `Processing batch ${batchIdx + 1} of ${batches.length} (${currentBatch.length} submissions)...`,
     });
 
+    const saveCheckpoint = async () => {
+      const checkpoint: HistoricalImportCheckpoint = {
+        checkpointId: `import-${startTime}`,
+        createdAt: Date.now(),
+        config,
+        commitDateStrategy,
+        completedSubmissionIds: Array.from(completedIds),
+        totalExpected: totalCount,
+        importedCount,
+        skippedCount,
+        failedCount,
+        fallbackTimestampsCount,
+        isComplete: completedIds.size >= totalCount,
+      };
+      await storage.saveHistoricalCheckpoint(checkpoint);
+    };
+
     for (const sub of currentBatch) {
       if (cancelToken?.isCancelled) break;
+      if (completedIds.has(sub.id)) continue;
 
-      // Duplicate check against existing sync-index
+      // Duplicate check against current syncIndex
       if (syncIndex.submissions[sub.id]) {
         completedIds.add(sub.id);
         skippedCount++;
         continue;
       }
 
-      // 2. Retrieve code if missing
       let code = sub.code;
       let problemId = sub.problemId;
       let tags = sub.topicTags || [];
@@ -367,221 +598,46 @@ export async function executeHistoricalImport(
         continue;
       }
 
-      const lang: SupportedLanguage = sub.normalizedLanguage || 'unknown';
-      const cleanProblemId = formatProblemId(problemId || '0');
-      const contentHash = await computeContentHash(code);
-      const isAccepted = sub.statusDisplay === 'Accepted';
-      const canonicalKey = `${sub.titleSlug}::${lang}`;
-      const isCanonicalLatest = isAccepted && latestAcceptedPerProblemLang.get(canonicalKey) === sub.id;
-
-      distinctProblemsSet.add(sub.titleSlug);
-
-      // Determine appropriate storage file path under basePrefix (solutions/)
-      let solutionPath: string;
-      let metadataPath: string;
-
-      if (!isAccepted) {
-        // Mode C unsuccessful attempts
-        solutionPath = getAttemptSolutionFilePath(cleanProblemId, sub.titleSlug, sub.id, lang, basePrefix);
-        metadataPath = getAttemptMetadataFilePath(cleanProblemId, sub.titleSlug, sub.id, basePrefix);
-      } else if (isCanonicalLatest) {
-        // Canonical latest accepted solution
-        solutionPath = getSolutionFilePath(cleanProblemId, sub.titleSlug, lang, 'solution', basePrefix);
-        metadataPath = getMetadataFilePath(cleanProblemId, sub.titleSlug, basePrefix);
-      } else {
-        // Older accepted version (Mode A)
-        solutionPath = getHistoricalSolutionFilePath(cleanProblemId, sub.titleSlug, sub.id, lang, basePrefix);
-        metadataPath = getHistoricalMetadataFilePath(cleanProblemId, sub.titleSlug, sub.id, basePrefix);
-      }
-
-      // Add solution code file
-      fileChanges.push({
-        path: solutionPath,
-        content: code,
+      eligibleSubmissionsInBatch.push({
+        sub,
+        code,
+        problemId: problemId || '0',
+        tags,
       });
-
-      // Prepare metadata
-      const originalIsoDate = sub.timestamp > 0 ? new Date(sub.timestamp * 1000).toISOString() : new Date().toISOString();
-      const importNowIsoDate = new Date().toISOString();
-
-      const solutionRecord: SolutionRecord = {
-        language: lang,
-        approachName: isCanonicalLatest ? 'solution' : `submission-${sub.id}`,
-        filePath: solutionPath,
-        submissionId: sub.id,
-        contentHash,
-        syncedAt: importNowIsoDate,
-        runtime: sub.runtime,
-        memory: sub.memory,
-        rawPlatformLanguage: sub.lang || undefined,
-        languageDialect: getLanguageDialect(sub.lang || '') || undefined,
-      };
-
-      if (isCanonicalLatest) {
-        // Load or create ProblemMetadata
-        let existingMeta = await storage.getProblemMetadata(cleanProblemId);
-        if (!existingMeta) {
-          existingMeta = migrateProblemMetadata(null, cleanProblemId, sub.titleSlug);
-        }
-
-        const reviewCalc = calculateNextReview(3, existingMeta.reviewsCount || 0, 0);
-
-        const updatedMeta: ProblemMetadata = {
-          ...existingMeta,
-          id: cleanProblemId,
-          title: sub.title || existingMeta.title,
-          slug: sub.titleSlug,
-          difficulty: sub.difficulty || existingMeta.difficulty || 'Medium',
-          tags: Array.from(new Set([...existingMeta.tags, ...tags])),
-          firstTrackedAt: existingMeta.firstTrackedAt || originalIsoDate,
-          lastSyncedAt: importNowIsoDate,
-          solutions: {
-            ...existingMeta.solutions,
-            [`${lang}/solution`]: solutionRecord,
-          },
-          nextReviewDate: reviewCalc.nextReviewDate,
-          rawPlatformLanguage: sub.lang || existingMeta.rawPlatformLanguage,
-          languageDialect: getLanguageDialect(sub.lang || '') || existingMeta.languageDialect,
-        };
-
-        fileChanges.push({
-          path: metadataPath,
-          content: JSON.stringify(updatedMeta, null, 2),
-        });
-
-        // Add default notes.md if not present
-        const notesPath = getNotesFilePath(cleanProblemId, sub.titleSlug, basePrefix);
-        const existingNotes = formatNotesMarkdown(updatedMeta, parseNotesMarkdown(''));
-        fileChanges.push({
-          path: notesPath,
-          content: existingNotes,
-        });
-
-        await storage.saveProblemMetadata(updatedMeta);
-      } else {
-        // Isolated version metadata for history/attempts
-        const versionMeta = {
-          submissionId: sub.id,
-          problemTitle: sub.title,
-          slug: sub.titleSlug,
-          verdict: sub.statusDisplay,
-          language: lang,
-          rawPlatformLanguage: sub.lang || undefined,
-          languageDialect: getLanguageDialect(sub.lang || '') || undefined,
-          submittedAt: originalIsoDate,
-          importedAt: importNowIsoDate,
-          runtime: sub.runtime,
-          memory: sub.memory,
-          contentHash,
-        };
-
-        fileChanges.push({
-          path: metadataPath,
-          content: JSON.stringify(versionMeta, null, 2),
-        });
-      }
-
-      // Update sync-index entry
-      const indexEntry: SyncIndexEntry = {
-        problemId: cleanProblemId,
-        slug: sub.titleSlug,
-        title: sub.title,
-        difficulty: sub.difficulty || 'Medium',
-        language: lang,
-        approachName: isCanonicalLatest ? 'solution' : `sub-${sub.id}`,
-        submissionId: sub.id,
-        contentHash,
-        syncedAt: importNowIsoDate,
-        filePath: solutionPath,
-      };
-
-      syncIndex.submissions[sub.id] = indexEntry;
-
-      const existingProblemSummary = syncIndex.problems[cleanProblemId];
-      const existingLanguages = existingProblemSummary?.languages || [];
-      const updatedLanguages = Array.from(new Set([...existingLanguages, lang]));
-
-      const problemSummary: ProblemSummaryEntry = {
-        id: cleanProblemId,
-        title: sub.title,
-        slug: sub.titleSlug,
-        difficulty: sub.difficulty || existingProblemSummary?.difficulty || 'Medium',
-        languages: updatedLanguages,
-        approachesCount: (existingProblemSummary?.approachesCount || 0) + 1,
-        lastSyncedAt: importNowIsoDate,
-        confidenceRating: existingProblemSummary?.confidenceRating || 3,
-        nextReviewDate: existingProblemSummary?.nextReviewDate || new Date().toISOString().split('T')[0],
-        tags: Array.from(new Set([...(existingProblemSummary?.tags || []), ...tags])),
-        patterns: existingProblemSummary?.patterns || [],
-      };
-
-      syncIndex.problems[cleanProblemId] = problemSummary;
-      importedCount++;
-      batchProcessedIds.push(sub.id);
     }
 
-    if (fileChanges.length > 0) {
-      syncIndex.totalProblems = Object.keys(syncIndex.problems).length;
-      syncIndex.totalSubmissions = Object.keys(syncIndex.submissions).length;
-      syncIndex.lastUpdated = new Date().toISOString();
+    if (eligibleSubmissionsInBatch.length > 0) {
+      let batchSuccess = false;
+      const fileChanges: FileChange[] = [];
+      const batchProcessedIds: string[] = [];
 
-      // Regenerate README and SVG
-      let existingReadme: string | null = null;
-      try {
-        const remoteReadme = await client.getFileContent(README_PATH);
-        existingReadme = remoteReadme?.content || null;
-      } catch {
-        // ignore
+      for (const item of eligibleSubmissionsInBatch) {
+        const canonicalKey = `${item.sub.titleSlug}::${item.sub.normalizedLanguage || item.sub.lang}`;
+        const isCanonicalLatest =
+          item.sub.statusDisplay === 'Accepted' &&
+          latestAcceptedPerProblemLang.get(canonicalKey) === item.sub.id;
+        distinctProblemsSet.add(item.sub.titleSlug);
+
+        const subFiles = await buildSubmissionFileChanges(
+          item.sub,
+          item.code,
+          item.problemId,
+          item.tags,
+          syncIndex,
+          isCanonicalLatest,
+          basePrefix
+        );
+        fileChanges.push(...subFiles);
+        batchProcessedIds.push(item.sub.id);
       }
 
-      const appSettings = await storage.getSettings();
-      const cleanLeetCodeUser = extractLeetCodeUsername(appSettings?.leetcodeProfileUsername);
-      const cacheBuster = Math.floor(Date.now() / 1000);
+      const auxFiles = await buildAuxiliaryFiles(client, syncIndex, basePrefix);
+      fileChanges.push(...auxFiles);
 
-      const generatedReadme = generateReadme(existingReadme, syncIndex, {
-        repoName: client.rawSettings.repo,
-        githubUsername: client.rawSettings.owner,
-        leetcodeUsername: cleanLeetCodeUser || undefined,
-        basePrefix,
-        cacheBuster,
-      });
-
-      // Progress SVG stats
-      let easyCount = 0;
-      let mediumCount = 0;
-      let hardCount = 0;
-      const languagesCount: Record<string, number> = {};
-      for (const p of Object.values(syncIndex.problems)) {
-        if (p.difficulty === 'Easy') easyCount++;
-        else if (p.difficulty === 'Medium') mediumCount++;
-        else if (p.difficulty === 'Hard') hardCount++;
-        for (const l of p.languages) {
-          languagesCount[l] = (languagesCount[l] || 0) + 1;
-        }
-      }
-
-      const progressStats: ProgressStats = {
-        totalTracked: syncIndex.totalProblems,
-        totalSubmissions: syncIndex.totalSubmissions,
-        easyCount,
-        mediumCount,
-        hardCount,
-        languagesCount,
-        reviewsCompleted: 0,
-      };
-
-      const generatedSvg = generateProgressSvg(progressStats);
-
-      fileChanges.push(
-        { path: SYNC_INDEX_PATH, content: JSON.stringify(syncIndex, null, 2) },
-        { path: README_PATH, content: generatedReadme },
-        { path: PROGRESS_SVG_PATH, content: generatedSvg }
-      );
-
-      // Determine commit date based on selected strategy
+      // Determine commit date based on strategy
       let commitDateIso = new Date().toISOString();
       if (commitDateStrategy === 'ORIGINAL_DATE') {
-        const refSub = currentBatch[currentBatch.length - 1];
+        const refSub = eligibleSubmissionsInBatch[eligibleSubmissionsInBatch.length - 1].sub;
         if (refSub && typeof refSub.timestamp === 'number' && refSub.timestamp > 0) {
           commitDateIso = new Date(refSub.timestamp * 1000).toISOString();
         } else {
@@ -589,79 +645,150 @@ export async function executeHistoricalImport(
         }
       }
 
-      // Generate descriptive commit message
+      const authorName = client.rawSettings.authorName || client.rawSettings.owner || 'LC-Sync';
+      const authorEmail =
+        client.rawSettings.authorEmail || `${client.rawSettings.owner || 'user'}@users.noreply.github.com`;
+
       let commitMsg: string;
       if (batchProcessedIds.length === 1) {
-        const singleSub = currentBatch[0];
+        const singleSub = eligibleSubmissionsInBatch[0].sub;
         const langConfig = getLanguageConfig((singleSub.normalizedLanguage || 'cpp') as any);
         commitMsg = `feat(leetcode): add ${singleSub.title} (${langConfig.name}) [historical]`;
       } else {
         commitMsg = `feat(history): import ${batchProcessedIds.length} historical submissions (batch ${batchIdx + 1}/${batches.length})`;
       }
 
-      const authorName = client.rawSettings.authorName || client.rawSettings.owner || 'LC-Sync';
-      const authorEmail = client.rawSettings.authorEmail || `${client.rawSettings.owner || 'user'}@users.noreply.github.com`;
+      try {
+        const commitSha = await createAtomicCommit(client, {
+          message: commitMsg,
+          files: fileChanges,
+          author: { name: authorName, email: authorEmail, date: commitDateIso },
+          committer: { name: authorName, email: authorEmail, date: commitDateIso },
+        });
 
-      const commitOptions: AtomicCommitOptions = {
-        message: commitMsg,
-        files: fileChanges,
-        author: {
-          name: authorName,
-          email: authorEmail,
-          date: commitDateIso,
-        },
-        committer: {
-          name: authorName,
-          email: authorEmail,
-          date: commitDateIso,
-        },
-      };
+        commitsCreated.push(commitSha);
+        for (const id of batchProcessedIds) {
+          completedIds.add(id);
+          importedCount++;
+        }
+        await storage.saveSyncIndex(syncIndex);
+        batchSuccess = true;
 
-      const commitSha = await createAtomicCommit(client, commitOptions);
-      commitsCreated.push(commitSha);
-
-      // Save local sync index
-      await storage.saveSyncIndex(syncIndex);
-
-      // Update checkpoint
-      for (const id of batchProcessedIds) {
-        completedIds.add(id);
+        await saveCheckpoint();
+        onProgress?.({
+          status: 'importing',
+          processedCount: completedIds.size,
+          totalCount,
+          importedCount,
+          skippedDuplicatesCount: skippedCount,
+          failedCount,
+          awaitingRetryCount: 0,
+          currentBatch: batchIdx + 1,
+          totalBatches: batches.length,
+          message: `Committed batch ${batchIdx + 1}: ${commitSha.slice(0, 7)} (${commitDateStrategy === 'ORIGINAL_DATE' ? commitDateIso.split('T')[0] : 'today'})`,
+          latestCommitSha: commitSha,
+        });
+      } catch (batchErr: any) {
+        console.warn(
+          `[historical-import] Batch ${batchIdx + 1} commit failed: ${batchErr?.message}. Falling back to 1-by-1 recovery...`
+        );
       }
 
-      const checkpoint: HistoricalImportCheckpoint = {
-        checkpointId: `import-${startTime}`,
-        createdAt: Date.now(),
-        config,
-        commitDateStrategy,
-        completedSubmissionIds: Array.from(completedIds),
-        totalExpected: totalCount,
-        importedCount,
-        skippedCount,
-        failedCount,
-        fallbackTimestampsCount,
-        isComplete: completedIds.size >= totalCount,
-      };
+      // If batch commit failed, recover individual submissions one-by-one!
+      if (!batchSuccess) {
+        for (const item of eligibleSubmissionsInBatch) {
+          if (completedIds.has(item.sub.id)) continue;
+          try {
+            // Reconcile with latest remote sync index
+            try {
+              const remoteIdx = await client.getFileContent(SYNC_INDEX_PATH);
+              if (remoteIdx?.content) {
+                const parsed = JSON.parse(remoteIdx.content);
+                syncIndex.submissions = { ...syncIndex.submissions, ...parsed.submissions };
+                syncIndex.problems = { ...syncIndex.problems, ...parsed.problems };
+              }
+            } catch {
+              // ignore
+            }
 
-      await storage.saveHistoricalCheckpoint(checkpoint);
+            const canonicalKey = `${item.sub.titleSlug}::${item.sub.normalizedLanguage || item.sub.lang}`;
+            const isCanonicalLatest =
+              item.sub.statusDisplay === 'Accepted' &&
+              latestAcceptedPerProblemLang.get(canonicalKey) === item.sub.id;
 
-      onProgress?.({
-        status: 'importing',
-        processedCount: completedIds.size,
-        totalCount,
-        importedCount,
-        skippedDuplicatesCount: skippedCount,
-        failedCount,
-        awaitingRetryCount: 0,
-        currentBatch: batchIdx + 1,
-        totalBatches: batches.length,
-        message: `Committed batch ${batchIdx + 1}: ${commitSha.slice(0, 7)} (${commitDateStrategy === 'ORIGINAL_DATE' ? commitDateIso.split('T')[0] : 'today'})`,
-        latestCommitSha: commitSha,
-      });
+            const singleFiles = await buildSubmissionFileChanges(
+              item.sub,
+              item.code,
+              item.problemId,
+              item.tags,
+              syncIndex,
+              isCanonicalLatest,
+              basePrefix
+            );
+            const singleAux = await buildAuxiliaryFiles(client, syncIndex, basePrefix);
+            singleFiles.push(...singleAux);
+
+            let singleDateIso = new Date().toISOString();
+            if (commitDateStrategy === 'ORIGINAL_DATE' && item.sub.timestamp > 0) {
+              singleDateIso = new Date(item.sub.timestamp * 1000).toISOString();
+            }
+
+            const langConfig = getLanguageConfig((item.sub.normalizedLanguage || 'cpp') as any);
+            const singleMsg = `feat(leetcode): add ${item.sub.title} (${langConfig.name}) [historical]`;
+
+            const singleSha = await createAtomicCommit(client, {
+              message: singleMsg,
+              files: singleFiles,
+              author: { name: authorName, email: authorEmail, date: singleDateIso },
+              committer: { name: authorName, email: authorEmail, date: singleDateIso },
+            });
+
+            commitsCreated.push(singleSha);
+            completedIds.add(item.sub.id);
+            importedCount++;
+            await storage.saveSyncIndex(syncIndex);
+            await saveCheckpoint();
+
+            onProgress?.({
+              status: 'importing',
+              processedCount: completedIds.size,
+              totalCount,
+              importedCount,
+              skippedDuplicatesCount: skippedCount,
+              failedCount,
+              awaitingRetryCount: 0,
+              currentBatch: batchIdx + 1,
+              totalBatches: batches.length,
+              message: `Recovered submission "${item.sub.title}": ${singleSha.slice(0, 7)}`,
+              latestCommitSha: singleSha,
+            });
+          } catch (singleErr: any) {
+            // Isolate individual submission failure
+            failedCount++;
+            completedIds.add(item.sub.id);
+            await saveCheckpoint();
+
+            onProgress?.({
+              status: 'importing',
+              processedCount: completedIds.size,
+              totalCount,
+              importedCount,
+              skippedDuplicatesCount: skippedCount,
+              failedCount,
+              awaitingRetryCount: 0,
+              currentBatch: batchIdx + 1,
+              totalBatches: batches.length,
+              message: `Submission "${item.sub.title || item.sub.id}" failed: ${singleErr?.message || 'Commit error'}. Continuing to next submission...`,
+            });
+          }
+        }
+      }
     } else {
-      // All items in batch were duplicates or skipped
+      // All items in batch were duplicates or previously processed
       for (const sub of currentBatch) {
         completedIds.add(sub.id);
       }
+      await saveCheckpoint();
     }
   }
 

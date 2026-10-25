@@ -37,10 +37,13 @@ export class GitHubClient {
     headers.set('Accept', 'application/vnd.github+json');
     headers.set('Authorization', `Bearer ${token}`);
     headers.set('X-GitHub-Api-Version', '2022-11-28');
+    headers.set('Cache-Control', 'no-cache, no-store, max-age=0, must-revalidate');
+    headers.set('Pragma', 'no-cache');
 
     let response: Response;
     try {
       response = await fetch(url, {
+        cache: 'no-store',
         ...options,
         headers,
       });
@@ -196,6 +199,47 @@ export class GitHubClient {
     });
 
     return res.commit?.sha || '';
+  }
+
+  /**
+   * Reads the current branch head SHA with cache-busting
+   */
+  async getBranchHead(branchName?: string): Promise<string | null> {
+    const { owner, repo, branch = 'main' } = this.settings;
+    const targetBranch = branchName || branch || 'main';
+    const cacheBuster = Date.now();
+    try {
+      const refData = await this.request(
+        `/repos/${owner}/${repo}/git/ref/heads/${encodeURIComponent(targetBranch)}?_ts=${cacheBuster}`
+      );
+      if (refData?.object?.sha) {
+        return refData.object.sha;
+      }
+      if (Array.isArray(refData) && refData[0]?.object?.sha) {
+        return refData[0].object.sha;
+      }
+    } catch (err: any) {
+      if (err.status !== 404) {
+        try {
+          const altRef = await this.request(
+            `/repos/${owner}/${repo}/git/refs/heads/${encodeURIComponent(targetBranch)}?_ts=${cacheBuster}`
+          );
+          if (Array.isArray(altRef) && altRef[0]?.object?.sha) {
+            return altRef[0].object.sha;
+          }
+          if (altRef?.object?.sha) {
+            return altRef.object.sha;
+          }
+        } catch {
+          // pass
+        }
+      }
+      if (err.status === 404) {
+        return null;
+      }
+      throw err;
+    }
+    return null;
   }
 
   get rawSettings(): GitHubSettings {
