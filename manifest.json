@@ -5,8 +5,7 @@
   "description": "Personal DSA Learning, GitHub Automation, and Spaced Repetition Platform",
   "permissions": [
     "storage",
-    "tabs",
-    "action"
+    "tabs"
   ],
   "host_permissions": [
     "*://leetcode.com/*",
