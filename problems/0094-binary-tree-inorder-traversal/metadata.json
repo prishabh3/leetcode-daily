@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 2,
+  "id": "0094",
+  "title": "Binary Tree Inorder Traversal",
+  "slug": "binary-tree-inorder-traversal",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T07:12:43.260Z",
+  "lastSyncedAt": "2026-10-25T06:12:50.000Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0094-binary-tree-inorder-traversal/cpp/solution.cpp",
+      "submissionId": "2181140905",
+      "contentHash": "47db159420735b22669a9c1da506f981a07bd7eada7f40edea966f22e9dbea3d",
+      "syncedAt": "2026-10-25T06:12:50.000Z",
+      "runtime": "0 ms",
+      "memory": "10.9 MB"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}

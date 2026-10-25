@@ -1,0 +1,11 @@
+{
+  "submissionId": "2181138335",
+  "problemTitle": "Binary Tree Inorder Traversal",
+  "slug": "binary-tree-inorder-traversal",
+  "verdict": "Accepted",
+  "language": "cpp",
+  "timestamp": "2026-10-25T06:09:08.000Z",
+  "runtime": "0 ms",
+  "memory": "11 MB",
+  "contentHash": "47db159420735b22669a9c1da506f981a07bd7eada7f40edea966f22e9dbea3d"
+}

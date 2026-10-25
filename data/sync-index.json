@@ -1,9 +1,69 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T07:10:40.482Z",
-  "totalProblems": 2,
-  "totalSubmissions": 2,
+  "lastUpdated": "2026-10-25T07:12:44.383Z",
+  "totalProblems": 3,
+  "totalSubmissions": 7,
   "submissions": {
+    "2181124556": {
+      "problemId": "0094",
+      "slug": "binary-tree-inorder-traversal",
+      "title": "Binary Tree Inorder Traversal",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "sub-2181124556",
+      "submissionId": "2181124556",
+      "contentHash": "47db159420735b22669a9c1da506f981a07bd7eada7f40edea966f22e9dbea3d",
+      "syncedAt": "2026-10-25T05:48:40.000Z",
+      "filePath": "problems/0094-binary-tree-inorder-traversal/history/2181124556/solution.cpp"
+    },
+    "2181125100": {
+      "problemId": "0094",
+      "slug": "binary-tree-inorder-traversal",
+      "title": "Binary Tree Inorder Traversal",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "sub-2181125100",
+      "submissionId": "2181125100",
+      "contentHash": "47db159420735b22669a9c1da506f981a07bd7eada7f40edea966f22e9dbea3d",
+      "syncedAt": "2026-10-25T05:49:32.000Z",
+      "filePath": "problems/0094-binary-tree-inorder-traversal/history/2181125100/solution.cpp"
+    },
+    "2181138335": {
+      "problemId": "0094",
+      "slug": "binary-tree-inorder-traversal",
+      "title": "Binary Tree Inorder Traversal",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "sub-2181138335",
+      "submissionId": "2181138335",
+      "contentHash": "47db159420735b22669a9c1da506f981a07bd7eada7f40edea966f22e9dbea3d",
+      "syncedAt": "2026-10-25T06:09:08.000Z",
+      "filePath": "problems/0094-binary-tree-inorder-traversal/history/2181138335/solution.cpp"
+    },
+    "2181140905": {
+      "problemId": "0094",
+      "slug": "binary-tree-inorder-traversal",
+      "title": "Binary Tree Inorder Traversal",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2181140905",
+      "contentHash": "47db159420735b22669a9c1da506f981a07bd7eada7f40edea966f22e9dbea3d",
+      "syncedAt": "2026-10-25T06:12:50.000Z",
+      "filePath": "problems/0094-binary-tree-inorder-traversal/cpp/solution.cpp"
+    },
+    "2181142111": {
+      "problemId": "0013",
+      "slug": "roman-to-integer",
+      "title": "Roman to Integer",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "sub-2181142111",
+      "submissionId": "2181142111",
+      "contentHash": "5c4dd733bbcde7f6898f7d7b37a3e62c8785f9a5f409c7f9ad54ca9cf74acda2",
+      "syncedAt": "2026-10-25T06:14:41.000Z",
+      "filePath": "problems/0013-roman-to-integer/history/2181142111/solution.cpp"
+    },
     "2181143273": {
       "problemId": "0013",
       "slug": "roman-to-integer",
@@ -37,8 +97,8 @@
       "languages": [
         "cpp"
       ],
-      "approachesCount": 1,
-      "lastSyncedAt": "2026-10-25T06:16:25.425Z",
+      "approachesCount": 2,
+      "lastSyncedAt": "2026-10-25T06:14:41.000Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-27",
       "tags": [],
@@ -56,6 +116,21 @@
       "lastSyncedAt": "2026-10-25T07:10:40.482Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-27",
+      "tags": [],
+      "patterns": []
+    },
+    "0094": {
+      "id": "0094",
+      "title": "Binary Tree Inorder Traversal",
+      "slug": "binary-tree-inorder-traversal",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 4,
+      "lastSyncedAt": "2026-10-25T05:48:40.000Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
       "tags": [],
       "patterns": []
     }

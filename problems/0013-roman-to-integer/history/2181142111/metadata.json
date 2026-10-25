@@ -1,0 +1,11 @@
+{
+  "submissionId": "2181142111",
+  "problemTitle": "Roman to Integer",
+  "slug": "roman-to-integer",
+  "verdict": "Accepted",
+  "language": "cpp",
+  "timestamp": "2026-10-25T06:14:41.000Z",
+  "runtime": "11 ms",
+  "memory": "13.2 MB",
+  "contentHash": "5c4dd733bbcde7f6898f7d7b37a3e62c8785f9a5f409c7f9ad54ca9cf74acda2"
+}
