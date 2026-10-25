@@ -211,6 +211,8 @@ async function buildAuxiliaryFiles(
     githubUsername: client.rawSettings.owner,
     leetcodeUsername: cleanLeetCodeUser || undefined,
     leetcodeSite: appSettings?.leetcodeSite || 'us',
+    leetcodeVerified: appSettings?.leetcodeVerified === true,
+    leetcodeAccountStats: appSettings?.leetcodeAccountStats,
     basePrefix,
     cacheBuster,
   });

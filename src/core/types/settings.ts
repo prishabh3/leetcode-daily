@@ -26,12 +26,34 @@ export interface SyncPreferences {
   defaultConfidence: number;
 }
 
+export interface LeetCodeAccountStats {
+  totalSolved: number;
+  easySolved: number;
+  mediumSolved: number;
+  hardSolved: number;
+  ranking?: number | string;
+}
+
+export interface LeetCodeConnectionInfo {
+  status: 'CONNECTED' | 'EXPIRED' | 'DISCONNECTED' | 'ERROR';
+  username?: string;
+  realName?: string;
+  site: 'us' | 'cn';
+  verifiedAt?: string;
+  stats?: LeetCodeAccountStats;
+  error?: string;
+  authMethod: 'session' | 'manual';
+}
+
 export interface AppSettings {
   github: GitHubSettings;
   preferences: SyncPreferences;
   leetcodeProfileUsername?: string;
   leetcodeProfileUrl?: string;
   leetcodeSite?: 'us' | 'cn';
+  leetcodeVerified?: boolean;
+  leetcodeAccountStats?: LeetCodeAccountStats;
+  leetcodeConnection?: LeetCodeConnectionInfo;
   lastSyncInfo?: LastSyncInfo;
 }
 

@@ -160,16 +160,40 @@ ${LC_SYNC_END_MARKER}
       cacheBuster: 12345,
     });
 
-    expect(readme).toContain('## 🔗 LeetCode Profile');
+    expect(readme).toContain('## 🌐 LeetCode Account');
+    expect(readme).toContain('### 🔗 LeetCode Profile');
     expect(readme).toContain('[octocat](https://leetcode.com/u/octocat/)');
-    expect(readme).toContain('## LeetCode Stats');
+    expect(readme).toContain('### 📈 Account Statistics');
     expect(readme).toContain(
       '[![LeetCode Stats](https://leetcard.jacoblin.cool/octocat?theme=dark&font=Roboto&v=12345)](https://leetcode.com/u/octocat/)'
     );
-    expect(readme).toContain('## Submission Activity');
+    expect(readme).toContain('### 🔥 Submission Activity Heatmap');
     expect(readme).toContain(
       '[![LeetCode Heatmap](https://leetcard.jacoblin.cool/octocat?ext=heatmap&theme=dark&v=12345)](https://leetcode.com/u/octocat/)'
     );
+    expect(readme).toContain('## 📊 LC-Sync Repository');
+  });
+
+  it('renders verified account statistics breakdown in LeetCode Account section', () => {
+    const readme = generateReadme(null, mockIndex, {
+      repoName: 'leetcode-daily',
+      leetcodeUsername: 'prishabh',
+      leetcodeVerified: true,
+      leetcodeAccountStats: {
+        totalSolved: 20,
+        easySolved: 15,
+        mediumSolved: 4,
+        hardSolved: 1,
+        ranking: 4525348,
+      },
+      cacheBuster: 12345,
+    });
+
+    expect(readme).toContain('## 🌐 LeetCode Account');
+    expect(readme).toContain('- **Total Solved on LeetCode**: **20** (🟢 Easy: **15** • 🟡 Medium: **4** • 🔴 Hard: **1**)');
+    expect(readme).toContain('• Ranking: `#4525348`');
+    expect(readme).toContain('## 📊 LC-Sync Repository');
+    expect(readme).toContain('- **Distinct Problems Tracked**: **2**');
   });
 
   it('extracts clean username from full LeetCode profile URL in readme options', () => {
@@ -179,7 +203,7 @@ ${LC_SYNC_END_MARKER}
       cacheBuster: 99999,
     });
 
-    expect(readme).toContain('## 🔗 LeetCode Profile');
+    expect(readme).toContain('## 🌐 LeetCode Account');
     expect(readme).toContain('[octocat](https://leetcode.com/u/octocat/)');
     expect(readme).toContain('https://leetcard.jacoblin.cool/octocat?theme=dark&font=Roboto&v=99999');
   });
@@ -189,17 +213,17 @@ ${LC_SYNC_END_MARKER}
       repoName: 'leetcode-daily',
     });
 
-    expect(readmeNoUser).toContain('## 🔗 LeetCode Profile');
+    expect(readmeNoUser).toContain('## 🌐 LeetCode Account');
     expect(readmeNoUser).toContain('[LeetCode](https://leetcode.com)');
-    expect(readmeNoUser).not.toContain('## LeetCode Stats');
-    expect(readmeNoUser).not.toContain('## Submission Activity');
+    expect(readmeNoUser).not.toContain('### 📈 Account Statistics');
+    expect(readmeNoUser).not.toContain('### 🔥 Submission Activity Heatmap');
     expect(readmeNoUser).not.toContain('leetcard.jacoblin.cool');
 
     const readmeInvalidUser = generateReadme(null, mockIndex, {
       repoName: 'leetcode-daily',
       leetcodeUsername: 'ab', // too short
     });
-    expect(readmeInvalidUser).not.toContain('## LeetCode Stats');
+    expect(readmeInvalidUser).not.toContain('### 📈 Account Statistics');
     expect(readmeInvalidUser).not.toContain('leetcard.jacoblin.cool');
   });
 
@@ -210,11 +234,11 @@ ${LC_SYNC_END_MARKER}
       leetcodeVerified: false,
     });
 
-    expect(readmeUnverified).toContain('## 🔗 LeetCode Profile');
+    expect(readmeUnverified).toContain('## 🌐 LeetCode Account');
     expect(readmeUnverified).toContain('[octocat](https://leetcode.com/u/octocat/)');
     expect(readmeUnverified).toContain('External LeetCode statistics cards are unverified');
-    expect(readmeUnverified).not.toContain('## LeetCode Stats');
-    expect(readmeUnverified).not.toContain('## Submission Activity');
+    expect(readmeUnverified).not.toContain('### 📈 Account Statistics');
+    expect(readmeUnverified).not.toContain('### 🔥 Submission Activity Heatmap');
     expect(readmeUnverified).not.toContain('leetcard.jacoblin.cool');
   });
 

@@ -217,6 +217,9 @@ export async function verifyLeetCodeUsername(
       query userPublicProfile($username: String!) {
         matchedUser(username: $username) {
           username
+          profile {
+            ranking
+          }
           submitStatsGlobal {
             acSubmissionNum {
               difficulty
@@ -260,6 +263,7 @@ export async function verifyLeetCodeUsername(
           easySolved: easy,
           mediumSolved: medium,
           hardSolved: hard,
+          ranking: json.data.matchedUser.profile?.ranking,
         };
       } else if (
         json?.data?.matchedUser === null ||

@@ -17,19 +17,135 @@ export const OptionsApp: React.FC = () => {
     checking: boolean;
     result?: string;
     isError?: boolean;
+    stats?: any;
   }>({ checking: false });
   const [isDetectingSession, setIsDetectingSession] = useState(false);
+  const [waitingForLogin, setWaitingForLogin] = useState(false);
+
+  const loadSettingsAndCheckSession = async (silent: boolean = false) => {
+    const s = await storage.getSettings();
+    setSettings(s);
+    if (!silent && !s.leetcodeProfileUsername) {
+      checkLeetCodeSession(true);
+    }
+  };
 
   useEffect(() => {
-    storage.getSettings().then(setSettings);
+    loadSettingsAndCheckSession();
+
+    const onFocus = () => {
+      // Auto-detect session when returning from LeetCode login tab
+      checkLeetCodeSession(true);
+    };
+    window.addEventListener('focus', onFocus);
+    return () => window.removeEventListener('focus', onFocus);
   }, []);
+
+  const checkLeetCodeSession = async (silent: boolean = false) => {
+    if (!silent) setIsDetectingSession(true);
+    try {
+      const site = settings.leetcodeSite || 'us';
+      const baseUrl = site === 'cn' ? 'https://leetcode.cn' : 'https://leetcode.com';
+      const adapter = new LeetCodeHistoricalAdapter(baseUrl);
+      const identity = await adapter.checkAuthenticatedIdentity();
+
+      if (identity.status === 'CONNECTED' && identity.username) {
+        const clean = extractLeetCodeUsername(identity.username) || identity.username;
+        const profileUrl = `https://${site === 'cn' ? 'leetcode.cn' : 'leetcode.com'}/u/${clean}/`;
+        const updated: AppSettings = {
+          ...settings,
+          leetcodeProfileUsername: clean,
+          leetcodeProfileUrl: profileUrl,
+          leetcodeVerified: true,
+          leetcodeSite: site,
+          leetcodeAccountStats: identity.stats,
+          leetcodeConnection: identity,
+        };
+        setSettings(updated);
+        await storage.saveSettings(updated);
+        setWaitingForLogin(false);
+        if (!silent) {
+          setLcVerification({
+            checking: false,
+            isError: false,
+            result: `✓ Connected as @${clean}! ${identity.stats ? `(${identity.stats.totalSolved} solved)` : ''}`,
+            stats: identity.stats,
+          });
+        }
+      } else if (identity.status === 'EXPIRED') {
+        if (!silent) {
+          setLcVerification({
+            checking: false,
+            isError: true,
+            result: 'Session expired or not logged in. Click "Connect LeetCode" to log in.',
+          });
+        }
+      } else if (identity.status === 'ERROR') {
+        if (!silent) {
+          setLcVerification({
+            checking: false,
+            isError: true,
+            result: `Connection error: ${identity.error}`,
+          });
+        }
+      }
+    } catch (err: any) {
+      if (!silent) {
+        setLcVerification({
+          checking: false,
+          isError: true,
+          result: `Failed to detect session: ${err.message}`,
+        });
+      }
+    } finally {
+      if (!silent) setIsDetectingSession(false);
+    }
+  };
+
+  const handleConnectLeetCode = () => {
+    const site = settings.leetcodeSite || 'us';
+    const loginUrl = site === 'cn' ? 'https://leetcode.cn/accounts/login/' : 'https://leetcode.com/accounts/login/';
+    setWaitingForLogin(true);
+    setLcVerification({
+      checking: false,
+      isError: false,
+      result: 'Opening LeetCode in a new tab. Please sign in, then return here to complete connection.',
+    });
+
+    if (typeof chrome !== 'undefined' && chrome.tabs?.create) {
+      chrome.tabs.create({ url: loginUrl });
+    } else {
+      window.open(loginUrl, '_blank');
+    }
+  };
+
+  const handleDisconnectLeetCode = async () => {
+    const updated: AppSettings = {
+      ...settings,
+      leetcodeVerified: false,
+      leetcodeConnection: undefined,
+      leetcodeAccountStats: undefined,
+    };
+    setSettings(updated);
+    await storage.saveSettings(updated);
+    setLcVerification({
+      checking: false,
+      isError: false,
+      result: 'Disconnected LeetCode session.',
+    });
+  };
 
   const handleSave = async (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     const cleanLcUsername = extractLeetCodeUsername(settings.leetcodeProfileUsername) || '';
+    const site = settings.leetcodeSite || 'us';
+    const profileUrl = cleanLcUsername ? `https://${site === 'cn' ? 'leetcode.cn' : 'leetcode.com'}/u/${cleanLcUsername}/` : '';
     const updatedSettings: AppSettings = {
       ...settings,
       leetcodeProfileUsername: cleanLcUsername,
+      leetcodeProfileUrl: profileUrl,
+      leetcodeSite: site,
+      leetcodeVerified: cleanLcUsername ? settings.leetcodeVerified : false,
     };
     setSettings(updatedSettings);
     await storage.saveSettings(updatedSettings);
@@ -59,20 +175,31 @@ export const OptionsApp: React.FC = () => {
 
     setLcVerification({ checking: true });
     try {
-      const res = await verifyLeetCodeUsername(clean);
+      const site = settings.leetcodeSite || 'us';
+      const res = await verifyLeetCodeUsername(clean, site);
       if (res.valid && res.username) {
         setLcVerification({
           checking: false,
           isError: false,
-          result: `✓ Account verified: "${res.username}" exists on LeetCode!`,
+          result: `✓ Account verified: "${res.username}" exists on LeetCode! ${res.stats ? `(${res.stats.totalSolved} solved)` : ''}`,
+          stats: res.stats,
         });
-        setSettings((prev) => ({ ...prev, leetcodeProfileUsername: res.username }));
+        const updated: AppSettings = {
+          ...settings,
+          leetcodeProfileUsername: res.username,
+          leetcodeVerified: true,
+          leetcodeAccountStats: res.stats,
+          leetcodeProfileUrl: `https://${site === 'cn' ? 'leetcode.cn' : 'leetcode.com'}/u/${res.username}/`,
+        };
+        setSettings(updated);
+        await storage.saveSettings(updated);
       } else {
         setLcVerification({
           checking: false,
           isError: true,
           result: `✗ ${res.error || 'User not found on LeetCode.'}`,
         });
+        setSettings((prev) => ({ ...prev, leetcodeVerified: false }));
       }
     } catch (err: any) {
       setLcVerification({
@@ -80,40 +207,6 @@ export const OptionsApp: React.FC = () => {
         isError: true,
         result: `✗ Verification error: ${err.message}`,
       });
-    }
-  };
-
-  const handleAutoDetectLeetCodeSession = async () => {
-    setIsDetectingSession(true);
-    setLcVerification({ checking: false });
-    try {
-      const adapter = new LeetCodeHistoricalAdapter();
-      const session = await adapter.checkSession();
-      if (session.isSignedIn && session.username) {
-        const clean = extractLeetCodeUsername(session.username);
-        if (clean) {
-          setSettings((prev) => ({ ...prev, leetcodeProfileUsername: clean }));
-          setLcVerification({
-            checking: false,
-            isError: false,
-            result: `✓ Detected active LeetCode session for "${clean}"!`,
-          });
-        }
-      } else {
-        setLcVerification({
-          checking: false,
-          isError: true,
-          result: session.error || 'No active LeetCode session found. Please log in to leetcode.com in your browser.',
-        });
-      }
-    } catch (err: any) {
-      setLcVerification({
-        checking: false,
-        isError: true,
-        result: `Failed to detect session: ${err.message}`,
-      });
-    } finally {
-      setIsDetectingSession(false);
     }
   };
 
@@ -431,53 +524,208 @@ export const OptionsApp: React.FC = () => {
             </div>
           </div>
 
-          <div style={{ marginBottom: '20px', padding: '14px', backgroundColor: 'var(--bg-primary)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
-            <label style={{ fontSize: '13px', fontWeight: 600, display: 'block', marginBottom: '4px' }}>
-              LeetCode Account & Profile Cards
-            </label>
-            <p style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '12px' }}>
-              Used to generate your live LeetCode stats card, submission activity heatmap, and profile badges in your GitHub README.
-              You can enter your LeetCode username (e.g. <code>tourist</code>) or full profile URL (e.g. <code>https://leetcode.com/u/tourist/</code>).
-            </p>
-
-            <div style={{ display: 'flex', gap: '8px', marginBottom: '8px' }}>
-              <input
-                type="text"
-                placeholder="e.g. tourist or https://leetcode.com/u/tourist/"
-                value={settings.leetcodeProfileUsername || ''}
-                onChange={(e) =>
-                  setSettings({
-                    ...settings,
-                    leetcodeProfileUsername: e.target.value,
-                  })
-                }
-                style={{ flex: 1, fontFamily: 'var(--font-mono)' }}
-              />
-              <button
-                type="button"
-                onClick={handleVerifyLeetCodeProfile}
-                disabled={lcVerification.checking || !settings.leetcodeProfileUsername?.trim()}
-                style={{ flexShrink: 0 }}
-              >
-                {lcVerification.checking ? 'Verifying...' : '🔍 Verify Account'}
-              </button>
-              <button
-                type="button"
-                onClick={handleAutoDetectLeetCodeSession}
-                disabled={isDetectingSession}
-                style={{ flexShrink: 0 }}
-              >
-                {isDetectingSession ? 'Detecting...' : '⚡ Auto-Detect Session'}
-              </button>
+          {/* LeetCode Account Connection Card */}
+          <div style={{ marginBottom: '20px', padding: '16px', backgroundColor: 'var(--bg-primary)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+              <label style={{ fontSize: '14px', fontWeight: 600, display: 'block' }}>
+                🌐 LeetCode Account Connection
+              </label>
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <select
+                  value={settings.leetcodeSite || 'us'}
+                  onChange={(e) =>
+                    setSettings({
+                      ...settings,
+                      leetcodeSite: e.target.value as 'us' | 'cn',
+                    })
+                  }
+                  style={{ fontSize: '12px', padding: '4px 8px' }}
+                >
+                  <option value="us">LeetCode Global (leetcode.com)</option>
+                  <option value="cn">LeetCode CN (leetcode.cn)</option>
+                </select>
+              </div>
             </div>
 
-            {settings.leetcodeProfileUsername &&
-              extractLeetCodeUsername(settings.leetcodeProfileUsername) &&
-              extractLeetCodeUsername(settings.leetcodeProfileUsername) !== settings.leetcodeProfileUsername.trim() && (
-                <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginBottom: '6px' }}>
-                  Parsed username: <strong style={{ color: 'var(--accent-blue)' }}>{extractLeetCodeUsername(settings.leetcodeProfileUsername)}</strong>
+            <p style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '14px' }}>
+              Connect your authenticated browser session to display your actual LeetCode account statistics and activity heatmap in your repository README.
+            </p>
+
+            {/* Active Connection Status Badge */}
+            {settings.leetcodeVerified && settings.leetcodeProfileUsername ? (
+              <div
+                style={{
+                  padding: '12px 14px',
+                  borderRadius: 'var(--radius-md)',
+                  backgroundColor: 'rgba(35, 134, 54, 0.1)',
+                  border: '1px solid var(--accent-green)',
+                  marginBottom: '14px',
+                }}
+              >
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <span style={{ color: 'var(--accent-green)', fontWeight: 600, fontSize: '13px' }}>
+                      ✓ Connected & Verified
+                    </span>
+                    <strong style={{ color: 'var(--accent-blue)', fontSize: '13px' }}>
+                      @{settings.leetcodeProfileUsername}
+                    </strong>
+                    <span style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                      ({settings.leetcodeSite === 'cn' ? 'leetcode.cn' : 'leetcode.com'})
+                    </span>
+                  </div>
+                  <div style={{ display: 'flex', gap: '6px' }}>
+                    <button
+                      type="button"
+                      onClick={() => checkLeetCodeSession(false)}
+                      disabled={isDetectingSession}
+                      style={{ fontSize: '11px', padding: '3px 8px' }}
+                    >
+                      {isDetectingSession ? 'Refreshing...' : '🔄 Refresh Stats'}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleDisconnectLeetCode}
+                      style={{ fontSize: '11px', padding: '3px 8px', backgroundColor: 'transparent', borderColor: 'var(--border-color)' }}
+                    >
+                      🔌 Disconnect
+                    </button>
+                  </div>
+                </div>
+
+                {settings.leetcodeAccountStats ? (
+                  <div style={{ fontSize: '12px', color: 'var(--text-primary)', marginTop: '4px' }}>
+                    <strong>{settings.leetcodeAccountStats.totalSolved}</strong> total solved:
+                    <span style={{ color: '#238636', marginLeft: '6px' }}>🟢 {settings.leetcodeAccountStats.easySolved} Easy</span>
+                    <span style={{ color: '#d29922', marginLeft: '6px' }}>🟡 {settings.leetcodeAccountStats.mediumSolved} Medium</span>
+                    <span style={{ color: '#da3633', marginLeft: '6px' }}>🔴 {settings.leetcodeAccountStats.hardSolved} Hard</span>
+                    {settings.leetcodeAccountStats.ranking && (
+                      <span style={{ color: 'var(--text-secondary)', marginLeft: '8px' }}>
+                        • Ranking: #{settings.leetcodeAccountStats.ranking}
+                      </span>
+                    )}
+                  </div>
+                ) : (
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                    Session verified. Solved count will be refreshed on next sync.
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div
+                style={{
+                  padding: '12px 14px',
+                  borderRadius: 'var(--radius-md)',
+                  backgroundColor: 'var(--bg-secondary)',
+                  border: '1px solid var(--border-color)',
+                  marginBottom: '14px',
+                }}
+              >
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div>
+                    <div style={{ fontSize: '13px', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '2px' }}>
+                      Not Connected to LeetCode
+                    </div>
+                    <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                      Sign in to your account to link live statistics without entering passwords.
+                    </div>
+                  </div>
+                  <div style={{ display: 'flex', gap: '8px' }}>
+                    <button
+                      type="button"
+                      onClick={handleConnectLeetCode}
+                      style={{ backgroundColor: 'var(--accent-blue)', color: '#fff', border: 'none', fontWeight: 600 }}
+                    >
+                      🔗 Connect LeetCode
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => checkLeetCodeSession(false)}
+                      disabled={isDetectingSession}
+                    >
+                      {isDetectingSession ? 'Detecting...' : '⚡ Check Session'}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Account Mismatch Warning */}
+            {settings.leetcodeConnection?.username &&
+              settings.leetcodeProfileUsername &&
+              settings.leetcodeConnection.username.toLowerCase() !== settings.leetcodeProfileUsername.toLowerCase() && (
+                <div
+                  style={{
+                    padding: '8px 12px',
+                    borderRadius: 'var(--radius-md)',
+                    backgroundColor: 'rgba(210, 153, 34, 0.1)',
+                    border: '1px solid var(--accent-yellow)',
+                    fontSize: '12px',
+                    color: 'var(--accent-yellow)',
+                    marginBottom: '10px',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                  }}
+                >
+                  <span>
+                    ⚠️ <strong>Account Mismatch:</strong> Manual profile "@
+                    {settings.leetcodeProfileUsername}" differs from active browser session "@
+                    {settings.leetcodeConnection.username}".
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSettings((prev) => ({
+                        ...prev,
+                        leetcodeProfileUsername: settings.leetcodeConnection!.username,
+                        leetcodeVerified: true,
+                        leetcodeAccountStats: settings.leetcodeConnection!.stats,
+                      }));
+                    }}
+                    style={{ fontSize: '11px', padding: '2px 8px' }}
+                  >
+                    Use Signed-in Account
+                  </button>
                 </div>
               )}
+
+            {/* Fallback Manual Profile URL Input */}
+            <div style={{ marginTop: '10px' }}>
+              <label style={{ fontSize: '12px', fontWeight: 500, display: 'block', marginBottom: '4px' }}>
+                Fallback Profile URL or Username
+              </label>
+              <div style={{ display: 'flex', gap: '8px', marginBottom: '6px' }}>
+                <input
+                  type="text"
+                  placeholder="e.g. tourist or https://leetcode.com/u/tourist/"
+                  value={settings.leetcodeProfileUsername || ''}
+                  onChange={(e) =>
+                    setSettings({
+                      ...settings,
+                      leetcodeProfileUsername: e.target.value,
+                    })
+                  }
+                  style={{ flex: 1, fontFamily: 'var(--font-mono)', fontSize: '12px' }}
+                />
+                <button
+                  type="button"
+                  onClick={handleVerifyLeetCodeProfile}
+                  disabled={lcVerification.checking || !settings.leetcodeProfileUsername?.trim()}
+                  style={{ flexShrink: 0, fontSize: '12px' }}
+                >
+                  {lcVerification.checking ? 'Verifying...' : '🔍 Verify Handle'}
+                </button>
+              </div>
+
+              {settings.leetcodeProfileUsername &&
+                extractLeetCodeUsername(settings.leetcodeProfileUsername) &&
+                extractLeetCodeUsername(settings.leetcodeProfileUsername) !== settings.leetcodeProfileUsername.trim() && (
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginBottom: '4px' }}>
+                    Parsed handle: <strong style={{ color: 'var(--accent-blue)' }}>{extractLeetCodeUsername(settings.leetcodeProfileUsername)}</strong>
+                  </div>
+                )}
+            </div>
 
             {lcVerification.result && (
               <div
@@ -492,9 +740,9 @@ export const OptionsApp: React.FC = () => {
               </div>
             )}
 
-            <p style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '8px', fontStyle: 'italic' }}>
-              ℹ️ If left empty, LeetCode stats and heatmap cards will be cleanly omitted from your README to prevent "User Not Found" errors.
-            </p>
+            <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '10px', lineHeight: '1.4' }}>
+              🔒 <strong>Security & Permissions:</strong> LC-Sync never asks for your password or stores session cookies. It relies on standard browser credentials to query your public problem-solving progress directly from LeetCode.
+            </div>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '13px' }}>

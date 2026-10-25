@@ -237,6 +237,8 @@ export async function executeSyncItem(
     githubUsername: settings.owner,
     leetcodeUsername: cleanLeetCodeUser || undefined,
     leetcodeSite: appSettings?.leetcodeSite || 'us',
+    leetcodeVerified: appSettings?.leetcodeVerified === true,
+    leetcodeAccountStats: appSettings?.leetcodeAccountStats,
     basePrefix,
     cacheBuster,
   });

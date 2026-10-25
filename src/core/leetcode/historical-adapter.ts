@@ -1,6 +1,7 @@
 import { RawHistoricalSubmission } from '../types/historical-import';
 import { normalizeLanguage } from '../utils/languages';
 import { ProblemDifficulty, SupportedLanguage } from '../types/submission';
+import { LeetCodeAccountStats, LeetCodeConnectionInfo } from '../types/settings';
 
 export interface LeetCodeSessionStatus {
   isSignedIn: boolean;
@@ -130,6 +131,94 @@ export class LeetCodeHistoricalAdapter {
         error: err?.message || 'Could not connect to LeetCode.',
       };
     }
+  }
+
+  /**
+   * Fetches account-wide solved problem statistics for a user from LeetCode GraphQL
+   */
+  async fetchUserStats(username: string): Promise<LeetCodeAccountStats | null> {
+    const query = `
+      query userPublicProfile($username: String!) {
+        matchedUser(username: $username) {
+          username
+          profile {
+            ranking
+          }
+          submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+            }
+          }
+        }
+      }
+    `;
+
+    try {
+      const response = await this.fetchWithRetry(`${this.baseUrl}/graphql`, {
+        method: 'POST',
+        body: JSON.stringify({ query, variables: { username } }),
+      });
+
+      if (!response.ok) return null;
+      const data = await response.json();
+      const matched = data?.data?.matchedUser;
+      if (!matched) return null;
+
+      const acList: Array<{ difficulty: string; count: number }> =
+        matched.submitStatsGlobal?.acSubmissionNum || [];
+
+      let total = 0;
+      let easy = 0;
+      let medium = 0;
+      let hard = 0;
+
+      for (const item of acList) {
+        if (item.difficulty === 'All') total = item.count;
+        else if (item.difficulty === 'Easy') easy = item.count;
+        else if (item.difficulty === 'Medium') medium = item.count;
+        else if (item.difficulty === 'Hard') hard = item.count;
+      }
+
+      return {
+        totalSolved: total,
+        easySolved: easy,
+        mediumSolved: medium,
+        hardSolved: hard,
+        ranking: matched.profile?.ranking,
+      };
+    } catch {
+      return null;
+    }
+  }
+
+  /**
+   * Comprehensive authenticated identity check that returns connection state and account statistics
+   */
+  async checkAuthenticatedIdentity(): Promise<LeetCodeConnectionInfo> {
+    const site: 'us' | 'cn' = this.baseUrl.includes('.cn') ? 'cn' : 'us';
+
+    const session = await this.checkSession();
+    if (!session.isSignedIn || !session.username) {
+      return {
+        status: session.error && /HTTP 429|rate limit/i.test(session.error) ? 'ERROR' : 'EXPIRED',
+        site,
+        authMethod: 'session',
+        error: session.error || 'No active LeetCode session found. Please sign in to LeetCode in your browser.',
+      };
+    }
+
+    const cleanUsername = session.username.trim();
+    const stats = await this.fetchUserStats(cleanUsername);
+
+    return {
+      status: 'CONNECTED',
+      username: cleanUsername,
+      site,
+      verifiedAt: new Date().toISOString(),
+      stats: stats || undefined,
+      authMethod: 'session',
+    };
   }
 
   /**

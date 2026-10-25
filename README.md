@@ -3,17 +3,28 @@
 > My LeetCode problem-solving journey — automatically synchronized to GitHub using LC-Sync.
 
 <!-- lc-sync:start -->
-## 🔗 LeetCode Profile
+## 🌐 LeetCode Account
 
-[LeetCode](https://leetcode.com) — _Configure your LeetCode profile in LC-Sync Settings to view live stats._
+### 🔗 LeetCode Profile
+[prishabh](https://leetcode.com/u/prishabh/)
 
-## 📊 Repository Progress
+- **Total Solved on LeetCode**: **20** (🟢 Easy: **15** • 🟡 Medium: **4** • 🔴 Hard: **1**) • Ranking: `#4525348`
+
+### 📈 Account Statistics
+[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh?theme=dark&font=Roboto&v=1792928400)](https://leetcode.com/u/prishabh/)
+
+### 🔥 Submission Activity Heatmap
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh?ext=heatmap&theme=dark&v=1792928400)](https://leetcode.com/u/prishabh/)
+
+_External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
+
+## 📊 LC-Sync Repository
 
 <p align="center">
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-54-blue)]() [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-54-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
 - **Distinct Problems Tracked**: **54**
 - **Total Accepted Submissions**: **62**
