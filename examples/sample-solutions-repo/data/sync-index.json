@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 2,
+  "lastUpdated": "2026-10-24T12:00:00.000Z",
+  "totalProblems": 1,
+  "totalSubmissions": 1,
+  "submissions": {
+    "1049281920": {
+      "problemId": "0001",
+      "slug": "two-sum",
+      "title": "Two Sum",
+      "difficulty": "Easy",
+      "language": "cpp",
+      "approachName": "hash-map-optimal",
+      "submissionId": "1049281920",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "syncedAt": "2026-10-24T12:00:00.000Z",
+      "filePath": "problems/0001-two-sum/cpp/hash-map-optimal.cpp"
+    }
+  },
+  "problems": {
+    "0001": {
+      "id": "0001",
+      "title": "Two Sum",
+      "slug": "two-sum",
+      "difficulty": "Easy",
+      "languages": ["cpp"],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-24T12:00:00.000Z",
+      "confidenceRating": 5,
+      "nextReviewDate": "2026-10-29",
+      "tags": ["Array", "Hash Table"],
+      "patterns": ["Hash Map", "Complement Lookup"]
+    }
+  }
+}
