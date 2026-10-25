@@ -6,15 +6,15 @@
 ## 🌐 LeetCode Account
 
 ### 🔗 LeetCode Profile
-[prishabh](https://leetcode.com/u/prishabh/)
+[risxbh](https://leetcode.com/u/risxbh/)
 
-- **Total Solved on LeetCode**: **20** (🟢 Easy: **15** • 🟡 Medium: **4** • 🔴 Hard: **1**) • Ranking: `#4525348`
+- **Total Solved on LeetCode**: **62** (🟢 Easy: **26** • 🟡 Medium: **26** • 🔴 Hard: **10**) • Ranking: `#2443671`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh?theme=dark&font=Roboto&v=1792928400)](https://leetcode.com/u/prishabh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1792929100)](https://leetcode.com/u/risxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh?ext=heatmap&theme=dark&v=1792928400)](https://leetcode.com/u/prishabh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1792929100)](https://leetcode.com/u/risxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,7 +24,7 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-54-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-54-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
 - **Distinct Problems Tracked**: **54**
 - **Total Accepted Submissions**: **62**
