@@ -1,0 +1,32 @@
+{
+  "confidenceRating": 3,
+  "difficulty": "Unknown",
+  "failedRecallCount": 0,
+  "firstTrackedAt": "2026-10-25T07:12:55.956Z",
+  "id": "1380",
+  "lastSyncedAt": "2026-10-25T10:46:09.029Z",
+  "nextReviewDate": "2026-10-27",
+  "patterns": [],
+  "reviewHistory": [],
+  "reviewsCount": 0,
+  "schemaVersion": 2,
+  "slug": "number-of-closed-islands",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/1380-number-of-closed-islands/cpp/solution.cpp",
+      "submissionId": "2181105398",
+      "contentHash": "333e8248b112c43b8cdb19857cc8441f2a90153e6a03034692c2388cd32ff768",
+      "syncedAt": "2026-10-25T10:46:09.029Z",
+      "runtime": "1 ms",
+      "memory": "13 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "tags": [],
+  "title": "Number of Closed Islands",
+  "url": "",
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

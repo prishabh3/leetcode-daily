@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:45:55.151Z",
-  "totalProblems": 53,
-  "totalSubmissions": 61,
+  "lastUpdated": "2026-10-25T10:46:09.047Z",
+  "totalProblems": 54,
+  "totalSubmissions": 62,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -616,6 +616,18 @@
       "syncedAt": "2026-10-25T10:45:55.145Z",
       "filePath": "problems/4403-count-magical-substring-pairs-ii/cpp/solution.cpp"
     },
+    "2181105398": {
+      "problemId": "1380",
+      "slug": "number-of-closed-islands",
+      "title": "Number of Closed Islands",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2181105398",
+      "contentHash": "333e8248b112c43b8cdb19857cc8441f2a90153e6a03034692c2388cd32ff768",
+      "syncedAt": "2026-10-25T10:46:09.029Z",
+      "filePath": "problems/1380-number-of-closed-islands/cpp/solution.cpp"
+    },
     "2181124556": {
       "problemId": "0094",
       "slug": "binary-tree-inorder-traversal",
@@ -774,6 +786,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T10:42:37.446Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "1380": {
+      "id": "1380",
+      "title": "Number of Closed Islands",
+      "slug": "number-of-closed-islands",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-25T10:46:09.029Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
       "tags": [],
