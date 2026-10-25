@@ -9,11 +9,11 @@
 
 ## LeetCode Stats
 
-[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792920783)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792924866)](https://leetcode.com/u/prishabh3/)
 
 ## Submission Activity
 
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792920783)](https://leetcode.com/u/prishabh3/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792924866)](https://leetcode.com/u/prishabh3/)
 
 ## 📊 Repository Progress
 
@@ -21,16 +21,16 @@
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-8-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-9-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **8**
-- **Total Accepted Submissions**: **12**
-- **Repository Solutions & Historical Versions**: **12** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **9**
+- **Total Accepted Submissions**: **13**
+- **Repository Solutions & Historical Versions**: **13** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
-| 🟢 Easy | **3** |
+| 🟢 Easy | **4** |
 | 🟡 Medium | **5** |
 | 🔴 Hard | **0** |
 
@@ -38,8 +38,8 @@
 | Language | Solved Problems |
 | :--- | :--- |
 | C++ | `3` |
+| SQL | `3` |
 | Python 3 | `3` |
-| SQL | `2` |
 
 ### 🏷️ Topic Tags
 _No topic tags recorded yet._
@@ -54,6 +54,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [0197. Rising Temperature](./problems/0197-rising-temperature) | Easy | SQL | [solution.sql](./problems/0197-rising-temperature/sql/solution.sql) |
 | [2392. Successful Pairs of Spells and Potions](./problems/2392-successful-pairs-of-spells-and-potions) | Medium | Python 3 | [solution.py](./problems/2392-successful-pairs-of-spells-and-potions/python3/solution.py) |
 | [1407. Top Travellers](./problems/1407-top-travellers) | Easy | C++ | [solution.cpp](./problems/1407-top-travellers/cpp/solution.cpp) |
 | [0794. Swim in Rising Water](./problems/0794-swim-in-rising-water) | Medium | Python 3 | [solution.py](./problems/0794-swim-in-rising-water/python3/solution.py) |
@@ -61,16 +62,16 @@ _No topic tags recorded yet._
 | [0595. Big Countries](./problems/0595-big-countries) | Easy | SQL | [solution.sql](./problems/0595-big-countries/sql/solution.sql) |
 | [0178. Rank Scores](./problems/0178-rank-scores) | Medium | SQL | [solution.sql](./problems/0178-rank-scores/sql/solution.sql) |
 | [0013. Roman to Integer](./problems/0013-roman-to-integer) | Easy | C++ | [solution.cpp](./problems/0013-roman-to-integer/cpp/solution.cpp) |
-| [0094. Binary Tree Inorder Traversal](./problems/0094-binary-tree-inorder-traversal) | Medium | C++ | [solution.cpp](./problems/0094-binary-tree-inorder-traversal/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (8)</strong></summary>
+<summary><strong>View All Tracked Problems (9)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
 | 0013 | [Roman to Integer](./problems/0013-roman-to-integer) | Easy | [`C++`](./problems/0013-roman-to-integer/cpp) | - | [Notes](./problems/0013-roman-to-integer/notes.md) | 2026-10-25 | `2026-10-27` |
 | 0094 | [Binary Tree Inorder Traversal](./problems/0094-binary-tree-inorder-traversal) | Medium | [`C++`](./problems/0094-binary-tree-inorder-traversal/cpp) | - | [Notes](./problems/0094-binary-tree-inorder-traversal/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0178 | [Rank Scores](./problems/0178-rank-scores) | Medium | [`SQL`](./problems/0178-rank-scores/sql) | - | [Notes](./problems/0178-rank-scores/notes.md) | 2026-10-25 | `2026-10-27` |
+| 0197 | [Rising Temperature](./problems/0197-rising-temperature) | Easy | [`SQL`](./problems/0197-rising-temperature/sql) | - | [Notes](./problems/0197-rising-temperature/notes.md) | 2026-10-25 | `2026-10-27` |
 | 0595 | [Big Countries](./problems/0595-big-countries) | Easy | [`SQL`](./problems/0595-big-countries/sql) | - | [Notes](./problems/0595-big-countries/notes.md) | 2026-10-25 | `2026-10-27` |
 | 0794 | [Swim in Rising Water](./problems/0794-swim-in-rising-water) | Medium | [`Python 3`](./problems/0794-swim-in-rising-water/python3) | - | [Notes](./problems/0794-swim-in-rising-water/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1407 | [Top Travellers](./problems/1407-top-travellers) | Easy | [`C++`](./problems/1407-top-travellers/cpp) | - | [Notes](./problems/1407-top-travellers/notes.md) | 2026-10-25 | `2026-10-27` |
@@ -81,7 +82,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-10-25T09:33:03.252Z`_
+_Last synchronized via LC-Sync: `2026-10-25T10:41:06.808Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

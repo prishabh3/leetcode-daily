@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "0197",
+  "title": "Rising Temperature",
+  "slug": "rising-temperature",
+  "url": "https://leetcode.com/problems/rising-temperature/description/",
+  "difficulty": "Easy",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T10:41:07.089Z",
+  "lastSyncedAt": "2026-10-25T10:41:06.808Z",
+  "solutions": {
+    "sql/solution": {
+      "language": "sql",
+      "approachName": "solution",
+      "filePath": "problems/0197-rising-temperature/sql/solution.sql",
+      "contentHash": "a2b97b01c6707a67d82ac876f141ab51f4a3e1780c15c80f6cf669949d55dfcc",
+      "syncedAt": "2026-10-25T10:41:06.808Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-10-25",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}
