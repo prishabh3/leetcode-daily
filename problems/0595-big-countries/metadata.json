@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "0595",
+  "title": "Big Countries",
+  "slug": "big-countries",
+  "url": "https://leetcode.com/problems/big-countries/",
+  "difficulty": "Easy",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T07:47:46.063Z",
+  "lastSyncedAt": "2026-10-25T07:47:45.778Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/0595-big-countries/cpp/solution.cpp",
+      "contentHash": "3f375d3d16b21c26d8e5f93eef2f48b7d671830f26661f21006ea389d42abb65",
+      "syncedAt": "2026-10-25T07:47:45.778Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-10-25",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}
