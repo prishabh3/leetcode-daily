@@ -236,6 +236,7 @@ export async function executeSyncItem(
     repoName: settings.repo,
     githubUsername: settings.owner,
     leetcodeUsername: cleanLeetCodeUser || undefined,
+    leetcodeSite: appSettings?.leetcodeSite || 'us',
     basePrefix,
     cacheBuster,
   });

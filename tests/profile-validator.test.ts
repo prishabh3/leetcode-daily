@@ -1,9 +1,12 @@
 import { describe, it, expect, vi } from 'vitest';
 import {
   extractLeetCodeUsername,
+  detectLeetCodeSite,
   getLeetCodeProfileUrl,
   getLeetCodeStatsCardUrl,
   getLeetCodeHeatmapUrl,
+  isProviderUserNotFoundError,
+  shouldEmbedLeetCodeStatsCard,
   verifyLeetCodeUsername,
 } from '../src/core/leetcode/profile-validator';
 
@@ -66,24 +69,36 @@ describe('LeetCode Profile Validator', () => {
       expect(getLeetCodeProfileUrl('https://leetcode.com/u/tourist/')).toBe('https://leetcode.com/u/tourist/');
     });
 
-    it('generates stats card URLs with optional cache buster', () => {
+    it('generates stats card URLs with optional cache buster and site parameter', () => {
       expect(getLeetCodeStatsCardUrl('tourist')).toBe(
         'https://leetcard.jacoblin.cool/tourist?theme=dark&font=Roboto'
       );
       expect(getLeetCodeStatsCardUrl('tourist', 1700000000)).toBe(
         'https://leetcard.jacoblin.cool/tourist?theme=dark&font=Roboto&v=1700000000'
       );
+      expect(getLeetCodeStatsCardUrl('tourist', 'cn')).toBe(
+        'https://leetcard.jacoblin.cool/tourist?theme=dark&font=Roboto&site=cn'
+      );
+      expect(getLeetCodeStatsCardUrl('tourist', 'cn', 1700000000)).toBe(
+        'https://leetcard.jacoblin.cool/tourist?theme=dark&font=Roboto&site=cn&v=1700000000'
+      );
       expect(getLeetCodeStatsCardUrl('https://leetcode.com/u/tourist/', 'bust')).toBe(
         'https://leetcard.jacoblin.cool/tourist?theme=dark&font=Roboto&v=bust'
       );
     });
 
-    it('generates heatmap URLs with optional cache buster', () => {
+    it('generates heatmap URLs with optional cache buster and site parameter', () => {
       expect(getLeetCodeHeatmapUrl('tourist')).toBe(
         'https://leetcard.jacoblin.cool/tourist?ext=heatmap&theme=dark'
       );
       expect(getLeetCodeHeatmapUrl('tourist', 1700000000)).toBe(
         'https://leetcard.jacoblin.cool/tourist?ext=heatmap&theme=dark&v=1700000000'
+      );
+      expect(getLeetCodeHeatmapUrl('tourist', 'cn')).toBe(
+        'https://leetcard.jacoblin.cool/tourist?ext=heatmap&theme=dark&site=cn'
+      );
+      expect(getLeetCodeHeatmapUrl('tourist', 'cn', 1700000000)).toBe(
+        'https://leetcard.jacoblin.cool/tourist?ext=heatmap&theme=dark&site=cn&v=1700000000'
       );
     });
   });
@@ -133,6 +148,54 @@ describe('LeetCode Profile Validator', () => {
       } finally {
         globalThis.fetch = originalFetch;
       }
+    });
+
+    it('detects JacobLinCool User Not Found SVG output and flags as invalid', async () => {
+      const originalFetch = globalThis.fetch;
+      // GraphQL fails/offline, but JacobLinCool returns 200 with User Not Found SVG
+      globalThis.fetch = vi.fn().mockImplementation((url: string) => {
+        if (url.includes('graphql')) {
+          return Promise.reject(new Error('GraphQL unavailable'));
+        }
+        return Promise.resolve({
+          ok: true,
+          text: async () => '<svg><title>User Not Found | LeetCode Stats Card</title><text id="username-text">User Not Found</text></svg>',
+        } as any);
+      });
+
+      try {
+        const res = await verifyLeetCodeUsername('prishabh3');
+        expect(res.valid).toBe(false);
+        expect(res.state).toBe('INVALID_USERNAME');
+        expect(res.error).toContain('User Not Found');
+      } finally {
+        globalThis.fetch = originalFetch;
+      }
+    });
+  });
+
+  describe('Site Detection & Embed Guard', () => {
+    it('detects site correctly between Global (leetcode.com) and CN (leetcode.cn)', () => {
+      expect(detectLeetCodeSite('https://leetcode.cn/u/someone/')).toBe('cn');
+      expect(detectLeetCodeSite('https://leetcode.com/u/someone/')).toBe('us');
+      expect(detectLeetCodeSite('someone')).toBe('us');
+      expect(detectLeetCodeSite(undefined)).toBe('us');
+    });
+
+    it('detects provider User Not Found SVG patterns correctly', () => {
+      expect(isProviderUserNotFoundError('<title>User Not Found | LeetCode Stats Card</title>')).toBe(true);
+      expect(isProviderUserNotFoundError('<text id="username-text">User Not Found</text>')).toBe(true);
+      expect(isProviderUserNotFoundError('<text id="username-text">tourist</text>')).toBe(false);
+      expect(isProviderUserNotFoundError('')).toBe(true);
+    });
+
+    it('shouldEmbedLeetCodeStatsCard only returns true for VALID state', () => {
+      expect(shouldEmbedLeetCodeStatsCard({ state: 'VALID', valid: true })).toBe(true);
+      expect(shouldEmbedLeetCodeStatsCard({ state: 'INVALID_USERNAME', valid: false })).toBe(false);
+      expect(shouldEmbedLeetCodeStatsCard({ state: 'UNVERIFIED', valid: false })).toBe(false);
+      expect(shouldEmbedLeetCodeStatsCard({ state: 'PROVIDER_UNAVAILABLE', valid: false })).toBe(false);
+      expect(shouldEmbedLeetCodeStatsCard(null)).toBe(false);
+      expect(shouldEmbedLeetCodeStatsCard(undefined)).toBe(false);
     });
   });
 });

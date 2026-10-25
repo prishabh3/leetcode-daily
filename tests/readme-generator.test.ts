@@ -203,6 +203,34 @@ ${LC_SYNC_END_MARKER}
     expect(readmeInvalidUser).not.toContain('leetcard.jacoblin.cool');
   });
 
+  it('cleanly omits stats cards and renders unverified notice when leetcodeVerified is false', () => {
+    const readmeUnverified = generateReadme(null, mockIndex, {
+      repoName: 'leetcode-daily',
+      leetcodeUsername: 'octocat',
+      leetcodeVerified: false,
+    });
+
+    expect(readmeUnverified).toContain('## 🔗 LeetCode Profile');
+    expect(readmeUnverified).toContain('[octocat](https://leetcode.com/u/octocat/)');
+    expect(readmeUnverified).toContain('External LeetCode statistics cards are unverified');
+    expect(readmeUnverified).not.toContain('## LeetCode Stats');
+    expect(readmeUnverified).not.toContain('## Submission Activity');
+    expect(readmeUnverified).not.toContain('leetcard.jacoblin.cool');
+  });
+
+  it('supports LeetCode CN site and passes site=cn parameter', () => {
+    const readmeCn = generateReadme(null, mockIndex, {
+      repoName: 'leetcode-daily',
+      leetcodeUsername: 'octocat',
+      leetcodeSite: 'cn',
+      cacheBuster: 77777,
+    });
+
+    expect(readmeCn).toContain('https://leetcode.cn/u/octocat/');
+    expect(readmeCn).toContain('https://leetcard.jacoblin.cool/octocat?theme=dark&font=Roboto&site=cn&v=77777');
+    expect(readmeCn).toContain('https://leetcard.jacoblin.cool/octocat?ext=heatmap&theme=dark&site=cn&v=77777');
+  });
+
   it('strips legacy stats cards placed before lc-sync markers in existing README', () => {
     const existingWithLegacy = `# ⚡ LeetCode Daily
 

@@ -65,7 +65,8 @@ export const PopupApp: React.FC = () => {
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span style={{ fontSize: '18px', fontWeight: '700', letterSpacing: '-0.5px' }}>⚡ LC-Sync</span>
+          <img src="icons/icon32.png" alt="LC-Sync" width="22" height="22" style={{ borderRadius: '5px' }} />
+          <span style={{ fontSize: '18px', fontWeight: '700', letterSpacing: '-0.5px' }}>LC-Sync</span>
           <span className="badge" style={{ backgroundColor: '#21262d', color: '#8b949e', fontSize: '10px' }}>v1.0</span>
         </div>
         <button

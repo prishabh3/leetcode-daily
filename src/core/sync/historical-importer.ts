@@ -210,6 +210,7 @@ async function buildAuxiliaryFiles(
     repoName: client.rawSettings.repo,
     githubUsername: client.rawSettings.owner,
     leetcodeUsername: cleanLeetCodeUser || undefined,
+    leetcodeSite: appSettings?.leetcodeSite || 'us',
     basePrefix,
     cacheBuster,
   });

@@ -101,8 +101,9 @@ export const DashboardApp: React.FC = () => {
       {/* Top Header */}
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-color)', paddingBottom: '16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-          <h1 style={{ fontSize: '22px', fontWeight: 700, letterSpacing: '-0.5px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-            ⚡ LC-Sync
+          <h1 style={{ fontSize: '22px', fontWeight: 700, letterSpacing: '-0.5px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <img src="icons/icon48.png" alt="LC-Sync" width="28" height="28" style={{ borderRadius: '6px' }} />
+            <span>LC-Sync</span>
           </h1>
           <span style={{ color: 'var(--text-muted)' }}>|</span>
           <span style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>

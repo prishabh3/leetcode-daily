@@ -30,6 +30,8 @@ export interface AppSettings {
   github: GitHubSettings;
   preferences: SyncPreferences;
   leetcodeProfileUsername?: string;
+  leetcodeProfileUrl?: string;
+  leetcodeSite?: 'us' | 'cn';
   lastSyncInfo?: LastSyncInfo;
 }
 
@@ -49,4 +51,5 @@ export const DEFAULT_SETTINGS: AppSettings = {
     defaultLanguage: 'cpp',
     defaultConfidence: 3,
   },
+  leetcodeSite: 'us',
 };

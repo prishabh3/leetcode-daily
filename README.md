@@ -5,15 +5,7 @@
 <!-- lc-sync:start -->
 ## 🔗 LeetCode Profile
 
-[prishabh3](https://leetcode.com/u/prishabh3/)
-
-## LeetCode Stats
-
-[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto&v=1792925169)](https://leetcode.com/u/prishabh3/)
-
-## Submission Activity
-
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/prishabh3?ext=heatmap&theme=dark&v=1792925169)](https://leetcode.com/u/prishabh3/)
+[LeetCode](https://leetcode.com) — _Configure your LeetCode profile in LC-Sync Settings to view live stats._
 
 ## 📊 Repository Progress
 
@@ -21,7 +13,7 @@
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-54-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/prishabh3/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-54-blue)]() [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
 - **Distinct Problems Tracked**: **54**
 - **Total Accepted Submissions**: **62**

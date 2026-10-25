@@ -159,7 +159,8 @@ export const OptionsApp: React.FC = () => {
       {/* Title */}
       <div style={{ marginBottom: '28px', borderBottom: '1px solid var(--border-color)', paddingBottom: '16px' }}>
         <h1 style={{ fontSize: '24px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
-          ⚡ LC-Sync Settings & GitHub Integration
+          <img src="icons/icon48.png" alt="LC-Sync" width="30" height="30" style={{ borderRadius: '6px' }} />
+          <span>LC-Sync Settings & GitHub Integration</span>
         </h1>
         <p style={{ color: 'var(--text-secondary)', marginTop: '6px' }}>
           Configure your personal GitHub repository for automated DSA solution synchronization and progress tracking.
