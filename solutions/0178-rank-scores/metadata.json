@@ -13,7 +13,7 @@
     "cpp/solution": {
       "language": "cpp",
       "approachName": "solution",
-      "filePath": "problems/0178-rank-scores/cpp/solution.cpp",
+      "filePath": "solutions/0178-rank-scores/cpp/solution.cpp",
       "contentHash": "a592f06bef0a64be855452b0340d13c771c3156fe108bd36364afa027dd8e47b",
       "syncedAt": "2026-10-25T07:10:40.482Z",
       "complexity": {

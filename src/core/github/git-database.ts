@@ -7,6 +7,12 @@ export interface AtomicCommitOptions {
   author?: {
     name: string;
     email: string;
+    date?: string; // ISO 8601 string
+  };
+  committer?: {
+    name: string;
+    email: string;
+    date?: string; // ISO 8601 string
   };
   maxRetries?: number;
 }
@@ -136,7 +142,21 @@ export async function createAtomicCommit(
         commitBody.author = {
           name: options.author.name,
           email: options.author.email,
-          date: new Date().toISOString(),
+          date: options.author.date || new Date().toISOString(),
+        };
+      }
+
+      if (options.committer) {
+        commitBody.committer = {
+          name: options.committer.name,
+          email: options.committer.email,
+          date: options.committer.date || new Date().toISOString(),
+        };
+      } else if (options.author?.date) {
+        commitBody.committer = {
+          name: options.author.name,
+          email: options.author.email,
+          date: options.author.date,
         };
       }
 

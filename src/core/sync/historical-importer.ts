@@ -1,5 +1,5 @@
 import { GitHubClient, FileChange } from '../github/client';
-import { createAtomicCommit } from '../github/git-database';
+import { createAtomicCommit, AtomicCommitOptions } from '../github/git-database';
 import { LeetCodeHistoricalAdapter } from '../leetcode/historical-adapter';
 import {
   HistoricalImportConfig,
@@ -8,11 +8,13 @@ import {
   HistoricalImportSummary,
   HistoricalImportCheckpoint,
   RawHistoricalSubmission,
+  CommitDateStrategy,
 } from '../types/historical-import';
 import { SyncIndex, SyncIndexEntry, ProblemSummaryEntry } from '../types/sync-index';
 import { ProblemMetadata, SolutionRecord } from '../types/problem';
 import { SupportedLanguage } from '../types/submission';
 import { computeContentHash } from '../utils/crypto';
+import { getLanguageConfig } from '../utils/languages';
 import {
   formatProblemId,
   getSolutionFilePath,
@@ -52,6 +54,7 @@ export async function previewHistoricalImport(
   const limit = 20;
   let hasNext = true;
   let lastKey: string | undefined;
+  const dateStrategy: CommitDateStrategy = config.commitDateStrategy || 'IMPORT_DATE';
 
   onProgress?.('Fetching submission history from LeetCode...');
 
@@ -112,6 +115,8 @@ export async function previewHistoricalImport(
   let alreadySyncedCount = 0;
   let duplicatesSkippedCount = 0;
   let codeMissingCount = 0;
+  let recordsWithOriginalTimestamp = 0;
+  let recordsWithoutTimestamp = 0;
 
   // Deduplicate discovered items based on mode
   let finalSubmissions: RawHistoricalSubmission[] = [];
@@ -150,6 +155,12 @@ export async function previewHistoricalImport(
     if (!sub.code) {
       codeMissingCount++;
     }
+
+    if (typeof sub.timestamp === 'number' && sub.timestamp > 0) {
+      recordsWithOriginalTimestamp++;
+    } else {
+      recordsWithoutTimestamp++;
+    }
   }
 
   const newToImportCount = finalSubmissions.length - duplicatesSkippedCount;
@@ -164,12 +175,16 @@ export async function previewHistoricalImport(
     newToImportCount: Math.max(0, newToImportCount),
     duplicatesSkippedCount,
     codeMissingCount,
+    recordsWithOriginalTimestamp,
+    recordsWithoutTimestamp,
+    selectedDateStrategy: dateStrategy,
     submissions: finalSubmissions,
   };
 }
 
 /**
- * Executes historical import in bounded atomic batches with resumability and checkpoints
+ * Executes historical import in bounded atomic batches with resumability, checkpoints,
+ * and support for custom Commit Date Strategies.
  */
 export async function executeHistoricalImport(
   submissions: RawHistoricalSubmission[],
@@ -182,7 +197,9 @@ export async function executeHistoricalImport(
 ): Promise<HistoricalImportSummary> {
   const startTime = Date.now();
   const commitsCreated: string[] = [];
-  const batchSize = Math.max(1, Math.min(config.batchSize || 6, 15));
+  const commitDateStrategy: CommitDateStrategy =
+    config.commitDateStrategy || existingCheckpoint?.commitDateStrategy || 'IMPORT_DATE';
+  const basePrefix = client.rawSettings.defaultPathPrefix || 'solutions';
 
   // 1. Fetch current sync-index from GitHub or local storage
   let syncIndex: SyncIndex = await storage.getSyncIndex();
@@ -195,14 +212,27 @@ export async function executeHistoricalImport(
     // use local index
   }
 
+  // Migrate any legacy 'problems/' paths to canonical basePrefix in sync-index
+  for (const sub of Object.values(syncIndex.submissions)) {
+    if (sub.filePath && sub.filePath.startsWith('problems/')) {
+      sub.filePath = sub.filePath.replace(/^problems\//, `${basePrefix}/`);
+    }
+  }
+
   const completedIds = new Set<string>(existingCheckpoint?.completedSubmissionIds || []);
   let importedCount = existingCheckpoint?.importedCount || 0;
   let skippedCount = existingCheckpoint?.skippedCount || 0;
   let failedCount = existingCheckpoint?.failedCount || 0;
+  let fallbackTimestampsCount = existingCheckpoint?.fallbackTimestampsCount || 0;
 
   // Filter out submissions already processed in previous checkpoint
-  const pendingSubmissions = submissions.filter((s) => !completedIds.has(s.id));
+  let pendingSubmissions = submissions.filter((s) => !completedIds.has(s.id));
   const totalCount = submissions.length;
+
+  // If ORIGINAL_DATE mode: Sort chronologically ascending so commits build in historical sequence
+  if (commitDateStrategy === 'ORIGINAL_DATE') {
+    pendingSubmissions = [...pendingSubmissions].sort((a, b) => a.timestamp - b.timestamp);
+  }
 
   // Determine latest accepted submission per (problemSlug, language)
   // so we know which one takes the canonical solution path
@@ -222,10 +252,35 @@ export async function executeHistoricalImport(
     }
   }
 
-  // Divide pending submissions into bounded batches
+  // Divide pending submissions into batches
+  // In ORIGINAL_DATE mode, group by calendar date (YYYY-MM-DD) or max 8 submissions so commits reflect honest dates
   const batches: RawHistoricalSubmission[][] = [];
-  for (let i = 0; i < pendingSubmissions.length; i += batchSize) {
-    batches.push(pendingSubmissions.slice(i, i + batchSize));
+  const maxBatchSize = Math.max(1, Math.min(config.batchSize || 6, 12));
+
+  if (commitDateStrategy === 'ORIGINAL_DATE') {
+    let currentDayBatch: RawHistoricalSubmission[] = [];
+    let currentDayStr = '';
+
+    for (const sub of pendingSubmissions) {
+      const subDay = sub.timestamp > 0 ? new Date(sub.timestamp * 1000).toISOString().split('T')[0] : 'unknown';
+      if (currentDayBatch.length === 0) {
+        currentDayBatch.push(sub);
+        currentDayStr = subDay;
+      } else if (subDay === currentDayStr && currentDayBatch.length < maxBatchSize) {
+        currentDayBatch.push(sub);
+      } else {
+        batches.push(currentDayBatch);
+        currentDayBatch = [sub];
+        currentDayStr = subDay;
+      }
+    }
+    if (currentDayBatch.length > 0) {
+      batches.push(currentDayBatch);
+    }
+  } else {
+    for (let i = 0; i < pendingSubmissions.length; i += maxBatchSize) {
+      batches.push(pendingSubmissions.slice(i, i + maxBatchSize));
+    }
   }
 
   const distinctProblemsSet = new Set<string>();
@@ -242,17 +297,19 @@ export async function executeHistoricalImport(
         awaitingRetryCount: 0,
         currentBatch: batchIdx,
         totalBatches: batches.length,
-        message: 'Import cancelled by user. Progress has been saved.',
+        message: 'Import cancelled by user. Progress has been saved in checkpoint.',
       });
       return {
         success: false,
         mode: config.mode,
+        commitDateStrategy,
         totalDiscovered: totalCount,
         importedCount,
         skippedCount,
         failedCount,
         distinctProblemsImported: distinctProblemsSet.size,
         commitsCreated,
+        fallbackTimestampsCount,
         durationMs: Date.now() - startTime,
         error: 'Cancelled by user',
       };
@@ -297,7 +354,6 @@ export async function executeHistoricalImport(
           if (details.problemId) problemId = details.problemId;
           if (details.topicTags && details.topicTags.length > 0) tags = details.topicTags;
         } catch {
-          // Code retrieval failure
           failedCount++;
           completedIds.add(sub.id);
           continue;
@@ -319,22 +375,22 @@ export async function executeHistoricalImport(
 
       distinctProblemsSet.add(sub.titleSlug);
 
-      // Determine appropriate storage file path
+      // Determine appropriate storage file path under basePrefix (solutions/)
       let solutionPath: string;
       let metadataPath: string;
 
       if (!isAccepted) {
         // Mode C unsuccessful attempts
-        solutionPath = getAttemptSolutionFilePath(cleanProblemId, sub.titleSlug, sub.id, lang);
-        metadataPath = getAttemptMetadataFilePath(cleanProblemId, sub.titleSlug, sub.id);
+        solutionPath = getAttemptSolutionFilePath(cleanProblemId, sub.titleSlug, sub.id, lang, basePrefix);
+        metadataPath = getAttemptMetadataFilePath(cleanProblemId, sub.titleSlug, sub.id, basePrefix);
       } else if (isCanonicalLatest) {
         // Canonical latest accepted solution
-        solutionPath = getSolutionFilePath(cleanProblemId, sub.titleSlug, lang, 'solution');
-        metadataPath = getMetadataFilePath(cleanProblemId, sub.titleSlug);
+        solutionPath = getSolutionFilePath(cleanProblemId, sub.titleSlug, lang, 'solution', basePrefix);
+        metadataPath = getMetadataFilePath(cleanProblemId, sub.titleSlug, basePrefix);
       } else {
         // Older accepted version (Mode A)
-        solutionPath = getHistoricalSolutionFilePath(cleanProblemId, sub.titleSlug, sub.id, lang);
-        metadataPath = getHistoricalMetadataFilePath(cleanProblemId, sub.titleSlug, sub.id);
+        solutionPath = getHistoricalSolutionFilePath(cleanProblemId, sub.titleSlug, sub.id, lang, basePrefix);
+        metadataPath = getHistoricalMetadataFilePath(cleanProblemId, sub.titleSlug, sub.id, basePrefix);
       }
 
       // Add solution code file
@@ -344,14 +400,16 @@ export async function executeHistoricalImport(
       });
 
       // Prepare metadata
-      const isoDate = new Date(sub.timestamp * 1000).toISOString();
+      const originalIsoDate = sub.timestamp > 0 ? new Date(sub.timestamp * 1000).toISOString() : new Date().toISOString();
+      const importNowIsoDate = new Date().toISOString();
+
       const solutionRecord: SolutionRecord = {
         language: lang,
         approachName: isCanonicalLatest ? 'solution' : `submission-${sub.id}`,
         filePath: solutionPath,
         submissionId: sub.id,
         contentHash,
-        syncedAt: isoDate,
+        syncedAt: importNowIsoDate,
         runtime: sub.runtime,
         memory: sub.memory,
       };
@@ -372,7 +430,8 @@ export async function executeHistoricalImport(
           slug: sub.titleSlug,
           difficulty: sub.difficulty || existingMeta.difficulty || 'Medium',
           tags: Array.from(new Set([...existingMeta.tags, ...tags])),
-          lastSyncedAt: isoDate,
+          firstTrackedAt: existingMeta.firstTrackedAt || originalIsoDate,
+          lastSyncedAt: importNowIsoDate,
           solutions: {
             ...existingMeta.solutions,
             [`${lang}/solution`]: solutionRecord,
@@ -386,7 +445,7 @@ export async function executeHistoricalImport(
         });
 
         // Add default notes.md if not present
-        const notesPath = getNotesFilePath(cleanProblemId, sub.titleSlug);
+        const notesPath = getNotesFilePath(cleanProblemId, sub.titleSlug, basePrefix);
         const existingNotes = formatNotesMarkdown(updatedMeta, parseNotesMarkdown(''));
         fileChanges.push({
           path: notesPath,
@@ -402,7 +461,8 @@ export async function executeHistoricalImport(
           slug: sub.titleSlug,
           verdict: sub.statusDisplay,
           language: lang,
-          timestamp: isoDate,
+          submittedAt: originalIsoDate,
+          importedAt: importNowIsoDate,
           runtime: sub.runtime,
           memory: sub.memory,
           contentHash,
@@ -424,7 +484,7 @@ export async function executeHistoricalImport(
         approachName: isCanonicalLatest ? 'solution' : `sub-${sub.id}`,
         submissionId: sub.id,
         contentHash,
-        syncedAt: isoDate,
+        syncedAt: importNowIsoDate,
         filePath: solutionPath,
       };
 
@@ -441,7 +501,7 @@ export async function executeHistoricalImport(
         difficulty: sub.difficulty || existingProblemSummary?.difficulty || 'Medium',
         languages: updatedLanguages,
         approachesCount: (existingProblemSummary?.approachesCount || 0) + 1,
-        lastSyncedAt: isoDate,
+        lastSyncedAt: importNowIsoDate,
         confidenceRating: existingProblemSummary?.confidenceRating || 3,
         nextReviewDate: existingProblemSummary?.nextReviewDate || new Date().toISOString().split('T')[0],
         tags: Array.from(new Set([...(existingProblemSummary?.tags || []), ...tags])),
@@ -469,6 +529,7 @@ export async function executeHistoricalImport(
 
       const generatedReadme = generateReadme(existingReadme, syncIndex, {
         repoName: client.rawSettings.repo,
+        basePrefix,
       });
 
       // Progress SVG stats
@@ -503,13 +564,46 @@ export async function executeHistoricalImport(
         { path: PROGRESS_SVG_PATH, content: generatedSvg }
       );
 
-      // Execute atomic batch commit via GitHub Git DB API
-      const commitMsg = `feat(history): import ${batchProcessedIds.length} historical submissions (batch ${batchIdx + 1}/${batches.length})`;
-      const commitSha = await createAtomicCommit(client, {
+      // Determine commit date based on selected strategy
+      let commitDateIso = new Date().toISOString();
+      if (commitDateStrategy === 'ORIGINAL_DATE') {
+        const refSub = currentBatch[currentBatch.length - 1];
+        if (refSub && typeof refSub.timestamp === 'number' && refSub.timestamp > 0) {
+          commitDateIso = new Date(refSub.timestamp * 1000).toISOString();
+        } else {
+          fallbackTimestampsCount++;
+        }
+      }
+
+      // Generate descriptive commit message
+      let commitMsg: string;
+      if (batchProcessedIds.length === 1) {
+        const singleSub = currentBatch[0];
+        const langConfig = getLanguageConfig((singleSub.normalizedLanguage || 'cpp') as any);
+        commitMsg = `feat(leetcode): add ${singleSub.title} (${langConfig.name}) [historical]`;
+      } else {
+        commitMsg = `feat(history): import ${batchProcessedIds.length} historical submissions (batch ${batchIdx + 1}/${batches.length})`;
+      }
+
+      const authorName = client.rawSettings.authorName || client.rawSettings.owner || 'LC-Sync';
+      const authorEmail = client.rawSettings.authorEmail || `${client.rawSettings.owner || 'user'}@users.noreply.github.com`;
+
+      const commitOptions: AtomicCommitOptions = {
         message: commitMsg,
         files: fileChanges,
-      });
+        author: {
+          name: authorName,
+          email: authorEmail,
+          date: commitDateIso,
+        },
+        committer: {
+          name: authorName,
+          email: authorEmail,
+          date: commitDateIso,
+        },
+      };
 
+      const commitSha = await createAtomicCommit(client, commitOptions);
       commitsCreated.push(commitSha);
 
       // Save local sync index
@@ -524,11 +618,13 @@ export async function executeHistoricalImport(
         checkpointId: `import-${startTime}`,
         createdAt: Date.now(),
         config,
+        commitDateStrategy,
         completedSubmissionIds: Array.from(completedIds),
         totalExpected: totalCount,
         importedCount,
         skippedCount,
         failedCount,
+        fallbackTimestampsCount,
         isComplete: completedIds.size >= totalCount,
       };
 
@@ -544,7 +640,7 @@ export async function executeHistoricalImport(
         awaitingRetryCount: 0,
         currentBatch: batchIdx + 1,
         totalBatches: batches.length,
-        message: `Committed batch ${batchIdx + 1}: ${commitSha.slice(0, 7)}`,
+        message: `Committed batch ${batchIdx + 1}: ${commitSha.slice(0, 7)} (${commitDateStrategy === 'ORIGINAL_DATE' ? commitDateIso.split('T')[0] : 'today'})`,
         latestCommitSha: commitSha,
       });
     } else {
@@ -575,12 +671,14 @@ export async function executeHistoricalImport(
   return {
     success: true,
     mode: config.mode,
+    commitDateStrategy,
     totalDiscovered: totalCount,
     importedCount,
     skippedCount,
     failedCount,
     distinctProblemsImported: distinctProblemsSet.size,
     commitsCreated,
+    fallbackTimestampsCount,
     durationMs: Date.now() - startTime,
   };
 }

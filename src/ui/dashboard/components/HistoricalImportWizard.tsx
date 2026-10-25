@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AppSettings } from '../../../core/types/settings';
 import { SyncIndex } from '../../../core/types/sync-index';
 import {
+  CommitDateStrategy,
   HistoricalImportConfig,
   HistoricalImportMode,
   HistoricalImportPreview,
@@ -43,6 +44,7 @@ export const HistoricalImportWizard: React.FC<HistoricalImportWizardProps> = ({
 
   // Step 2: Configuration
   const [mode, setMode] = useState<HistoricalImportMode>('ALL_ACCEPTED');
+  const [commitDateStrategy, setCommitDateStrategy] = useState<CommitDateStrategy>('IMPORT_DATE');
   const [useDateRange, setUseDateRange] = useState(false);
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
@@ -103,6 +105,7 @@ export const HistoricalImportWizard: React.FC<HistoricalImportWizardProps> = ({
 
     const config: HistoricalImportConfig = {
       mode,
+      commitDateStrategy,
       dateRange: useDateRange ? { startDate, endDate } : undefined,
       languages: selectedLangs,
       destinationBranch: settings.github.branch || 'main',
@@ -132,6 +135,7 @@ export const HistoricalImportWizard: React.FC<HistoricalImportWizardProps> = ({
 
     const config: HistoricalImportConfig = resumeCheckpoint?.config || {
       mode,
+      commitDateStrategy,
       dateRange: useDateRange ? { startDate, endDate } : undefined,
       languages: selectedLangs,
       destinationBranch: settings.github.branch || 'main',
@@ -176,6 +180,9 @@ export const HistoricalImportWizard: React.FC<HistoricalImportWizardProps> = ({
   const handleResumeCheckpoint = async () => {
     if (!checkpoint) return;
     setMode(checkpoint.config.mode);
+    if (checkpoint.config.commitDateStrategy) {
+      setCommitDateStrategy(checkpoint.config.commitDateStrategy);
+    }
     await handleStartImport(checkpoint);
   };
 
@@ -485,6 +492,79 @@ export const HistoricalImportWizard: React.FC<HistoricalImportWizardProps> = ({
                 </div>
               </div>
 
+              {/* Commit Date Strategy */}
+              <div>
+                <label style={{ fontWeight: 600, fontSize: '13px', display: 'block', marginBottom: '8px' }}>
+                  Select Commit Date Strategy:
+                </label>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <label
+                    style={{
+                      display: 'flex',
+                      gap: '12px',
+                      padding: '12px',
+                      borderRadius: 'var(--radius-md)',
+                      border: `1px solid ${commitDateStrategy === 'IMPORT_DATE' ? 'var(--accent-blue)' : 'var(--border-color)'}`,
+                      backgroundColor: commitDateStrategy === 'IMPORT_DATE' ? 'rgba(88, 166, 255, 0.08)' : 'var(--bg-primary)',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <input
+                      type="radio"
+                      name="commitDateStrategy"
+                      checked={commitDateStrategy === 'IMPORT_DATE'}
+                      onChange={() => setCommitDateStrategy('IMPORT_DATE')}
+                    />
+                    <div>
+                      <strong>Option A — Commit on Import Date (Recommended Default)</strong>
+                      <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '2px' }}>
+                        Creates Git commits using the actual current import date and time. Preserves original submission timestamps inside problem metadata (<code>metadata.json</code>).
+                      </div>
+                    </div>
+                  </label>
+
+                  <label
+                    style={{
+                      display: 'flex',
+                      gap: '12px',
+                      padding: '12px',
+                      borderRadius: 'var(--radius-md)',
+                      border: `1px solid ${commitDateStrategy === 'ORIGINAL_DATE' ? 'var(--accent-blue)' : 'var(--border-color)'}`,
+                      backgroundColor: commitDateStrategy === 'ORIGINAL_DATE' ? 'rgba(88, 166, 255, 0.08)' : 'var(--bg-primary)',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <input
+                      type="radio"
+                      name="commitDateStrategy"
+                      checked={commitDateStrategy === 'ORIGINAL_DATE'}
+                      onChange={() => setCommitDateStrategy('ORIGINAL_DATE')}
+                    />
+                    <div>
+                      <strong>Option B — Use Original Submission Date</strong>
+                      <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '2px' }}>
+                        Sets Git commit author and committer timestamps to match each original LeetCode submission date. Preserves authentic problem-solving chronology in GitHub.
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div
+                  style={{
+                    marginTop: '8px',
+                    padding: '8px 12px',
+                    borderRadius: 'var(--radius-md)',
+                    backgroundColor: 'rgba(88, 166, 255, 0.06)',
+                    border: '1px solid rgba(88, 166, 255, 0.2)',
+                    fontSize: '11px',
+                    color: 'var(--text-secondary)',
+                    lineHeight: '1.4',
+                  }}
+                >
+                  💡 <strong>GitHub Contribution Graph Note:</strong> GitHub only reflects past activity on your contribution graph when commits are authored with your verified GitHub email address and pushed to the repository&apos;s default branch (<code>main</code>). Any submissions lacking valid timestamps safely fall back to the import date.
+                </div>
+              </div>
+
               {/* Language Filters */}
               <div>
                 <label style={{ fontWeight: 600, fontSize: '13px', display: 'block', marginBottom: '8px' }}>
@@ -601,6 +681,25 @@ export const HistoricalImportWizard: React.FC<HistoricalImportWizardProps> = ({
                           {lang}: <strong>{count}</strong>
                         </span>
                       ))}
+                    </div>
+                  </div>
+
+                  {/* Commit Date Strategy & Destination Information */}
+                  <div style={{ backgroundColor: 'var(--bg-primary)', padding: '12px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div>
+                      <strong style={{ fontSize: '12px' }}>Commit Date Strategy:</strong>
+                      <span style={{ fontSize: '12px', marginLeft: '6px', color: 'var(--accent-blue)', fontWeight: 600 }}>
+                        {commitDateStrategy === 'ORIGINAL_DATE' ? '📅 Use Original LeetCode Submission Dates' : '🕒 Commit on Import Date (Current Time)'}
+                      </span>
+                      <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>
+                        {commitDateStrategy === 'ORIGINAL_DATE'
+                          ? `Original timestamps detected: ${previewData.recordsWithOriginalTimestamp ?? 0} submissions` +
+                            ((previewData.recordsWithoutTimestamp ?? 0) > 0 ? ` (${previewData.recordsWithoutTimestamp} missing will fall back to import date)` : '')
+                          : 'Original timestamps will be preserved inside each metadata.json file.'}
+                      </div>
+                    </div>
+                    <div style={{ fontSize: '11px', padding: '4px 8px', borderRadius: '4px', backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)' }}>
+                      Target: <code>solutions/&lt;id&gt;-&lt;title&gt;/</code>
                     </div>
                   </div>
 
@@ -732,6 +831,24 @@ export const HistoricalImportWizard: React.FC<HistoricalImportWizardProps> = ({
                 <div style={{ backgroundColor: 'var(--bg-primary)', padding: '12px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)', textAlign: 'center' }}>
                   <div style={{ fontSize: '20px', fontWeight: 700, color: 'var(--accent-yellow)' }}>{importSummary.skippedCount}</div>
                   <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>Duplicates Skipped</div>
+                </div>
+              </div>
+
+              {/* Commit Strategy & Target Destination Summary */}
+              <div style={{ backgroundColor: 'var(--bg-primary)', padding: '12px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div>
+                  <strong style={{ fontSize: '12px' }}>Commit Date Strategy Applied:</strong>
+                  <span style={{ fontSize: '12px', marginLeft: '6px', color: 'var(--accent-blue)', fontWeight: 600 }}>
+                    {importSummary.commitDateStrategy === 'ORIGINAL_DATE' ? 'Original Submission Dates' : 'Import Date (Current Time)'}
+                  </span>
+                  {typeof importSummary.fallbackTimestampsCount === 'number' && importSummary.fallbackTimestampsCount > 0 ? (
+                    <div style={{ fontSize: '11px', color: 'var(--accent-yellow)', marginTop: '2px' }}>
+                      ⚠️ {importSummary.fallbackTimestampsCount} submissions lacked original timestamps and fell back to the import date.
+                    </div>
+                  ) : null}
+                </div>
+                <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                  Organized under <code>solutions/</code>
                 </div>
               </div>
 

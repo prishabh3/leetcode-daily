@@ -39,7 +39,7 @@ export const DEFAULT_SETTINGS: AppSettings = {
     owner: '',
     repo: 'leetcode-daily',
     branch: 'main',
-    defaultPathPrefix: 'problems',
+    defaultPathPrefix: 'solutions',
   },
   preferences: {
     autoSyncOnAccepted: true,

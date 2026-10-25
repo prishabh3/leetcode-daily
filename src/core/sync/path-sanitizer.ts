@@ -56,7 +56,7 @@ export function getSolutionFilePath(
   slug: string,
   language: SupportedLanguage,
   approachName: string = 'solution',
-  basePrefix: string = 'problems'
+  basePrefix: string = 'solutions'
 ): string {
   const dir = getProblemDirectory(problemId, slug);
   const ext = getFileExtension(language);
@@ -67,12 +67,12 @@ export function getSolutionFilePath(
 
 /**
  * Generates relative metadata file path
- * Example: problems/0001-two-sum/metadata.json
+ * Example: solutions/0001-two-sum/metadata.json
  */
 export function getMetadataFilePath(
   problemId: string | number,
   slug: string,
-  basePrefix: string = 'problems'
+  basePrefix: string = 'solutions'
 ): string {
   const dir = getProblemDirectory(problemId, slug);
   const prefix = basePrefix ? `${sanitizeSlug(basePrefix)}/` : '';
@@ -81,12 +81,12 @@ export function getMetadataFilePath(
 
 /**
  * Generates relative notes file path
- * Example: problems/0001-two-sum/notes.md
+ * Example: solutions/0001-two-sum/notes.md
  */
 export function getNotesFilePath(
   problemId: string | number,
   slug: string,
-  basePrefix: string = 'problems'
+  basePrefix: string = 'solutions'
 ): string {
   const dir = getProblemDirectory(problemId, slug);
   const prefix = basePrefix ? `${sanitizeSlug(basePrefix)}/` : '';
@@ -95,14 +95,14 @@ export function getNotesFilePath(
 
 /**
  * Generates relative historical solution path for non-canonical/older accepted solutions
- * Example: problems/0013-roman-to-integer/history/123456789/solution.cpp
+ * Example: solutions/0013-roman-to-integer/history/123456789/solution.cpp
  */
 export function getHistoricalSolutionFilePath(
   problemId: string | number,
   slug: string,
   submissionId: string | number,
   language: SupportedLanguage,
-  basePrefix: string = 'problems'
+  basePrefix: string = 'solutions'
 ): string {
   const dir = getProblemDirectory(problemId, slug);
   const ext = getFileExtension(language);
@@ -113,13 +113,13 @@ export function getHistoricalSolutionFilePath(
 
 /**
  * Generates relative historical metadata file path
- * Example: problems/0013-roman-to-integer/history/123456789/metadata.json
+ * Example: solutions/0013-roman-to-integer/history/123456789/metadata.json
  */
 export function getHistoricalMetadataFilePath(
   problemId: string | number,
   slug: string,
   submissionId: string | number,
-  basePrefix: string = 'problems'
+  basePrefix: string = 'solutions'
 ): string {
   const dir = getProblemDirectory(problemId, slug);
   const safeSubId = sanitizeSlug(String(submissionId));
@@ -129,14 +129,14 @@ export function getHistoricalMetadataFilePath(
 
 /**
  * Generates relative attempt solution path for unsuccessful attempts (Mode C)
- * Example: problems/0013-roman-to-integer/attempts/123456789/attempt.cpp
+ * Example: solutions/0013-roman-to-integer/attempts/123456789/attempt.cpp
  */
 export function getAttemptSolutionFilePath(
   problemId: string | number,
   slug: string,
   submissionId: string | number,
   language: SupportedLanguage,
-  basePrefix: string = 'problems'
+  basePrefix: string = 'solutions'
 ): string {
   const dir = getProblemDirectory(problemId, slug);
   const ext = getFileExtension(language);
@@ -147,13 +147,13 @@ export function getAttemptSolutionFilePath(
 
 /**
  * Generates relative attempt metadata path for unsuccessful attempts
- * Example: problems/0013-roman-to-integer/attempts/123456789/metadata.json
+ * Example: solutions/0013-roman-to-integer/attempts/123456789/metadata.json
  */
 export function getAttemptMetadataFilePath(
   problemId: string | number,
   slug: string,
   submissionId: string | number,
-  basePrefix: string = 'problems'
+  basePrefix: string = 'solutions'
 ): string {
   const dir = getProblemDirectory(problemId, slug);
   const safeSubId = sanitizeSlug(String(submissionId));

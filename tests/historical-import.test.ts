@@ -126,7 +126,7 @@ describe('Historical Submission Import Engine & Regression Tests', () => {
       owner: 'test-user',
       repo: 'leetcode-solutions',
       branch: 'main',
-      defaultPathPrefix: 'problems',
+      defaultPathPrefix: 'solutions',
     });
 
     client.getFileContent = vi.fn().mockResolvedValue(null);
@@ -410,6 +410,7 @@ describe('Historical Submission Import Engine & Regression Tests', () => {
       checkpointId: 'import-123',
       createdAt: Date.now(),
       config: { mode: 'ALL_ACCEPTED', batchSize: 2 },
+      commitDateStrategy: 'IMPORT_DATE',
       completedSubmissionIds: ['1001', '1002'], // Page 1 already finished
       totalExpected: 4,
       importedCount: 2,
@@ -552,5 +553,98 @@ describe('Historical Submission Import Engine & Regression Tests', () => {
     expect(secondSummary.importedCount).toBe(0);
     expect(secondSummary.skippedCount).toBe(3);
     expect(secondSummary.commitsCreated.length).toBe(0);
+  });
+
+  // 17. Commit date strategy: ORIGINAL_DATE sets commit author/committer timestamp to original submission time
+  it('17. Commit date strategy ORIGINAL_DATE sets author and committer dates to original submission date', async () => {
+    const adapter = createMockAdapter();
+    const client = createMockGitHubClient();
+
+    const commitPayloads: any[] = [];
+    const originalRawRequest = client.rawRequest.bind(client);
+    client.rawRequest = vi.fn().mockImplementation((endpoint: string, options?: any) => {
+      if (endpoint.includes('/git/commits') && options?.method === 'POST') {
+        commitPayloads.push(JSON.parse(options.body));
+      }
+      return originalRawRequest(endpoint, options);
+    });
+
+    const summary = await executeHistoricalImport(
+      [sampleSubmissionsPage1[0]], // Two sum with timestamp 1690000000 (2023-07-22T04:26:40.000Z)
+      { mode: 'ALL_ACCEPTED', commitDateStrategy: 'ORIGINAL_DATE', batchSize: 5 },
+      adapter,
+      client
+    );
+
+    expect(summary.success).toBe(true);
+    expect(summary.importedCount).toBe(1);
+    expect(summary.commitDateStrategy).toBe('ORIGINAL_DATE');
+    expect(commitPayloads.length).toBeGreaterThan(0);
+
+    const firstCommit = commitPayloads[0];
+    const expectedIso = new Date(1690000000 * 1000).toISOString();
+    expect(firstCommit.author?.date).toBe(expectedIso);
+    expect(firstCommit.committer?.date).toBe(expectedIso);
+  });
+
+  // 18. Commit date strategy: fallback when timestamp is missing
+  it('18. Commit date strategy ORIGINAL_DATE falls back to current import date when timestamp is missing', async () => {
+    const adapter = createMockAdapter();
+    const client = createMockGitHubClient();
+
+    const commitPayloads: any[] = [];
+    const originalRawRequest = client.rawRequest.bind(client);
+    client.rawRequest = vi.fn().mockImplementation((endpoint: string, options?: any) => {
+      if (endpoint.includes('/git/commits') && options?.method === 'POST') {
+        commitPayloads.push(JSON.parse(options.body));
+      }
+      return originalRawRequest(endpoint, options);
+    });
+
+    const subWithoutTimestamp: RawHistoricalSubmission = {
+      ...sampleSubmissionsPage1[0],
+      id: '9999',
+      timestamp: 0, // Missing timestamp
+    };
+
+    const summary = await executeHistoricalImport(
+      [subWithoutTimestamp],
+      { mode: 'ALL_ACCEPTED', commitDateStrategy: 'ORIGINAL_DATE', batchSize: 5 },
+      adapter,
+      client
+    );
+
+    expect(summary.success).toBe(true);
+    expect(summary.importedCount).toBe(1);
+    expect(summary.fallbackTimestampsCount).toBe(1);
+    expect(commitPayloads.length).toBeGreaterThan(0);
+    expect(commitPayloads[0].author?.date).toBeDefined();
+  });
+
+  // 19. Solutions directory prefix is solutions/
+  it('19. Stores solution files and metadata under solutions/ directory', async () => {
+    const adapter = createMockAdapter();
+    const client = createMockGitHubClient();
+
+    let createdTreeEntries: any[] = [];
+    const originalRawRequest = client.rawRequest.bind(client);
+    client.rawRequest = vi.fn().mockImplementation((endpoint: string, options?: any) => {
+      if (endpoint.includes('/git/trees') && options?.method === 'POST') {
+        const body = JSON.parse(options.body);
+        createdTreeEntries = body.tree || [];
+      }
+      return originalRawRequest(endpoint, options);
+    });
+
+    await executeHistoricalImport(
+      [sampleSubmissionsPage1[0]],
+      { mode: 'ALL_ACCEPTED', batchSize: 5 },
+      adapter,
+      client
+    );
+
+    const paths = createdTreeEntries.map((e) => e.path);
+    expect(paths.some((p) => p.startsWith('solutions/0001-two-sum/'))).toBe(true);
+    expect(paths.some((p) => p.startsWith('problems/'))).toBe(false);
   });
 });

@@ -13,7 +13,7 @@
     "cpp/hash-map-optimal": {
       "language": "cpp",
       "approachName": "hash-map-optimal",
-      "filePath": "problems/0001-two-sum/cpp/hash-map-optimal.cpp",
+      "filePath": "solutions/0001-two-sum/cpp/hash-map-optimal.cpp",
       "submissionId": "1049281920",
       "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "syncedAt": "2026-10-24T12:00:00.000Z",

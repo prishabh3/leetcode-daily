@@ -45,12 +45,14 @@ describe('7 & 14. README generation & Preservation of manual sections', () => {
       leetcodeUsername: 'octocat',
     });
 
-    expect(readme).toContain('# leetcode-daily');
+    expect(readme).toContain('# ⚡ LeetCode Daily');
+    expect(readme).toContain('> My LeetCode problem-solving journey — automatically synchronized to GitHub using LC-Sync.');
     expect(readme).toContain(LC_SYNC_START_MARKER);
     expect(readme).toContain(LC_SYNC_END_MARKER);
     expect(readme).toContain('Two Sum');
     expect(readme).toContain('Longest Substring Without Repeating Characters');
     expect(readme).toContain('Total Problems Tracked**: **2**');
+    expect(readme).toContain('Browse All Solutions → solutions/');
   });
 
   it('14. Strictly preserves custom user content before and after markers', () => {
@@ -93,8 +95,8 @@ ${LC_SYNC_END_MARKER}${customFooter}`;
 
   it('keeps software README and solutions README strictly separate', () => {
     const solutionsReadme = generateReadme(null, mockIndex, { repoName: 'my-solutions' });
-    expect(solutionsReadme).toContain('# my-solutions');
-    expect(solutionsReadme).toContain('Problem Directory');
+    expect(solutionsReadme).toContain('# ⚡ LeetCode Daily');
+    expect(solutionsReadme).toContain('Browse All Solutions → solutions/');
     // Solutions README does not include internal extension source tree
     expect(solutionsReadme).not.toContain('src/background');
     expect(solutionsReadme).not.toContain('npm run build');

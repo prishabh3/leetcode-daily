@@ -33,6 +33,10 @@ describe('3. File path sanitization', () => {
   });
 
   it('generates correct solution file paths with approach names', () => {
+    // Default basePrefix should now be 'solutions'
+    const defaultPath = getSolutionFilePath('1', 'two-sum', 'cpp', 'solution');
+    expect(defaultPath).toBe('solutions/0001-two-sum/cpp/solution.cpp');
+
     const path1 = getSolutionFilePath('1', 'two-sum', 'cpp', 'solution', 'problems');
     expect(path1).toBe('problems/0001-two-sum/cpp/solution.cpp');
 
@@ -44,6 +48,11 @@ describe('3. File path sanitization', () => {
   });
 
   it('generates correct metadata and notes paths', () => {
+    // Default basePrefix is 'solutions'
+    expect(getMetadataFilePath('1', 'two-sum')).toBe('solutions/0001-two-sum/metadata.json');
+    expect(getNotesFilePath('1', 'two-sum')).toBe('solutions/0001-two-sum/notes.md');
+
+    // Explicit basePrefix
     expect(getMetadataFilePath('1', 'two-sum', 'problems')).toBe('problems/0001-two-sum/metadata.json');
     expect(getNotesFilePath('1', 'two-sum', 'problems')).toBe('problems/0001-two-sum/notes.md');
   });

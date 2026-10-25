@@ -5,8 +5,11 @@ export type HistoricalImportMode =
   | 'LATEST_ACCEPTED' // Mode B: Latest Accepted submission per problem-language combination
   | 'ALL_ATTEMPTS'; // Mode C: All attempts (Accepted + Wrong Answer / TLE / etc., kept separate)
 
+export type CommitDateStrategy = 'IMPORT_DATE' | 'ORIGINAL_DATE';
+
 export interface HistoricalImportConfig {
   mode: HistoricalImportMode;
+  commitDateStrategy?: CommitDateStrategy; // Option A (IMPORT_DATE) or Option B (ORIGINAL_DATE)
   dateRange?: {
     startDate?: string; // YYYY-MM-DD
     endDate?: string; // YYYY-MM-DD
@@ -43,6 +46,9 @@ export interface HistoricalImportPreview {
   newToImportCount: number;
   duplicatesSkippedCount: number;
   codeMissingCount: number;
+  recordsWithOriginalTimestamp: number;
+  recordsWithoutTimestamp: number;
+  selectedDateStrategy: CommitDateStrategy;
   submissions: RawHistoricalSubmission[];
 }
 
@@ -64,12 +70,14 @@ export interface HistoricalImportProgress {
 export interface HistoricalImportSummary {
   success: boolean;
   mode: HistoricalImportMode;
+  commitDateStrategy: CommitDateStrategy;
   totalDiscovered: number;
   importedCount: number;
   skippedCount: number;
   failedCount: number;
   distinctProblemsImported: number;
   commitsCreated: string[];
+  fallbackTimestampsCount: number;
   durationMs: number;
   error?: string;
 }
@@ -78,10 +86,12 @@ export interface HistoricalImportCheckpoint {
   checkpointId: string;
   createdAt: number;
   config: HistoricalImportConfig;
+  commitDateStrategy: CommitDateStrategy;
   completedSubmissionIds: string[];
   totalExpected: number;
   importedCount: number;
   skippedCount: number;
   failedCount: number;
+  fallbackTimestampsCount?: number;
   isComplete: boolean;
 }

@@ -14,7 +14,7 @@
       "submissionId": "2181124556",
       "contentHash": "47db159420735b22669a9c1da506f981a07bd7eada7f40edea966f22e9dbea3d",
       "syncedAt": "2026-10-25T05:48:40.000Z",
-      "filePath": "problems/0094-binary-tree-inorder-traversal/history/2181124556/solution.cpp"
+      "filePath": "solutions/0094-binary-tree-inorder-traversal/history/2181124556/solution.cpp"
     },
     "2181125100": {
       "problemId": "0094",
@@ -26,7 +26,7 @@
       "submissionId": "2181125100",
       "contentHash": "47db159420735b22669a9c1da506f981a07bd7eada7f40edea966f22e9dbea3d",
       "syncedAt": "2026-10-25T05:49:32.000Z",
-      "filePath": "problems/0094-binary-tree-inorder-traversal/history/2181125100/solution.cpp"
+      "filePath": "solutions/0094-binary-tree-inorder-traversal/history/2181125100/solution.cpp"
     },
     "2181138335": {
       "problemId": "0094",
@@ -38,7 +38,7 @@
       "submissionId": "2181138335",
       "contentHash": "47db159420735b22669a9c1da506f981a07bd7eada7f40edea966f22e9dbea3d",
       "syncedAt": "2026-10-25T06:09:08.000Z",
-      "filePath": "problems/0094-binary-tree-inorder-traversal/history/2181138335/solution.cpp"
+      "filePath": "solutions/0094-binary-tree-inorder-traversal/history/2181138335/solution.cpp"
     },
     "2181140905": {
       "problemId": "0094",
@@ -50,7 +50,7 @@
       "submissionId": "2181140905",
       "contentHash": "47db159420735b22669a9c1da506f981a07bd7eada7f40edea966f22e9dbea3d",
       "syncedAt": "2026-10-25T06:12:50.000Z",
-      "filePath": "problems/0094-binary-tree-inorder-traversal/cpp/solution.cpp"
+      "filePath": "solutions/0094-binary-tree-inorder-traversal/cpp/solution.cpp"
     },
     "2181142111": {
       "problemId": "0013",
@@ -62,7 +62,7 @@
       "submissionId": "2181142111",
       "contentHash": "5c4dd733bbcde7f6898f7d7b37a3e62c8785f9a5f409c7f9ad54ca9cf74acda2",
       "syncedAt": "2026-10-25T06:14:41.000Z",
-      "filePath": "problems/0013-roman-to-integer/history/2181142111/solution.cpp"
+      "filePath": "solutions/0013-roman-to-integer/history/2181142111/solution.cpp"
     },
     "2181143273": {
       "problemId": "0013",
@@ -74,7 +74,7 @@
       "submissionId": "2181143273",
       "contentHash": "2f8dba4983fb812bc8b5d485b5093dbca3cbfd3a757b702d3da111e38b549d40",
       "syncedAt": "2026-10-25T06:16:25.425Z",
-      "filePath": "problems/0013-roman-to-integer/cpp/solution.cpp"
+      "filePath": "solutions/0013-roman-to-integer/cpp/solution.cpp"
     },
     "rank-scores-a592f06bef0a": {
       "problemId": "0178",
@@ -85,7 +85,7 @@
       "approachName": "solution",
       "contentHash": "a592f06bef0a64be855452b0340d13c771c3156fe108bd36364afa027dd8e47b",
       "syncedAt": "2026-10-25T07:10:40.482Z",
-      "filePath": "problems/0178-rank-scores/cpp/solution.cpp"
+      "filePath": "solutions/0178-rank-scores/cpp/solution.cpp"
     }
   },
   "problems": {

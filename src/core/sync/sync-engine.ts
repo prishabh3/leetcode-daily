@@ -65,6 +65,7 @@ export async function executeSyncItem(
 
   const contentHash = dupCheck.contentHash;
   const now = new Date().toISOString();
+  const basePrefix = settings.defaultPathPrefix || 'solutions';
 
   const paddedId = formatProblemId(submission.problemId);
   const solutionRelPath = getSolutionFilePath(
@@ -72,17 +73,17 @@ export async function executeSyncItem(
     submission.problemSlug,
     submission.language,
     approachName,
-    settings.defaultPathPrefix
+    basePrefix
   );
   const metadataRelPath = getMetadataFilePath(
     submission.problemId,
     submission.problemSlug,
-    settings.defaultPathPrefix
+    basePrefix
   );
   const notesRelPath = getNotesFilePath(
     submission.problemId,
     submission.problemSlug,
-    settings.defaultPathPrefix
+    basePrefix
   );
 
   // 3. Load or initialize ProblemMetadata
@@ -219,8 +220,16 @@ export async function executeSyncItem(
     // no existing readme
   }
 
+  // Migrate any legacy 'problems/' paths to canonical basePrefix
+  for (const sub of Object.values(syncIndex.submissions)) {
+    if (sub.filePath && sub.filePath.startsWith('problems/')) {
+      sub.filePath = sub.filePath.replace(/^problems\//, `${basePrefix}/`);
+    }
+  }
+
   const generatedReadme = generateReadme(existingReadme, syncIndex, {
     repoName: settings.repo,
+    basePrefix,
   });
 
   // Calculate stats for SVG
