@@ -29,7 +29,19 @@ export interface SyncFeedback {
   problemTitle?: string;
   repo?: string;
   error?: string;
-  actionRequired?: 'OPEN_SETTINGS' | 'RETRY' | 'MANUAL_IMPORT';
+  actionRequired?: 'OPEN_SETTINGS' | 'RETRY' | 'MANUAL_IMPORT' | 'REFRESH_PAGE';
+}
+
+/**
+ * Checks if the Chrome extension context is currently alive and valid for messaging.
+ * Returns false if the extension was reloaded in chrome://extensions and the page hasn't been refreshed yet.
+ */
+export function isExtensionContextValid(): boolean {
+  try {
+    return typeof chrome !== 'undefined' && Boolean(chrome.runtime && chrome.runtime.id && chrome.runtime.sendMessage);
+  } catch {
+    return false;
+  }
 }
 
 export class LeetCodeObserver {
@@ -62,6 +74,31 @@ export class LeetCodeObserver {
     this.attachNavigationListener();
     this.startDomObserver();
     this.renderFloatingBadge();
+
+    // Check if there was a pending submission saved prior to an extension reload / page refresh
+    try {
+      if (typeof window !== 'undefined' && window.sessionStorage) {
+        const pendingRaw = sessionStorage.getItem('lc_sync_pending_submission');
+        if (pendingRaw) {
+          sessionStorage.removeItem('lc_sync_pending_submission');
+          const pendingSub: PlatformSubmission = JSON.parse(pendingRaw);
+          if (pendingSub && (pendingSub.problemSlug === this.currentSlug || !this.currentSlug)) {
+            console.log('[LC-Sync] Resuming pending submission after page reload:', pendingSub.problemTitle);
+            this.activeSubmission = pendingSub;
+            this.state = 'SYNCING';
+            this.updateBadge({
+              type: 'syncing',
+              text: `Syncing ${pendingSub.problemTitle}...`,
+            });
+            if (this.onAcceptedCallback) {
+              this.onAcceptedCallback(pendingSub, (fb) => this.handleSyncFeedback(fb));
+            }
+          }
+        }
+      }
+    } catch (e) {
+      console.warn('[LC-Sync] Could not inspect pending submission:', e);
+    }
   }
 
   stop(): void {
@@ -387,6 +424,15 @@ export class LeetCodeObserver {
     } else if (feedback.status === 'FAILED') {
       this.state = 'FAILED';
       const isMissingConfig = feedback.actionRequired === 'OPEN_SETTINGS';
+      const isNeedsRefresh =
+        feedback.actionRequired === 'REFRESH_PAGE' ||
+        Boolean(
+          feedback.error &&
+            (feedback.error.toLowerCase().includes('messaging not available') ||
+              feedback.error.toLowerCase().includes('context invalidated') ||
+              feedback.error.toLowerCase().includes('extension was reloaded') ||
+              feedback.error.toLowerCase().includes('refresh this page'))
+        );
 
       this.updateBadge({
         type: 'error',
@@ -395,6 +441,11 @@ export class LeetCodeObserver {
           ? {
               label: 'Open Settings',
               onClick: () => this.openSettings(),
+            }
+          : isNeedsRefresh
+          ? {
+              label: 'Refresh Page',
+              onClick: () => window.location.reload(),
             }
           : {
               label: 'Retry',
@@ -412,6 +463,21 @@ export class LeetCodeObserver {
 
   private retryActiveSubmission(): void {
     if (!this.activeSubmission) return;
+
+    // Guard against calling runtime APIs from an invalidated context
+    if (!isExtensionContextValid()) {
+      try {
+        sessionStorage.setItem('lc_sync_pending_submission', JSON.stringify(this.activeSubmission));
+      } catch {}
+      this.handleSyncFeedback({
+        success: false,
+        status: 'FAILED',
+        error: 'Extension was reloaded. Please refresh this page to reconnect.',
+        actionRequired: 'REFRESH_PAGE',
+      });
+      return;
+    }
+
     this.lastProcessedKey = '';
     this.state = 'SYNCING';
     this.updateBadge({

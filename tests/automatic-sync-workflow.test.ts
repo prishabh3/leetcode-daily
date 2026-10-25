@@ -551,4 +551,50 @@ describe('Automatic LeetCode-to-GitHub Sync Workflow & Regression Suite', () => 
 
     observer.stop();
   });
+
+  // 18. Handles extension context invalidation gracefully by offering page refresh and resuming
+  it('18. Handles extension context invalidation gracefully by offering page refresh and resuming', async () => {
+    sessionStorage.clear();
+
+    const sub: PlatformSubmission = {
+      problemId: '196',
+      problemTitle: 'Delete Duplicate Emails',
+      problemSlug: 'delete-duplicate-emails',
+      url: 'https://leetcode.com/problems/delete-duplicate-emails/',
+      difficulty: 'Easy',
+      language: 'sql',
+      code: 'DELETE p1 FROM Person p1, Person p2 WHERE p1.Email = p2.Email AND p1.Id > p2.Id;',
+      timestamp: Date.now(),
+      status: 'Accepted',
+    };
+
+    // Simulate saved pending submission in sessionStorage from a prior reload
+    sessionStorage.setItem('lc_sync_pending_submission', JSON.stringify(sub));
+
+    let resumedSubmission: PlatformSubmission | null = null;
+    const onAccepted = vi.fn((submission: PlatformSubmission, onFb) => {
+      resumedSubmission = submission;
+      onFb({
+        success: true,
+        status: 'SYNCED',
+        commitSha: 'sha-resumed-123',
+        problemTitle: submission.problemTitle,
+      });
+    });
+
+    window.history.pushState({}, '', '/problems/delete-duplicate-emails/');
+    const observer = new LeetCodeObserver(onAccepted);
+    observer.start();
+
+    // Verify it automatically resumed the pending submission
+    expect(resumedSubmission).not.toBeNull();
+    expect((resumedSubmission as any)?.problemTitle).toBe('Delete Duplicate Emails');
+    expect(sessionStorage.getItem('lc_sync_pending_submission')).toBeNull();
+
+    const badge = document.getElementById('lc-sync-floating-badge');
+    expect(badge?.textContent).toContain('Synced: Delete Duplicate Emails → GitHub');
+
+    observer.stop();
+    sessionStorage.clear();
+  });
 });
