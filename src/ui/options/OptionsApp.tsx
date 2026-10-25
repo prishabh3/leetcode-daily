@@ -3,6 +3,8 @@ import { storage } from '../../core/storage/chrome-storage';
 import { AppSettings, DEFAULT_SETTINGS } from '../../core/types/settings';
 import { GitHubClient, RepoTestResult } from '../../core/github/client';
 import { getSolutionFilePath } from '../../core/sync/path-sanitizer';
+import { extractLeetCodeUsername, verifyLeetCodeUsername } from '../../core/leetcode/profile-validator';
+import { LeetCodeHistoricalAdapter } from '../../core/leetcode/historical-adapter';
 
 export const OptionsApp: React.FC = () => {
   const [settings, setSettings] = useState<AppSettings>(DEFAULT_SETTINGS);
@@ -11,6 +13,12 @@ export const OptionsApp: React.FC = () => {
   const [isTesting, setIsTesting] = useState(false);
   const [saveStatus, setSaveStatus] = useState<string | null>(null);
   const [resetConfirm, setResetConfirm] = useState(false);
+  const [lcVerification, setLcVerification] = useState<{
+    checking: boolean;
+    result?: string;
+    isError?: boolean;
+  }>({ checking: false });
+  const [isDetectingSession, setIsDetectingSession] = useState(false);
 
   useEffect(() => {
     storage.getSettings().then(setSettings);
@@ -18,9 +26,95 @@ export const OptionsApp: React.FC = () => {
 
   const handleSave = async (e?: React.FormEvent) => {
     if (e) e.preventDefault();
-    await storage.saveSettings(settings);
+    const cleanLcUsername = extractLeetCodeUsername(settings.leetcodeProfileUsername) || '';
+    const updatedSettings: AppSettings = {
+      ...settings,
+      leetcodeProfileUsername: cleanLcUsername,
+    };
+    setSettings(updatedSettings);
+    await storage.saveSettings(updatedSettings);
     setSaveStatus('Settings saved successfully.');
     setTimeout(() => setSaveStatus(null), 3000);
+  };
+
+  const handleVerifyLeetCodeProfile = async () => {
+    const raw = settings.leetcodeProfileUsername?.trim();
+    if (!raw) {
+      setLcVerification({
+        checking: false,
+        isError: true,
+        result: 'Please enter a LeetCode username or profile URL first.',
+      });
+      return;
+    }
+    const clean = extractLeetCodeUsername(raw);
+    if (!clean) {
+      setLcVerification({
+        checking: false,
+        isError: true,
+        result: 'Invalid username format. Must be 3–30 letters/numbers/hyphens/underscores.',
+      });
+      return;
+    }
+
+    setLcVerification({ checking: true });
+    try {
+      const res = await verifyLeetCodeUsername(clean);
+      if (res.valid && res.username) {
+        setLcVerification({
+          checking: false,
+          isError: false,
+          result: `✓ Account verified: "${res.username}" exists on LeetCode!`,
+        });
+        setSettings((prev) => ({ ...prev, leetcodeProfileUsername: res.username }));
+      } else {
+        setLcVerification({
+          checking: false,
+          isError: true,
+          result: `✗ ${res.error || 'User not found on LeetCode.'}`,
+        });
+      }
+    } catch (err: any) {
+      setLcVerification({
+        checking: false,
+        isError: true,
+        result: `✗ Verification error: ${err.message}`,
+      });
+    }
+  };
+
+  const handleAutoDetectLeetCodeSession = async () => {
+    setIsDetectingSession(true);
+    setLcVerification({ checking: false });
+    try {
+      const adapter = new LeetCodeHistoricalAdapter();
+      const session = await adapter.checkSession();
+      if (session.isSignedIn && session.username) {
+        const clean = extractLeetCodeUsername(session.username);
+        if (clean) {
+          setSettings((prev) => ({ ...prev, leetcodeProfileUsername: clean }));
+          setLcVerification({
+            checking: false,
+            isError: false,
+            result: `✓ Detected active LeetCode session for "${clean}"!`,
+          });
+        }
+      } else {
+        setLcVerification({
+          checking: false,
+          isError: true,
+          result: session.error || 'No active LeetCode session found. Please log in to leetcode.com in your browser.',
+        });
+      }
+    } catch (err: any) {
+      setLcVerification({
+        checking: false,
+        isError: true,
+        result: `Failed to detect session: ${err.message}`,
+      });
+    } finally {
+      setIsDetectingSession(false);
+    }
   };
 
   const handleTestConnection = async () => {
@@ -336,21 +430,70 @@ export const OptionsApp: React.FC = () => {
             </div>
           </div>
 
-          <div style={{ marginBottom: '16px' }}>
-            <label style={{ fontSize: '13px', fontWeight: 500, display: 'block', marginBottom: '6px' }}>
-              LeetCode Username (For README Profile Link)
+          <div style={{ marginBottom: '20px', padding: '14px', backgroundColor: 'var(--bg-primary)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
+            <label style={{ fontSize: '13px', fontWeight: 600, display: 'block', marginBottom: '4px' }}>
+              LeetCode Account & Profile Cards
             </label>
-            <input
-              type="text"
-              placeholder="e.g. tourist"
-              value={settings.leetcodeProfileUsername || ''}
-              onChange={(e) =>
-                setSettings({
-                  ...settings,
-                  leetcodeProfileUsername: e.target.value,
-                })
-              }
-            />
+            <p style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '12px' }}>
+              Used to generate your live LeetCode stats card, submission activity heatmap, and profile badges in your GitHub README.
+              You can enter your LeetCode username (e.g. <code>tourist</code>) or full profile URL (e.g. <code>https://leetcode.com/u/tourist/</code>).
+            </p>
+
+            <div style={{ display: 'flex', gap: '8px', marginBottom: '8px' }}>
+              <input
+                type="text"
+                placeholder="e.g. tourist or https://leetcode.com/u/tourist/"
+                value={settings.leetcodeProfileUsername || ''}
+                onChange={(e) =>
+                  setSettings({
+                    ...settings,
+                    leetcodeProfileUsername: e.target.value,
+                  })
+                }
+                style={{ flex: 1, fontFamily: 'var(--font-mono)' }}
+              />
+              <button
+                type="button"
+                onClick={handleVerifyLeetCodeProfile}
+                disabled={lcVerification.checking || !settings.leetcodeProfileUsername?.trim()}
+                style={{ flexShrink: 0 }}
+              >
+                {lcVerification.checking ? 'Verifying...' : '🔍 Verify Account'}
+              </button>
+              <button
+                type="button"
+                onClick={handleAutoDetectLeetCodeSession}
+                disabled={isDetectingSession}
+                style={{ flexShrink: 0 }}
+              >
+                {isDetectingSession ? 'Detecting...' : '⚡ Auto-Detect Session'}
+              </button>
+            </div>
+
+            {settings.leetcodeProfileUsername &&
+              extractLeetCodeUsername(settings.leetcodeProfileUsername) &&
+              extractLeetCodeUsername(settings.leetcodeProfileUsername) !== settings.leetcodeProfileUsername.trim() && (
+                <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginBottom: '6px' }}>
+                  Parsed username: <strong style={{ color: 'var(--accent-blue)' }}>{extractLeetCodeUsername(settings.leetcodeProfileUsername)}</strong>
+                </div>
+              )}
+
+            {lcVerification.result && (
+              <div
+                style={{
+                  fontSize: '12px',
+                  fontWeight: 500,
+                  color: lcVerification.isError ? 'var(--accent-red)' : 'var(--accent-green)',
+                  marginTop: '6px',
+                }}
+              >
+                {lcVerification.result}
+              </div>
+            )}
+
+            <p style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '8px', fontStyle: 'italic' }}>
+              ℹ️ If left empty, LeetCode stats and heatmap cards will be cleanly omitted from your README to prevent "User Not Found" errors.
+            </p>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '13px' }}>

@@ -3,6 +3,7 @@ import { SyncIndex } from '../../../core/types/sync-index';
 import { HeatmapView } from './HeatmapView';
 import { generateProgressSvg, ProgressStats } from '../../../core/generator/svg-generator';
 import { generateReadme } from '../../../core/generator/readme-generator';
+import { extractLeetCodeUsername } from '../../../core/leetcode/profile-validator';
 import { storage } from '../../../core/storage/chrome-storage';
 import { GitHubClient } from '../../../core/github/client';
 import { README_PATH, PROGRESS_SVG_PATH } from '../../../core/sync/path-sanitizer';
@@ -59,7 +60,8 @@ export const AnalyticsView: React.FC<Props> = ({ syncIndex, onRefresh }) => {
     setIsPushing(true);
     setPushStatus(null);
     try {
-      const settings = (await storage.getSettings()).github;
+      const fullSettings = await storage.getSettings();
+      const settings = fullSettings.github;
       if (!settings.token || !settings.owner || !settings.repo) {
         setPushStatus('GitHub repository not configured in Settings.');
         return;
@@ -67,8 +69,16 @@ export const AnalyticsView: React.FC<Props> = ({ syncIndex, onRefresh }) => {
 
       const client = new GitHubClient(settings);
       const existingReadme = await client.getFileContent(README_PATH);
+      const cleanLeetCodeUser = extractLeetCodeUsername(fullSettings.leetcodeProfileUsername);
+      const basePrefix = settings.defaultPathPrefix || 'solutions';
+      const cacheBuster = Math.floor(Date.now() / 1000);
+
       const updatedReadme = generateReadme(existingReadme?.content || null, syncIndex, {
         repoName: settings.repo,
+        githubUsername: settings.owner,
+        leetcodeUsername: cleanLeetCodeUser || undefined,
+        basePrefix,
+        cacheBuster,
       });
 
       // Update README & SVG via contents API or atomic commit

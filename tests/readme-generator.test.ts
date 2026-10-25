@@ -51,7 +51,7 @@ describe('7 & 14. README generation & Preservation of manual sections', () => {
     expect(readme).toContain(LC_SYNC_END_MARKER);
     expect(readme).toContain('Two Sum');
     expect(readme).toContain('Longest Substring Without Repeating Characters');
-    expect(readme).toContain('Total Problems Tracked**: **2**');
+    expect(readme).toContain('Distinct Problems Tracked**: **2**');
     expect(readme).toContain('Browse All Solutions → solutions/');
   });
 
@@ -151,5 +151,77 @@ ${LC_SYNC_END_MARKER}
 
     expect(readme).toContain('| SQL | `1` |');
     expect(readme).not.toContain('| C++ |');
+  });
+
+  it('renders stats card and heatmap when valid leetcodeUsername is provided', () => {
+    const readme = generateReadme(null, mockIndex, {
+      repoName: 'leetcode-daily',
+      leetcodeUsername: 'octocat',
+      cacheBuster: 12345,
+    });
+
+    expect(readme).toContain('## 🔗 LeetCode Profile');
+    expect(readme).toContain('[octocat](https://leetcode.com/u/octocat/)');
+    expect(readme).toContain('## LeetCode Stats');
+    expect(readme).toContain(
+      '[![LeetCode Stats](https://leetcard.jacoblin.cool/octocat?theme=dark&font=Roboto&v=12345)](https://leetcode.com/u/octocat/)'
+    );
+    expect(readme).toContain('## Submission Activity');
+    expect(readme).toContain(
+      '[![LeetCode Heatmap](https://leetcard.jacoblin.cool/octocat?ext=heatmap&theme=dark&v=12345)](https://leetcode.com/u/octocat/)'
+    );
+  });
+
+  it('extracts clean username from full LeetCode profile URL in readme options', () => {
+    const readme = generateReadme(null, mockIndex, {
+      repoName: 'leetcode-daily',
+      leetcodeUsername: 'https://leetcode.com/u/octocat/',
+      cacheBuster: 99999,
+    });
+
+    expect(readme).toContain('## 🔗 LeetCode Profile');
+    expect(readme).toContain('[octocat](https://leetcode.com/u/octocat/)');
+    expect(readme).toContain('https://leetcard.jacoblin.cool/octocat?theme=dark&font=Roboto&v=99999');
+  });
+
+  it('cleanly omits stats cards and heatmaps when leetcodeUsername is missing or invalid', () => {
+    const readmeNoUser = generateReadme(null, mockIndex, {
+      repoName: 'leetcode-daily',
+    });
+
+    expect(readmeNoUser).toContain('## 🔗 LeetCode Profile');
+    expect(readmeNoUser).toContain('[LeetCode](https://leetcode.com)');
+    expect(readmeNoUser).not.toContain('## LeetCode Stats');
+    expect(readmeNoUser).not.toContain('## Submission Activity');
+    expect(readmeNoUser).not.toContain('leetcard.jacoblin.cool');
+
+    const readmeInvalidUser = generateReadme(null, mockIndex, {
+      repoName: 'leetcode-daily',
+      leetcodeUsername: 'ab', // too short
+    });
+    expect(readmeInvalidUser).not.toContain('## LeetCode Stats');
+    expect(readmeInvalidUser).not.toContain('leetcard.jacoblin.cool');
+  });
+
+  it('strips legacy stats cards placed before lc-sync markers in existing README', () => {
+    const existingWithLegacy = `# ⚡ LeetCode Daily
+
+> My LeetCode problem-solving journey — automatically synchronized to GitHub using LC-Sync.
+
+## 📈 LeetCode Stats
+
+[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto)](https://leetcode.com/u/prishabh3/)
+
+<!-- lc-sync:start -->
+old
+<!-- lc-sync:end -->
+`;
+    const regenerated = generateReadme(existingWithLegacy, mockIndex, {
+      repoName: 'leetcode-daily',
+      githubUsername: 'prishabh3',
+    });
+
+    expect(regenerated).not.toContain('https://leetcard.jacoblin.cool/prishabh3');
+    expect(regenerated).not.toContain('## 📈 LeetCode Stats');
   });
 });

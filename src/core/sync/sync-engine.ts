@@ -16,6 +16,7 @@ import {
 } from './path-sanitizer';
 import { formatNotesMarkdown, parseNotesMarkdown } from '../generator/template';
 import { generateReadme } from '../generator/readme-generator';
+import { extractLeetCodeUsername } from '../leetcode/profile-validator';
 import { generateProgressSvg, ProgressStats } from '../generator/svg-generator';
 import { calculateNextReview } from '../revision/scheduler';
 import { migrateProblemMetadata } from '../storage/schema-migration';
@@ -227,9 +228,16 @@ export async function executeSyncItem(
     }
   }
 
+  const appSettings = await storage.getSettings();
+  const cleanLeetCodeUser = extractLeetCodeUsername(appSettings?.leetcodeProfileUsername);
+  const cacheBuster = Math.floor(new Date(now).getTime() / 1000);
+
   const generatedReadme = generateReadme(existingReadme, syncIndex, {
     repoName: settings.repo,
+    githubUsername: settings.owner,
+    leetcodeUsername: cleanLeetCodeUser || undefined,
     basePrefix,
+    cacheBuster,
   });
 
   // Calculate stats for SVG

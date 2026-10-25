@@ -29,6 +29,7 @@ import {
   README_PATH,
 } from './path-sanitizer';
 import { generateReadme } from '../generator/readme-generator';
+import { extractLeetCodeUsername } from '../leetcode/profile-validator';
 import { generateProgressSvg, ProgressStats } from '../generator/svg-generator';
 import { formatNotesMarkdown, parseNotesMarkdown } from '../generator/template';
 import { migrateProblemMetadata } from '../storage/schema-migration';
@@ -533,9 +534,16 @@ export async function executeHistoricalImport(
         // ignore
       }
 
+      const appSettings = await storage.getSettings();
+      const cleanLeetCodeUser = extractLeetCodeUsername(appSettings?.leetcodeProfileUsername);
+      const cacheBuster = Math.floor(Date.now() / 1000);
+
       const generatedReadme = generateReadme(existingReadme, syncIndex, {
         repoName: client.rawSettings.repo,
+        githubUsername: client.rawSettings.owner,
+        leetcodeUsername: cleanLeetCodeUser || undefined,
         basePrefix,
+        cacheBuster,
       });
 
       // Progress SVG stats

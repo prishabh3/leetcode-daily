@@ -2,23 +2,22 @@
 
 > My LeetCode problem-solving journey — automatically synchronized to GitHub using LC-Sync.
 
-## 📈 LeetCode Stats
-
-[![LeetCode Stats](https://leetcard.jacoblin.cool/prishabh3?theme=dark&font=Roboto)](https://leetcode.com/u/prishabh3/)
-
 <!-- lc-sync:start -->
-## 📊 Progress Summary
+## 🔗 LeetCode Profile
+
+[LeetCode](https://leetcode.com)
+
+## 📊 Repository Progress
 
 <p align="center">
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-7-blue)]()
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-7-blue)]() [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Total Problems Tracked**: **7**
 - **Distinct Problems Tracked**: **7**
-- **Total Solutions & Historical Versions**: **11**
-- **Profiles**: [LeetCode](https://leetcode.com)
+- **Total Accepted Submissions**: **11**
+- **Repository Solutions & Historical Versions**: **11** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |

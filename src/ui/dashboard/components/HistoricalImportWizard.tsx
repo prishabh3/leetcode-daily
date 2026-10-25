@@ -12,6 +12,7 @@ import {
 } from '../../../core/types/historical-import';
 import { SupportedLanguage } from '../../../core/types/submission';
 import { LeetCodeHistoricalAdapter, LeetCodeSessionStatus } from '../../../core/leetcode/historical-adapter';
+import { extractLeetCodeUsername } from '../../../core/leetcode/profile-validator';
 import { GitHubClient, RepoTestResult } from '../../../core/github/client';
 import {
   previewHistoricalImport,
@@ -96,6 +97,14 @@ export const HistoricalImportWizard: React.FC<HistoricalImportWizardProps> = ({
     setLeetcodeStatus(lcRes);
     setGithubStatus(ghRes);
     setCheckingAuth(false);
+
+    if (lcRes.isSignedIn && lcRes.username) {
+      const clean = extractLeetCodeUsername(lcRes.username);
+      if (clean && !settings.leetcodeProfileUsername) {
+        settings.leetcodeProfileUsername = clean;
+        storage.saveSettings(settings).catch(() => {});
+      }
+    }
   };
 
   const handleStartDiscovery = async () => {
