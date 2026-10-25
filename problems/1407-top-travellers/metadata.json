@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "1407",
+  "title": "Top Travellers",
+  "slug": "top-travellers",
+  "url": "https://leetcode.com/problems/top-travellers/",
+  "difficulty": "Easy",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-25T08:29:57.288Z",
+  "lastSyncedAt": "2026-10-25T08:29:56.926Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "problems/1407-top-travellers/cpp/solution.cpp",
+      "contentHash": "3d573f5ceeac8a630bd70d096ba811590fa89bce59437c4df0eaf03c282dbe62",
+      "syncedAt": "2026-10-25T08:29:56.926Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-10-25",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-10-27",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}
