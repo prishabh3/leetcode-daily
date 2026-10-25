@@ -10,10 +10,12 @@
   "firstTrackedAt": "2026-10-25T07:47:46.063Z",
   "lastSyncedAt": "2026-10-25T07:47:45.778Z",
   "solutions": {
-    "cpp/solution": {
-      "language": "cpp",
+    "sql/solution": {
+      "language": "sql",
+      "rawPlatformLanguage": "mysql",
+      "languageDialect": "MySQL",
       "approachName": "solution",
-      "filePath": "problems/0595-big-countries/cpp/solution.cpp",
+      "filePath": "solutions/0595-big-countries/sql/solution.sql",
       "contentHash": "3f375d3d16b21c26d8e5f93eef2f48b7d671830f26661f21006ea389d42abb65",
       "syncedAt": "2026-10-25T07:47:45.778Z",
       "complexity": {

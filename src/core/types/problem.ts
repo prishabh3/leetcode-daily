@@ -31,6 +31,10 @@ export interface SolutionRecord {
     time: string;
     space: string;
   };
+  /** The original language string from the LeetCode platform (e.g. 'mysql', 'postgresql') */
+  rawPlatformLanguage?: string;
+  /** SQL dialect or language variant (e.g. 'MySQL', 'PostgreSQL', 'MS SQL Server') */
+  languageDialect?: string;
 }
 
 export interface ProblemMetadata {
@@ -53,4 +57,8 @@ export interface ProblemMetadata {
   estimatedTimeComplexity?: string;
   estimatedSpaceComplexity?: string;
   verifiedComplexity: boolean; // false if user estimated / not formally verified
+  /** The original language string from the LeetCode platform (e.g. 'mysql', 'postgresql') */
+  rawPlatformLanguage?: string;
+  /** SQL dialect or language variant (e.g. 'MySQL', 'PostgreSQL', 'MS SQL Server') */
+  languageDialect?: string;
 }

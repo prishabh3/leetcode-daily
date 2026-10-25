@@ -10,12 +10,14 @@
   "firstTrackedAt": "2026-10-25T07:10:40.790Z",
   "lastSyncedAt": "2026-10-25T07:10:40.482Z",
   "solutions": {
-    "cpp/solution": {
-      "language": "cpp",
+    "sql/solution": {
+      "language": "sql",
       "approachName": "solution",
-      "filePath": "solutions/0178-rank-scores/cpp/solution.cpp",
+      "filePath": "solutions/0178-rank-scores/sql/solution.sql",
       "contentHash": "a592f06bef0a64be855452b0340d13c771c3156fe108bd36364afa027dd8e47b",
       "syncedAt": "2026-10-25T07:10:40.482Z",
+      "rawPlatformLanguage": "mysql",
+      "languageDialect": "MySQL",
       "complexity": {
         "time": "O(?)",
         "space": "O(?)"

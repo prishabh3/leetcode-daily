@@ -119,4 +119,37 @@ ${LC_SYNC_END_MARKER}
     expect(readme).not.toContain('ðŸ');
     expect(readme).not.toContain('\uFFFD');
   });
+
+  it('correctly reports SQL in language distribution', () => {
+    const indexWithSql: SyncIndex = {
+      schemaVersion: 2,
+      lastUpdated: '2026-10-25T12:00:00.000Z',
+      totalProblems: 1,
+      totalSubmissions: 1,
+      submissions: {},
+      problems: {
+        '0178': {
+          id: '178',
+          title: 'Rank Scores',
+          slug: 'rank-scores',
+          difficulty: 'Medium',
+          languages: ['sql'],
+          approachesCount: 1,
+          lastSyncedAt: '2026-10-25T12:00:00.000Z',
+          confidenceRating: 3,
+          nextReviewDate: '2026-10-27',
+          tags: [],
+          patterns: [],
+        },
+      },
+    };
+
+    const readme = generateReadme(null, indexWithSql, {
+      repoName: 'leetcode-daily',
+      leetcodeUsername: 'octocat',
+    });
+
+    expect(readme).toContain('| SQL | `1` |');
+    expect(readme).not.toContain('| C++ |');
+  });
 });

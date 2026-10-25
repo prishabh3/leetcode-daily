@@ -6,7 +6,9 @@ export type SupportedLanguage =
   | 'java'
   | 'javascript'
   | 'typescript'
-  | 'csharp';
+  | 'csharp'
+  | 'sql'
+  | 'unknown';
 
 export interface LanguageConfig {
   id: SupportedLanguage;

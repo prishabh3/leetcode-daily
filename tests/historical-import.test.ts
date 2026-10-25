@@ -647,4 +647,101 @@ describe('Historical Submission Import Engine & Regression Tests', () => {
     expect(paths.some((p) => p.startsWith('solutions/0001-two-sum/'))).toBe(true);
     expect(paths.some((p) => p.startsWith('problems/'))).toBe(false);
   });
+
+  // 20. SQL submissions get stored in sql/ directory (not cpp/)
+  it('20. SQL submissions (mysql) are stored under solutions/<id>/sql/ with .sql extension', async () => {
+    const adapter = createMockAdapter();
+    const client = createMockGitHubClient();
+
+    const sqlSubmission: RawHistoricalSubmission[] = [
+      {
+        id: '5001',
+        title: 'Rank Scores',
+        titleSlug: 'rank-scores',
+        problemId: '178',
+        statusDisplay: 'Accepted',
+        lang: 'mysql',
+        normalizedLanguage: 'sql',
+        timestamp: 1690000000,
+        code: 'SELECT score, DENSE_RANK() OVER (ORDER BY score DESC) AS `rank` FROM Scores;',
+      },
+    ];
+
+    let createdTreeEntries: any[] = [];
+    const originalRawRequest = client.rawRequest.bind(client);
+    client.rawRequest = vi.fn().mockImplementation((endpoint: string, options?: any) => {
+      if (endpoint.includes('/git/trees') && options?.method === 'POST') {
+        const body = JSON.parse(options.body);
+        createdTreeEntries = body.tree || [];
+      }
+      return originalRawRequest(endpoint, options);
+    });
+
+    const summary = await executeHistoricalImport(
+      sqlSubmission,
+      { mode: 'ALL_ACCEPTED', batchSize: 5 },
+      adapter,
+      client
+    );
+
+    expect(summary.importedCount).toBe(1);
+    const paths = createdTreeEntries.map((e: any) => e.path);
+    // Solution must be under .../sql/solution.sql, NOT .../cpp/solution.cpp
+    expect(paths.some((p: string) => p.includes('/sql/') && p.endsWith('.sql'))).toBe(true);
+    expect(paths.some((p: string) => p.includes('/cpp/') || p.endsWith('.cpp'))).toBe(false);
+  });
+
+  // 21. Non-fast-forward (422) recovery: retries with refreshed HEAD SHA
+  it('21. Recovers from GitHub 422 non-fast-forward by retrying with refreshed HEAD', async () => {
+    const adapter = createMockAdapter();
+    const client = createMockGitHubClient();
+
+    let patchAttemptCount = 0;
+    let refCallCount = 0;
+
+    client.rawRequest = vi.fn().mockImplementation((endpoint: string, options?: any) => {
+      if (endpoint.includes('/git/ref/heads/')) {
+        refCallCount++;
+        // Always return a fresh HEAD SHA
+        return Promise.resolve({ object: { sha: `head-sha-${refCallCount}` } });
+      }
+      if (endpoint.includes('/git/commits/head-sha-')) {
+        return Promise.resolve({ tree: { sha: 'base-tree-sha' } });
+      }
+      if (endpoint.includes('/git/blobs')) {
+        return Promise.resolve({ sha: `blob-sha-${Math.random().toString(36).slice(2, 8)}` });
+      }
+      if (endpoint.includes('/git/trees')) {
+        return Promise.resolve({ sha: 'new-tree-sha' });
+      }
+      if (endpoint.includes('/git/commits') && options?.method === 'POST') {
+        return Promise.resolve({ sha: `commit-sha-${Date.now()}` });
+      }
+      if (endpoint.includes('/git/refs/heads/') && options?.method === 'PATCH') {
+        patchAttemptCount++;
+        if (patchAttemptCount === 1) {
+          // Simulate 422 non-fast-forward on first attempt
+          const err: any = new Error('Update is not a fast forward');
+          err.status = 422;
+          return Promise.reject(err);
+        }
+        // Second attempt succeeds
+        return Promise.resolve({ object: { sha: 'final-commit-sha' } });
+      }
+      return Promise.resolve({});
+    });
+
+    const summary = await executeHistoricalImport(
+      [sampleSubmissionsPage1[0]],
+      { mode: 'ALL_ACCEPTED', batchSize: 5 },
+      adapter,
+      client
+    );
+
+    expect(summary.importedCount).toBe(1);
+    // Ref was fetched at least twice (first attempt + retry after 422)
+    expect(refCallCount).toBeGreaterThanOrEqual(2);
+    // PATCH was called twice (first 422, then success)
+    expect(patchAttemptCount).toBe(2);
+  });
 });

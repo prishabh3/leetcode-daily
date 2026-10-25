@@ -25,7 +25,7 @@ export async function createAtomicCommit(
   options: AtomicCommitOptions
 ): Promise<string> {
   const { owner, repo, branch = 'main' } = client.rawSettings;
-  const maxRetries = options.maxRetries ?? 3;
+  const maxRetries = options.maxRetries ?? 5;
 
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
@@ -181,15 +181,24 @@ export async function createAtomicCommit(
 
       return newCommit.sha;
     } catch (err: any) {
-      const isConflict =
-        err?.status === 409 ||
+      const isNonFastForward =
         err?.status === 422 ||
         (err?.message && err.message.toLowerCase().includes('not a fast forward'));
 
+      const isConflict =
+        err?.status === 409 || isNonFastForward;
+
       if (isConflict && attempt < maxRetries) {
-        // Concurrency conflict: wait with exponential backoff and retry
-        const backoffMs = Math.pow(2, attempt) * 300;
+        // Exponential backoff: 1s, 2s, 4s, 8s, 16s
+        const backoffMs = Math.pow(2, attempt - 1) * 1000;
         await new Promise((r) => setTimeout(r, backoffMs));
+
+        if (isNonFastForward) {
+          // Non-fast-forward: the branch moved ahead while we were building the commit.
+          // The next loop iteration will re-fetch the current HEAD SHA from scratch,
+          // ensuring the refreshed parent is used for the new tree and commit.
+          continue;
+        }
         continue;
       }
       throw err;

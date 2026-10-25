@@ -14,7 +14,7 @@
       "submissionId": "1794703316",
       "contentHash": "53ce6b4f220782cb512bbfa90d1f5672ac954371afcfce9c6f0bbe4110906fa0",
       "syncedAt": "2026-10-25T07:49:48.216Z",
-      "filePath": "problems/1612-avoid-flood-in-the-city/python3/solution.py"
+      "filePath": "solutions/1612-avoid-flood-in-the-city/python3/solution.py"
     },
     "1794705287": {
       "problemId": "0794",
@@ -26,7 +26,7 @@
       "submissionId": "1794705287",
       "contentHash": "ac12d4d25ba1f0e34501d0c92193f270cd45fd14f898d588929c76298996a309",
       "syncedAt": "2026-10-25T07:49:48.625Z",
-      "filePath": "problems/0794-swim-in-rising-water/python3/solution.py"
+      "filePath": "solutions/0794-swim-in-rising-water/python3/solution.py"
     },
     "2181124556": {
       "problemId": "0094",
@@ -105,22 +105,22 @@
       "slug": "rank-scores",
       "title": "Rank Scores",
       "difficulty": "Medium",
-      "language": "cpp",
+      "language": "sql",
       "approachName": "solution",
       "contentHash": "a592f06bef0a64be855452b0340d13c771c3156fe108bd36364afa027dd8e47b",
       "syncedAt": "2026-10-25T07:10:40.482Z",
-      "filePath": "solutions/0178-rank-scores/cpp/solution.cpp"
+      "filePath": "solutions/0178-rank-scores/sql/solution.sql"
     },
     "big-countries-3f375d3d16b2": {
       "problemId": "0595",
       "slug": "big-countries",
       "title": "Big Countries",
       "difficulty": "Easy",
-      "language": "cpp",
+      "language": "sql",
       "approachName": "solution",
       "contentHash": "3f375d3d16b21c26d8e5f93eef2f48b7d671830f26661f21006ea389d42abb65",
       "syncedAt": "2026-10-25T07:47:45.778Z",
-      "filePath": "problems/0595-big-countries/cpp/solution.cpp"
+      "filePath": "solutions/0595-big-countries/sql/solution.sql"
     }
   },
   "problems": {
@@ -160,7 +160,7 @@
       "slug": "rank-scores",
       "difficulty": "Medium",
       "languages": [
-        "cpp"
+        "sql"
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T07:10:40.482Z",
@@ -190,7 +190,7 @@
       "slug": "big-countries",
       "difficulty": "Easy",
       "languages": [
-        "cpp"
+        "sql"
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-10-25T07:47:45.778Z",

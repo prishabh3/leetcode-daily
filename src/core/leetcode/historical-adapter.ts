@@ -177,7 +177,7 @@ export class LeetCodeHistoricalAdapter {
         if (data && Array.isArray(data.submissions)) {
           const rawSubmissions: RawHistoricalSubmission[] = data.submissions.map((s: any) => {
             const rawLang = String(s.lang || '').toLowerCase();
-            const normalized = normalizeLanguage(rawLang) as SupportedLanguage | undefined;
+            const normalized = normalizeLanguage(rawLang) as SupportedLanguage;
             return {
               id: String(s.id),
               title: s.title || '',
@@ -214,7 +214,7 @@ export class LeetCodeHistoricalAdapter {
         if (Array.isArray(dumps)) {
           const rawSubmissions: RawHistoricalSubmission[] = dumps.map((s: any) => {
             const rawLang = String(s.lang || '').toLowerCase();
-            const normalized = normalizeLanguage(rawLang) as SupportedLanguage | undefined;
+            const normalized = normalizeLanguage(rawLang) as SupportedLanguage;
             return {
               id: String(s.id),
               title: s.title || '',

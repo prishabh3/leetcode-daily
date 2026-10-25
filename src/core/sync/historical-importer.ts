@@ -14,7 +14,7 @@ import { SyncIndex, SyncIndexEntry, ProblemSummaryEntry } from '../types/sync-in
 import { ProblemMetadata, SolutionRecord } from '../types/problem';
 import { SupportedLanguage } from '../types/submission';
 import { computeContentHash } from '../utils/crypto';
-import { getLanguageConfig } from '../utils/languages';
+import { getLanguageConfig, getLanguageDialect } from '../utils/languages';
 import {
   formatProblemId,
   getSolutionFilePath,
@@ -366,7 +366,7 @@ export async function executeHistoricalImport(
         continue;
       }
 
-      const lang: SupportedLanguage = sub.normalizedLanguage || 'cpp';
+      const lang: SupportedLanguage = sub.normalizedLanguage || 'unknown';
       const cleanProblemId = formatProblemId(problemId || '0');
       const contentHash = await computeContentHash(code);
       const isAccepted = sub.statusDisplay === 'Accepted';
@@ -412,6 +412,8 @@ export async function executeHistoricalImport(
         syncedAt: importNowIsoDate,
         runtime: sub.runtime,
         memory: sub.memory,
+        rawPlatformLanguage: sub.lang || undefined,
+        languageDialect: getLanguageDialect(sub.lang || '') || undefined,
       };
 
       if (isCanonicalLatest) {
@@ -437,6 +439,8 @@ export async function executeHistoricalImport(
             [`${lang}/solution`]: solutionRecord,
           },
           nextReviewDate: reviewCalc.nextReviewDate,
+          rawPlatformLanguage: sub.lang || existingMeta.rawPlatformLanguage,
+          languageDialect: getLanguageDialect(sub.lang || '') || existingMeta.languageDialect,
         };
 
         fileChanges.push({
@@ -461,6 +465,8 @@ export async function executeHistoricalImport(
           slug: sub.titleSlug,
           verdict: sub.statusDisplay,
           language: lang,
+          rawPlatformLanguage: sub.lang || undefined,
+          languageDialect: getLanguageDialect(sub.lang || '') || undefined,
           submittedAt: originalIsoDate,
           importedAt: importNowIsoDate,
           runtime: sub.runtime,
