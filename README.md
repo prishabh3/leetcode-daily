@@ -6,15 +6,15 @@
 ## 🌐 LeetCode Account
 
 ### 🔗 LeetCode Profile
-[risxbh](https://leetcode.com/u/risxbh/)
+[rishxxbh](https://leetcode.com/u/rishxxbh/)
 
-- **Total Solved on LeetCode**: **62** (🟢 Easy: **26** • 🟡 Medium: **26** • 🔴 Hard: **10**) • Ranking: `#2443671`
+- **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1794454549)](https://leetcode.com/u/risxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887513)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1794454549)](https://leetcode.com/u/risxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887513)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-74-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-75-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **74**
-- **Total Accepted Submissions**: **82**
-- **Repository Solutions & Historical Versions**: **82** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **75**
+- **Total Accepted Submissions**: **83**
+- **Repository Solutions & Historical Versions**: **83** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **62** |
+| 🟡 Medium | **63** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `67` |
+| C++ | `68` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [3823. Count Islands With Total Value Divisible by K](./solutions/3823-count-islands-with-total-value-divisible-by-k) | Medium | C++ | [solution.cpp](./solutions/3823-count-islands-with-total-value-divisible-by-k/cpp/solution.cpp) |
 | [3105. Longest Strictly Increasing or Strictly Decreasing Subarray](./solutions/3105-longest-strictly-increasing-or-strictly-decreasing-subarray) | Easy | C++ | [solution.cpp](./solutions/3105-longest-strictly-increasing-or-strictly-decreasing-subarray/cpp/solution.cpp) |
 | [3789. Minimum Cost to Acquire Required Items](./solutions/3789-minimum-cost-to-acquire-required-items) | Medium | C++ | [solution.cpp](./solutions/3789-minimum-cost-to-acquire-required-items/cpp/solution.cpp) |
 | [3693. Climbing Stairs II](./solutions/3693-climbing-stairs-ii) | Medium | C++ | [solution.cpp](./solutions/3693-climbing-stairs-ii/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [1267. Count Servers that Communicate](./solutions/1267-count-servers-that-communicate) | Medium | C++ | [solution.cpp](./solutions/1267-count-servers-that-communicate/cpp/solution.cpp) |
 | [1882. Process Tasks Using Servers](./solutions/1882-process-tasks-using-servers) | Medium | C++ | [solution.cpp](./solutions/1882-process-tasks-using-servers/cpp/solution.cpp) |
 | [2747. Count Zero Request Servers](./solutions/2747-count-zero-request-servers) | Medium | C++ | [solution.cpp](./solutions/2747-count-zero-request-servers/cpp/solution.cpp) |
-| [1385. Find the Distance Value Between Two Arrays](./solutions/1385-find-the-distance-value-between-two-arrays) | Easy | C++ | [solution.cpp](./solutions/1385-find-the-distance-value-between-two-arrays/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (74)</strong></summary>
+<summary><strong>View All Tracked Problems (75)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -127,6 +127,7 @@ _No topic tags recorded yet._
 | 3736 | [Minimum Moves to Equal Array Elements III](./solutions/3736-minimum-moves-to-equal-array-elements-iii) | Easy | [`C++`](./solutions/3736-minimum-moves-to-equal-array-elements-iii/cpp) | - | [Notes](./solutions/3736-minimum-moves-to-equal-array-elements-iii/notes.md) | 2026-11-03 | `2026-11-05` |
 | 3769 | [Minimum Interval Selection to Cover Target Intervals](./solutions/3769-minimum-interval-selection-to-cover-target-intervals) | Medium | [`C++`](./solutions/3769-minimum-interval-selection-to-cover-target-intervals/cpp) | - | [Notes](./solutions/3769-minimum-interval-selection-to-cover-target-intervals/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3789 | [Minimum Cost to Acquire Required Items](./solutions/3789-minimum-cost-to-acquire-required-items) | Medium | [`C++`](./solutions/3789-minimum-cost-to-acquire-required-items/cpp) | - | [Notes](./solutions/3789-minimum-cost-to-acquire-required-items/notes.md) | 2026-11-11 | `2026-11-13` |
+| 3823 | [Count Islands With Total Value Divisible by K](./solutions/3823-count-islands-with-total-value-divisible-by-k) | Medium | [`C++`](./solutions/3823-count-islands-with-total-value-divisible-by-k/cpp) | - | [Notes](./solutions/3823-count-islands-with-total-value-divisible-by-k/notes.md) | 2026-11-17 | `2026-11-17` |
 | 3841 | [Palindromic Path Queries in a Tree](./solutions/3841-palindromic-path-queries-in-a-tree) | Hard | [`C++`](./solutions/3841-palindromic-path-queries-in-a-tree/cpp) | - | [Notes](./solutions/3841-palindromic-path-queries-in-a-tree/notes.md) | 2026-10-29 | `2026-10-31` |
 | 3847 | [Minimum Swaps to Sort by Digit Sum](./solutions/3847-minimum-swaps-to-sort-by-digit-sum) | Medium | [`C++`](./solutions/3847-minimum-swaps-to-sort-by-digit-sum/cpp) | - | [Notes](./solutions/3847-minimum-swaps-to-sort-by-digit-sum/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3882 | [Minimum XOR Path in a Grid](./solutions/3882-minimum-xor-path-in-a-grid) | Medium | [`C++`](./solutions/3882-minimum-xor-path-in-a-grid/cpp) | - | [Notes](./solutions/3882-minimum-xor-path-in-a-grid/notes.md) | 2026-10-28 | `2026-10-30` |
@@ -150,7 +151,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-12T03:35:49.427Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:51:52.483Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-12T03:35:49.427Z",
-  "totalProblems": 74,
-  "totalSubmissions": 82,
+  "lastUpdated": "2026-11-17T03:51:52.483Z",
+  "totalProblems": 75,
+  "totalSubmissions": 83,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -699,6 +699,18 @@
       "contentHash": "2f8dba4983fb812bc8b5d485b5093dbca3cbfd3a757b702d3da111e38b549d40",
       "syncedAt": "2026-10-25T06:16:25.425Z",
       "filePath": "solutions/0013-roman-to-integer/cpp/solution.cpp"
+    },
+    "2181864669": {
+      "problemId": "3823",
+      "slug": "count-islands-with-total-value-divisible-by-k",
+      "title": "Count Islands With Total Value Divisible by K",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2181864669",
+      "contentHash": "45173ff929e98821daaf9050902016ae117f4ad79bc49fbda2d29d533627e024",
+      "syncedAt": "2026-11-17T03:51:52.480Z",
+      "filePath": "solutions/3823-count-islands-with-total-value-divisible-by-k/cpp/solution.cpp"
     },
     "rank-scores-a592f06bef0a": {
       "problemId": "0178",
@@ -1443,6 +1455,21 @@
       "lastSyncedAt": "2026-11-11T03:53:29.737Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-11-13",
+      "tags": [],
+      "patterns": []
+    },
+    "3823": {
+      "id": "3823",
+      "title": "Count Islands With Total Value Divisible by K",
+      "slug": "count-islands-with-total-value-divisible-by-k",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-17T03:51:52.480Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-17",
       "tags": [],
       "patterns": []
     },

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "3823",
+  "title": "Count Islands With Total Value Divisible by K",
+  "slug": "count-islands-with-total-value-divisible-by-k",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:51:52.481Z",
+  "lastSyncedAt": "2026-11-17T03:51:52.480Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3823-count-islands-with-total-value-divisible-by-k/cpp/solution.cpp",
+      "submissionId": "2181864669",
+      "contentHash": "45173ff929e98821daaf9050902016ae117f4ad79bc49fbda2d29d533627e024",
+      "syncedAt": "2026-11-17T03:51:52.480Z",
+      "runtime": "192 ms",
+      "memory": "199.7 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
