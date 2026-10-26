@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-25T10:46:09.047Z",
-  "totalProblems": 54,
-  "totalSubmissions": 62,
+  "lastUpdated": "2026-10-26T03:39:23.707Z",
+  "totalProblems": 55,
+  "totalSubmissions": 63,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -38,7 +38,7 @@
       "submissionId": "1795152126",
       "contentHash": "2a6f4ff80bdc3bcf9d270036b51616cf8bf82d2f971de5c7d4f55e15f7cf3e45",
       "syncedAt": "2026-10-25T09:33:03.243Z",
-      "filePath": "problems/2392-successful-pairs-of-spells-and-potions/python3/solution.py"
+      "filePath": "solutions/2392-successful-pairs-of-spells-and-potions/python3/solution.py"
     },
     "1930096802": {
       "problemId": "0002",
@@ -50,7 +50,7 @@
       "submissionId": "1930096802",
       "contentHash": "0a0404bb54cdd38768022a9a5999afda9b8ef7bbcafd136cfbd47cc6e6b68881",
       "syncedAt": "2026-10-25T10:42:04.527Z",
-      "filePath": "problems/0002-add-two-numbers/cpp/solution.cpp"
+      "filePath": "solutions/0002-add-two-numbers/cpp/solution.cpp"
     },
     "1971389570": {
       "problemId": "0004",
@@ -62,7 +62,7 @@
       "submissionId": "1971389570",
       "contentHash": "0c6e3b4931136ed34094b582b5b7d6d95912897b7af3ed0f189107b6d041fd90",
       "syncedAt": "2026-10-25T10:42:12.172Z",
-      "filePath": "problems/0004-median-of-two-sorted-arrays/cpp/solution.cpp"
+      "filePath": "solutions/0004-median-of-two-sorted-arrays/cpp/solution.cpp"
     },
     "2156354725": {
       "problemId": "1046",
@@ -74,7 +74,7 @@
       "submissionId": "2156354725",
       "contentHash": "cf1576a9de1147226168ec323b73db116ba766e0aef3261d93dd20ea9d2c5245",
       "syncedAt": "2026-10-25T10:42:18.754Z",
-      "filePath": "problems/1046-max-consecutive-ones-iii/cpp/solution.cpp"
+      "filePath": "solutions/1046-max-consecutive-ones-iii/cpp/solution.cpp"
     },
     "2157474859": {
       "problemId": "0001",
@@ -86,7 +86,7 @@
       "submissionId": "2157474859",
       "contentHash": "51a516313f0f4587f3955ce39d6f0586cc5e8b877f39d58f35d3138c416d7471",
       "syncedAt": "2026-10-25T10:42:26.230Z",
-      "filePath": "problems/0001-two-sum/history/2157474859/solution.cpp"
+      "filePath": "solutions/0001-two-sum/history/2157474859/solution.cpp"
     },
     "2157475181": {
       "problemId": "0001",
@@ -98,7 +98,7 @@
       "submissionId": "2157475181",
       "contentHash": "51a516313f0f4587f3955ce39d6f0586cc5e8b877f39d58f35d3138c416d7471",
       "syncedAt": "2026-10-25T10:42:26.230Z",
-      "filePath": "problems/0001-two-sum/cpp/solution.cpp"
+      "filePath": "solutions/0001-two-sum/cpp/solution.cpp"
     },
     "2157477125": {
       "problemId": "1737",
@@ -110,7 +110,7 @@
       "submissionId": "2157477125",
       "contentHash": "4b6c5b1a4dfe49c43169940ec5537533e6f40b4e85dd0ffa8b38e33b4e561be7",
       "syncedAt": "2026-10-25T10:42:26.240Z",
-      "filePath": "problems/1737-maximum-nesting-depth-of-the-parentheses/cpp/solution.cpp"
+      "filePath": "solutions/1737-maximum-nesting-depth-of-the-parentheses/cpp/solution.cpp"
     },
     "2158459027": {
       "problemId": "0015",
@@ -122,7 +122,7 @@
       "submissionId": "2158459027",
       "contentHash": "679b2fb7b52e84e35f3d6ed0e0fd421b1e8dd4f45c2e24b2026957c089597301",
       "syncedAt": "2026-10-25T10:42:37.437Z",
-      "filePath": "problems/0015-3sum/cpp/solution.cpp"
+      "filePath": "solutions/0015-3sum/cpp/solution.cpp"
     },
     "2158461715": {
       "problemId": "1208",
@@ -134,7 +134,7 @@
       "submissionId": "2158461715",
       "contentHash": "7bf10b05b04075f5126620d44e09d5d609962a1f6b64e197ab7d562ff3934300",
       "syncedAt": "2026-10-25T10:42:37.446Z",
-      "filePath": "problems/1208-maximum-nesting-depth-of-two-valid-parentheses-strings/cpp/solution.cpp"
+      "filePath": "solutions/1208-maximum-nesting-depth-of-two-valid-parentheses-strings/cpp/solution.cpp"
     },
     "2159418692": {
       "problemId": "0020",
@@ -146,7 +146,7 @@
       "submissionId": "2159418692",
       "contentHash": "dacd6486254caa3c7967a09d04e2a33ffddafb0baec786894c602c756c59626c",
       "syncedAt": "2026-10-25T10:42:46.197Z",
-      "filePath": "problems/0020-valid-parentheses/cpp/solution.cpp"
+      "filePath": "solutions/0020-valid-parentheses/cpp/solution.cpp"
     },
     "2160022991": {
       "problemId": "0022",
@@ -158,7 +158,7 @@
       "submissionId": "2160022991",
       "contentHash": "0b3609d256138950757ab1381f6fa2efb5ec86edd55ed134d0813364966453f0",
       "syncedAt": "2026-10-25T10:42:52.752Z",
-      "filePath": "problems/0022-generate-parentheses/cpp/solution.cpp"
+      "filePath": "solutions/0022-generate-parentheses/cpp/solution.cpp"
     },
     "2161389401": {
       "problemId": "0032",
@@ -170,7 +170,7 @@
       "submissionId": "2161389401",
       "contentHash": "53af4329aa48d228e6751bd8604dfc755f9c70ed3d752616c1fefbc4137e486d",
       "syncedAt": "2026-10-25T10:42:59.292Z",
-      "filePath": "problems/0032-longest-valid-parentheses/cpp/solution.cpp"
+      "filePath": "solutions/0032-longest-valid-parentheses/cpp/solution.cpp"
     },
     "2161845327": {
       "problemId": "0678",
@@ -182,7 +182,7 @@
       "submissionId": "2161845327",
       "contentHash": "020333cd2d453501963a390ca4585b657eb1e8be35140c35b733845eaef72ce1",
       "syncedAt": "2026-10-25T10:43:05.964Z",
-      "filePath": "problems/0678-valid-parenthesis-string/cpp/solution.cpp"
+      "filePath": "solutions/0678-valid-parenthesis-string/cpp/solution.cpp"
     },
     "2162688886": {
       "problemId": "0886",
@@ -194,7 +194,7 @@
       "submissionId": "2162688886",
       "contentHash": "11df352f8e6aece0b85e55b146ec7909df0937c9cb9e80684d5bb7fdb1847fc5",
       "syncedAt": "2026-10-25T10:43:13.132Z",
-      "filePath": "problems/0886-score-of-parentheses/cpp/solution.cpp"
+      "filePath": "solutions/0886-score-of-parentheses/cpp/solution.cpp"
     },
     "2163442392": {
       "problemId": "0089",
@@ -206,7 +206,7 @@
       "submissionId": "2163442392",
       "contentHash": "0854f3b140dfb64de1c2a67acae8e53281594945b80b43d39d91120e5fbbde3f",
       "syncedAt": "2026-10-25T10:43:13.142Z",
-      "filePath": "problems/0089-gray-code/cpp/solution.cpp"
+      "filePath": "solutions/0089-gray-code/cpp/solution.cpp"
     },
     "2163763811": {
       "problemId": "0957",
@@ -218,7 +218,7 @@
       "submissionId": "2163763811",
       "contentHash": "43e1ed3a7f5d53a27e1fc29a65109e0fd1a9c5b49fa92ea19a3e91abe89aa899",
       "syncedAt": "2026-10-25T10:43:21.217Z",
-      "filePath": "problems/0957-minimum-add-to-make-parentheses-valid/cpp/solution.cpp"
+      "filePath": "solutions/0957-minimum-add-to-make-parentheses-valid/cpp/solution.cpp"
     },
     "2164885447": {
       "problemId": "0301",
@@ -230,7 +230,7 @@
       "submissionId": "2164885447",
       "contentHash": "4dc20c24f6f68493ef245e3a46f42100c3c8b45ed04178b45fe92cb165f05a1d",
       "syncedAt": "2026-10-25T10:43:28.189Z",
-      "filePath": "problems/0301-remove-invalid-parentheses/cpp/solution.cpp"
+      "filePath": "solutions/0301-remove-invalid-parentheses/cpp/solution.cpp"
     },
     "2165918927": {
       "problemId": "1078",
@@ -242,7 +242,7 @@
       "submissionId": "2165918927",
       "contentHash": "a0c1f92febcac8a3dab991cb6097c088f09f8abb989899a85c446db338f9c267",
       "syncedAt": "2026-10-25T10:43:34.633Z",
-      "filePath": "problems/1078-remove-outermost-parentheses/cpp/solution.cpp"
+      "filePath": "solutions/1078-remove-outermost-parentheses/cpp/solution.cpp"
     },
     "2166850878": {
       "problemId": "1648",
@@ -254,7 +254,7 @@
       "submissionId": "2166850878",
       "contentHash": "bd71a59778440666c3196c921bdabc8b3d6386cc4446e5570a4fac11b0c7cd52",
       "syncedAt": "2026-10-25T10:43:42.007Z",
-      "filePath": "problems/1648-minimum-insertions-to-balance-a-parentheses-string/cpp/solution.cpp"
+      "filePath": "solutions/1648-minimum-insertions-to-balance-a-parentheses-string/cpp/solution.cpp"
     },
     "2166869306": {
       "problemId": "1791",
@@ -266,7 +266,7 @@
       "submissionId": "2166869306",
       "contentHash": "b602c86f387e5912612aeed3a293f1fb0f7593a47e64aec3d8f33a07e1e4625f",
       "syncedAt": "2026-10-25T10:43:42.019Z",
-      "filePath": "problems/1791-richest-customer-wealth/cpp/solution.cpp"
+      "filePath": "solutions/1791-richest-customer-wealth/cpp/solution.cpp"
     },
     "2167839649": {
       "problemId": "2418",
@@ -278,7 +278,7 @@
       "submissionId": "2167839649",
       "contentHash": "70dbac468016e89b1a73e93521a9952f2f10094822579e2a443d1b5b39145afd",
       "syncedAt": "2026-10-25T10:43:50.598Z",
-      "filePath": "problems/2418-minimum-sum-of-squared-difference/cpp/solution.cpp"
+      "filePath": "solutions/2418-minimum-sum-of-squared-difference/cpp/solution.cpp"
     },
     "2168905128": {
       "problemId": "2844",
@@ -290,7 +290,7 @@
       "submissionId": "2168905128",
       "contentHash": "b5ecea89756866f85c2370a92cab064e0f4a25ae5d897be2100f8a83d648675f",
       "syncedAt": "2026-10-25T10:43:57.350Z",
-      "filePath": "problems/2844-sum-of-squares-of-special-elements/cpp/solution.cpp"
+      "filePath": "solutions/2844-sum-of-squares-of-special-elements/cpp/solution.cpp"
     },
     "2169778242": {
       "problemId": "3153",
@@ -302,7 +302,7 @@
       "submissionId": "2169778242",
       "contentHash": "cb2bffe9ebc5888f47c3146485f0890e8333a434c3959733e17ea54336c56772",
       "syncedAt": "2026-10-25T10:44:04.534Z",
-      "filePath": "problems/3153-apply-operations-on-array-to-maximize-sum-of-squares/cpp/solution.cpp"
+      "filePath": "solutions/3153-apply-operations-on-array-to-maximize-sum-of-squares/cpp/solution.cpp"
     },
     "2170750682": {
       "problemId": "4078",
@@ -314,7 +314,7 @@
       "submissionId": "2170750682",
       "contentHash": "2d71cdf8411f115e3266c1b45debe4a67e1b081ef1e63e66996f9217106df6dd",
       "syncedAt": "2026-10-25T10:44:12.420Z",
-      "filePath": "problems/4078-maximum-alternating-sum-of-squares/cpp/solution.cpp"
+      "filePath": "solutions/4078-maximum-alternating-sum-of-squares/cpp/solution.cpp"
     },
     "2171530654": {
       "problemId": "0228",
@@ -326,7 +326,7 @@
       "submissionId": "2171530654",
       "contentHash": "7494c65f32a1340d1f6b83f8c68103973c91139ef35d2d89effc66f366aa6530",
       "syncedAt": "2026-10-25T10:44:12.433Z",
-      "filePath": "problems/0228-summary-ranges/cpp/solution.cpp"
+      "filePath": "solutions/0228-summary-ranges/cpp/solution.cpp"
     },
     "2171731297": {
       "problemId": "4084",
@@ -338,7 +338,7 @@
       "submissionId": "2171731297",
       "contentHash": "7b2cc313295c6718d1965ae61e44f53d66ce8977b0142bb98c715dd805b47e9b",
       "syncedAt": "2026-10-25T10:44:22.040Z",
-      "filePath": "problems/4084-maximize-sum-of-squares-of-digits/cpp/solution.cpp"
+      "filePath": "solutions/4084-maximize-sum-of-squares-of-digits/cpp/solution.cpp"
     },
     "2172240602": {
       "problemId": "0448",
@@ -350,7 +350,7 @@
       "submissionId": "2172240602",
       "contentHash": "71bd71011fd3ac4e80d5c19f5d445189c32db3a86bdb9409345be8ee97fcdd81",
       "syncedAt": "2026-10-25T10:44:22.054Z",
-      "filePath": "problems/0448-find-all-numbers-disappeared-in-an-array/cpp/solution.cpp"
+      "filePath": "solutions/0448-find-all-numbers-disappeared-in-an-array/cpp/solution.cpp"
     },
     "2172644701": {
       "problemId": "3163",
@@ -362,7 +362,7 @@
       "submissionId": "2172644701",
       "contentHash": "723ab6153dc41342a4030175d0703de778414583cd9b1b0d4d1cbf2011951ab6",
       "syncedAt": "2026-10-25T10:44:31.037Z",
-      "filePath": "problems/3163-subarrays-distinct-element-sum-of-squares-i/cpp/solution.cpp"
+      "filePath": "solutions/3163-subarrays-distinct-element-sum-of-squares-i/cpp/solution.cpp"
     },
     "2173023924": {
       "problemId": "0026",
@@ -374,7 +374,7 @@
       "submissionId": "2173023924",
       "contentHash": "d1fa01441f1b92795d14281b14b1a8a86e47486ab2d893f8e4115760a57bb606",
       "syncedAt": "2026-10-25T10:44:31.053Z",
-      "filePath": "problems/0026-remove-duplicates-from-sorted-array/history/2173023924/solution.cpp"
+      "filePath": "solutions/0026-remove-duplicates-from-sorted-array/history/2173023924/solution.cpp"
     },
     "2173024112": {
       "problemId": "0026",
@@ -386,7 +386,7 @@
       "submissionId": "2173024112",
       "contentHash": "d1fa01441f1b92795d14281b14b1a8a86e47486ab2d893f8e4115760a57bb606",
       "syncedAt": "2026-10-25T10:44:31.053Z",
-      "filePath": "problems/0026-remove-duplicates-from-sorted-array/cpp/solution.cpp"
+      "filePath": "solutions/0026-remove-duplicates-from-sorted-array/cpp/solution.cpp"
     },
     "2173494673": {
       "problemId": "3139",
@@ -398,7 +398,7 @@
       "submissionId": "2173494673",
       "contentHash": "4d3283cf9f3c629d442bbfd88f9d4c59aa609bdb5b41c3e5255b7396df21edab",
       "syncedAt": "2026-10-25T10:44:41.194Z",
-      "filePath": "problems/3139-subarrays-distinct-element-sum-of-squares-ii/cpp/solution.cpp"
+      "filePath": "solutions/3139-subarrays-distinct-element-sum-of-squares-ii/cpp/solution.cpp"
     },
     "2174377123": {
       "problemId": "3847",
@@ -410,7 +410,7 @@
       "submissionId": "2174377123",
       "contentHash": "b9d3820cb79f2d10b692fab9dbe01eaebc60c47c2b0cce200098d82cd261bfe2",
       "syncedAt": "2026-10-25T10:44:47.851Z",
-      "filePath": "problems/3847-minimum-swaps-to-sort-by-digit-sum/cpp/solution.cpp"
+      "filePath": "solutions/3847-minimum-swaps-to-sort-by-digit-sum/cpp/solution.cpp"
     },
     "2174958725": {
       "problemId": "1692",
@@ -422,7 +422,7 @@
       "submissionId": "2174958725",
       "contentHash": "b9eae09171886e21a511d76583121eb88f75069961d36fc3bed4fd59e80a6035",
       "syncedAt": "2026-10-25T10:44:56.352Z",
-      "filePath": "problems/1692-number-of-ways-to-reorder-array-to-get-same-bst/cpp/solution.cpp"
+      "filePath": "solutions/1692-number-of-ways-to-reorder-array-to-get-same-bst/cpp/solution.cpp"
     },
     "2175010427": {
       "problemId": "4430",
@@ -434,7 +434,7 @@
       "submissionId": "2175010427",
       "contentHash": "852c85d53a787f2f19456d434d16a2baaac01cc8c4a54895d75f9857527c84f6",
       "syncedAt": "2026-10-25T10:44:56.367Z",
-      "filePath": "problems/4430-minimum-deletions-to-make-array-sharp/cpp/solution.cpp"
+      "filePath": "solutions/4430-minimum-deletions-to-make-array-sharp/cpp/solution.cpp"
     },
     "2175013393": {
       "problemId": "3968",
@@ -446,7 +446,7 @@
       "submissionId": "2175013393",
       "contentHash": "b819e03890e1f02172d077185bdacba4998b08295e4510fc3d96acb100c659c4",
       "syncedAt": "2026-10-25T10:44:56.377Z",
-      "filePath": "problems/3968-find-root-of-a-colored-tree/history/2175013393/solution.cpp"
+      "filePath": "solutions/3968-find-root-of-a-colored-tree/history/2175013393/solution.cpp"
     },
     "2175013503": {
       "problemId": "3968",
@@ -458,7 +458,7 @@
       "submissionId": "2175013503",
       "contentHash": "b819e03890e1f02172d077185bdacba4998b08295e4510fc3d96acb100c659c4",
       "syncedAt": "2026-10-25T10:44:56.377Z",
-      "filePath": "problems/3968-find-root-of-a-colored-tree/cpp/solution.cpp"
+      "filePath": "solutions/3968-find-root-of-a-colored-tree/cpp/solution.cpp"
     },
     "2175014868": {
       "problemId": "4456",
@@ -470,7 +470,7 @@
       "submissionId": "2175014868",
       "contentHash": "5069d5f21a807e33090aea8d95b39552ea74d0e32d1b23b17ed194a89acfc953",
       "syncedAt": "2026-10-25T10:44:56.384Z",
-      "filePath": "problems/4456-last-visited-cell-in-a-directional-grid/history/2175014868/solution.cpp"
+      "filePath": "solutions/4456-last-visited-cell-in-a-directional-grid/history/2175014868/solution.cpp"
     },
     "2175014948": {
       "problemId": "4456",
@@ -482,7 +482,7 @@
       "submissionId": "2175014948",
       "contentHash": "5069d5f21a807e33090aea8d95b39552ea74d0e32d1b23b17ed194a89acfc953",
       "syncedAt": "2026-10-25T10:44:56.384Z",
-      "filePath": "problems/4456-last-visited-cell-in-a-directional-grid/cpp/solution.cpp"
+      "filePath": "solutions/4456-last-visited-cell-in-a-directional-grid/cpp/solution.cpp"
     },
     "2175033266": {
       "problemId": "3769",
@@ -494,7 +494,7 @@
       "submissionId": "2175033266",
       "contentHash": "d62102d36e9e56371a154e26fc4973a56e956bbec057dd16c480ad114947b7fd",
       "syncedAt": "2026-10-25T10:45:11.506Z",
-      "filePath": "problems/3769-minimum-interval-selection-to-cover-target-intervals/cpp/solution.cpp"
+      "filePath": "solutions/3769-minimum-interval-selection-to-cover-target-intervals/cpp/solution.cpp"
     },
     "2175896513": {
       "problemId": "2210",
@@ -506,7 +506,7 @@
       "submissionId": "2175896513",
       "contentHash": "2ba02fe7129f85fb24fc292ce066bedf5dfb817abb07e216c3f1c64d30cd4183",
       "syncedAt": "2026-10-25T10:45:18.571Z",
-      "filePath": "problems/2210-find-target-indices-after-sorting-array/cpp/solution.cpp"
+      "filePath": "solutions/2210-find-target-indices-after-sorting-array/cpp/solution.cpp"
     },
     "2176714948": {
       "problemId": "4257",
@@ -518,7 +518,7 @@
       "submissionId": "2176714948",
       "contentHash": "40287ae96f84d16c5fe99a1ce74bb5b667db6f7667791760dd67a86f46dc0c4d",
       "syncedAt": "2026-10-25T10:45:26.045Z",
-      "filePath": "problems/4257-sum-of-sortable-integers/cpp/solution.cpp"
+      "filePath": "solutions/4257-sum-of-sortable-integers/cpp/solution.cpp"
     },
     "2177554565": {
       "problemId": "4220",
@@ -530,7 +530,7 @@
       "submissionId": "2177554565",
       "contentHash": "54aba6e29ff33771370537f7d385e6e52d11da0df333b58c782af81c4adfed6c",
       "syncedAt": "2026-10-25T10:45:32.946Z",
-      "filePath": "problems/4220-minimum-operations-to-sort-a-string/cpp/solution.cpp"
+      "filePath": "solutions/4220-minimum-operations-to-sort-a-string/cpp/solution.cpp"
     },
     "2178470100": {
       "problemId": "4184",
@@ -542,7 +542,7 @@
       "submissionId": "2178470100",
       "contentHash": "d28a13f6638620b78990da44a95cc0fc0d820116ffc9d89576f72b411cb9f17a",
       "syncedAt": "2026-10-25T10:45:39.769Z",
-      "filePath": "problems/4184-minimum-operations-to-sort-a-permutation/cpp/solution.cpp"
+      "filePath": "solutions/4184-minimum-operations-to-sort-a-permutation/cpp/solution.cpp"
     },
     "2179272856": {
       "problemId": "3950",
@@ -554,7 +554,7 @@
       "submissionId": "2179272856",
       "contentHash": "e924cfa03453d9bbc8cc3fe0da4eb8ece1ec22ccb66c983bec1bbe3bcaf01427",
       "syncedAt": "2026-10-25T10:45:46.422Z",
-      "filePath": "problems/3950-maximum-k-to-sort-a-permutation/cpp/solution.cpp"
+      "filePath": "solutions/3950-maximum-k-to-sort-a-permutation/cpp/solution.cpp"
     },
     "2180321466": {
       "problemId": "2496",
@@ -566,7 +566,7 @@
       "submissionId": "2180321466",
       "contentHash": "1c426817c17b57b4126d2cf04b2d67e49aaff238e8ef8c551a17cc03cf125b67",
       "syncedAt": "2026-10-25T10:45:55.103Z",
-      "filePath": "problems/2496-count-days-spent-together/cpp/solution.cpp"
+      "filePath": "solutions/2496-count-days-spent-together/cpp/solution.cpp"
     },
     "2180521241": {
       "problemId": "4436",
@@ -578,7 +578,7 @@
       "submissionId": "2180521241",
       "contentHash": "9a942a04fe191960ba52e3dc21f693d252f0aaab06f08da0a57489c25c9085cf",
       "syncedAt": "2026-10-25T10:45:55.120Z",
-      "filePath": "problems/4436-difference-between-peaks-and-valleys/cpp/solution.cpp"
+      "filePath": "solutions/4436-difference-between-peaks-and-valleys/cpp/solution.cpp"
     },
     "2180528134": {
       "problemId": "4391",
@@ -590,7 +590,7 @@
       "submissionId": "2180528134",
       "contentHash": "1e75c18d7af06c5dc55c2e38b2d27223395d5112ca123ad2ef193f7ecbbe17bc",
       "syncedAt": "2026-10-25T10:45:55.130Z",
-      "filePath": "problems/4391-count-subarrays-with-loose-bounds/cpp/solution.cpp"
+      "filePath": "solutions/4391-count-subarrays-with-loose-bounds/cpp/solution.cpp"
     },
     "2180531363": {
       "problemId": "4402",
@@ -602,7 +602,7 @@
       "submissionId": "2180531363",
       "contentHash": "ac4e0473c8e137d6b8fdf11d16fc2cd8f0c6eff8dce83f7844be238765066c57",
       "syncedAt": "2026-10-25T10:45:55.138Z",
-      "filePath": "problems/4402-count-magical-substring-pairs-i/cpp/solution.cpp"
+      "filePath": "solutions/4402-count-magical-substring-pairs-i/cpp/solution.cpp"
     },
     "2180533774": {
       "problemId": "4403",
@@ -614,7 +614,7 @@
       "submissionId": "2180533774",
       "contentHash": "f0771e4dd85c31e9c00740203a05f3774a11c6a4dd3cb0fb204390ef0bf06511",
       "syncedAt": "2026-10-25T10:45:55.145Z",
-      "filePath": "problems/4403-count-magical-substring-pairs-ii/cpp/solution.cpp"
+      "filePath": "solutions/4403-count-magical-substring-pairs-ii/cpp/solution.cpp"
     },
     "2181105398": {
       "problemId": "1380",
@@ -626,7 +626,7 @@
       "submissionId": "2181105398",
       "contentHash": "333e8248b112c43b8cdb19857cc8441f2a90153e6a03034692c2388cd32ff768",
       "syncedAt": "2026-10-25T10:46:09.029Z",
-      "filePath": "problems/1380-number-of-closed-islands/cpp/solution.cpp"
+      "filePath": "solutions/1380-number-of-closed-islands/cpp/solution.cpp"
     },
     "2181124556": {
       "problemId": "0094",
@@ -731,7 +731,7 @@
       "approachName": "solution",
       "contentHash": "3d573f5ceeac8a630bd70d096ba811590fa89bce59437c4df0eaf03c282dbe62",
       "syncedAt": "2026-10-25T08:29:56.926Z",
-      "filePath": "problems/1407-top-travellers/cpp/solution.cpp"
+      "filePath": "solutions/1407-top-travellers/cpp/solution.cpp"
     },
     "rising-temperature-a2b97b01c670": {
       "problemId": "0197",
@@ -742,7 +742,18 @@
       "approachName": "solution",
       "contentHash": "a2b97b01c6707a67d82ac876f141ab51f4a3e1780c15c80f6cf669949d55dfcc",
       "syncedAt": "2026-10-25T10:41:06.808Z",
-      "filePath": "problems/0197-rising-temperature/sql/solution.sql"
+      "filePath": "solutions/0197-rising-temperature/sql/solution.sql"
+    },
+    "count-islands-with-total-value-divisible-by-k-cdc36e45900f": {
+      "problemId": "3619",
+      "slug": "count-islands-with-total-value-divisible-by-k",
+      "title": "Count Islands With Total Value Divisible by K",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "contentHash": "cdc36e45900faf136ef21512079c9662a93ec4ec33ea311ac3c2f4c72a4c314e",
+      "syncedAt": "2026-10-26T03:39:23.707Z",
+      "filePath": "solutions/3619-count-islands-with-total-value-divisible-by-k/cpp/solution.cpp"
     }
   },
   "problems": {
@@ -1013,6 +1024,21 @@
       "lastSyncedAt": "2026-10-25T10:44:31.037Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "3619": {
+      "id": "3619",
+      "title": "Count Islands With Total Value Divisible by K",
+      "slug": "count-islands-with-total-value-divisible-by-k",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-26T03:39:23.707Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-28",
       "tags": [],
       "patterns": []
     },

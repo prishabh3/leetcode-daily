@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "3619",
+  "title": "Count Islands With Total Value Divisible by K",
+  "slug": "count-islands-with-total-value-divisible-by-k",
+  "url": "https://leetcode.com/problems/count-islands-with-total-value-divisible-by-k/?envType=daily-question&envId=2026-10-26",
+  "difficulty": "Medium",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-26T03:39:23.999Z",
+  "lastSyncedAt": "2026-10-26T03:39:23.707Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3619-count-islands-with-total-value-divisible-by-k/cpp/solution.cpp",
+      "contentHash": "cdc36e45900faf136ef21512079c9662a93ec4ec33ea311ac3c2f4c72a4c314e",
+      "syncedAt": "2026-10-26T03:39:23.707Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-10-26",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-10-28",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}
