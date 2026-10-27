@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "0014",
+  "title": "Longest Common Prefix",
+  "slug": "longest-common-prefix",
+  "url": "https://leetcode.com/problems/longest-common-prefix/",
+  "difficulty": "Easy",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-27T18:21:36.080Z",
+  "lastSyncedAt": "2026-10-27T18:21:35.744Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/0014-longest-common-prefix/cpp/solution.cpp",
+      "contentHash": "096a7bbd18c93f895c96e08fe062e4ed7c58384e98e50a590bfe2135f3933ac0",
+      "syncedAt": "2026-10-27T18:21:35.744Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-10-27",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-10-29",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}

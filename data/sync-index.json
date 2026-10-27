@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-27T03:45:28.543Z",
-  "totalProblems": 56,
-  "totalSubmissions": 64,
+  "lastUpdated": "2026-10-27T18:21:35.744Z",
+  "totalProblems": 57,
+  "totalSubmissions": 65,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -765,6 +765,17 @@
       "contentHash": "4f4963afbd80857ccfee58132d56376370fa3b7893ccb46ffb6b4bffec1c6d96",
       "syncedAt": "2026-10-27T03:45:28.543Z",
       "filePath": "solutions/3963-create-grid-with-exactly-one-path/cpp/solution.cpp"
+    },
+    "longest-common-prefix-096a7bbd18c9": {
+      "problemId": "0014",
+      "slug": "longest-common-prefix",
+      "title": "Longest Common Prefix",
+      "difficulty": "Easy",
+      "language": "cpp",
+      "approachName": "solution",
+      "contentHash": "096a7bbd18c93f895c96e08fe062e4ed7c58384e98e50a590bfe2135f3933ac0",
+      "syncedAt": "2026-10-27T18:21:35.744Z",
+      "filePath": "solutions/0014-longest-common-prefix/cpp/solution.cpp"
     }
   },
   "problems": {
@@ -1605,6 +1616,21 @@
       "lastSyncedAt": "2026-10-25T10:44:31.053Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "0014": {
+      "id": "0014",
+      "title": "Longest Common Prefix",
+      "slug": "longest-common-prefix",
+      "difficulty": "Easy",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-27T18:21:35.744Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-29",
       "tags": [],
       "patterns": []
     }

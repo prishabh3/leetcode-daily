@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **62** (🟢 Easy: **26** • 🟡 Medium: **26** • 🔴 Hard: **10**) • Ranking: `#2443671`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1793072728)](https://leetcode.com/u/risxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1793125295)](https://leetcode.com/u/risxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1793072728)](https://leetcode.com/u/risxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1793125295)](https://leetcode.com/u/risxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-56-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-57-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **56**
-- **Total Accepted Submissions**: **64**
-- **Repository Solutions & Historical Versions**: **64** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **57**
+- **Total Accepted Submissions**: **65**
+- **Repository Solutions & Historical Versions**: **65** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
-| 🟢 Easy | **5** |
+| 🟢 Easy | **6** |
 | 🟡 Medium | **51** |
 | 🔴 Hard | **0** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `50` |
+| C++ | `51` |
 | SQL | `3` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [0014. Longest Common Prefix](./solutions/0014-longest-common-prefix) | Easy | C++ | [solution.cpp](./solutions/0014-longest-common-prefix/cpp/solution.cpp) |
 | [3963. Create Grid With Exactly One Path](./solutions/3963-create-grid-with-exactly-one-path) | Easy | C++ | [solution.cpp](./solutions/3963-create-grid-with-exactly-one-path/cpp/solution.cpp) |
 | [3619. Count Islands With Total Value Divisible by K](./solutions/3619-count-islands-with-total-value-divisible-by-k) | Medium | C++ | [solution.cpp](./solutions/3619-count-islands-with-total-value-divisible-by-k/cpp/solution.cpp) |
 | [1380. Number of Closed Islands](./solutions/1380-number-of-closed-islands) | Medium | C++ | [solution.cpp](./solutions/1380-number-of-closed-islands/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [4402. Count Magical Substring Pairs I](./solutions/4402-count-magical-substring-pairs-i) | Medium | C++ | [solution.cpp](./solutions/4402-count-magical-substring-pairs-i/cpp/solution.cpp) |
 | [4391. Count Subarrays With Loose Bounds](./solutions/4391-count-subarrays-with-loose-bounds) | Medium | C++ | [solution.cpp](./solutions/4391-count-subarrays-with-loose-bounds/cpp/solution.cpp) |
 | [4436. Difference Between Peaks and Valleys](./solutions/4436-difference-between-peaks-and-valleys) | Medium | C++ | [solution.cpp](./solutions/4436-difference-between-peaks-and-valleys/cpp/solution.cpp) |
-| [2496. Count Days Spent Together](./solutions/2496-count-days-spent-together) | Medium | C++ | [solution.cpp](./solutions/2496-count-days-spent-together/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (56)</strong></summary>
+<summary><strong>View All Tracked Problems (57)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -75,6 +75,7 @@ _No topic tags recorded yet._
 | 0002 | [Add Two Numbers](./solutions/0002-add-two-numbers) | Medium | [`C++`](./solutions/0002-add-two-numbers/cpp) | - | [Notes](./solutions/0002-add-two-numbers/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0004 | [Median of Two Sorted Arrays](./solutions/0004-median-of-two-sorted-arrays) | Medium | [`C++`](./solutions/0004-median-of-two-sorted-arrays/cpp) | - | [Notes](./solutions/0004-median-of-two-sorted-arrays/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0013 | [Roman to Integer](./solutions/0013-roman-to-integer) | Easy | [`C++`](./solutions/0013-roman-to-integer/cpp) | - | [Notes](./solutions/0013-roman-to-integer/notes.md) | 2026-10-25 | `2026-10-27` |
+| 0014 | [Longest Common Prefix](./solutions/0014-longest-common-prefix) | Easy | [`C++`](./solutions/0014-longest-common-prefix/cpp) | - | [Notes](./solutions/0014-longest-common-prefix/notes.md) | 2026-10-27 | `2026-10-29` |
 | 0015 | [3Sum](./solutions/0015-3sum) | Medium | [`C++`](./solutions/0015-3sum/cpp) | - | [Notes](./solutions/0015-3sum/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0020 | [Valid Parentheses](./solutions/0020-valid-parentheses) | Medium | [`C++`](./solutions/0020-valid-parentheses/cpp) | - | [Notes](./solutions/0020-valid-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0022 | [Generate Parentheses](./solutions/0022-generate-parentheses) | Medium | [`C++`](./solutions/0022-generate-parentheses/cpp) | - | [Notes](./solutions/0022-generate-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -132,7 +133,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-10-27T03:45:28.543Z`_
+_Last synchronized via LC-Sync: `2026-10-27T18:21:35.744Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout
