@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-26T03:39:23.707Z",
-  "totalProblems": 55,
-  "totalSubmissions": 63,
+  "lastUpdated": "2026-10-27T03:45:28.543Z",
+  "totalProblems": 56,
+  "totalSubmissions": 64,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -754,6 +754,17 @@
       "contentHash": "cdc36e45900faf136ef21512079c9662a93ec4ec33ea311ac3c2f4c72a4c314e",
       "syncedAt": "2026-10-26T03:39:23.707Z",
       "filePath": "solutions/3619-count-islands-with-total-value-divisible-by-k/cpp/solution.cpp"
+    },
+    "create-grid-with-exactly-one-path-4f4963afbd80": {
+      "problemId": "3963",
+      "slug": "create-grid-with-exactly-one-path",
+      "title": "Create Grid With Exactly One Path",
+      "difficulty": "Easy",
+      "language": "cpp",
+      "approachName": "solution",
+      "contentHash": "4f4963afbd80857ccfee58132d56376370fa3b7893ccb46ffb6b4bffec1c6d96",
+      "syncedAt": "2026-10-27T03:45:28.543Z",
+      "filePath": "solutions/3963-create-grid-with-exactly-one-path/cpp/solution.cpp"
     }
   },
   "problems": {
@@ -1084,6 +1095,21 @@
       "lastSyncedAt": "2026-10-25T10:45:46.422Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "3963": {
+      "id": "3963",
+      "title": "Create Grid With Exactly One Path",
+      "slug": "create-grid-with-exactly-one-path",
+      "difficulty": "Easy",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-27T03:45:28.543Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-29",
       "tags": [],
       "patterns": []
     },

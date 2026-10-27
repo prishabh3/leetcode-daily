@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **62** (🟢 Easy: **26** • 🟡 Medium: **26** • 🔴 Hard: **10**) • Ranking: `#2443671`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1792985963)](https://leetcode.com/u/risxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1793072728)](https://leetcode.com/u/risxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1792985963)](https://leetcode.com/u/risxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1793072728)](https://leetcode.com/u/risxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-55-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-56-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **55**
-- **Total Accepted Submissions**: **63**
-- **Repository Solutions & Historical Versions**: **63** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **56**
+- **Total Accepted Submissions**: **64**
+- **Repository Solutions & Historical Versions**: **64** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
-| 🟢 Easy | **4** |
+| 🟢 Easy | **5** |
 | 🟡 Medium | **51** |
 | 🔴 Hard | **0** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `49` |
+| C++ | `50` |
 | SQL | `3` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [3963. Create Grid With Exactly One Path](./solutions/3963-create-grid-with-exactly-one-path) | Easy | C++ | [solution.cpp](./solutions/3963-create-grid-with-exactly-one-path/cpp/solution.cpp) |
 | [3619. Count Islands With Total Value Divisible by K](./solutions/3619-count-islands-with-total-value-divisible-by-k) | Medium | C++ | [solution.cpp](./solutions/3619-count-islands-with-total-value-divisible-by-k/cpp/solution.cpp) |
 | [1380. Number of Closed Islands](./solutions/1380-number-of-closed-islands) | Medium | C++ | [solution.cpp](./solutions/1380-number-of-closed-islands/cpp/solution.cpp) |
 | [4403. Count Magical Substring Pairs II](./solutions/4403-count-magical-substring-pairs-ii) | Medium | C++ | [solution.cpp](./solutions/4403-count-magical-substring-pairs-ii/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [4391. Count Subarrays With Loose Bounds](./solutions/4391-count-subarrays-with-loose-bounds) | Medium | C++ | [solution.cpp](./solutions/4391-count-subarrays-with-loose-bounds/cpp/solution.cpp) |
 | [4436. Difference Between Peaks and Valleys](./solutions/4436-difference-between-peaks-and-valleys) | Medium | C++ | [solution.cpp](./solutions/4436-difference-between-peaks-and-valleys/cpp/solution.cpp) |
 | [2496. Count Days Spent Together](./solutions/2496-count-days-spent-together) | Medium | C++ | [solution.cpp](./solutions/2496-count-days-spent-together/cpp/solution.cpp) |
-| [3950. Maximum K to Sort a Permutation](./solutions/3950-maximum-k-to-sort-a-permutation) | Medium | C++ | [solution.cpp](./solutions/3950-maximum-k-to-sort-a-permutation/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (55)</strong></summary>
+<summary><strong>View All Tracked Problems (56)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -114,6 +114,7 @@ _No topic tags recorded yet._
 | 3769 | [Minimum Interval Selection to Cover Target Intervals](./solutions/3769-minimum-interval-selection-to-cover-target-intervals) | Medium | [`C++`](./solutions/3769-minimum-interval-selection-to-cover-target-intervals/cpp) | - | [Notes](./solutions/3769-minimum-interval-selection-to-cover-target-intervals/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3847 | [Minimum Swaps to Sort by Digit Sum](./solutions/3847-minimum-swaps-to-sort-by-digit-sum) | Medium | [`C++`](./solutions/3847-minimum-swaps-to-sort-by-digit-sum/cpp) | - | [Notes](./solutions/3847-minimum-swaps-to-sort-by-digit-sum/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3950 | [Maximum K to Sort a Permutation](./solutions/3950-maximum-k-to-sort-a-permutation) | Medium | [`C++`](./solutions/3950-maximum-k-to-sort-a-permutation/cpp) | - | [Notes](./solutions/3950-maximum-k-to-sort-a-permutation/notes.md) | 2026-10-25 | `2026-10-25` |
+| 3963 | [Create Grid With Exactly One Path](./solutions/3963-create-grid-with-exactly-one-path) | Easy | [`C++`](./solutions/3963-create-grid-with-exactly-one-path/cpp) | - | [Notes](./solutions/3963-create-grid-with-exactly-one-path/notes.md) | 2026-10-27 | `2026-10-29` |
 | 3968 | [Find Root of a Colored Tree](./solutions/3968-find-root-of-a-colored-tree) | Medium | [`C++`](./solutions/3968-find-root-of-a-colored-tree/cpp) | - | [Notes](./solutions/3968-find-root-of-a-colored-tree/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4078 | [Maximum Alternating Sum of Squares](./solutions/4078-maximum-alternating-sum-of-squares) | Medium | [`C++`](./solutions/4078-maximum-alternating-sum-of-squares/cpp) | - | [Notes](./solutions/4078-maximum-alternating-sum-of-squares/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4084 | [Maximize Sum of Squares of Digits](./solutions/4084-maximize-sum-of-squares-of-digits) | Medium | [`C++`](./solutions/4084-maximize-sum-of-squares-of-digits/cpp) | - | [Notes](./solutions/4084-maximize-sum-of-squares-of-digits/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -131,7 +132,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-10-26T03:39:23.707Z`_
+_Last synchronized via LC-Sync: `2026-10-27T03:45:28.543Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

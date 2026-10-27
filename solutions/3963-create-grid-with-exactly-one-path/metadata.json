@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "3963",
+  "title": "Create Grid With Exactly One Path",
+  "slug": "create-grid-with-exactly-one-path",
+  "url": "https://leetcode.com/problems/create-grid-with-exactly-one-path/?envType=daily-question&envId=2026-10-27",
+  "difficulty": "Easy",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-27T03:45:28.858Z",
+  "lastSyncedAt": "2026-10-27T03:45:28.543Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3963-create-grid-with-exactly-one-path/cpp/solution.cpp",
+      "contentHash": "4f4963afbd80857ccfee58132d56376370fa3b7893ccb46ffb6b4bffec1c6d96",
+      "syncedAt": "2026-10-27T03:45:28.543Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-10-27",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-10-29",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}
