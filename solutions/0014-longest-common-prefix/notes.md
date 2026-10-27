@@ -1,8 +1,8 @@
 # Longest Common Prefix
 
 - **Problem ID**: 0014
-- **Difficulty**: Easy
-- **LeetCode URL**: [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
+- **Difficulty**: Unknown
+- **LeetCode URL**: [Longest Common Prefix](#)
 - **Tags**: None
 - **Patterns**: None
 

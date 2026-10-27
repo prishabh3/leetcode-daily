@@ -3,36 +3,30 @@
   "id": "0014",
   "title": "Longest Common Prefix",
   "slug": "longest-common-prefix",
-  "url": "https://leetcode.com/problems/longest-common-prefix/",
-  "difficulty": "Easy",
+  "url": "",
+  "difficulty": "Unknown",
   "tags": [],
   "patterns": [],
-  "firstTrackedAt": "2026-10-27T18:21:36.080Z",
-  "lastSyncedAt": "2026-10-27T18:21:35.744Z",
+  "firstTrackedAt": "2026-11-17T03:52:01.082Z",
+  "lastSyncedAt": "2026-11-17T03:52:01.081Z",
   "solutions": {
     "cpp/solution": {
       "language": "cpp",
       "approachName": "solution",
       "filePath": "solutions/0014-longest-common-prefix/cpp/solution.cpp",
-      "contentHash": "096a7bbd18c93f895c96e08fe062e4ed7c58384e98e50a590bfe2135f3933ac0",
-      "syncedAt": "2026-10-27T18:21:35.744Z",
-      "complexity": {
-        "time": "O(?)",
-        "space": "O(?)"
-      }
+      "submissionId": "2183353735",
+      "contentHash": "25519c380fa0418724732bdd74e5f834a3c53baaf51353bb4d9970f9d8ca291a",
+      "syncedAt": "2026-11-17T03:52:01.081Z",
+      "runtime": "1 ms",
+      "memory": "12.1 MB",
+      "rawPlatformLanguage": "cpp"
     }
   },
   "confidenceRating": 3,
-  "reviewHistory": [
-    {
-      "date": "2026-10-27",
-      "rating": 3,
-      "recalled": true,
-      "intervalDays": 2
-    }
-  ],
-  "nextReviewDate": "2026-10-29",
-  "reviewsCount": 1,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
   "failedRecallCount": 0,
-  "verifiedComplexity": false
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
 }

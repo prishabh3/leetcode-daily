@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887513)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887521)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887513)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887521)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-75-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-76-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **75**
-- **Total Accepted Submissions**: **83**
-- **Repository Solutions & Historical Versions**: **83** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **76**
+- **Total Accepted Submissions**: **85**
+- **Repository Solutions & Historical Versions**: **85** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **63** |
+| 🟡 Medium | **64** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `68` |
+| C++ | `69` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,17 +57,17 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [0014. Longest Common Prefix](./solutions/0014-longest-common-prefix) | Easy | C++ | [solution.cpp](./solutions/0014-longest-common-prefix/cpp/solution.cpp) |
+| [4342. Create Grid With Exactly One Path](./solutions/4342-create-grid-with-exactly-one-path) | Medium | C++ | [solution.cpp](./solutions/4342-create-grid-with-exactly-one-path/cpp/solution.cpp) |
 | [3823. Count Islands With Total Value Divisible by K](./solutions/3823-count-islands-with-total-value-divisible-by-k) | Medium | C++ | [solution.cpp](./solutions/3823-count-islands-with-total-value-divisible-by-k/cpp/solution.cpp) |
 | [3105. Longest Strictly Increasing or Strictly Decreasing Subarray](./solutions/3105-longest-strictly-increasing-or-strictly-decreasing-subarray) | Easy | C++ | [solution.cpp](./solutions/3105-longest-strictly-increasing-or-strictly-decreasing-subarray/cpp/solution.cpp) |
 | [3789. Minimum Cost to Acquire Required Items](./solutions/3789-minimum-cost-to-acquire-required-items) | Medium | C++ | [solution.cpp](./solutions/3789-minimum-cost-to-acquire-required-items/cpp/solution.cpp) |
 | [3693. Climbing Stairs II](./solutions/3693-climbing-stairs-ii) | Medium | C++ | [solution.cpp](./solutions/3693-climbing-stairs-ii/cpp/solution.cpp) |
 | [1606. Find Servers That Handled Most Number of Requests](./solutions/1606-find-servers-that-handled-most-number-of-requests) | Hard | C++ | [solution.cpp](./solutions/1606-find-servers-that-handled-most-number-of-requests/cpp/solution.cpp) |
 | [1267. Count Servers that Communicate](./solutions/1267-count-servers-that-communicate) | Medium | C++ | [solution.cpp](./solutions/1267-count-servers-that-communicate/cpp/solution.cpp) |
-| [1882. Process Tasks Using Servers](./solutions/1882-process-tasks-using-servers) | Medium | C++ | [solution.cpp](./solutions/1882-process-tasks-using-servers/cpp/solution.cpp) |
-| [2747. Count Zero Request Servers](./solutions/2747-count-zero-request-servers) | Medium | C++ | [solution.cpp](./solutions/2747-count-zero-request-servers/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (75)</strong></summary>
+<summary><strong>View All Tracked Problems (76)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -75,7 +75,7 @@ _No topic tags recorded yet._
 | 0002 | [Add Two Numbers](./solutions/0002-add-two-numbers) | Medium | [`C++`](./solutions/0002-add-two-numbers/cpp) | - | [Notes](./solutions/0002-add-two-numbers/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0004 | [Median of Two Sorted Arrays](./solutions/0004-median-of-two-sorted-arrays) | Medium | [`C++`](./solutions/0004-median-of-two-sorted-arrays/cpp) | - | [Notes](./solutions/0004-median-of-two-sorted-arrays/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0013 | [Roman to Integer](./solutions/0013-roman-to-integer) | Easy | [`C++`](./solutions/0013-roman-to-integer/cpp) | - | [Notes](./solutions/0013-roman-to-integer/notes.md) | 2026-10-25 | `2026-10-27` |
-| 0014 | [Longest Common Prefix](./solutions/0014-longest-common-prefix) | Easy | [`C++`](./solutions/0014-longest-common-prefix/cpp) | - | [Notes](./solutions/0014-longest-common-prefix/notes.md) | 2026-10-27 | `2026-10-29` |
+| 0014 | [Longest Common Prefix](./solutions/0014-longest-common-prefix) | Easy | [`C++`](./solutions/0014-longest-common-prefix/cpp) | - | [Notes](./solutions/0014-longest-common-prefix/notes.md) | 2026-11-17 | `2026-10-29` |
 | 0015 | [3Sum](./solutions/0015-3sum) | Medium | [`C++`](./solutions/0015-3sum/cpp) | - | [Notes](./solutions/0015-3sum/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0020 | [Valid Parentheses](./solutions/0020-valid-parentheses) | Medium | [`C++`](./solutions/0020-valid-parentheses/cpp) | - | [Notes](./solutions/0020-valid-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0022 | [Generate Parentheses](./solutions/0022-generate-parentheses) | Medium | [`C++`](./solutions/0022-generate-parentheses/cpp) | - | [Notes](./solutions/0022-generate-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -140,6 +140,7 @@ _No topic tags recorded yet._
 | 4184 | [Minimum Operations to Sort a Permutation](./solutions/4184-minimum-operations-to-sort-a-permutation) | Medium | [`C++`](./solutions/4184-minimum-operations-to-sort-a-permutation/cpp) | - | [Notes](./solutions/4184-minimum-operations-to-sort-a-permutation/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4220 | [Minimum Operations to Sort a String](./solutions/4220-minimum-operations-to-sort-a-string) | Medium | [`C++`](./solutions/4220-minimum-operations-to-sort-a-string/cpp) | - | [Notes](./solutions/4220-minimum-operations-to-sort-a-string/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4257 | [Sum of Sortable Integers](./solutions/4257-sum-of-sortable-integers) | Medium | [`C++`](./solutions/4257-sum-of-sortable-integers/cpp) | - | [Notes](./solutions/4257-sum-of-sortable-integers/notes.md) | 2026-10-25 | `2026-10-25` |
+| 4342 | [Create Grid With Exactly One Path](./solutions/4342-create-grid-with-exactly-one-path) | Medium | [`C++`](./solutions/4342-create-grid-with-exactly-one-path/cpp) | - | [Notes](./solutions/4342-create-grid-with-exactly-one-path/notes.md) | 2026-11-17 | `2026-11-17` |
 | 4391 | [Count Subarrays With Loose Bounds](./solutions/4391-count-subarrays-with-loose-bounds) | Medium | [`C++`](./solutions/4391-count-subarrays-with-loose-bounds/cpp) | - | [Notes](./solutions/4391-count-subarrays-with-loose-bounds/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4402 | [Count Magical Substring Pairs I](./solutions/4402-count-magical-substring-pairs-i) | Medium | [`C++`](./solutions/4402-count-magical-substring-pairs-i/cpp) | - | [Notes](./solutions/4402-count-magical-substring-pairs-i/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4403 | [Count Magical Substring Pairs II](./solutions/4403-count-magical-substring-pairs-ii) | Medium | [`C++`](./solutions/4403-count-magical-substring-pairs-ii/cpp) | - | [Notes](./solutions/4403-count-magical-substring-pairs-ii/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -151,7 +152,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-17T03:51:52.483Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:52:01.084Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

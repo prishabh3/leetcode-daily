@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-17T03:51:52.483Z",
-  "totalProblems": 75,
-  "totalSubmissions": 83,
+  "lastUpdated": "2026-11-17T03:52:01.084Z",
+  "totalProblems": 76,
+  "totalSubmissions": 85,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -711,6 +711,30 @@
       "contentHash": "45173ff929e98821daaf9050902016ae117f4ad79bc49fbda2d29d533627e024",
       "syncedAt": "2026-11-17T03:51:52.480Z",
       "filePath": "solutions/3823-count-islands-with-total-value-divisible-by-k/cpp/solution.cpp"
+    },
+    "2182739279": {
+      "problemId": "4342",
+      "slug": "create-grid-with-exactly-one-path",
+      "title": "Create Grid With Exactly One Path",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2182739279",
+      "contentHash": "0baeb528c94e15f4365972140a802a27907433840d60809be76c01df49d4b8e1",
+      "syncedAt": "2026-11-17T03:52:01.078Z",
+      "filePath": "solutions/4342-create-grid-with-exactly-one-path/cpp/solution.cpp"
+    },
+    "2183353735": {
+      "problemId": "0014",
+      "slug": "longest-common-prefix",
+      "title": "Longest Common Prefix",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2183353735",
+      "contentHash": "25519c380fa0418724732bdd74e5f834a3c53baaf51353bb4d9970f9d8ca291a",
+      "syncedAt": "2026-11-17T03:52:01.081Z",
+      "filePath": "solutions/0014-longest-common-prefix/cpp/solution.cpp"
     },
     "rank-scores-a592f06bef0a": {
       "problemId": "0178",
@@ -1653,6 +1677,21 @@
       "tags": [],
       "patterns": []
     },
+    "4342": {
+      "id": "4342",
+      "title": "Create Grid With Exactly One Path",
+      "slug": "create-grid-with-exactly-one-path",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-17T03:52:01.078Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-17",
+      "tags": [],
+      "patterns": []
+    },
     "4391": {
       "id": "4391",
       "title": "Count Subarrays With Loose Bounds",
@@ -2066,8 +2105,8 @@
       "languages": [
         "cpp"
       ],
-      "approachesCount": 1,
-      "lastSyncedAt": "2026-10-27T18:21:35.744Z",
+      "approachesCount": 2,
+      "lastSyncedAt": "2026-11-17T03:52:01.081Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-29",
       "tags": [],
