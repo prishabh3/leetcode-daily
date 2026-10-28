@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887521)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887531)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887521)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887531)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-76-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-77-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **76**
-- **Total Accepted Submissions**: **85**
-- **Repository Solutions & Historical Versions**: **85** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **77**
+- **Total Accepted Submissions**: **86**
+- **Repository Solutions & Historical Versions**: **86** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **64** |
+| 🟡 Medium | **65** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `69` |
+| C++ | `70` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [4205. Minimum XOR Path in a Grid](./solutions/4205-minimum-xor-path-in-a-grid) | Medium | C++ | [solution.cpp](./solutions/4205-minimum-xor-path-in-a-grid/cpp/solution.cpp) |
 | [0014. Longest Common Prefix](./solutions/0014-longest-common-prefix) | Easy | C++ | [solution.cpp](./solutions/0014-longest-common-prefix/cpp/solution.cpp) |
 | [4342. Create Grid With Exactly One Path](./solutions/4342-create-grid-with-exactly-one-path) | Medium | C++ | [solution.cpp](./solutions/4342-create-grid-with-exactly-one-path/cpp/solution.cpp) |
 | [3823. Count Islands With Total Value Divisible by K](./solutions/3823-count-islands-with-total-value-divisible-by-k) | Medium | C++ | [solution.cpp](./solutions/3823-count-islands-with-total-value-divisible-by-k/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [3789. Minimum Cost to Acquire Required Items](./solutions/3789-minimum-cost-to-acquire-required-items) | Medium | C++ | [solution.cpp](./solutions/3789-minimum-cost-to-acquire-required-items/cpp/solution.cpp) |
 | [3693. Climbing Stairs II](./solutions/3693-climbing-stairs-ii) | Medium | C++ | [solution.cpp](./solutions/3693-climbing-stairs-ii/cpp/solution.cpp) |
 | [1606. Find Servers That Handled Most Number of Requests](./solutions/1606-find-servers-that-handled-most-number-of-requests) | Hard | C++ | [solution.cpp](./solutions/1606-find-servers-that-handled-most-number-of-requests/cpp/solution.cpp) |
-| [1267. Count Servers that Communicate](./solutions/1267-count-servers-that-communicate) | Medium | C++ | [solution.cpp](./solutions/1267-count-servers-that-communicate/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (76)</strong></summary>
+<summary><strong>View All Tracked Problems (77)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -138,6 +138,7 @@ _No topic tags recorded yet._
 | 4078 | [Maximum Alternating Sum of Squares](./solutions/4078-maximum-alternating-sum-of-squares) | Medium | [`C++`](./solutions/4078-maximum-alternating-sum-of-squares/cpp) | - | [Notes](./solutions/4078-maximum-alternating-sum-of-squares/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4084 | [Maximize Sum of Squares of Digits](./solutions/4084-maximize-sum-of-squares-of-digits) | Medium | [`C++`](./solutions/4084-maximize-sum-of-squares-of-digits/cpp) | - | [Notes](./solutions/4084-maximize-sum-of-squares-of-digits/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4184 | [Minimum Operations to Sort a Permutation](./solutions/4184-minimum-operations-to-sort-a-permutation) | Medium | [`C++`](./solutions/4184-minimum-operations-to-sort-a-permutation/cpp) | - | [Notes](./solutions/4184-minimum-operations-to-sort-a-permutation/notes.md) | 2026-10-25 | `2026-10-25` |
+| 4205 | [Minimum XOR Path in a Grid](./solutions/4205-minimum-xor-path-in-a-grid) | Medium | [`C++`](./solutions/4205-minimum-xor-path-in-a-grid/cpp) | - | [Notes](./solutions/4205-minimum-xor-path-in-a-grid/notes.md) | 2026-11-17 | `2026-11-17` |
 | 4220 | [Minimum Operations to Sort a String](./solutions/4220-minimum-operations-to-sort-a-string) | Medium | [`C++`](./solutions/4220-minimum-operations-to-sort-a-string/cpp) | - | [Notes](./solutions/4220-minimum-operations-to-sort-a-string/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4257 | [Sum of Sortable Integers](./solutions/4257-sum-of-sortable-integers) | Medium | [`C++`](./solutions/4257-sum-of-sortable-integers/cpp) | - | [Notes](./solutions/4257-sum-of-sortable-integers/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4342 | [Create Grid With Exactly One Path](./solutions/4342-create-grid-with-exactly-one-path) | Medium | [`C++`](./solutions/4342-create-grid-with-exactly-one-path/cpp) | - | [Notes](./solutions/4342-create-grid-with-exactly-one-path/notes.md) | 2026-11-17 | `2026-11-17` |
@@ -152,7 +153,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-17T03:52:01.084Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:52:10.914Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

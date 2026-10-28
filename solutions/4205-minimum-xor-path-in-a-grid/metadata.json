@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "4205",
+  "title": "Minimum XOR Path in a Grid",
+  "slug": "minimum-xor-path-in-a-grid",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:52:10.911Z",
+  "lastSyncedAt": "2026-11-17T03:52:10.910Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/4205-minimum-xor-path-in-a-grid/cpp/solution.cpp",
+      "submissionId": "2183570410",
+      "contentHash": "1832bae2b875ab4fd1c4521e35c44aeca46c72d41d3c7badcbe2fad4fa7a56d4",
+      "syncedAt": "2026-11-17T03:52:10.910Z",
+      "runtime": "721 ms",
+      "memory": "74.1 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
