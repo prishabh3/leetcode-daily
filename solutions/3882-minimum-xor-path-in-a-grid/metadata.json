@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "3882",
+  "title": "Minimum XOR Path in a Grid",
+  "slug": "minimum-xor-path-in-a-grid",
+  "url": "https://leetcode.com/problems/minimum-xor-path-in-a-grid/?envType=daily-question&envId=2026-10-28",
+  "difficulty": "Medium",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-28T03:44:42.917Z",
+  "lastSyncedAt": "2026-10-28T03:44:42.596Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3882-minimum-xor-path-in-a-grid/cpp/solution.cpp",
+      "contentHash": "1fff20a378d1b3382bbf20a4c530aa35cc674b828b1076752119f8e040c7dbc1",
+      "syncedAt": "2026-10-28T03:44:42.596Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-10-28",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-10-30",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-27T18:21:35.744Z",
-  "totalProblems": 57,
-  "totalSubmissions": 65,
+  "lastUpdated": "2026-10-28T03:44:42.596Z",
+  "totalProblems": 58,
+  "totalSubmissions": 66,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -776,6 +776,17 @@
       "contentHash": "096a7bbd18c93f895c96e08fe062e4ed7c58384e98e50a590bfe2135f3933ac0",
       "syncedAt": "2026-10-27T18:21:35.744Z",
       "filePath": "solutions/0014-longest-common-prefix/cpp/solution.cpp"
+    },
+    "minimum-xor-path-in-a-grid-1fff20a378d1": {
+      "problemId": "3882",
+      "slug": "minimum-xor-path-in-a-grid",
+      "title": "Minimum XOR Path in a Grid",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "contentHash": "1fff20a378d1b3382bbf20a4c530aa35cc674b828b1076752119f8e040c7dbc1",
+      "syncedAt": "2026-10-28T03:44:42.596Z",
+      "filePath": "solutions/3882-minimum-xor-path-in-a-grid/cpp/solution.cpp"
     }
   },
   "problems": {
@@ -1091,6 +1102,21 @@
       "lastSyncedAt": "2026-10-25T10:44:47.851Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "3882": {
+      "id": "3882",
+      "title": "Minimum XOR Path in a Grid",
+      "slug": "minimum-xor-path-in-a-grid",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-10-28T03:44:42.596Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-10-30",
       "tags": [],
       "patterns": []
     },
