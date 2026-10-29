@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "3841",
+  "title": "Palindromic Path Queries in a Tree",
+  "slug": "palindromic-path-queries-in-a-tree",
+  "url": "https://leetcode.com/problems/palindromic-path-queries-in-a-tree/?envType=daily-question&envId=2026-10-29",
+  "difficulty": "Hard",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-29T04:10:58.912Z",
+  "lastSyncedAt": "2026-10-29T04:10:58.600Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3841-palindromic-path-queries-in-a-tree/cpp/solution.cpp",
+      "contentHash": "2fa7d858f9cb24ea0c471a74aa8f79c6223f96d676e3810d494738e410e6df02",
+      "syncedAt": "2026-10-29T04:10:58.600Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-10-29",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-10-31",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}
