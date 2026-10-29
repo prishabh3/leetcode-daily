@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "4209",
+  "title": "Palindromic Path Queries in a Tree",
+  "slug": "palindromic-path-queries-in-a-tree",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:52:18.693Z",
+  "lastSyncedAt": "2026-11-17T03:52:18.692Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/4209-palindromic-path-queries-in-a-tree/cpp/solution.cpp",
+      "submissionId": "2184404489",
+      "contentHash": "6a4a3d66f073b3dadab92dae2dc6780a0c8c8a11ad5f3f900ff4a76520d5f86c",
+      "syncedAt": "2026-11-17T03:52:18.692Z",
+      "runtime": "497 ms",
+      "memory": "353.2 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

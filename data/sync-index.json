@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-17T03:52:10.914Z",
-  "totalProblems": 77,
-  "totalSubmissions": 86,
+  "lastUpdated": "2026-11-17T03:52:18.696Z",
+  "totalProblems": 78,
+  "totalSubmissions": 87,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -747,6 +747,18 @@
       "contentHash": "1832bae2b875ab4fd1c4521e35c44aeca46c72d41d3c7badcbe2fad4fa7a56d4",
       "syncedAt": "2026-11-17T03:52:10.910Z",
       "filePath": "solutions/4205-minimum-xor-path-in-a-grid/cpp/solution.cpp"
+    },
+    "2184404489": {
+      "problemId": "4209",
+      "slug": "palindromic-path-queries-in-a-tree",
+      "title": "Palindromic Path Queries in a Tree",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2184404489",
+      "contentHash": "6a4a3d66f073b3dadab92dae2dc6780a0c8c8a11ad5f3f900ff4a76520d5f86c",
+      "syncedAt": "2026-11-17T03:52:18.692Z",
+      "filePath": "solutions/4209-palindromic-path-queries-in-a-tree/cpp/solution.cpp"
     },
     "rank-scores-a592f06bef0a": {
       "problemId": "0178",
@@ -1669,6 +1681,21 @@
       ],
       "approachesCount": 1,
       "lastSyncedAt": "2026-11-17T03:52:10.910Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-17",
+      "tags": [],
+      "patterns": []
+    },
+    "4209": {
+      "id": "4209",
+      "title": "Palindromic Path Queries in a Tree",
+      "slug": "palindromic-path-queries-in-a-tree",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-17T03:52:18.692Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-11-17",
       "tags": [],
