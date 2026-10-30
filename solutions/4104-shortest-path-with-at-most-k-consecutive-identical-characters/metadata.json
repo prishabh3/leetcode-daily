@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "4104",
+  "title": "Shortest Path With At Most K Consecutive Identical Characters",
+  "slug": "shortest-path-with-at-most-k-consecutive-identical-characters",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:52:26.781Z",
+  "lastSyncedAt": "2026-11-17T03:52:26.780Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters/cpp/solution.cpp",
+      "submissionId": "2185166813",
+      "contentHash": "97e08fe62ea57d5cdb2e3921ac964a08a44dc2b48c28b3dddb9a96458ed0e3eb",
+      "syncedAt": "2026-11-17T03:52:26.780Z",
+      "runtime": "203 ms",
+      "memory": "273.8 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

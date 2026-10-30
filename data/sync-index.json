@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-17T03:52:18.696Z",
-  "totalProblems": 78,
-  "totalSubmissions": 87,
+  "lastUpdated": "2026-11-17T03:52:26.784Z",
+  "totalProblems": 79,
+  "totalSubmissions": 88,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -759,6 +759,18 @@
       "contentHash": "6a4a3d66f073b3dadab92dae2dc6780a0c8c8a11ad5f3f900ff4a76520d5f86c",
       "syncedAt": "2026-11-17T03:52:18.692Z",
       "filePath": "solutions/4209-palindromic-path-queries-in-a-tree/cpp/solution.cpp"
+    },
+    "2185166813": {
+      "problemId": "4104",
+      "slug": "shortest-path-with-at-most-k-consecutive-identical-characters",
+      "title": "Shortest Path With At Most K Consecutive Identical Characters",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2185166813",
+      "contentHash": "97e08fe62ea57d5cdb2e3921ac964a08a44dc2b48c28b3dddb9a96458ed0e3eb",
+      "syncedAt": "2026-11-17T03:52:26.780Z",
+      "filePath": "solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters/cpp/solution.cpp"
     },
     "rank-scores-a592f06bef0a": {
       "problemId": "0178",
@@ -1653,6 +1665,21 @@
       "lastSyncedAt": "2026-10-25T10:44:22.040Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "4104": {
+      "id": "4104",
+      "title": "Shortest Path With At Most K Consecutive Identical Characters",
+      "slug": "shortest-path-with-at-most-k-consecutive-identical-characters",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-17T03:52:26.780Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-17",
       "tags": [],
       "patterns": []
     },
