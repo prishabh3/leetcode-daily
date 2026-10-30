@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **62** (🟢 Easy: **26** • 🟡 Medium: **26** • 🔴 Hard: **10**) • Ranking: `#2443671`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1793247058)](https://leetcode.com/u/risxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1793329279)](https://leetcode.com/u/risxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1793247058)](https://leetcode.com/u/risxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1793329279)](https://leetcode.com/u/risxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-59-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-60-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **59**
-- **Total Accepted Submissions**: **67**
-- **Repository Solutions & Historical Versions**: **67** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **60**
+- **Total Accepted Submissions**: **68**
+- **Repository Solutions & Historical Versions**: **68** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **6** |
-| 🟡 Medium | **52** |
+| 🟡 Medium | **53** |
 | 🔴 Hard | **1** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `53` |
+| C++ | `54` |
 | SQL | `3` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [3970. Shortest Path With At Most K Consecutive Identical Characters](./solutions/3970-shortest-path-with-at-most-k-consecutive-identical-characters) | Medium | C++ | [solution.cpp](./solutions/3970-shortest-path-with-at-most-k-consecutive-identical-characters/cpp/solution.cpp) |
 | [3841. Palindromic Path Queries in a Tree](./solutions/3841-palindromic-path-queries-in-a-tree) | Hard | C++ | [solution.cpp](./solutions/3841-palindromic-path-queries-in-a-tree/cpp/solution.cpp) |
 | [3882. Minimum XOR Path in a Grid](./solutions/3882-minimum-xor-path-in-a-grid) | Medium | C++ | [solution.cpp](./solutions/3882-minimum-xor-path-in-a-grid/cpp/solution.cpp) |
 | [0014. Longest Common Prefix](./solutions/0014-longest-common-prefix) | Easy | C++ | [solution.cpp](./solutions/0014-longest-common-prefix/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [3619. Count Islands With Total Value Divisible by K](./solutions/3619-count-islands-with-total-value-divisible-by-k) | Medium | C++ | [solution.cpp](./solutions/3619-count-islands-with-total-value-divisible-by-k/cpp/solution.cpp) |
 | [1380. Number of Closed Islands](./solutions/1380-number-of-closed-islands) | Medium | C++ | [solution.cpp](./solutions/1380-number-of-closed-islands/cpp/solution.cpp) |
 | [4403. Count Magical Substring Pairs II](./solutions/4403-count-magical-substring-pairs-ii) | Medium | C++ | [solution.cpp](./solutions/4403-count-magical-substring-pairs-ii/cpp/solution.cpp) |
-| [4402. Count Magical Substring Pairs I](./solutions/4402-count-magical-substring-pairs-i) | Medium | C++ | [solution.cpp](./solutions/4402-count-magical-substring-pairs-i/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (59)</strong></summary>
+<summary><strong>View All Tracked Problems (60)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -119,6 +119,7 @@ _No topic tags recorded yet._
 | 3950 | [Maximum K to Sort a Permutation](./solutions/3950-maximum-k-to-sort-a-permutation) | Medium | [`C++`](./solutions/3950-maximum-k-to-sort-a-permutation/cpp) | - | [Notes](./solutions/3950-maximum-k-to-sort-a-permutation/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3963 | [Create Grid With Exactly One Path](./solutions/3963-create-grid-with-exactly-one-path) | Easy | [`C++`](./solutions/3963-create-grid-with-exactly-one-path/cpp) | - | [Notes](./solutions/3963-create-grid-with-exactly-one-path/notes.md) | 2026-10-27 | `2026-10-29` |
 | 3968 | [Find Root of a Colored Tree](./solutions/3968-find-root-of-a-colored-tree) | Medium | [`C++`](./solutions/3968-find-root-of-a-colored-tree/cpp) | - | [Notes](./solutions/3968-find-root-of-a-colored-tree/notes.md) | 2026-10-25 | `2026-10-25` |
+| 3970 | [Shortest Path With At Most K Consecutive Identical Characters](./solutions/3970-shortest-path-with-at-most-k-consecutive-identical-characters) | Medium | [`C++`](./solutions/3970-shortest-path-with-at-most-k-consecutive-identical-characters/cpp) | - | [Notes](./solutions/3970-shortest-path-with-at-most-k-consecutive-identical-characters/notes.md) | 2026-10-30 | `2026-11-01` |
 | 4078 | [Maximum Alternating Sum of Squares](./solutions/4078-maximum-alternating-sum-of-squares) | Medium | [`C++`](./solutions/4078-maximum-alternating-sum-of-squares/cpp) | - | [Notes](./solutions/4078-maximum-alternating-sum-of-squares/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4084 | [Maximize Sum of Squares of Digits](./solutions/4084-maximize-sum-of-squares-of-digits) | Medium | [`C++`](./solutions/4084-maximize-sum-of-squares-of-digits/cpp) | - | [Notes](./solutions/4084-maximize-sum-of-squares-of-digits/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4184 | [Minimum Operations to Sort a Permutation](./solutions/4184-minimum-operations-to-sort-a-permutation) | Medium | [`C++`](./solutions/4184-minimum-operations-to-sort-a-permutation/cpp) | - | [Notes](./solutions/4184-minimum-operations-to-sort-a-permutation/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -135,7 +136,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-10-29T04:10:58.600Z`_
+_Last synchronized via LC-Sync: `2026-10-30T03:01:19.225Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

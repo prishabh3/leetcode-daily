@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "3970",
+  "title": "Shortest Path With At Most K Consecutive Identical Characters",
+  "slug": "shortest-path-with-at-most-k-consecutive-identical-characters",
+  "url": "https://leetcode.com/problems/shortest-path-with-at-most-k-consecutive-identical-characters/?envType=daily-question&envId=2026-10-30",
+  "difficulty": "Medium",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-30T03:01:19.539Z",
+  "lastSyncedAt": "2026-10-30T03:01:19.225Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3970-shortest-path-with-at-most-k-consecutive-identical-characters/cpp/solution.cpp",
+      "contentHash": "32faf159a19fd643605f5381fd7d7d56ec5f3deafb5f5fd8c37ff070c94ed507",
+      "syncedAt": "2026-10-30T03:01:19.225Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-10-30",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-11-01",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}
