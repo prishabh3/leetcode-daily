@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "3665",
+  "title": "Twisted Mirror Path Count",
+  "slug": "twisted-mirror-path-count",
+  "url": "https://leetcode.com/problems/twisted-mirror-path-count/?envType=daily-question&envId=2026-10-31",
+  "difficulty": "Medium",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-10-31T05:49:52.464Z",
+  "lastSyncedAt": "2026-10-31T05:49:51.741Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3665-twisted-mirror-path-count/cpp/solution.cpp",
+      "contentHash": "604d3aad9508a42c097ae7f001a2b06be6b3b2701b31ca67dd9377efb17829ea",
+      "syncedAt": "2026-10-31T05:49:51.741Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-10-31",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-11-02",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}

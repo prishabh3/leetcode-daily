@@ -3,14 +3,14 @@
   
   <!-- Header -->
   <text x="24" y="36" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600">LC-Sync Progress Tracker</text>
-  <text x="426" y="36" text-anchor="end" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Tracked: 60</text>
+  <text x="426" y="36" text-anchor="end" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Tracked: 61</text>
   
   <!-- Stacked Progress Bar -->
   <g transform="translate(24, 55)">
     <rect width="380" height="10" rx="5" fill="#21262d" />
-    <rect x="0" y="0" width="38" height="10" rx="5" fill="#238636" />
-    <rect x="38" y="0" width="336" height="10" fill="#d29922" />
-    <rect x="374" y="0" width="6" height="10" rx="5" fill="#da3633" />
+    <rect x="0" y="0" width="37" height="10" rx="5" fill="#238636" />
+    <rect x="37" y="0" width="336" height="10" fill="#d29922" />
+    <rect x="373" y="0" width="6" height="10" rx="5" fill="#da3633" />
   </g>
   
   <!-- Statistics Table -->
@@ -24,8 +24,8 @@
     <!-- Medium -->
     <circle cx="6" cy="36" r="5" fill="#d29922" />
     <text x="20" y="40" fill="#c9d1d9" font-size="13">Medium</text>
-    <text x="100" y="40" fill="#f0f6fc" font-size="13" font-weight="600">53</text>
-    <text x="130" y="40" fill="#8b949e" font-size="12">(88%)</text>
+    <text x="100" y="40" fill="#f0f6fc" font-size="13" font-weight="600">54</text>
+    <text x="130" y="40" fill="#8b949e" font-size="12">(89%)</text>
     
     <!-- Hard -->
     <circle cx="6" cy="66" r="5" fill="#da3633" />
@@ -37,7 +37,7 @@
     <line x1="220" y1="0" x2="220" y2="76" stroke="#30363d" stroke-width="1" />
     
     <text x="240" y="20" fill="#8b949e" font-size="12">Total Solutions</text>
-    <text x="240" y="40" fill="#58a6ff" font-size="18" font-weight="600">68</text>
+    <text x="240" y="40" fill="#58a6ff" font-size="18" font-weight="600">69</text>
     
     <text x="340" y="20" fill="#8b949e" font-size="12">Reviews Completed</text>
     <text x="340" y="40" fill="#3fb950" font-size="18" font-weight="600">1</text>
