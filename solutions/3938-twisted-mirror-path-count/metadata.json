@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "3938",
+  "title": "Twisted Mirror Path Count",
+  "slug": "twisted-mirror-path-count",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:52:34.052Z",
+  "lastSyncedAt": "2026-11-17T03:52:34.050Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3938-twisted-mirror-path-count/cpp/solution.cpp",
+      "submissionId": "2185964029",
+      "contentHash": "373f2951c3ceb187be60a71e70f33f9d9d763d59d73235ab7b11495525903cda",
+      "syncedAt": "2026-11-17T03:52:34.050Z",
+      "runtime": "1234 ms",
+      "memory": "489.8 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
