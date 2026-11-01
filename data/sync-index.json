@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-10-31T05:49:51.741Z",
-  "totalProblems": 61,
-  "totalSubmissions": 69,
+  "lastUpdated": "2026-11-01T04:05:07.581Z",
+  "totalProblems": 62,
+  "totalSubmissions": 70,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -820,6 +820,17 @@
       "contentHash": "604d3aad9508a42c097ae7f001a2b06be6b3b2701b31ca67dd9377efb17829ea",
       "syncedAt": "2026-10-31T05:49:51.741Z",
       "filePath": "solutions/3665-twisted-mirror-path-count/cpp/solution.cpp"
+    },
+    "minimum-moves-to-equal-array-elements-6bb3168be13f": {
+      "problemId": "0453",
+      "slug": "minimum-moves-to-equal-array-elements",
+      "title": "Minimum Moves to Equal Array Elements",
+      "difficulty": "Easy",
+      "language": "cpp",
+      "approachName": "solution",
+      "contentHash": "6bb3168be13f65885503d154ba5936b51db75a349df272cd9c8711d05172a36d",
+      "syncedAt": "2026-11-01T04:05:07.581Z",
+      "filePath": "solutions/0453-minimum-moves-to-equal-array-elements/cpp/solution.cpp"
     }
   },
   "problems": {
@@ -1735,6 +1746,21 @@
       "lastSyncedAt": "2026-10-27T18:21:35.744Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-29",
+      "tags": [],
+      "patterns": []
+    },
+    "0453": {
+      "id": "0453",
+      "title": "Minimum Moves to Equal Array Elements",
+      "slug": "minimum-moves-to-equal-array-elements",
+      "difficulty": "Easy",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-01T04:05:07.581Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-03",
       "tags": [],
       "patterns": []
     }
