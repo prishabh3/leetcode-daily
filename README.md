@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887554)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887561)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887554)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887561)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -27,8 +27,8 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
 [![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-80-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
 - **Distinct Problems Tracked**: **80**
-- **Total Accepted Submissions**: **89**
-- **Repository Solutions & Historical Versions**: **89** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Total Accepted Submissions**: **90**
+- **Repository Solutions & Historical Versions**: **90** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [0453. Minimum Moves to Equal Array Elements](./solutions/0453-minimum-moves-to-equal-array-elements) | Easy | C++ | [solution.cpp](./solutions/0453-minimum-moves-to-equal-array-elements/cpp/solution.cpp) |
 | [3938. Twisted Mirror Path Count](./solutions/3938-twisted-mirror-path-count) | Medium | C++ | [solution.cpp](./solutions/3938-twisted-mirror-path-count/cpp/solution.cpp) |
 | [4104. Shortest Path With At Most K Consecutive Identical Characters](./solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters) | Medium | C++ | [solution.cpp](./solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters/cpp/solution.cpp) |
 | [4209. Palindromic Path Queries in a Tree](./solutions/4209-palindromic-path-queries-in-a-tree) | Medium | C++ | [solution.cpp](./solutions/4209-palindromic-path-queries-in-a-tree/cpp/solution.cpp) |
@@ -64,7 +65,6 @@ _No topic tags recorded yet._
 | [0014. Longest Common Prefix](./solutions/0014-longest-common-prefix) | Easy | C++ | [solution.cpp](./solutions/0014-longest-common-prefix/cpp/solution.cpp) |
 | [4342. Create Grid With Exactly One Path](./solutions/4342-create-grid-with-exactly-one-path) | Medium | C++ | [solution.cpp](./solutions/4342-create-grid-with-exactly-one-path/cpp/solution.cpp) |
 | [3823. Count Islands With Total Value Divisible by K](./solutions/3823-count-islands-with-total-value-divisible-by-k) | Medium | C++ | [solution.cpp](./solutions/3823-count-islands-with-total-value-divisible-by-k/cpp/solution.cpp) |
-| [3105. Longest Strictly Increasing or Strictly Decreasing Subarray](./solutions/3105-longest-strictly-increasing-or-strictly-decreasing-subarray) | Easy | C++ | [solution.cpp](./solutions/3105-longest-strictly-increasing-or-strictly-decreasing-subarray/cpp/solution.cpp) |
 
 <details>
 <summary><strong>View All Tracked Problems (80)</strong></summary>
@@ -88,7 +88,7 @@ _No topic tags recorded yet._
 | 0228 | [Summary Ranges](./solutions/0228-summary-ranges) | Medium | [`C++`](./solutions/0228-summary-ranges/cpp) | - | [Notes](./solutions/0228-summary-ranges/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0301 | [Remove Invalid Parentheses](./solutions/0301-remove-invalid-parentheses) | Medium | [`C++`](./solutions/0301-remove-invalid-parentheses/cpp) | - | [Notes](./solutions/0301-remove-invalid-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0448 | [Find All Numbers Disappeared in an Array](./solutions/0448-find-all-numbers-disappeared-in-an-array) | Medium | [`C++`](./solutions/0448-find-all-numbers-disappeared-in-an-array/cpp) | - | [Notes](./solutions/0448-find-all-numbers-disappeared-in-an-array/notes.md) | 2026-10-25 | `2026-10-25` |
-| 0453 | [Minimum Moves to Equal Array Elements](./solutions/0453-minimum-moves-to-equal-array-elements) | Easy | [`C++`](./solutions/0453-minimum-moves-to-equal-array-elements/cpp) | - | [Notes](./solutions/0453-minimum-moves-to-equal-array-elements/notes.md) | 2026-11-01 | `2026-11-03` |
+| 0453 | [Minimum Moves to Equal Array Elements](./solutions/0453-minimum-moves-to-equal-array-elements) | Easy | [`C++`](./solutions/0453-minimum-moves-to-equal-array-elements/cpp) | - | [Notes](./solutions/0453-minimum-moves-to-equal-array-elements/notes.md) | 2026-11-17 | `2026-11-03` |
 | 0462 | [Minimum Moves to Equal Array Elements II](./solutions/0462-minimum-moves-to-equal-array-elements-ii) | Medium | [`C++`](./solutions/0462-minimum-moves-to-equal-array-elements-ii/cpp) | - | [Notes](./solutions/0462-minimum-moves-to-equal-array-elements-ii/notes.md) | 2026-11-02 | `2026-11-04` |
 | 0595 | [Big Countries](./solutions/0595-big-countries) | Easy | [`SQL`](./solutions/0595-big-countries/sql) | - | [Notes](./solutions/0595-big-countries/notes.md) | 2026-10-25 | `2026-10-27` |
 | 0678 | [Valid Parenthesis String](./solutions/0678-valid-parenthesis-string) | Medium | [`C++`](./solutions/0678-valid-parenthesis-string/cpp) | - | [Notes](./solutions/0678-valid-parenthesis-string/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -156,7 +156,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-17T03:52:34.055Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:52:41.428Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

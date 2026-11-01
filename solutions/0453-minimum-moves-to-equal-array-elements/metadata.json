@@ -3,36 +3,30 @@
   "id": "0453",
   "title": "Minimum Moves to Equal Array Elements",
   "slug": "minimum-moves-to-equal-array-elements",
-  "url": "https://leetcode.com/problems/minimum-moves-to-equal-array-elements/?envType=daily-question&envId=2026-11-01",
-  "difficulty": "Easy",
+  "url": "",
+  "difficulty": "Unknown",
   "tags": [],
   "patterns": [],
-  "firstTrackedAt": "2026-11-01T04:05:07.898Z",
-  "lastSyncedAt": "2026-11-01T04:05:07.581Z",
+  "firstTrackedAt": "2026-11-17T03:52:41.425Z",
+  "lastSyncedAt": "2026-11-17T03:52:41.424Z",
   "solutions": {
     "cpp/solution": {
       "language": "cpp",
       "approachName": "solution",
       "filePath": "solutions/0453-minimum-moves-to-equal-array-elements/cpp/solution.cpp",
-      "contentHash": "6bb3168be13f65885503d154ba5936b51db75a349df272cd9c8711d05172a36d",
-      "syncedAt": "2026-11-01T04:05:07.581Z",
-      "complexity": {
-        "time": "O(?)",
-        "space": "O(?)"
-      }
+      "submissionId": "2186687390",
+      "contentHash": "4e6ed63daf51c4886e9dc98470df91388871c77cdb3a139ac22625280f08da66",
+      "syncedAt": "2026-11-17T03:52:41.424Z",
+      "runtime": "2 ms",
+      "memory": "31.8 MB",
+      "rawPlatformLanguage": "cpp"
     }
   },
   "confidenceRating": 3,
-  "reviewHistory": [
-    {
-      "date": "2026-11-01",
-      "rating": 3,
-      "recalled": true,
-      "intervalDays": 2
-    }
-  ],
-  "nextReviewDate": "2026-11-03",
-  "reviewsCount": 1,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
   "failedRecallCount": 0,
-  "verifiedComplexity": false
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
 }
