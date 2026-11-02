@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **62** (🟢 Easy: **26** • 🟡 Medium: **26** • 🔴 Hard: **10**) • Ranking: `#2443671`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1793505907)](https://leetcode.com/u/risxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1793633292)](https://leetcode.com/u/risxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1793505907)](https://leetcode.com/u/risxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1793633292)](https://leetcode.com/u/risxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-62-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-63-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **62**
-- **Total Accepted Submissions**: **70**
-- **Repository Solutions & Historical Versions**: **70** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **63**
+- **Total Accepted Submissions**: **71**
+- **Repository Solutions & Historical Versions**: **71** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **7** |
-| 🟡 Medium | **54** |
+| 🟡 Medium | **55** |
 | 🔴 Hard | **1** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `56` |
+| C++ | `57` |
 | SQL | `3` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [0462. Minimum Moves to Equal Array Elements II](./solutions/0462-minimum-moves-to-equal-array-elements-ii) | Medium | C++ | [solution.cpp](./solutions/0462-minimum-moves-to-equal-array-elements-ii/cpp/solution.cpp) |
 | [0453. Minimum Moves to Equal Array Elements](./solutions/0453-minimum-moves-to-equal-array-elements) | Easy | C++ | [solution.cpp](./solutions/0453-minimum-moves-to-equal-array-elements/cpp/solution.cpp) |
 | [3665. Twisted Mirror Path Count](./solutions/3665-twisted-mirror-path-count) | Medium | C++ | [solution.cpp](./solutions/3665-twisted-mirror-path-count/cpp/solution.cpp) |
 | [3970. Shortest Path With At Most K Consecutive Identical Characters](./solutions/3970-shortest-path-with-at-most-k-consecutive-identical-characters) | Medium | C++ | [solution.cpp](./solutions/3970-shortest-path-with-at-most-k-consecutive-identical-characters/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [3882. Minimum XOR Path in a Grid](./solutions/3882-minimum-xor-path-in-a-grid) | Medium | C++ | [solution.cpp](./solutions/3882-minimum-xor-path-in-a-grid/cpp/solution.cpp) |
 | [0014. Longest Common Prefix](./solutions/0014-longest-common-prefix) | Easy | C++ | [solution.cpp](./solutions/0014-longest-common-prefix/cpp/solution.cpp) |
 | [3963. Create Grid With Exactly One Path](./solutions/3963-create-grid-with-exactly-one-path) | Easy | C++ | [solution.cpp](./solutions/3963-create-grid-with-exactly-one-path/cpp/solution.cpp) |
-| [3619. Count Islands With Total Value Divisible by K](./solutions/3619-count-islands-with-total-value-divisible-by-k) | Medium | C++ | [solution.cpp](./solutions/3619-count-islands-with-total-value-divisible-by-k/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (62)</strong></summary>
+<summary><strong>View All Tracked Problems (63)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -89,6 +89,7 @@ _No topic tags recorded yet._
 | 0301 | [Remove Invalid Parentheses](./solutions/0301-remove-invalid-parentheses) | Medium | [`C++`](./solutions/0301-remove-invalid-parentheses/cpp) | - | [Notes](./solutions/0301-remove-invalid-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0448 | [Find All Numbers Disappeared in an Array](./solutions/0448-find-all-numbers-disappeared-in-an-array) | Medium | [`C++`](./solutions/0448-find-all-numbers-disappeared-in-an-array/cpp) | - | [Notes](./solutions/0448-find-all-numbers-disappeared-in-an-array/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0453 | [Minimum Moves to Equal Array Elements](./solutions/0453-minimum-moves-to-equal-array-elements) | Easy | [`C++`](./solutions/0453-minimum-moves-to-equal-array-elements/cpp) | - | [Notes](./solutions/0453-minimum-moves-to-equal-array-elements/notes.md) | 2026-11-01 | `2026-11-03` |
+| 0462 | [Minimum Moves to Equal Array Elements II](./solutions/0462-minimum-moves-to-equal-array-elements-ii) | Medium | [`C++`](./solutions/0462-minimum-moves-to-equal-array-elements-ii/cpp) | - | [Notes](./solutions/0462-minimum-moves-to-equal-array-elements-ii/notes.md) | 2026-11-02 | `2026-11-04` |
 | 0595 | [Big Countries](./solutions/0595-big-countries) | Easy | [`SQL`](./solutions/0595-big-countries/sql) | - | [Notes](./solutions/0595-big-countries/notes.md) | 2026-10-25 | `2026-10-27` |
 | 0678 | [Valid Parenthesis String](./solutions/0678-valid-parenthesis-string) | Medium | [`C++`](./solutions/0678-valid-parenthesis-string/cpp) | - | [Notes](./solutions/0678-valid-parenthesis-string/notes.md) | 2026-10-25 | `2026-10-25` |
 | 0794 | [Swim in Rising Water](./solutions/0794-swim-in-rising-water) | Medium | [`Python 3`](./solutions/0794-swim-in-rising-water/python3) | - | [Notes](./solutions/0794-swim-in-rising-water/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -138,7 +139,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-01T04:05:07.581Z`_
+_Last synchronized via LC-Sync: `2026-11-02T15:28:12.040Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout
