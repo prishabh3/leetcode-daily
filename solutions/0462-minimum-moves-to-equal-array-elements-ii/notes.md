@@ -1,8 +1,8 @@
 # Minimum Moves to Equal Array Elements II
 
 - **Problem ID**: 0462
-- **Difficulty**: Medium
-- **LeetCode URL**: [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/?envType=daily-question&envId=2026-11-02)
+- **Difficulty**: Unknown
+- **LeetCode URL**: [Minimum Moves to Equal Array Elements II](#)
 - **Tags**: None
 - **Patterns**: None
 
