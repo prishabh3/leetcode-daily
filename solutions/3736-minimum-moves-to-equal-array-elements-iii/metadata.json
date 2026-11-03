@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "3736",
+  "title": "Minimum Moves to Equal Array Elements III",
+  "slug": "minimum-moves-to-equal-array-elements-iii",
+  "url": "https://leetcode.com/problems/minimum-moves-to-equal-array-elements-iii/?envType=daily-question&envId=2026-11-03",
+  "difficulty": "Easy",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-03T03:36:24.629Z",
+  "lastSyncedAt": "2026-11-03T03:36:24.317Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3736-minimum-moves-to-equal-array-elements-iii/cpp/solution.cpp",
+      "contentHash": "0c79071a5b885bf05a37cec978c264a3a4832b9c923073f5c9934a17b7da58b5",
+      "syncedAt": "2026-11-03T03:36:24.317Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-11-03",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-11-05",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}

@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **62** (🟢 Easy: **26** • 🟡 Medium: **26** • 🔴 Hard: **10**) • Ranking: `#2443671`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1793633292)](https://leetcode.com/u/risxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1793676984)](https://leetcode.com/u/risxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1793633292)](https://leetcode.com/u/risxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1793676984)](https://leetcode.com/u/risxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-63-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-64-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **63**
-- **Total Accepted Submissions**: **71**
-- **Repository Solutions & Historical Versions**: **71** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **64**
+- **Total Accepted Submissions**: **72**
+- **Repository Solutions & Historical Versions**: **72** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
-| 🟢 Easy | **7** |
+| 🟢 Easy | **8** |
 | 🟡 Medium | **55** |
 | 🔴 Hard | **1** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `57` |
+| C++ | `58` |
 | SQL | `3` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [3736. Minimum Moves to Equal Array Elements III](./solutions/3736-minimum-moves-to-equal-array-elements-iii) | Easy | C++ | [solution.cpp](./solutions/3736-minimum-moves-to-equal-array-elements-iii/cpp/solution.cpp) |
 | [0462. Minimum Moves to Equal Array Elements II](./solutions/0462-minimum-moves-to-equal-array-elements-ii) | Medium | C++ | [solution.cpp](./solutions/0462-minimum-moves-to-equal-array-elements-ii/cpp/solution.cpp) |
 | [0453. Minimum Moves to Equal Array Elements](./solutions/0453-minimum-moves-to-equal-array-elements) | Easy | C++ | [solution.cpp](./solutions/0453-minimum-moves-to-equal-array-elements/cpp/solution.cpp) |
 | [3665. Twisted Mirror Path Count](./solutions/3665-twisted-mirror-path-count) | Medium | C++ | [solution.cpp](./solutions/3665-twisted-mirror-path-count/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [3841. Palindromic Path Queries in a Tree](./solutions/3841-palindromic-path-queries-in-a-tree) | Hard | C++ | [solution.cpp](./solutions/3841-palindromic-path-queries-in-a-tree/cpp/solution.cpp) |
 | [3882. Minimum XOR Path in a Grid](./solutions/3882-minimum-xor-path-in-a-grid) | Medium | C++ | [solution.cpp](./solutions/3882-minimum-xor-path-in-a-grid/cpp/solution.cpp) |
 | [0014. Longest Common Prefix](./solutions/0014-longest-common-prefix) | Easy | C++ | [solution.cpp](./solutions/0014-longest-common-prefix/cpp/solution.cpp) |
-| [3963. Create Grid With Exactly One Path](./solutions/3963-create-grid-with-exactly-one-path) | Easy | C++ | [solution.cpp](./solutions/3963-create-grid-with-exactly-one-path/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (63)</strong></summary>
+<summary><strong>View All Tracked Problems (64)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -115,6 +115,7 @@ _No topic tags recorded yet._
 | 3163 | [Subarrays Distinct Element Sum of Squares I](./solutions/3163-subarrays-distinct-element-sum-of-squares-i) | Medium | [`C++`](./solutions/3163-subarrays-distinct-element-sum-of-squares-i/cpp) | - | [Notes](./solutions/3163-subarrays-distinct-element-sum-of-squares-i/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3619 | [Count Islands With Total Value Divisible by K](./solutions/3619-count-islands-with-total-value-divisible-by-k) | Medium | [`C++`](./solutions/3619-count-islands-with-total-value-divisible-by-k/cpp) | - | [Notes](./solutions/3619-count-islands-with-total-value-divisible-by-k/notes.md) | 2026-10-26 | `2026-10-28` |
 | 3665 | [Twisted Mirror Path Count](./solutions/3665-twisted-mirror-path-count) | Medium | [`C++`](./solutions/3665-twisted-mirror-path-count/cpp) | - | [Notes](./solutions/3665-twisted-mirror-path-count/notes.md) | 2026-10-31 | `2026-11-02` |
+| 3736 | [Minimum Moves to Equal Array Elements III](./solutions/3736-minimum-moves-to-equal-array-elements-iii) | Easy | [`C++`](./solutions/3736-minimum-moves-to-equal-array-elements-iii/cpp) | - | [Notes](./solutions/3736-minimum-moves-to-equal-array-elements-iii/notes.md) | 2026-11-03 | `2026-11-05` |
 | 3769 | [Minimum Interval Selection to Cover Target Intervals](./solutions/3769-minimum-interval-selection-to-cover-target-intervals) | Medium | [`C++`](./solutions/3769-minimum-interval-selection-to-cover-target-intervals/cpp) | - | [Notes](./solutions/3769-minimum-interval-selection-to-cover-target-intervals/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3841 | [Palindromic Path Queries in a Tree](./solutions/3841-palindromic-path-queries-in-a-tree) | Hard | [`C++`](./solutions/3841-palindromic-path-queries-in-a-tree/cpp) | - | [Notes](./solutions/3841-palindromic-path-queries-in-a-tree/notes.md) | 2026-10-29 | `2026-10-31` |
 | 3847 | [Minimum Swaps to Sort by Digit Sum](./solutions/3847-minimum-swaps-to-sort-by-digit-sum) | Medium | [`C++`](./solutions/3847-minimum-swaps-to-sort-by-digit-sum/cpp) | - | [Notes](./solutions/3847-minimum-swaps-to-sort-by-digit-sum/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -139,7 +140,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-02T15:28:12.040Z`_
+_Last synchronized via LC-Sync: `2026-11-03T03:36:24.317Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

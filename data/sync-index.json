@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-02T15:28:12.040Z",
-  "totalProblems": 63,
-  "totalSubmissions": 71,
+  "lastUpdated": "2026-11-03T03:36:24.317Z",
+  "totalProblems": 64,
+  "totalSubmissions": 72,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -842,6 +842,17 @@
       "contentHash": "31a7e92e57a239ad4d173bc39a75d7adc4b5540ee8d7750deb9d7548507c3e51",
       "syncedAt": "2026-11-02T15:28:12.040Z",
       "filePath": "solutions/0462-minimum-moves-to-equal-array-elements-ii/cpp/solution.cpp"
+    },
+    "minimum-moves-to-equal-array-elements-iii-0c79071a5b88": {
+      "problemId": "3736",
+      "slug": "minimum-moves-to-equal-array-elements-iii",
+      "title": "Minimum Moves to Equal Array Elements III",
+      "difficulty": "Easy",
+      "language": "cpp",
+      "approachName": "solution",
+      "contentHash": "0c79071a5b885bf05a37cec978c264a3a4832b9c923073f5c9934a17b7da58b5",
+      "syncedAt": "2026-11-03T03:36:24.317Z",
+      "filePath": "solutions/3736-minimum-moves-to-equal-array-elements-iii/cpp/solution.cpp"
     }
   },
   "problems": {
@@ -1142,6 +1153,21 @@
       "lastSyncedAt": "2026-10-31T05:49:51.741Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-11-02",
+      "tags": [],
+      "patterns": []
+    },
+    "3736": {
+      "id": "3736",
+      "title": "Minimum Moves to Equal Array Elements III",
+      "slug": "minimum-moves-to-equal-array-elements-iii",
+      "difficulty": "Easy",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-03T03:36:24.317Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-05",
       "tags": [],
       "patterns": []
     },
