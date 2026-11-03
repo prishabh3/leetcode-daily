@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "4116",
+  "title": "Minimum Moves to Equal Array Elements III",
+  "slug": "minimum-moves-to-equal-array-elements-iii",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:52:56.144Z",
+  "lastSyncedAt": "2026-11-17T03:52:56.142Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/4116-minimum-moves-to-equal-array-elements-iii/cpp/solution.cpp",
+      "submissionId": "2188229980",
+      "contentHash": "77dbff3f0baa364c7e3339f6acdad23d40939fc29be19b6b79050fccca155051",
+      "syncedAt": "2026-11-17T03:52:56.142Z",
+      "runtime": "0 ms",
+      "memory": "31.5 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
