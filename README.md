@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887576)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887584)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887576)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887584)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-81-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-82-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **81**
-- **Total Accepted Submissions**: **92**
-- **Repository Solutions & Historical Versions**: **92** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **82**
+- **Total Accepted Submissions**: **93**
+- **Repository Solutions & Historical Versions**: **93** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **69** |
+| 🟡 Medium | **70** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `74` |
+| C++ | `75` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [3717. Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | C++ | [solution.cpp](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp/solution.cpp) |
 | [4116. Minimum Moves to Equal Array Elements III](./solutions/4116-minimum-moves-to-equal-array-elements-iii) | Medium | C++ | [solution.cpp](./solutions/4116-minimum-moves-to-equal-array-elements-iii/cpp/solution.cpp) |
 | [0462. Minimum Moves to Equal Array Elements II](./solutions/0462-minimum-moves-to-equal-array-elements-ii) | Medium | C++ | [solution.cpp](./solutions/0462-minimum-moves-to-equal-array-elements-ii/cpp/solution.cpp) |
 | [0453. Minimum Moves to Equal Array Elements](./solutions/0453-minimum-moves-to-equal-array-elements) | Easy | C++ | [solution.cpp](./solutions/0453-minimum-moves-to-equal-array-elements/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [4104. Shortest Path With At Most K Consecutive Identical Characters](./solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters) | Medium | C++ | [solution.cpp](./solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters/cpp/solution.cpp) |
 | [4209. Palindromic Path Queries in a Tree](./solutions/4209-palindromic-path-queries-in-a-tree) | Medium | C++ | [solution.cpp](./solutions/4209-palindromic-path-queries-in-a-tree/cpp/solution.cpp) |
 | [4205. Minimum XOR Path in a Grid](./solutions/4205-minimum-xor-path-in-a-grid) | Medium | C++ | [solution.cpp](./solutions/4205-minimum-xor-path-in-a-grid/cpp/solution.cpp) |
-| [0014. Longest Common Prefix](./solutions/0014-longest-common-prefix) | Easy | C++ | [solution.cpp](./solutions/0014-longest-common-prefix/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (81)</strong></summary>
+<summary><strong>View All Tracked Problems (82)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -124,6 +124,7 @@ _No topic tags recorded yet._
 | 3619 | [Count Islands With Total Value Divisible by K](./solutions/3619-count-islands-with-total-value-divisible-by-k) | Medium | [`C++`](./solutions/3619-count-islands-with-total-value-divisible-by-k/cpp) | - | [Notes](./solutions/3619-count-islands-with-total-value-divisible-by-k/notes.md) | 2026-10-26 | `2026-10-28` |
 | 3665 | [Twisted Mirror Path Count](./solutions/3665-twisted-mirror-path-count) | Medium | [`C++`](./solutions/3665-twisted-mirror-path-count/cpp) | - | [Notes](./solutions/3665-twisted-mirror-path-count/notes.md) | 2026-10-31 | `2026-11-02` |
 | 3693 | [Climbing Stairs II](./solutions/3693-climbing-stairs-ii) | Medium | [`C++`](./solutions/3693-climbing-stairs-ii/cpp) | - | [Notes](./solutions/3693-climbing-stairs-ii/notes.md) | 2026-11-10 | `2026-11-12` |
+| 3717 | [Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | [`C++`](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp) | - | [Notes](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal/notes.md) | 2026-11-17 | `2026-11-17` |
 | 3736 | [Minimum Moves to Equal Array Elements III](./solutions/3736-minimum-moves-to-equal-array-elements-iii) | Easy | [`C++`](./solutions/3736-minimum-moves-to-equal-array-elements-iii/cpp) | - | [Notes](./solutions/3736-minimum-moves-to-equal-array-elements-iii/notes.md) | 2026-11-03 | `2026-11-05` |
 | 3769 | [Minimum Interval Selection to Cover Target Intervals](./solutions/3769-minimum-interval-selection-to-cover-target-intervals) | Medium | [`C++`](./solutions/3769-minimum-interval-selection-to-cover-target-intervals/cpp) | - | [Notes](./solutions/3769-minimum-interval-selection-to-cover-target-intervals/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3789 | [Minimum Cost to Acquire Required Items](./solutions/3789-minimum-cost-to-acquire-required-items) | Medium | [`C++`](./solutions/3789-minimum-cost-to-acquire-required-items/cpp) | - | [Notes](./solutions/3789-minimum-cost-to-acquire-required-items/notes.md) | 2026-11-11 | `2026-11-13` |
@@ -157,7 +158,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-17T03:52:56.148Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:53:03.753Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

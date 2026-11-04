@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "3717",
+  "title": "Minimum Operations to Make Elements Within K Subarrays Equal",
+  "slug": "minimum-operations-to-make-elements-within-k-subarrays-equal",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:53:03.749Z",
+  "lastSyncedAt": "2026-11-17T03:53:03.747Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp/solution.cpp",
+      "submissionId": "2189042182",
+      "contentHash": "3452b57a330fe3629125dc1da64e6a502eaa857e6395057a23ac314c3afddd87",
+      "syncedAt": "2026-11-17T03:53:03.747Z",
+      "runtime": "1318 ms",
+      "memory": "451.6 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
