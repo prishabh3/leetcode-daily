@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "1341",
+  "title": "Movie Rating",
+  "slug": "movie-rating",
+  "url": "https://leetcode.com/problems/movie-rating/",
+  "difficulty": "Medium",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-04T20:07:22.148Z",
+  "lastSyncedAt": "2026-11-04T20:07:21.819Z",
+  "solutions": {
+    "sql/solution": {
+      "language": "sql",
+      "approachName": "solution",
+      "filePath": "solutions/1341-movie-rating/sql/solution.sql",
+      "contentHash": "0498cf06bcdf19442c22374e3a8764f9f4ff09b994cb876986d10fd6a6ae40de",
+      "syncedAt": "2026-11-04T20:07:21.819Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-11-04",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-11-06",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-04T03:30:52.984Z",
-  "totalProblems": 65,
-  "totalSubmissions": 73,
+  "lastUpdated": "2026-11-04T20:07:21.819Z",
+  "totalProblems": 66,
+  "totalSubmissions": 74,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -864,6 +864,17 @@
       "contentHash": "65626a6c2e5d0da76513e5b51f62b51f93ea3d66912f35631f3ce4230f295381",
       "syncedAt": "2026-11-04T03:30:52.984Z",
       "filePath": "solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp/solution.cpp"
+    },
+    "movie-rating-0498cf06bcdf": {
+      "problemId": "1341",
+      "slug": "movie-rating",
+      "title": "Movie Rating",
+      "difficulty": "Medium",
+      "language": "sql",
+      "approachName": "solution",
+      "contentHash": "0498cf06bcdf19442c22374e3a8764f9f4ff09b994cb876986d10fd6a6ae40de",
+      "syncedAt": "2026-11-04T20:07:21.819Z",
+      "filePath": "solutions/1341-movie-rating/sql/solution.sql"
     }
   },
   "problems": {
@@ -909,6 +920,21 @@
       "lastSyncedAt": "2026-10-25T10:42:37.446Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "1341": {
+      "id": "1341",
+      "title": "Movie Rating",
+      "slug": "movie-rating",
+      "difficulty": "Medium",
+      "languages": [
+        "sql"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-04T20:07:21.819Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-06",
       "tags": [],
       "patterns": []
     },
