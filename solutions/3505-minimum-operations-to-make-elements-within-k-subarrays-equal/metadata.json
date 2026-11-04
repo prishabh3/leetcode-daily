@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "3505",
+  "title": "Minimum Operations to Make Elements Within K Subarrays Equal",
+  "slug": "minimum-operations-to-make-elements-within-k-subarrays-equal",
+  "url": "https://leetcode.com/problems/minimum-operations-to-make-elements-within-k-subarrays-equal/?envType=daily-question&envId=2026-11-04",
+  "difficulty": "Medium",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-04T03:30:53.294Z",
+  "lastSyncedAt": "2026-11-04T03:30:52.984Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp/solution.cpp",
+      "contentHash": "65626a6c2e5d0da76513e5b51f62b51f93ea3d66912f35631f3ce4230f295381",
+      "syncedAt": "2026-11-04T03:30:52.984Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-11-04",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-11-06",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}

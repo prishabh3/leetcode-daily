@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **62** (🟢 Easy: **26** • 🟡 Medium: **26** • 🔴 Hard: **10**) • Ranking: `#2443671`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1793676984)](https://leetcode.com/u/risxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1793763052)](https://leetcode.com/u/risxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1793676984)](https://leetcode.com/u/risxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1793763052)](https://leetcode.com/u/risxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-64-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-65-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **64**
-- **Total Accepted Submissions**: **72**
-- **Repository Solutions & Historical Versions**: **72** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **65**
+- **Total Accepted Submissions**: **73**
+- **Repository Solutions & Historical Versions**: **73** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **8** |
-| 🟡 Medium | **55** |
+| 🟡 Medium | **56** |
 | 🔴 Hard | **1** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `58` |
+| C++ | `59` |
 | SQL | `3` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [3505. Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | C++ | [solution.cpp](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp/solution.cpp) |
 | [3736. Minimum Moves to Equal Array Elements III](./solutions/3736-minimum-moves-to-equal-array-elements-iii) | Easy | C++ | [solution.cpp](./solutions/3736-minimum-moves-to-equal-array-elements-iii/cpp/solution.cpp) |
 | [0462. Minimum Moves to Equal Array Elements II](./solutions/0462-minimum-moves-to-equal-array-elements-ii) | Medium | C++ | [solution.cpp](./solutions/0462-minimum-moves-to-equal-array-elements-ii/cpp/solution.cpp) |
 | [0453. Minimum Moves to Equal Array Elements](./solutions/0453-minimum-moves-to-equal-array-elements) | Easy | C++ | [solution.cpp](./solutions/0453-minimum-moves-to-equal-array-elements/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [3970. Shortest Path With At Most K Consecutive Identical Characters](./solutions/3970-shortest-path-with-at-most-k-consecutive-identical-characters) | Medium | C++ | [solution.cpp](./solutions/3970-shortest-path-with-at-most-k-consecutive-identical-characters/cpp/solution.cpp) |
 | [3841. Palindromic Path Queries in a Tree](./solutions/3841-palindromic-path-queries-in-a-tree) | Hard | C++ | [solution.cpp](./solutions/3841-palindromic-path-queries-in-a-tree/cpp/solution.cpp) |
 | [3882. Minimum XOR Path in a Grid](./solutions/3882-minimum-xor-path-in-a-grid) | Medium | C++ | [solution.cpp](./solutions/3882-minimum-xor-path-in-a-grid/cpp/solution.cpp) |
-| [0014. Longest Common Prefix](./solutions/0014-longest-common-prefix) | Easy | C++ | [solution.cpp](./solutions/0014-longest-common-prefix/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (64)</strong></summary>
+<summary><strong>View All Tracked Problems (65)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -113,6 +113,7 @@ _No topic tags recorded yet._
 | 3139 | [Subarrays Distinct Element Sum of Squares II](./solutions/3139-subarrays-distinct-element-sum-of-squares-ii) | Medium | [`C++`](./solutions/3139-subarrays-distinct-element-sum-of-squares-ii/cpp) | - | [Notes](./solutions/3139-subarrays-distinct-element-sum-of-squares-ii/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3153 | [Apply Operations on Array to Maximize Sum of Squares](./solutions/3153-apply-operations-on-array-to-maximize-sum-of-squares) | Medium | [`C++`](./solutions/3153-apply-operations-on-array-to-maximize-sum-of-squares/cpp) | - | [Notes](./solutions/3153-apply-operations-on-array-to-maximize-sum-of-squares/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3163 | [Subarrays Distinct Element Sum of Squares I](./solutions/3163-subarrays-distinct-element-sum-of-squares-i) | Medium | [`C++`](./solutions/3163-subarrays-distinct-element-sum-of-squares-i/cpp) | - | [Notes](./solutions/3163-subarrays-distinct-element-sum-of-squares-i/notes.md) | 2026-10-25 | `2026-10-25` |
+| 3505 | [Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | [`C++`](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp) | - | [Notes](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal/notes.md) | 2026-11-04 | `2026-11-06` |
 | 3619 | [Count Islands With Total Value Divisible by K](./solutions/3619-count-islands-with-total-value-divisible-by-k) | Medium | [`C++`](./solutions/3619-count-islands-with-total-value-divisible-by-k/cpp) | - | [Notes](./solutions/3619-count-islands-with-total-value-divisible-by-k/notes.md) | 2026-10-26 | `2026-10-28` |
 | 3665 | [Twisted Mirror Path Count](./solutions/3665-twisted-mirror-path-count) | Medium | [`C++`](./solutions/3665-twisted-mirror-path-count/cpp) | - | [Notes](./solutions/3665-twisted-mirror-path-count/notes.md) | 2026-10-31 | `2026-11-02` |
 | 3736 | [Minimum Moves to Equal Array Elements III](./solutions/3736-minimum-moves-to-equal-array-elements-iii) | Easy | [`C++`](./solutions/3736-minimum-moves-to-equal-array-elements-iii/cpp) | - | [Notes](./solutions/3736-minimum-moves-to-equal-array-elements-iii/notes.md) | 2026-11-03 | `2026-11-05` |
@@ -140,7 +141,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-03T03:36:24.317Z`_
+_Last synchronized via LC-Sync: `2026-11-04T03:30:52.984Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout
