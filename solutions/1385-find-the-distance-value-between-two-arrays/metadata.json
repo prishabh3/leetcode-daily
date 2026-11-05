@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "1385",
+  "title": "Find the Distance Value Between Two Arrays",
+  "slug": "find-the-distance-value-between-two-arrays",
+  "url": "https://leetcode.com/problems/find-the-distance-value-between-two-arrays/?envType=daily-question&envId=2026-11-05",
+  "difficulty": "Easy",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-05T03:19:09.785Z",
+  "lastSyncedAt": "2026-11-05T03:19:09.485Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/1385-find-the-distance-value-between-two-arrays/cpp/solution.cpp",
+      "contentHash": "2eb54e3a55e5c54ccc3899088c2a9e1b36ca4abf6db2ded6de76ac8f8bb4b629",
+      "syncedAt": "2026-11-05T03:19:09.485Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-11-05",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-11-07",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}
