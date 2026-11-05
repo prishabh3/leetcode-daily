@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887584)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887592)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887584)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887592)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-82-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-83-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **82**
-- **Total Accepted Submissions**: **93**
-- **Repository Solutions & Historical Versions**: **93** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **83**
+- **Total Accepted Submissions**: **94**
+- **Repository Solutions & Historical Versions**: **94** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **70** |
+| 🟡 Medium | **71** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `75` |
+| C++ | `76` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [1486. Find the Distance Value Between Two Arrays](./solutions/1486-find-the-distance-value-between-two-arrays) | Medium | C++ | [solution.cpp](./solutions/1486-find-the-distance-value-between-two-arrays/cpp/solution.cpp) |
 | [3717. Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | C++ | [solution.cpp](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp/solution.cpp) |
 | [4116. Minimum Moves to Equal Array Elements III](./solutions/4116-minimum-moves-to-equal-array-elements-iii) | Medium | C++ | [solution.cpp](./solutions/4116-minimum-moves-to-equal-array-elements-iii/cpp/solution.cpp) |
 | [0462. Minimum Moves to Equal Array Elements II](./solutions/0462-minimum-moves-to-equal-array-elements-ii) | Medium | C++ | [solution.cpp](./solutions/0462-minimum-moves-to-equal-array-elements-ii/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [3938. Twisted Mirror Path Count](./solutions/3938-twisted-mirror-path-count) | Medium | C++ | [solution.cpp](./solutions/3938-twisted-mirror-path-count/cpp/solution.cpp) |
 | [4104. Shortest Path With At Most K Consecutive Identical Characters](./solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters) | Medium | C++ | [solution.cpp](./solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters/cpp/solution.cpp) |
 | [4209. Palindromic Path Queries in a Tree](./solutions/4209-palindromic-path-queries-in-a-tree) | Medium | C++ | [solution.cpp](./solutions/4209-palindromic-path-queries-in-a-tree/cpp/solution.cpp) |
-| [4205. Minimum XOR Path in a Grid](./solutions/4205-minimum-xor-path-in-a-grid) | Medium | C++ | [solution.cpp](./solutions/4205-minimum-xor-path-in-a-grid/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (82)</strong></summary>
+<summary><strong>View All Tracked Problems (83)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -103,6 +103,7 @@ _No topic tags recorded yet._
 | 1380 | [Number of Closed Islands](./solutions/1380-number-of-closed-islands) | Medium | [`C++`](./solutions/1380-number-of-closed-islands/cpp) | - | [Notes](./solutions/1380-number-of-closed-islands/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1385 | [Find the Distance Value Between Two Arrays](./solutions/1385-find-the-distance-value-between-two-arrays) | Easy | [`C++`](./solutions/1385-find-the-distance-value-between-two-arrays/cpp) | - | [Notes](./solutions/1385-find-the-distance-value-between-two-arrays/notes.md) | 2026-11-05 | `2026-11-07` |
 | 1407 | [Top Travellers](./solutions/1407-top-travellers) | Easy | [`C++`](./solutions/1407-top-travellers/cpp) | - | [Notes](./solutions/1407-top-travellers/notes.md) | 2026-10-25 | `2026-10-27` |
+| 1486 | [Find the Distance Value Between Two Arrays](./solutions/1486-find-the-distance-value-between-two-arrays) | Medium | [`C++`](./solutions/1486-find-the-distance-value-between-two-arrays/cpp) | - | [Notes](./solutions/1486-find-the-distance-value-between-two-arrays/notes.md) | 2026-11-17 | `2026-11-17` |
 | 1606 | [Find Servers That Handled Most Number of Requests](./solutions/1606-find-servers-that-handled-most-number-of-requests) | Hard | [`C++`](./solutions/1606-find-servers-that-handled-most-number-of-requests/cpp) | - | [Notes](./solutions/1606-find-servers-that-handled-most-number-of-requests/notes.md) | 2026-11-09 | `2026-11-11` |
 | 1612 | [Avoid Flood in The City](./solutions/1612-avoid-flood-in-the-city) | Medium | [`Python 3`](./solutions/1612-avoid-flood-in-the-city/python3) | - | [Notes](./solutions/1612-avoid-flood-in-the-city/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1648 | [Minimum Insertions to Balance a Parentheses String](./solutions/1648-minimum-insertions-to-balance-a-parentheses-string) | Medium | [`C++`](./solutions/1648-minimum-insertions-to-balance-a-parentheses-string/cpp) | - | [Notes](./solutions/1648-minimum-insertions-to-balance-a-parentheses-string/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -158,7 +159,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-17T03:53:03.753Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:53:11.839Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

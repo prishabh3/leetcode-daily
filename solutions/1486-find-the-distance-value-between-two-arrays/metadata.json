@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "1486",
+  "title": "Find the Distance Value Between Two Arrays",
+  "slug": "find-the-distance-value-between-two-arrays",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:53:11.836Z",
+  "lastSyncedAt": "2026-11-17T03:53:11.834Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/1486-find-the-distance-value-between-two-arrays/cpp/solution.cpp",
+      "submissionId": "2189760779",
+      "contentHash": "2decf6544d2ad4145a53a0a11b23fd9eda3262aa16670a6472584a7337884599",
+      "syncedAt": "2026-11-17T03:53:11.834Z",
+      "runtime": "0 ms",
+      "memory": "16.6 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
