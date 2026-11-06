@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **62** (🟢 Easy: **26** • 🟡 Medium: **26** • 🔴 Hard: **10**) • Ranking: `#2443671`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1793848749)](https://leetcode.com/u/risxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1793937886)](https://leetcode.com/u/risxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1793848749)](https://leetcode.com/u/risxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1793937886)](https://leetcode.com/u/risxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-67-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-68-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **67**
-- **Total Accepted Submissions**: **75**
-- **Repository Solutions & Historical Versions**: **75** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **68**
+- **Total Accepted Submissions**: **76**
+- **Repository Solutions & Historical Versions**: **76** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **9** |
-| 🟡 Medium | **57** |
+| 🟡 Medium | **58** |
 | 🔴 Hard | **1** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `60` |
+| C++ | `61` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [2747. Count Zero Request Servers](./solutions/2747-count-zero-request-servers) | Medium | C++ | [solution.cpp](./solutions/2747-count-zero-request-servers/cpp/solution.cpp) |
 | [1385. Find the Distance Value Between Two Arrays](./solutions/1385-find-the-distance-value-between-two-arrays) | Easy | C++ | [solution.cpp](./solutions/1385-find-the-distance-value-between-two-arrays/cpp/solution.cpp) |
 | [1341. Movie Rating](./solutions/1341-movie-rating) | Medium | SQL | [solution.sql](./solutions/1341-movie-rating/sql/solution.sql) |
 | [3505. Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | C++ | [solution.cpp](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [0462. Minimum Moves to Equal Array Elements II](./solutions/0462-minimum-moves-to-equal-array-elements-ii) | Medium | C++ | [solution.cpp](./solutions/0462-minimum-moves-to-equal-array-elements-ii/cpp/solution.cpp) |
 | [0453. Minimum Moves to Equal Array Elements](./solutions/0453-minimum-moves-to-equal-array-elements) | Easy | C++ | [solution.cpp](./solutions/0453-minimum-moves-to-equal-array-elements/cpp/solution.cpp) |
 | [3665. Twisted Mirror Path Count](./solutions/3665-twisted-mirror-path-count) | Medium | C++ | [solution.cpp](./solutions/3665-twisted-mirror-path-count/cpp/solution.cpp) |
-| [3970. Shortest Path With At Most K Consecutive Identical Characters](./solutions/3970-shortest-path-with-at-most-k-consecutive-identical-characters) | Medium | C++ | [solution.cpp](./solutions/3970-shortest-path-with-at-most-k-consecutive-identical-characters/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (67)</strong></summary>
+<summary><strong>View All Tracked Problems (68)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -111,6 +111,7 @@ _No topic tags recorded yet._
 | 2392 | [Successful Pairs of Spells and Potions](./solutions/2392-successful-pairs-of-spells-and-potions) | Medium | [`Python 3`](./solutions/2392-successful-pairs-of-spells-and-potions/python3) | - | [Notes](./solutions/2392-successful-pairs-of-spells-and-potions/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2418 | [Minimum Sum of Squared Difference](./solutions/2418-minimum-sum-of-squared-difference) | Medium | [`C++`](./solutions/2418-minimum-sum-of-squared-difference/cpp) | - | [Notes](./solutions/2418-minimum-sum-of-squared-difference/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2496 | [Count Days Spent Together](./solutions/2496-count-days-spent-together) | Medium | [`C++`](./solutions/2496-count-days-spent-together/cpp) | - | [Notes](./solutions/2496-count-days-spent-together/notes.md) | 2026-10-25 | `2026-10-25` |
+| 2747 | [Count Zero Request Servers](./solutions/2747-count-zero-request-servers) | Medium | [`C++`](./solutions/2747-count-zero-request-servers/cpp) | - | [Notes](./solutions/2747-count-zero-request-servers/notes.md) | 2026-11-06 | `2026-11-08` |
 | 2844 | [Sum of Squares of Special Elements ](./solutions/2844-sum-of-squares-of-special-elements) | Medium | [`C++`](./solutions/2844-sum-of-squares-of-special-elements/cpp) | - | [Notes](./solutions/2844-sum-of-squares-of-special-elements/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3139 | [Subarrays Distinct Element Sum of Squares II](./solutions/3139-subarrays-distinct-element-sum-of-squares-ii) | Medium | [`C++`](./solutions/3139-subarrays-distinct-element-sum-of-squares-ii/cpp) | - | [Notes](./solutions/3139-subarrays-distinct-element-sum-of-squares-ii/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3153 | [Apply Operations on Array to Maximize Sum of Squares](./solutions/3153-apply-operations-on-array-to-maximize-sum-of-squares) | Medium | [`C++`](./solutions/3153-apply-operations-on-array-to-maximize-sum-of-squares/cpp) | - | [Notes](./solutions/3153-apply-operations-on-array-to-maximize-sum-of-squares/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -143,7 +144,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-05T03:19:09.485Z`_
+_Last synchronized via LC-Sync: `2026-11-06T04:04:46.222Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

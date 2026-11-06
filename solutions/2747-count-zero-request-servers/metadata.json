@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "2747",
+  "title": "Count Zero Request Servers",
+  "slug": "count-zero-request-servers",
+  "url": "https://leetcode.com/problems/count-zero-request-servers/?envType=daily-question&envId=2026-11-06",
+  "difficulty": "Medium",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-06T04:04:46.517Z",
+  "lastSyncedAt": "2026-11-06T04:04:46.222Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/2747-count-zero-request-servers/cpp/solution.cpp",
+      "contentHash": "2bd6330d1d1ebdc718d0f0e68ce0dcb6d64c6328d3a2685d3f0f3f02131473f7",
+      "syncedAt": "2026-11-06T04:04:46.222Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-11-06",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-11-08",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}
