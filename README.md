@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887592)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887599)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887592)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887599)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-83-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-84-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **83**
-- **Total Accepted Submissions**: **94**
-- **Repository Solutions & Historical Versions**: **94** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **84**
+- **Total Accepted Submissions**: **95**
+- **Repository Solutions & Historical Versions**: **95** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **71** |
+| 🟡 Medium | **72** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `76` |
+| C++ | `77` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [2833. Count Zero Request Servers](./solutions/2833-count-zero-request-servers) | Medium | C++ | [solution.cpp](./solutions/2833-count-zero-request-servers/cpp/solution.cpp) |
 | [1486. Find the Distance Value Between Two Arrays](./solutions/1486-find-the-distance-value-between-two-arrays) | Medium | C++ | [solution.cpp](./solutions/1486-find-the-distance-value-between-two-arrays/cpp/solution.cpp) |
 | [3717. Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | C++ | [solution.cpp](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp/solution.cpp) |
 | [4116. Minimum Moves to Equal Array Elements III](./solutions/4116-minimum-moves-to-equal-array-elements-iii) | Medium | C++ | [solution.cpp](./solutions/4116-minimum-moves-to-equal-array-elements-iii/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [0453. Minimum Moves to Equal Array Elements](./solutions/0453-minimum-moves-to-equal-array-elements) | Easy | C++ | [solution.cpp](./solutions/0453-minimum-moves-to-equal-array-elements/cpp/solution.cpp) |
 | [3938. Twisted Mirror Path Count](./solutions/3938-twisted-mirror-path-count) | Medium | C++ | [solution.cpp](./solutions/3938-twisted-mirror-path-count/cpp/solution.cpp) |
 | [4104. Shortest Path With At Most K Consecutive Identical Characters](./solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters) | Medium | C++ | [solution.cpp](./solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters/cpp/solution.cpp) |
-| [4209. Palindromic Path Queries in a Tree](./solutions/4209-palindromic-path-queries-in-a-tree) | Medium | C++ | [solution.cpp](./solutions/4209-palindromic-path-queries-in-a-tree/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (83)</strong></summary>
+<summary><strong>View All Tracked Problems (84)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -116,6 +116,7 @@ _No topic tags recorded yet._
 | 2418 | [Minimum Sum of Squared Difference](./solutions/2418-minimum-sum-of-squared-difference) | Medium | [`C++`](./solutions/2418-minimum-sum-of-squared-difference/cpp) | - | [Notes](./solutions/2418-minimum-sum-of-squared-difference/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2496 | [Count Days Spent Together](./solutions/2496-count-days-spent-together) | Medium | [`C++`](./solutions/2496-count-days-spent-together/cpp) | - | [Notes](./solutions/2496-count-days-spent-together/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2747 | [Count Zero Request Servers](./solutions/2747-count-zero-request-servers) | Medium | [`C++`](./solutions/2747-count-zero-request-servers/cpp) | - | [Notes](./solutions/2747-count-zero-request-servers/notes.md) | 2026-11-06 | `2026-11-08` |
+| 2833 | [Count Zero Request Servers](./solutions/2833-count-zero-request-servers) | Medium | [`C++`](./solutions/2833-count-zero-request-servers/cpp) | - | [Notes](./solutions/2833-count-zero-request-servers/notes.md) | 2026-11-17 | `2026-11-17` |
 | 2844 | [Sum of Squares of Special Elements ](./solutions/2844-sum-of-squares-of-special-elements) | Medium | [`C++`](./solutions/2844-sum-of-squares-of-special-elements/cpp) | - | [Notes](./solutions/2844-sum-of-squares-of-special-elements/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3105 | [Longest Strictly Increasing or Strictly Decreasing Subarray](./solutions/3105-longest-strictly-increasing-or-strictly-decreasing-subarray) | Easy | [`C++`](./solutions/3105-longest-strictly-increasing-or-strictly-decreasing-subarray/cpp) | - | [Notes](./solutions/3105-longest-strictly-increasing-or-strictly-decreasing-subarray/notes.md) | 2026-11-12 | `2026-11-14` |
 | 3139 | [Subarrays Distinct Element Sum of Squares II](./solutions/3139-subarrays-distinct-element-sum-of-squares-ii) | Medium | [`C++`](./solutions/3139-subarrays-distinct-element-sum-of-squares-ii/cpp) | - | [Notes](./solutions/3139-subarrays-distinct-element-sum-of-squares-ii/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -159,7 +160,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-17T03:53:11.839Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:53:19.012Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

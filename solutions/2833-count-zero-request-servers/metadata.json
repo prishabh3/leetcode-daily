@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "2833",
+  "title": "Count Zero Request Servers",
+  "slug": "count-zero-request-servers",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:53:19.007Z",
+  "lastSyncedAt": "2026-11-17T03:53:19.004Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/2833-count-zero-request-servers/cpp/solution.cpp",
+      "submissionId": "2190462174",
+      "contentHash": "d55cde0f89b7a24f6e784f41c53f5edd46124db94bbd3d12d7ba92ba09efe146",
+      "syncedAt": "2026-11-17T03:53:19.004Z",
+      "runtime": "42 ms",
+      "memory": "199 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

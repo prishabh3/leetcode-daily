@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-17T03:53:11.839Z",
-  "totalProblems": 83,
-  "totalSubmissions": 94,
+  "lastUpdated": "2026-11-17T03:53:19.012Z",
+  "totalProblems": 84,
+  "totalSubmissions": 95,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -844,6 +844,18 @@
       "syncedAt": "2026-11-17T03:53:11.834Z",
       "filePath": "solutions/1486-find-the-distance-value-between-two-arrays/cpp/solution.cpp"
     },
+    "2190462174": {
+      "problemId": "2833",
+      "slug": "count-zero-request-servers",
+      "title": "Count Zero Request Servers",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2190462174",
+      "contentHash": "d55cde0f89b7a24f6e784f41c53f5edd46124db94bbd3d12d7ba92ba09efe146",
+      "syncedAt": "2026-11-17T03:53:19.004Z",
+      "filePath": "solutions/2833-count-zero-request-servers/cpp/solution.cpp"
+    },
     "rank-scores-a592f06bef0a": {
       "problemId": "0178",
       "slug": "rank-scores",
@@ -1422,6 +1434,21 @@
       "lastSyncedAt": "2026-11-06T04:04:46.222Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-11-08",
+      "tags": [],
+      "patterns": []
+    },
+    "2833": {
+      "id": "2833",
+      "title": "Count Zero Request Servers",
+      "slug": "count-zero-request-servers",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-17T03:53:19.004Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-17",
       "tags": [],
       "patterns": []
     },
