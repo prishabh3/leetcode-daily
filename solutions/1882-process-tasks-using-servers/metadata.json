@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "1882",
+  "title": "Process Tasks Using Servers",
+  "slug": "process-tasks-using-servers",
+  "url": "https://leetcode.com/problems/process-tasks-using-servers/?envType=daily-question&envId=2026-11-07",
+  "difficulty": "Medium",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-07T04:43:52.541Z",
+  "lastSyncedAt": "2026-11-07T04:43:52.146Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/1882-process-tasks-using-servers/cpp/solution.cpp",
+      "contentHash": "69b52abe1146865cdce1f14afd3374ae426cff144d0e2d9f6fa90e4b7cb6ecf7",
+      "syncedAt": "2026-11-07T04:43:52.146Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-11-07",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-11-09",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}
