@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "2012",
+  "title": "Process Tasks Using Servers",
+  "slug": "process-tasks-using-servers",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:53:26.481Z",
+  "lastSyncedAt": "2026-11-17T03:53:26.479Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/2012-process-tasks-using-servers/cpp/solution.cpp",
+      "submissionId": "2191065455",
+      "contentHash": "b0739684070f2147cb1a9939fe9e5761455a63c5a14ec84ade761591df08900e",
+      "syncedAt": "2026-11-17T03:53:26.479Z",
+      "runtime": "165 ms",
+      "memory": "141.7 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

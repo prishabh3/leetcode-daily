@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887599)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887607)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887599)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887607)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-84-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-85-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **84**
-- **Total Accepted Submissions**: **95**
-- **Repository Solutions & Historical Versions**: **95** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **85**
+- **Total Accepted Submissions**: **96**
+- **Repository Solutions & Historical Versions**: **96** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **72** |
+| 🟡 Medium | **73** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `77` |
+| C++ | `78` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [2012. Process Tasks Using Servers](./solutions/2012-process-tasks-using-servers) | Medium | C++ | [solution.cpp](./solutions/2012-process-tasks-using-servers/cpp/solution.cpp) |
 | [2833. Count Zero Request Servers](./solutions/2833-count-zero-request-servers) | Medium | C++ | [solution.cpp](./solutions/2833-count-zero-request-servers/cpp/solution.cpp) |
 | [1486. Find the Distance Value Between Two Arrays](./solutions/1486-find-the-distance-value-between-two-arrays) | Medium | C++ | [solution.cpp](./solutions/1486-find-the-distance-value-between-two-arrays/cpp/solution.cpp) |
 | [3717. Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | C++ | [solution.cpp](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [0462. Minimum Moves to Equal Array Elements II](./solutions/0462-minimum-moves-to-equal-array-elements-ii) | Medium | C++ | [solution.cpp](./solutions/0462-minimum-moves-to-equal-array-elements-ii/cpp/solution.cpp) |
 | [0453. Minimum Moves to Equal Array Elements](./solutions/0453-minimum-moves-to-equal-array-elements) | Easy | C++ | [solution.cpp](./solutions/0453-minimum-moves-to-equal-array-elements/cpp/solution.cpp) |
 | [3938. Twisted Mirror Path Count](./solutions/3938-twisted-mirror-path-count) | Medium | C++ | [solution.cpp](./solutions/3938-twisted-mirror-path-count/cpp/solution.cpp) |
-| [4104. Shortest Path With At Most K Consecutive Identical Characters](./solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters) | Medium | C++ | [solution.cpp](./solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (84)</strong></summary>
+<summary><strong>View All Tracked Problems (85)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -111,6 +111,7 @@ _No topic tags recorded yet._
 | 1737 | [Maximum Nesting Depth of the Parentheses](./solutions/1737-maximum-nesting-depth-of-the-parentheses) | Medium | [`C++`](./solutions/1737-maximum-nesting-depth-of-the-parentheses/cpp) | - | [Notes](./solutions/1737-maximum-nesting-depth-of-the-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1791 | [Richest Customer Wealth](./solutions/1791-richest-customer-wealth) | Medium | [`C++`](./solutions/1791-richest-customer-wealth/cpp) | - | [Notes](./solutions/1791-richest-customer-wealth/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1882 | [Process Tasks Using Servers](./solutions/1882-process-tasks-using-servers) | Medium | [`C++`](./solutions/1882-process-tasks-using-servers/cpp) | - | [Notes](./solutions/1882-process-tasks-using-servers/notes.md) | 2026-11-07 | `2026-11-09` |
+| 2012 | [Process Tasks Using Servers](./solutions/2012-process-tasks-using-servers) | Medium | [`C++`](./solutions/2012-process-tasks-using-servers/cpp) | - | [Notes](./solutions/2012-process-tasks-using-servers/notes.md) | 2026-11-17 | `2026-11-17` |
 | 2210 | [Find Target Indices After Sorting Array](./solutions/2210-find-target-indices-after-sorting-array) | Medium | [`C++`](./solutions/2210-find-target-indices-after-sorting-array/cpp) | - | [Notes](./solutions/2210-find-target-indices-after-sorting-array/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2392 | [Successful Pairs of Spells and Potions](./solutions/2392-successful-pairs-of-spells-and-potions) | Medium | [`Python 3`](./solutions/2392-successful-pairs-of-spells-and-potions/python3) | - | [Notes](./solutions/2392-successful-pairs-of-spells-and-potions/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2418 | [Minimum Sum of Squared Difference](./solutions/2418-minimum-sum-of-squared-difference) | Medium | [`C++`](./solutions/2418-minimum-sum-of-squared-difference/cpp) | - | [Notes](./solutions/2418-minimum-sum-of-squared-difference/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -160,7 +161,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-17T03:53:19.012Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:53:26.486Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout
