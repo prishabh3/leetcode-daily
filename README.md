@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **62** (🟢 Easy: **26** • 🟡 Medium: **26** • 🔴 Hard: **10**) • Ranking: `#2443671`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1794026632)](https://leetcode.com/u/risxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1794112973)](https://leetcode.com/u/risxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1794026632)](https://leetcode.com/u/risxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1794112973)](https://leetcode.com/u/risxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-69-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-70-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **69**
-- **Total Accepted Submissions**: **77**
-- **Repository Solutions & Historical Versions**: **77** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **70**
+- **Total Accepted Submissions**: **78**
+- **Repository Solutions & Historical Versions**: **78** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **9** |
-| 🟡 Medium | **59** |
+| 🟡 Medium | **60** |
 | 🔴 Hard | **1** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `62` |
+| C++ | `63` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [1267. Count Servers that Communicate](./solutions/1267-count-servers-that-communicate) | Medium | C++ | [solution.cpp](./solutions/1267-count-servers-that-communicate/cpp/solution.cpp) |
 | [1882. Process Tasks Using Servers](./solutions/1882-process-tasks-using-servers) | Medium | C++ | [solution.cpp](./solutions/1882-process-tasks-using-servers/cpp/solution.cpp) |
 | [2747. Count Zero Request Servers](./solutions/2747-count-zero-request-servers) | Medium | C++ | [solution.cpp](./solutions/2747-count-zero-request-servers/cpp/solution.cpp) |
 | [1385. Find the Distance Value Between Two Arrays](./solutions/1385-find-the-distance-value-between-two-arrays) | Easy | C++ | [solution.cpp](./solutions/1385-find-the-distance-value-between-two-arrays/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [3505. Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | C++ | [solution.cpp](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp/solution.cpp) |
 | [3736. Minimum Moves to Equal Array Elements III](./solutions/3736-minimum-moves-to-equal-array-elements-iii) | Easy | C++ | [solution.cpp](./solutions/3736-minimum-moves-to-equal-array-elements-iii/cpp/solution.cpp) |
 | [0462. Minimum Moves to Equal Array Elements II](./solutions/0462-minimum-moves-to-equal-array-elements-ii) | Medium | C++ | [solution.cpp](./solutions/0462-minimum-moves-to-equal-array-elements-ii/cpp/solution.cpp) |
-| [0453. Minimum Moves to Equal Array Elements](./solutions/0453-minimum-moves-to-equal-array-elements) | Easy | C++ | [solution.cpp](./solutions/0453-minimum-moves-to-equal-array-elements/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (69)</strong></summary>
+<summary><strong>View All Tracked Problems (70)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -98,6 +98,7 @@ _No topic tags recorded yet._
 | 1046 | [Max Consecutive Ones III](./solutions/1046-max-consecutive-ones-iii) | Medium | [`C++`](./solutions/1046-max-consecutive-ones-iii/cpp) | - | [Notes](./solutions/1046-max-consecutive-ones-iii/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1078 | [Remove Outermost Parentheses](./solutions/1078-remove-outermost-parentheses) | Medium | [`C++`](./solutions/1078-remove-outermost-parentheses/cpp) | - | [Notes](./solutions/1078-remove-outermost-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1208 | [Maximum Nesting Depth of Two Valid Parentheses Strings](./solutions/1208-maximum-nesting-depth-of-two-valid-parentheses-strings) | Medium | [`C++`](./solutions/1208-maximum-nesting-depth-of-two-valid-parentheses-strings/cpp) | - | [Notes](./solutions/1208-maximum-nesting-depth-of-two-valid-parentheses-strings/notes.md) | 2026-10-25 | `2026-10-25` |
+| 1267 | [Count Servers that Communicate](./solutions/1267-count-servers-that-communicate) | Medium | [`C++`](./solutions/1267-count-servers-that-communicate/cpp) | - | [Notes](./solutions/1267-count-servers-that-communicate/notes.md) | 2026-11-08 | `2026-11-10` |
 | 1341 | [Movie Rating](./solutions/1341-movie-rating) | Medium | [`SQL`](./solutions/1341-movie-rating/sql) | - | [Notes](./solutions/1341-movie-rating/notes.md) | 2026-11-04 | `2026-11-06` |
 | 1380 | [Number of Closed Islands](./solutions/1380-number-of-closed-islands) | Medium | [`C++`](./solutions/1380-number-of-closed-islands/cpp) | - | [Notes](./solutions/1380-number-of-closed-islands/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1385 | [Find the Distance Value Between Two Arrays](./solutions/1385-find-the-distance-value-between-two-arrays) | Easy | [`C++`](./solutions/1385-find-the-distance-value-between-two-arrays/cpp) | - | [Notes](./solutions/1385-find-the-distance-value-between-two-arrays/notes.md) | 2026-11-05 | `2026-11-07` |
@@ -145,7 +146,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-07T04:43:52.146Z`_
+_Last synchronized via LC-Sync: `2026-11-08T04:42:53.494Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "1267",
+  "title": "Count Servers that Communicate",
+  "slug": "count-servers-that-communicate",
+  "url": "https://leetcode.com/problems/count-servers-that-communicate/?envType=daily-question&envId=2026-11-08",
+  "difficulty": "Medium",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-08T04:42:53.795Z",
+  "lastSyncedAt": "2026-11-08T04:42:53.494Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/1267-count-servers-that-communicate/cpp/solution.cpp",
+      "contentHash": "3207d90391f0ef251aab1c733facc0f49dd8426d71a04d379a8130da8d92f2df",
+      "syncedAt": "2026-11-08T04:42:53.494Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-11-08",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-11-10",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}

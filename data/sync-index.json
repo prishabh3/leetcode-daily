@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-07T04:43:52.146Z",
-  "totalProblems": 69,
-  "totalSubmissions": 77,
+  "lastUpdated": "2026-11-08T04:42:53.494Z",
+  "totalProblems": 70,
+  "totalSubmissions": 78,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -908,6 +908,17 @@
       "contentHash": "69b52abe1146865cdce1f14afd3374ae426cff144d0e2d9f6fa90e4b7cb6ecf7",
       "syncedAt": "2026-11-07T04:43:52.146Z",
       "filePath": "solutions/1882-process-tasks-using-servers/cpp/solution.cpp"
+    },
+    "count-servers-that-communicate-3207d90391f0": {
+      "problemId": "1267",
+      "slug": "count-servers-that-communicate",
+      "title": "Count Servers that Communicate",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "contentHash": "3207d90391f0ef251aab1c733facc0f49dd8426d71a04d379a8130da8d92f2df",
+      "syncedAt": "2026-11-08T04:42:53.494Z",
+      "filePath": "solutions/1267-count-servers-that-communicate/cpp/solution.cpp"
     }
   },
   "problems": {
@@ -953,6 +964,21 @@
       "lastSyncedAt": "2026-10-25T10:42:37.446Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "1267": {
+      "id": "1267",
+      "title": "Count Servers that Communicate",
+      "slug": "count-servers-that-communicate",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-08T04:42:53.494Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-10",
       "tags": [],
       "patterns": []
     },
