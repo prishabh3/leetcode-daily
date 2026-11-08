@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "1396",
+  "title": "Count Servers that Communicate",
+  "slug": "count-servers-that-communicate",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:53:34.573Z",
+  "lastSyncedAt": "2026-11-17T03:53:34.571Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/1396-count-servers-that-communicate/cpp/solution.cpp",
+      "submissionId": "2191732041",
+      "contentHash": "f9fca8334c99199114b0b13ff26bbf9698cedaa29a256bec3ecf4ce6d9966724",
+      "syncedAt": "2026-11-17T03:53:34.571Z",
+      "runtime": "1 ms",
+      "memory": "26.6 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

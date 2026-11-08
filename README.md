@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887607)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887614)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887607)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887614)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-85-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-86-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **85**
-- **Total Accepted Submissions**: **96**
-- **Repository Solutions & Historical Versions**: **96** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **86**
+- **Total Accepted Submissions**: **97**
+- **Repository Solutions & Historical Versions**: **97** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **73** |
+| 🟡 Medium | **74** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `78` |
+| C++ | `79` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [1396. Count Servers that Communicate](./solutions/1396-count-servers-that-communicate) | Medium | C++ | [solution.cpp](./solutions/1396-count-servers-that-communicate/cpp/solution.cpp) |
 | [2012. Process Tasks Using Servers](./solutions/2012-process-tasks-using-servers) | Medium | C++ | [solution.cpp](./solutions/2012-process-tasks-using-servers/cpp/solution.cpp) |
 | [2833. Count Zero Request Servers](./solutions/2833-count-zero-request-servers) | Medium | C++ | [solution.cpp](./solutions/2833-count-zero-request-servers/cpp/solution.cpp) |
 | [1486. Find the Distance Value Between Two Arrays](./solutions/1486-find-the-distance-value-between-two-arrays) | Medium | C++ | [solution.cpp](./solutions/1486-find-the-distance-value-between-two-arrays/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [4116. Minimum Moves to Equal Array Elements III](./solutions/4116-minimum-moves-to-equal-array-elements-iii) | Medium | C++ | [solution.cpp](./solutions/4116-minimum-moves-to-equal-array-elements-iii/cpp/solution.cpp) |
 | [0462. Minimum Moves to Equal Array Elements II](./solutions/0462-minimum-moves-to-equal-array-elements-ii) | Medium | C++ | [solution.cpp](./solutions/0462-minimum-moves-to-equal-array-elements-ii/cpp/solution.cpp) |
 | [0453. Minimum Moves to Equal Array Elements](./solutions/0453-minimum-moves-to-equal-array-elements) | Easy | C++ | [solution.cpp](./solutions/0453-minimum-moves-to-equal-array-elements/cpp/solution.cpp) |
-| [3938. Twisted Mirror Path Count](./solutions/3938-twisted-mirror-path-count) | Medium | C++ | [solution.cpp](./solutions/3938-twisted-mirror-path-count/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (85)</strong></summary>
+<summary><strong>View All Tracked Problems (86)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -102,6 +102,7 @@ _No topic tags recorded yet._
 | 1341 | [Movie Rating](./solutions/1341-movie-rating) | Medium | [`SQL`](./solutions/1341-movie-rating/sql) | - | [Notes](./solutions/1341-movie-rating/notes.md) | 2026-11-04 | `2026-11-06` |
 | 1380 | [Number of Closed Islands](./solutions/1380-number-of-closed-islands) | Medium | [`C++`](./solutions/1380-number-of-closed-islands/cpp) | - | [Notes](./solutions/1380-number-of-closed-islands/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1385 | [Find the Distance Value Between Two Arrays](./solutions/1385-find-the-distance-value-between-two-arrays) | Easy | [`C++`](./solutions/1385-find-the-distance-value-between-two-arrays/cpp) | - | [Notes](./solutions/1385-find-the-distance-value-between-two-arrays/notes.md) | 2026-11-05 | `2026-11-07` |
+| 1396 | [Count Servers that Communicate](./solutions/1396-count-servers-that-communicate) | Medium | [`C++`](./solutions/1396-count-servers-that-communicate/cpp) | - | [Notes](./solutions/1396-count-servers-that-communicate/notes.md) | 2026-11-17 | `2026-11-17` |
 | 1407 | [Top Travellers](./solutions/1407-top-travellers) | Easy | [`C++`](./solutions/1407-top-travellers/cpp) | - | [Notes](./solutions/1407-top-travellers/notes.md) | 2026-10-25 | `2026-10-27` |
 | 1486 | [Find the Distance Value Between Two Arrays](./solutions/1486-find-the-distance-value-between-two-arrays) | Medium | [`C++`](./solutions/1486-find-the-distance-value-between-two-arrays/cpp) | - | [Notes](./solutions/1486-find-the-distance-value-between-two-arrays/notes.md) | 2026-11-17 | `2026-11-17` |
 | 1606 | [Find Servers That Handled Most Number of Requests](./solutions/1606-find-servers-that-handled-most-number-of-requests) | Hard | [`C++`](./solutions/1606-find-servers-that-handled-most-number-of-requests/cpp) | - | [Notes](./solutions/1606-find-servers-that-handled-most-number-of-requests/notes.md) | 2026-11-09 | `2026-11-11` |
@@ -161,7 +162,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-17T03:53:26.486Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:53:34.578Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout
