@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-17T03:53:34.578Z",
-  "totalProblems": 86,
-  "totalSubmissions": 97,
+  "lastUpdated": "2026-11-17T03:53:42.420Z",
+  "totalProblems": 87,
+  "totalSubmissions": 98,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -880,6 +880,18 @@
       "syncedAt": "2026-11-17T03:53:34.571Z",
       "filePath": "solutions/1396-count-servers-that-communicate/cpp/solution.cpp"
     },
+    "2192228510": {
+      "problemId": "1710",
+      "slug": "find-servers-that-handled-most-number-of-requests",
+      "title": "Find Servers That Handled Most Number of Requests",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2192228510",
+      "contentHash": "6e4dbcf7eb3dd7b911e803c180e005e652c03dd48b1fc2119114d689cfc2a318",
+      "syncedAt": "2026-11-17T03:53:42.413Z",
+      "filePath": "solutions/1710-find-servers-that-handled-most-number-of-requests/cpp/solution.cpp"
+    },
     "rank-scores-a592f06bef0a": {
       "problemId": "0178",
       "slug": "rank-scores",
@@ -1353,6 +1365,21 @@
       "lastSyncedAt": "2026-10-25T10:44:56.352Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "1710": {
+      "id": "1710",
+      "title": "Find Servers That Handled Most Number of Requests",
+      "slug": "find-servers-that-handled-most-number-of-requests",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-17T03:53:42.413Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-17",
       "tags": [],
       "patterns": []
     },

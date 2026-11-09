@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "1710",
+  "title": "Find Servers That Handled Most Number of Requests",
+  "slug": "find-servers-that-handled-most-number-of-requests",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:53:42.415Z",
+  "lastSyncedAt": "2026-11-17T03:53:42.413Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/1710-find-servers-that-handled-most-number-of-requests/cpp/solution.cpp",
+      "submissionId": "2192228510",
+      "contentHash": "6e4dbcf7eb3dd7b911e803c180e005e652c03dd48b1fc2119114d689cfc2a318",
+      "syncedAt": "2026-11-17T03:53:42.413Z",
+      "runtime": "155 ms",
+      "memory": "125.5 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

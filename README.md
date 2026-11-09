@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887614)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887623)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887614)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887623)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-86-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-87-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **86**
-- **Total Accepted Submissions**: **97**
-- **Repository Solutions & Historical Versions**: **97** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **87**
+- **Total Accepted Submissions**: **98**
+- **Repository Solutions & Historical Versions**: **98** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **74** |
+| 🟡 Medium | **75** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `79` |
+| C++ | `80` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [1710. Find Servers That Handled Most Number of Requests](./solutions/1710-find-servers-that-handled-most-number-of-requests) | Medium | C++ | [solution.cpp](./solutions/1710-find-servers-that-handled-most-number-of-requests/cpp/solution.cpp) |
 | [1396. Count Servers that Communicate](./solutions/1396-count-servers-that-communicate) | Medium | C++ | [solution.cpp](./solutions/1396-count-servers-that-communicate/cpp/solution.cpp) |
 | [2012. Process Tasks Using Servers](./solutions/2012-process-tasks-using-servers) | Medium | C++ | [solution.cpp](./solutions/2012-process-tasks-using-servers/cpp/solution.cpp) |
 | [2833. Count Zero Request Servers](./solutions/2833-count-zero-request-servers) | Medium | C++ | [solution.cpp](./solutions/2833-count-zero-request-servers/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [3717. Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | C++ | [solution.cpp](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp/solution.cpp) |
 | [4116. Minimum Moves to Equal Array Elements III](./solutions/4116-minimum-moves-to-equal-array-elements-iii) | Medium | C++ | [solution.cpp](./solutions/4116-minimum-moves-to-equal-array-elements-iii/cpp/solution.cpp) |
 | [0462. Minimum Moves to Equal Array Elements II](./solutions/0462-minimum-moves-to-equal-array-elements-ii) | Medium | C++ | [solution.cpp](./solutions/0462-minimum-moves-to-equal-array-elements-ii/cpp/solution.cpp) |
-| [0453. Minimum Moves to Equal Array Elements](./solutions/0453-minimum-moves-to-equal-array-elements) | Easy | C++ | [solution.cpp](./solutions/0453-minimum-moves-to-equal-array-elements/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (86)</strong></summary>
+<summary><strong>View All Tracked Problems (87)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -109,6 +109,7 @@ _No topic tags recorded yet._
 | 1612 | [Avoid Flood in The City](./solutions/1612-avoid-flood-in-the-city) | Medium | [`Python 3`](./solutions/1612-avoid-flood-in-the-city/python3) | - | [Notes](./solutions/1612-avoid-flood-in-the-city/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1648 | [Minimum Insertions to Balance a Parentheses String](./solutions/1648-minimum-insertions-to-balance-a-parentheses-string) | Medium | [`C++`](./solutions/1648-minimum-insertions-to-balance-a-parentheses-string/cpp) | - | [Notes](./solutions/1648-minimum-insertions-to-balance-a-parentheses-string/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1692 | [Number of Ways to Reorder Array to Get Same BST](./solutions/1692-number-of-ways-to-reorder-array-to-get-same-bst) | Medium | [`C++`](./solutions/1692-number-of-ways-to-reorder-array-to-get-same-bst/cpp) | - | [Notes](./solutions/1692-number-of-ways-to-reorder-array-to-get-same-bst/notes.md) | 2026-10-25 | `2026-10-25` |
+| 1710 | [Find Servers That Handled Most Number of Requests](./solutions/1710-find-servers-that-handled-most-number-of-requests) | Medium | [`C++`](./solutions/1710-find-servers-that-handled-most-number-of-requests/cpp) | - | [Notes](./solutions/1710-find-servers-that-handled-most-number-of-requests/notes.md) | 2026-11-17 | `2026-11-17` |
 | 1737 | [Maximum Nesting Depth of the Parentheses](./solutions/1737-maximum-nesting-depth-of-the-parentheses) | Medium | [`C++`](./solutions/1737-maximum-nesting-depth-of-the-parentheses/cpp) | - | [Notes](./solutions/1737-maximum-nesting-depth-of-the-parentheses/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1791 | [Richest Customer Wealth](./solutions/1791-richest-customer-wealth) | Medium | [`C++`](./solutions/1791-richest-customer-wealth/cpp) | - | [Notes](./solutions/1791-richest-customer-wealth/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1882 | [Process Tasks Using Servers](./solutions/1882-process-tasks-using-servers) | Medium | [`C++`](./solutions/1882-process-tasks-using-servers/cpp) | - | [Notes](./solutions/1882-process-tasks-using-servers/notes.md) | 2026-11-07 | `2026-11-09` |
@@ -162,7 +163,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-17T03:53:34.578Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:53:42.420Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout
