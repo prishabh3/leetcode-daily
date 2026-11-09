@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "1606",
+  "title": "Find Servers That Handled Most Number of Requests",
+  "slug": "find-servers-that-handled-most-number-of-requests",
+  "url": "https://leetcode.com/problems/find-servers-that-handled-most-number-of-requests/?envType=daily-question&envId=2026-11-09",
+  "difficulty": "Hard",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-09T03:48:36.901Z",
+  "lastSyncedAt": "2026-11-09T03:48:36.616Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/1606-find-servers-that-handled-most-number-of-requests/cpp/solution.cpp",
+      "contentHash": "691072aded851d23e793337708dd6f07f07dec9701d71ac644e2a266ea90a8cc",
+      "syncedAt": "2026-11-09T03:48:36.616Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-11-09",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-11-11",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}

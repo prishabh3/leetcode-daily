@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **62** (🟢 Easy: **26** • 🟡 Medium: **26** • 🔴 Hard: **10**) • Ranking: `#2443671`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1794112973)](https://leetcode.com/u/risxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1794196116)](https://leetcode.com/u/risxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1794112973)](https://leetcode.com/u/risxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1794196116)](https://leetcode.com/u/risxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-70-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-71-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **70**
-- **Total Accepted Submissions**: **78**
-- **Repository Solutions & Historical Versions**: **78** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **71**
+- **Total Accepted Submissions**: **79**
+- **Repository Solutions & Historical Versions**: **79** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **9** |
 | 🟡 Medium | **60** |
-| 🔴 Hard | **1** |
+| 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `63` |
+| C++ | `64` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [1606. Find Servers That Handled Most Number of Requests](./solutions/1606-find-servers-that-handled-most-number-of-requests) | Hard | C++ | [solution.cpp](./solutions/1606-find-servers-that-handled-most-number-of-requests/cpp/solution.cpp) |
 | [1267. Count Servers that Communicate](./solutions/1267-count-servers-that-communicate) | Medium | C++ | [solution.cpp](./solutions/1267-count-servers-that-communicate/cpp/solution.cpp) |
 | [1882. Process Tasks Using Servers](./solutions/1882-process-tasks-using-servers) | Medium | C++ | [solution.cpp](./solutions/1882-process-tasks-using-servers/cpp/solution.cpp) |
 | [2747. Count Zero Request Servers](./solutions/2747-count-zero-request-servers) | Medium | C++ | [solution.cpp](./solutions/2747-count-zero-request-servers/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [1341. Movie Rating](./solutions/1341-movie-rating) | Medium | SQL | [solution.sql](./solutions/1341-movie-rating/sql/solution.sql) |
 | [3505. Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | C++ | [solution.cpp](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp/solution.cpp) |
 | [3736. Minimum Moves to Equal Array Elements III](./solutions/3736-minimum-moves-to-equal-array-elements-iii) | Easy | C++ | [solution.cpp](./solutions/3736-minimum-moves-to-equal-array-elements-iii/cpp/solution.cpp) |
-| [0462. Minimum Moves to Equal Array Elements II](./solutions/0462-minimum-moves-to-equal-array-elements-ii) | Medium | C++ | [solution.cpp](./solutions/0462-minimum-moves-to-equal-array-elements-ii/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (70)</strong></summary>
+<summary><strong>View All Tracked Problems (71)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -103,6 +103,7 @@ _No topic tags recorded yet._
 | 1380 | [Number of Closed Islands](./solutions/1380-number-of-closed-islands) | Medium | [`C++`](./solutions/1380-number-of-closed-islands/cpp) | - | [Notes](./solutions/1380-number-of-closed-islands/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1385 | [Find the Distance Value Between Two Arrays](./solutions/1385-find-the-distance-value-between-two-arrays) | Easy | [`C++`](./solutions/1385-find-the-distance-value-between-two-arrays/cpp) | - | [Notes](./solutions/1385-find-the-distance-value-between-two-arrays/notes.md) | 2026-11-05 | `2026-11-07` |
 | 1407 | [Top Travellers](./solutions/1407-top-travellers) | Easy | [`C++`](./solutions/1407-top-travellers/cpp) | - | [Notes](./solutions/1407-top-travellers/notes.md) | 2026-10-25 | `2026-10-27` |
+| 1606 | [Find Servers That Handled Most Number of Requests](./solutions/1606-find-servers-that-handled-most-number-of-requests) | Hard | [`C++`](./solutions/1606-find-servers-that-handled-most-number-of-requests/cpp) | - | [Notes](./solutions/1606-find-servers-that-handled-most-number-of-requests/notes.md) | 2026-11-09 | `2026-11-11` |
 | 1612 | [Avoid Flood in The City](./solutions/1612-avoid-flood-in-the-city) | Medium | [`Python 3`](./solutions/1612-avoid-flood-in-the-city/python3) | - | [Notes](./solutions/1612-avoid-flood-in-the-city/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1648 | [Minimum Insertions to Balance a Parentheses String](./solutions/1648-minimum-insertions-to-balance-a-parentheses-string) | Medium | [`C++`](./solutions/1648-minimum-insertions-to-balance-a-parentheses-string/cpp) | - | [Notes](./solutions/1648-minimum-insertions-to-balance-a-parentheses-string/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1692 | [Number of Ways to Reorder Array to Get Same BST](./solutions/1692-number-of-ways-to-reorder-array-to-get-same-bst) | Medium | [`C++`](./solutions/1692-number-of-ways-to-reorder-array-to-get-same-bst/cpp) | - | [Notes](./solutions/1692-number-of-ways-to-reorder-array-to-get-same-bst/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -146,7 +147,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-08T04:42:53.494Z`_
+_Last synchronized via LC-Sync: `2026-11-09T03:48:36.616Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout
