@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "3693",
+  "title": "Climbing Stairs II",
+  "slug": "climbing-stairs-ii",
+  "url": "https://leetcode.com/problems/climbing-stairs-ii/?envType=daily-question&envId=2026-11-10",
+  "difficulty": "Medium",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-10T05:53:04.218Z",
+  "lastSyncedAt": "2026-11-10T05:53:03.894Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3693-climbing-stairs-ii/cpp/solution.cpp",
+      "contentHash": "025babc140efcdaa2c197219592a372ab11f6df43fa67fb188530d8aed460f95",
+      "syncedAt": "2026-11-10T05:53:03.894Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-11-10",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-11-12",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}

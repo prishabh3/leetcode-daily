@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-09T03:48:36.616Z",
-  "totalProblems": 71,
-  "totalSubmissions": 79,
+  "lastUpdated": "2026-11-10T05:53:03.894Z",
+  "totalProblems": 72,
+  "totalSubmissions": 80,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -930,6 +930,17 @@
       "contentHash": "691072aded851d23e793337708dd6f07f07dec9701d71ac644e2a266ea90a8cc",
       "syncedAt": "2026-11-09T03:48:36.616Z",
       "filePath": "solutions/1606-find-servers-that-handled-most-number-of-requests/cpp/solution.cpp"
+    },
+    "climbing-stairs-ii-025babc140ef": {
+      "problemId": "3693",
+      "slug": "climbing-stairs-ii",
+      "title": "Climbing Stairs II",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "contentHash": "025babc140efcdaa2c197219592a372ab11f6df43fa67fb188530d8aed460f95",
+      "syncedAt": "2026-11-10T05:53:03.894Z",
+      "filePath": "solutions/3693-climbing-stairs-ii/cpp/solution.cpp"
     }
   },
   "problems": {
@@ -1335,6 +1346,21 @@
       "lastSyncedAt": "2026-10-31T05:49:51.741Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-11-02",
+      "tags": [],
+      "patterns": []
+    },
+    "3693": {
+      "id": "3693",
+      "title": "Climbing Stairs II",
+      "slug": "climbing-stairs-ii",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-10T05:53:03.894Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-12",
       "tags": [],
       "patterns": []
     },

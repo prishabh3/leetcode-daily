@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **62** (🟢 Easy: **26** • 🟡 Medium: **26** • 🔴 Hard: **10**) • Ranking: `#2443671`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1794196116)](https://leetcode.com/u/risxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/risxbh?theme=dark&font=Roboto&v=1794289983)](https://leetcode.com/u/risxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1794196116)](https://leetcode.com/u/risxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/risxbh?ext=heatmap&theme=dark&v=1794289983)](https://leetcode.com/u/risxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-71-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-72-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/risxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **71**
-- **Total Accepted Submissions**: **79**
-- **Repository Solutions & Historical Versions**: **79** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **72**
+- **Total Accepted Submissions**: **80**
+- **Repository Solutions & Historical Versions**: **80** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **9** |
-| 🟡 Medium | **60** |
+| 🟡 Medium | **61** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `64` |
+| C++ | `65` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [3693. Climbing Stairs II](./solutions/3693-climbing-stairs-ii) | Medium | C++ | [solution.cpp](./solutions/3693-climbing-stairs-ii/cpp/solution.cpp) |
 | [1606. Find Servers That Handled Most Number of Requests](./solutions/1606-find-servers-that-handled-most-number-of-requests) | Hard | C++ | [solution.cpp](./solutions/1606-find-servers-that-handled-most-number-of-requests/cpp/solution.cpp) |
 | [1267. Count Servers that Communicate](./solutions/1267-count-servers-that-communicate) | Medium | C++ | [solution.cpp](./solutions/1267-count-servers-that-communicate/cpp/solution.cpp) |
 | [1882. Process Tasks Using Servers](./solutions/1882-process-tasks-using-servers) | Medium | C++ | [solution.cpp](./solutions/1882-process-tasks-using-servers/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [1385. Find the Distance Value Between Two Arrays](./solutions/1385-find-the-distance-value-between-two-arrays) | Easy | C++ | [solution.cpp](./solutions/1385-find-the-distance-value-between-two-arrays/cpp/solution.cpp) |
 | [1341. Movie Rating](./solutions/1341-movie-rating) | Medium | SQL | [solution.sql](./solutions/1341-movie-rating/sql/solution.sql) |
 | [3505. Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | C++ | [solution.cpp](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp/solution.cpp) |
-| [3736. Minimum Moves to Equal Array Elements III](./solutions/3736-minimum-moves-to-equal-array-elements-iii) | Easy | C++ | [solution.cpp](./solutions/3736-minimum-moves-to-equal-array-elements-iii/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (71)</strong></summary>
+<summary><strong>View All Tracked Problems (72)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -122,6 +122,7 @@ _No topic tags recorded yet._
 | 3505 | [Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | [`C++`](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp) | - | [Notes](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal/notes.md) | 2026-11-04 | `2026-11-06` |
 | 3619 | [Count Islands With Total Value Divisible by K](./solutions/3619-count-islands-with-total-value-divisible-by-k) | Medium | [`C++`](./solutions/3619-count-islands-with-total-value-divisible-by-k/cpp) | - | [Notes](./solutions/3619-count-islands-with-total-value-divisible-by-k/notes.md) | 2026-10-26 | `2026-10-28` |
 | 3665 | [Twisted Mirror Path Count](./solutions/3665-twisted-mirror-path-count) | Medium | [`C++`](./solutions/3665-twisted-mirror-path-count/cpp) | - | [Notes](./solutions/3665-twisted-mirror-path-count/notes.md) | 2026-10-31 | `2026-11-02` |
+| 3693 | [Climbing Stairs II](./solutions/3693-climbing-stairs-ii) | Medium | [`C++`](./solutions/3693-climbing-stairs-ii/cpp) | - | [Notes](./solutions/3693-climbing-stairs-ii/notes.md) | 2026-11-10 | `2026-11-12` |
 | 3736 | [Minimum Moves to Equal Array Elements III](./solutions/3736-minimum-moves-to-equal-array-elements-iii) | Easy | [`C++`](./solutions/3736-minimum-moves-to-equal-array-elements-iii/cpp) | - | [Notes](./solutions/3736-minimum-moves-to-equal-array-elements-iii/notes.md) | 2026-11-03 | `2026-11-05` |
 | 3769 | [Minimum Interval Selection to Cover Target Intervals](./solutions/3769-minimum-interval-selection-to-cover-target-intervals) | Medium | [`C++`](./solutions/3769-minimum-interval-selection-to-cover-target-intervals/cpp) | - | [Notes](./solutions/3769-minimum-interval-selection-to-cover-target-intervals/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3841 | [Palindromic Path Queries in a Tree](./solutions/3841-palindromic-path-queries-in-a-tree) | Hard | [`C++`](./solutions/3841-palindromic-path-queries-in-a-tree/cpp) | - | [Notes](./solutions/3841-palindromic-path-queries-in-a-tree/notes.md) | 2026-10-29 | `2026-10-31` |
@@ -147,7 +148,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-09T03:48:36.616Z`_
+_Last synchronized via LC-Sync: `2026-11-10T05:53:03.894Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout
