@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "4041",
+  "title": "Climbing Stairs II",
+  "slug": "climbing-stairs-ii",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:53:50.341Z",
+  "lastSyncedAt": "2026-11-17T03:53:50.339Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/4041-climbing-stairs-ii/cpp/solution.cpp",
+      "submissionId": "2192941177",
+      "contentHash": "0964e002814a9c414fb4badaccd2475a26dd7f4d13816984077c597b0ca660c9",
+      "syncedAt": "2026-11-17T03:53:50.339Z",
+      "runtime": "19 ms",
+      "memory": "169.4 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
