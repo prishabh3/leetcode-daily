@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "3789",
+  "title": "Minimum Cost to Acquire Required Items",
+  "slug": "minimum-cost-to-acquire-required-items",
+  "url": "https://leetcode.com/problems/minimum-cost-to-acquire-required-items/?envType=daily-question&envId=2026-11-11",
+  "difficulty": "Medium",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-11T03:53:30.090Z",
+  "lastSyncedAt": "2026-11-11T03:53:29.737Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3789-minimum-cost-to-acquire-required-items/cpp/solution.cpp",
+      "contentHash": "75693bfbb4f4926c2b790891851f9769f8710791b3ad3a5875099fbee7c9206d",
+      "syncedAt": "2026-11-11T03:53:29.737Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-11-11",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-11-13",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}

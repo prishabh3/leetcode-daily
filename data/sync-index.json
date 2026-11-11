@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-10T05:53:03.894Z",
-  "totalProblems": 72,
-  "totalSubmissions": 80,
+  "lastUpdated": "2026-11-11T03:53:29.737Z",
+  "totalProblems": 73,
+  "totalSubmissions": 81,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -941,6 +941,17 @@
       "contentHash": "025babc140efcdaa2c197219592a372ab11f6df43fa67fb188530d8aed460f95",
       "syncedAt": "2026-11-10T05:53:03.894Z",
       "filePath": "solutions/3693-climbing-stairs-ii/cpp/solution.cpp"
+    },
+    "minimum-cost-to-acquire-required-items-75693bfbb4f4": {
+      "problemId": "3789",
+      "slug": "minimum-cost-to-acquire-required-items",
+      "title": "Minimum Cost to Acquire Required Items",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "contentHash": "75693bfbb4f4926c2b790891851f9769f8710791b3ad3a5875099fbee7c9206d",
+      "syncedAt": "2026-11-11T03:53:29.737Z",
+      "filePath": "solutions/3789-minimum-cost-to-acquire-required-items/cpp/solution.cpp"
     }
   },
   "problems": {
@@ -1391,6 +1402,21 @@
       "lastSyncedAt": "2026-10-25T10:45:11.506Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "3789": {
+      "id": "3789",
+      "title": "Minimum Cost to Acquire Required Items",
+      "slug": "minimum-cost-to-acquire-required-items",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-11T03:53:29.737Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-13",
       "tags": [],
       "patterns": []
     },
