@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887630)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887639)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887630)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887639)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-88-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-89-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **88**
-- **Total Accepted Submissions**: **99**
-- **Repository Solutions & Historical Versions**: **99** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **89**
+- **Total Accepted Submissions**: **100**
+- **Repository Solutions & Historical Versions**: **100** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **76** |
+| 🟡 Medium | **77** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `81` |
+| C++ | `82` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [4147. Minimum Cost to Acquire Required Items](./solutions/4147-minimum-cost-to-acquire-required-items) | Medium | C++ | [solution.cpp](./solutions/4147-minimum-cost-to-acquire-required-items/cpp/solution.cpp) |
 | [4041. Climbing Stairs II](./solutions/4041-climbing-stairs-ii) | Medium | C++ | [solution.cpp](./solutions/4041-climbing-stairs-ii/cpp/solution.cpp) |
 | [1710. Find Servers That Handled Most Number of Requests](./solutions/1710-find-servers-that-handled-most-number-of-requests) | Medium | C++ | [solution.cpp](./solutions/1710-find-servers-that-handled-most-number-of-requests/cpp/solution.cpp) |
 | [1396. Count Servers that Communicate](./solutions/1396-count-servers-that-communicate) | Medium | C++ | [solution.cpp](./solutions/1396-count-servers-that-communicate/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [2833. Count Zero Request Servers](./solutions/2833-count-zero-request-servers) | Medium | C++ | [solution.cpp](./solutions/2833-count-zero-request-servers/cpp/solution.cpp) |
 | [1486. Find the Distance Value Between Two Arrays](./solutions/1486-find-the-distance-value-between-two-arrays) | Medium | C++ | [solution.cpp](./solutions/1486-find-the-distance-value-between-two-arrays/cpp/solution.cpp) |
 | [3717. Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | C++ | [solution.cpp](./solutions/3717-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp/solution.cpp) |
-| [4116. Minimum Moves to Equal Array Elements III](./solutions/4116-minimum-moves-to-equal-array-elements-iii) | Medium | C++ | [solution.cpp](./solutions/4116-minimum-moves-to-equal-array-elements-iii/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (88)</strong></summary>
+<summary><strong>View All Tracked Problems (89)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -147,6 +147,7 @@ _No topic tags recorded yet._
 | 4084 | [Maximize Sum of Squares of Digits](./solutions/4084-maximize-sum-of-squares-of-digits) | Medium | [`C++`](./solutions/4084-maximize-sum-of-squares-of-digits/cpp) | - | [Notes](./solutions/4084-maximize-sum-of-squares-of-digits/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4104 | [Shortest Path With At Most K Consecutive Identical Characters](./solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters) | Medium | [`C++`](./solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters/cpp) | - | [Notes](./solutions/4104-shortest-path-with-at-most-k-consecutive-identical-characters/notes.md) | 2026-11-17 | `2026-11-17` |
 | 4116 | [Minimum Moves to Equal Array Elements III](./solutions/4116-minimum-moves-to-equal-array-elements-iii) | Medium | [`C++`](./solutions/4116-minimum-moves-to-equal-array-elements-iii/cpp) | - | [Notes](./solutions/4116-minimum-moves-to-equal-array-elements-iii/notes.md) | 2026-11-17 | `2026-11-17` |
+| 4147 | [Minimum Cost to Acquire Required Items](./solutions/4147-minimum-cost-to-acquire-required-items) | Medium | [`C++`](./solutions/4147-minimum-cost-to-acquire-required-items/cpp) | - | [Notes](./solutions/4147-minimum-cost-to-acquire-required-items/notes.md) | 2026-11-17 | `2026-11-17` |
 | 4184 | [Minimum Operations to Sort a Permutation](./solutions/4184-minimum-operations-to-sort-a-permutation) | Medium | [`C++`](./solutions/4184-minimum-operations-to-sort-a-permutation/cpp) | - | [Notes](./solutions/4184-minimum-operations-to-sort-a-permutation/notes.md) | 2026-10-25 | `2026-10-25` |
 | 4205 | [Minimum XOR Path in a Grid](./solutions/4205-minimum-xor-path-in-a-grid) | Medium | [`C++`](./solutions/4205-minimum-xor-path-in-a-grid/cpp) | - | [Notes](./solutions/4205-minimum-xor-path-in-a-grid/notes.md) | 2026-11-17 | `2026-11-17` |
 | 4209 | [Palindromic Path Queries in a Tree](./solutions/4209-palindromic-path-queries-in-a-tree) | Medium | [`C++`](./solutions/4209-palindromic-path-queries-in-a-tree/cpp) | - | [Notes](./solutions/4209-palindromic-path-queries-in-a-tree/notes.md) | 2026-11-17 | `2026-11-17` |
@@ -164,7 +165,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-17T03:53:50.346Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:53:58.643Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

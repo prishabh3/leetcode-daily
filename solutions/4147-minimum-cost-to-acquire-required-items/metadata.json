@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "4147",
+  "title": "Minimum Cost to Acquire Required Items",
+  "slug": "minimum-cost-to-acquire-required-items",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:53:58.637Z",
+  "lastSyncedAt": "2026-11-17T03:53:58.634Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/4147-minimum-cost-to-acquire-required-items/cpp/solution.cpp",
+      "submissionId": "2193581858",
+      "contentHash": "277920f771f214e6cebfb7c349d1a5e3f631d992a823b47528b093b7d0763e05",
+      "syncedAt": "2026-11-17T03:53:58.634Z",
+      "runtime": "0 ms",
+      "memory": "9.4 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
