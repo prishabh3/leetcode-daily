@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "3105",
+  "title": "Longest Strictly Increasing or Strictly Decreasing Subarray",
+  "slug": "longest-strictly-increasing-or-strictly-decreasing-subarray",
+  "url": "https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/?envType=daily-question&envId=2026-11-12",
+  "difficulty": "Easy",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-12T03:35:49.757Z",
+  "lastSyncedAt": "2026-11-12T03:35:49.427Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3105-longest-strictly-increasing-or-strictly-decreasing-subarray/cpp/solution.cpp",
+      "contentHash": "9e5be96367e203235d0782bd0af19aab501f0373e50dd2db4a6b1ae1d179084a",
+      "syncedAt": "2026-11-12T03:35:49.427Z",
+      "complexity": {
+        "time": "O(?)",
+        "space": "O(?)"
+      }
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [
+    {
+      "date": "2026-11-12",
+      "rating": 3,
+      "recalled": true,
+      "intervalDays": 2
+    }
+  ],
+  "nextReviewDate": "2026-11-14",
+  "reviewsCount": 1,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false
+}
