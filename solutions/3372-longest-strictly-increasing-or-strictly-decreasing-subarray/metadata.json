@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "3372",
+  "title": "Longest Strictly Increasing or Strictly Decreasing Subarray",
+  "slug": "longest-strictly-increasing-or-strictly-decreasing-subarray",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:54:06.579Z",
+  "lastSyncedAt": "2026-11-17T03:54:06.576Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3372-longest-strictly-increasing-or-strictly-decreasing-subarray/cpp/solution.cpp",
+      "submissionId": "2194295954",
+      "contentHash": "57033c02b6403f734420bf2bf1ea24e0de963164023ae9edfc12fa05e31c88d9",
+      "syncedAt": "2026-11-17T03:54:06.576Z",
+      "runtime": "2 ms",
+      "memory": "27.5 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

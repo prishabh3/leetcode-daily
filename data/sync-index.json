@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-17T03:53:58.643Z",
-  "totalProblems": 89,
-  "totalSubmissions": 100,
+  "lastUpdated": "2026-11-17T03:54:06.585Z",
+  "totalProblems": 90,
+  "totalSubmissions": 101,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -916,6 +916,18 @@
       "syncedAt": "2026-11-17T03:53:58.634Z",
       "filePath": "solutions/4147-minimum-cost-to-acquire-required-items/cpp/solution.cpp"
     },
+    "2194295954": {
+      "problemId": "3372",
+      "slug": "longest-strictly-increasing-or-strictly-decreasing-subarray",
+      "title": "Longest Strictly Increasing or Strictly Decreasing Subarray",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2194295954",
+      "contentHash": "57033c02b6403f734420bf2bf1ea24e0de963164023ae9edfc12fa05e31c88d9",
+      "syncedAt": "2026-11-17T03:54:06.576Z",
+      "filePath": "solutions/3372-longest-strictly-increasing-or-strictly-decreasing-subarray/cpp/solution.cpp"
+    },
     "rank-scores-a592f06bef0a": {
       "problemId": "0178",
       "slug": "rank-scores",
@@ -1629,6 +1641,21 @@
       "lastSyncedAt": "2026-10-25T10:44:31.037Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "3372": {
+      "id": "3372",
+      "title": "Longest Strictly Increasing or Strictly Decreasing Subarray",
+      "slug": "longest-strictly-increasing-or-strictly-decreasing-subarray",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-17T03:54:06.576Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-17",
       "tags": [],
       "patterns": []
     },
