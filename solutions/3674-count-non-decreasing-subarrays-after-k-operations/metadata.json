@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "3674",
+  "title": "Count Non-Decreasing Subarrays After K Operations",
+  "slug": "count-non-decreasing-subarrays-after-k-operations",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:54:14.613Z",
+  "lastSyncedAt": "2026-11-17T03:54:14.610Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3674-count-non-decreasing-subarrays-after-k-operations/cpp/solution.cpp",
+      "submissionId": "2194988776",
+      "contentHash": "0f3cac804f0a5cde8df54c19cbc5ce8a3eff5d386e048c138e2dd67a07f40881",
+      "syncedAt": "2026-11-17T03:54:14.610Z",
+      "runtime": "73 ms",
+      "memory": "173 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
