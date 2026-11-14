@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887655)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887662)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887655)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887662)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-91-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-92-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **91**
-- **Total Accepted Submissions**: **102**
-- **Repository Solutions & Historical Versions**: **102** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **92**
+- **Total Accepted Submissions**: **103**
+- **Repository Solutions & Historical Versions**: **103** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **79** |
+| 🟡 Medium | **80** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `84` |
+| C++ | `85` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [3644. Minimum Positive Sum Subarray ](./solutions/3644-minimum-positive-sum-subarray) | Medium | C++ | [solution.cpp](./solutions/3644-minimum-positive-sum-subarray/cpp/solution.cpp) |
 | [3674. Count Non-Decreasing Subarrays After K Operations](./solutions/3674-count-non-decreasing-subarrays-after-k-operations) | Medium | C++ | [solution.cpp](./solutions/3674-count-non-decreasing-subarrays-after-k-operations/cpp/solution.cpp) |
 | [3372. Longest Strictly Increasing or Strictly Decreasing Subarray](./solutions/3372-longest-strictly-increasing-or-strictly-decreasing-subarray) | Medium | C++ | [solution.cpp](./solutions/3372-longest-strictly-increasing-or-strictly-decreasing-subarray/cpp/solution.cpp) |
 | [4147. Minimum Cost to Acquire Required Items](./solutions/4147-minimum-cost-to-acquire-required-items) | Medium | C++ | [solution.cpp](./solutions/4147-minimum-cost-to-acquire-required-items/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [1710. Find Servers That Handled Most Number of Requests](./solutions/1710-find-servers-that-handled-most-number-of-requests) | Medium | C++ | [solution.cpp](./solutions/1710-find-servers-that-handled-most-number-of-requests/cpp/solution.cpp) |
 | [1396. Count Servers that Communicate](./solutions/1396-count-servers-that-communicate) | Medium | C++ | [solution.cpp](./solutions/1396-count-servers-that-communicate/cpp/solution.cpp) |
 | [2012. Process Tasks Using Servers](./solutions/2012-process-tasks-using-servers) | Medium | C++ | [solution.cpp](./solutions/2012-process-tasks-using-servers/cpp/solution.cpp) |
-| [2833. Count Zero Request Servers](./solutions/2833-count-zero-request-servers) | Medium | C++ | [solution.cpp](./solutions/2833-count-zero-request-servers/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (91)</strong></summary>
+<summary><strong>View All Tracked Problems (92)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -128,6 +128,7 @@ _No topic tags recorded yet._
 | 3372 | [Longest Strictly Increasing or Strictly Decreasing Subarray](./solutions/3372-longest-strictly-increasing-or-strictly-decreasing-subarray) | Medium | [`C++`](./solutions/3372-longest-strictly-increasing-or-strictly-decreasing-subarray/cpp) | - | [Notes](./solutions/3372-longest-strictly-increasing-or-strictly-decreasing-subarray/notes.md) | 2026-11-17 | `2026-11-17` |
 | 3505 | [Minimum Operations to Make Elements Within K Subarrays Equal](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) | Medium | [`C++`](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal/cpp) | - | [Notes](./solutions/3505-minimum-operations-to-make-elements-within-k-subarrays-equal/notes.md) | 2026-11-04 | `2026-11-06` |
 | 3619 | [Count Islands With Total Value Divisible by K](./solutions/3619-count-islands-with-total-value-divisible-by-k) | Medium | [`C++`](./solutions/3619-count-islands-with-total-value-divisible-by-k/cpp) | - | [Notes](./solutions/3619-count-islands-with-total-value-divisible-by-k/notes.md) | 2026-10-26 | `2026-10-28` |
+| 3644 | [Minimum Positive Sum Subarray ](./solutions/3644-minimum-positive-sum-subarray) | Medium | [`C++`](./solutions/3644-minimum-positive-sum-subarray/cpp) | - | [Notes](./solutions/3644-minimum-positive-sum-subarray/notes.md) | 2026-11-17 | `2026-11-17` |
 | 3665 | [Twisted Mirror Path Count](./solutions/3665-twisted-mirror-path-count) | Medium | [`C++`](./solutions/3665-twisted-mirror-path-count/cpp) | - | [Notes](./solutions/3665-twisted-mirror-path-count/notes.md) | 2026-10-31 | `2026-11-02` |
 | 3674 | [Count Non-Decreasing Subarrays After K Operations](./solutions/3674-count-non-decreasing-subarrays-after-k-operations) | Medium | [`C++`](./solutions/3674-count-non-decreasing-subarrays-after-k-operations/cpp) | - | [Notes](./solutions/3674-count-non-decreasing-subarrays-after-k-operations/notes.md) | 2026-11-17 | `2026-11-17` |
 | 3693 | [Climbing Stairs II](./solutions/3693-climbing-stairs-ii) | Medium | [`C++`](./solutions/3693-climbing-stairs-ii/cpp) | - | [Notes](./solutions/3693-climbing-stairs-ii/notes.md) | 2026-11-10 | `2026-11-12` |
@@ -167,7 +168,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-17T03:54:14.619Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:54:22.195Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

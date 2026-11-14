@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "3644",
+  "title": "Minimum Positive Sum Subarray ",
+  "slug": "minimum-positive-sum-subarray",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:54:22.189Z",
+  "lastSyncedAt": "2026-11-17T03:54:22.186Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3644-minimum-positive-sum-subarray/cpp/solution.cpp",
+      "submissionId": "2195661425",
+      "contentHash": "35f9f9a30075fad7680c644da4bd8eb661e6e60f37022e2aa8f7dc395f1a36e1",
+      "syncedAt": "2026-11-17T03:54:22.186Z",
+      "runtime": "2 ms",
+      "memory": "29.3 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

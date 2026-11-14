@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-17T03:54:14.619Z",
-  "totalProblems": 91,
-  "totalSubmissions": 102,
+  "lastUpdated": "2026-11-17T03:54:22.195Z",
+  "totalProblems": 92,
+  "totalSubmissions": 103,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -940,6 +940,18 @@
       "syncedAt": "2026-11-17T03:54:14.610Z",
       "filePath": "solutions/3674-count-non-decreasing-subarrays-after-k-operations/cpp/solution.cpp"
     },
+    "2195661425": {
+      "problemId": "3644",
+      "slug": "minimum-positive-sum-subarray",
+      "title": "Minimum Positive Sum Subarray ",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2195661425",
+      "contentHash": "35f9f9a30075fad7680c644da4bd8eb661e6e60f37022e2aa8f7dc395f1a36e1",
+      "syncedAt": "2026-11-17T03:54:22.186Z",
+      "filePath": "solutions/3644-minimum-positive-sum-subarray/cpp/solution.cpp"
+    },
     "rank-scores-a592f06bef0a": {
       "problemId": "0178",
       "slug": "rank-scores",
@@ -1698,6 +1710,21 @@
       "lastSyncedAt": "2026-10-26T03:39:23.707Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-28",
+      "tags": [],
+      "patterns": []
+    },
+    "3644": {
+      "id": "3644",
+      "title": "Minimum Positive Sum Subarray ",
+      "slug": "minimum-positive-sum-subarray",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-17T03:54:22.186Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-17",
       "tags": [],
       "patterns": []
     },
