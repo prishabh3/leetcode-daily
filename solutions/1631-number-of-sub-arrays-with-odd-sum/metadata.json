@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "1631",
+  "title": "Number of Sub-arrays With Odd Sum",
+  "slug": "number-of-sub-arrays-with-odd-sum",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:54:30.024Z",
+  "lastSyncedAt": "2026-11-17T03:54:30.021Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/1631-number-of-sub-arrays-with-odd-sum/cpp/solution.cpp",
+      "submissionId": "2196380918",
+      "contentHash": "11030acdcd17669d8dd708131928464972f94550f80ddc22ffe1df4ec5ffce68",
+      "syncedAt": "2026-11-17T03:54:30.021Z",
+      "runtime": "10 ms",
+      "memory": "111.9 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

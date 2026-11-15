@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887662)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887670)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887662)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887670)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-92-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-93-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **92**
-- **Total Accepted Submissions**: **103**
-- **Repository Solutions & Historical Versions**: **103** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **93**
+- **Total Accepted Submissions**: **104**
+- **Repository Solutions & Historical Versions**: **104** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **80** |
+| 🟡 Medium | **81** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `85` |
+| C++ | `86` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [1631. Number of Sub-arrays With Odd Sum](./solutions/1631-number-of-sub-arrays-with-odd-sum) | Medium | C++ | [solution.cpp](./solutions/1631-number-of-sub-arrays-with-odd-sum/cpp/solution.cpp) |
 | [3644. Minimum Positive Sum Subarray ](./solutions/3644-minimum-positive-sum-subarray) | Medium | C++ | [solution.cpp](./solutions/3644-minimum-positive-sum-subarray/cpp/solution.cpp) |
 | [3674. Count Non-Decreasing Subarrays After K Operations](./solutions/3674-count-non-decreasing-subarrays-after-k-operations) | Medium | C++ | [solution.cpp](./solutions/3674-count-non-decreasing-subarrays-after-k-operations/cpp/solution.cpp) |
 | [3372. Longest Strictly Increasing or Strictly Decreasing Subarray](./solutions/3372-longest-strictly-increasing-or-strictly-decreasing-subarray) | Medium | C++ | [solution.cpp](./solutions/3372-longest-strictly-increasing-or-strictly-decreasing-subarray/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [4041. Climbing Stairs II](./solutions/4041-climbing-stairs-ii) | Medium | C++ | [solution.cpp](./solutions/4041-climbing-stairs-ii/cpp/solution.cpp) |
 | [1710. Find Servers That Handled Most Number of Requests](./solutions/1710-find-servers-that-handled-most-number-of-requests) | Medium | C++ | [solution.cpp](./solutions/1710-find-servers-that-handled-most-number-of-requests/cpp/solution.cpp) |
 | [1396. Count Servers that Communicate](./solutions/1396-count-servers-that-communicate) | Medium | C++ | [solution.cpp](./solutions/1396-count-servers-that-communicate/cpp/solution.cpp) |
-| [2012. Process Tasks Using Servers](./solutions/2012-process-tasks-using-servers) | Medium | C++ | [solution.cpp](./solutions/2012-process-tasks-using-servers/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (92)</strong></summary>
+<summary><strong>View All Tracked Problems (93)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -107,6 +107,7 @@ _No topic tags recorded yet._
 | 1486 | [Find the Distance Value Between Two Arrays](./solutions/1486-find-the-distance-value-between-two-arrays) | Medium | [`C++`](./solutions/1486-find-the-distance-value-between-two-arrays/cpp) | - | [Notes](./solutions/1486-find-the-distance-value-between-two-arrays/notes.md) | 2026-11-17 | `2026-11-17` |
 | 1606 | [Find Servers That Handled Most Number of Requests](./solutions/1606-find-servers-that-handled-most-number-of-requests) | Hard | [`C++`](./solutions/1606-find-servers-that-handled-most-number-of-requests/cpp) | - | [Notes](./solutions/1606-find-servers-that-handled-most-number-of-requests/notes.md) | 2026-11-09 | `2026-11-11` |
 | 1612 | [Avoid Flood in The City](./solutions/1612-avoid-flood-in-the-city) | Medium | [`Python 3`](./solutions/1612-avoid-flood-in-the-city/python3) | - | [Notes](./solutions/1612-avoid-flood-in-the-city/notes.md) | 2026-10-25 | `2026-10-25` |
+| 1631 | [Number of Sub-arrays With Odd Sum](./solutions/1631-number-of-sub-arrays-with-odd-sum) | Medium | [`C++`](./solutions/1631-number-of-sub-arrays-with-odd-sum/cpp) | - | [Notes](./solutions/1631-number-of-sub-arrays-with-odd-sum/notes.md) | 2026-11-17 | `2026-11-17` |
 | 1648 | [Minimum Insertions to Balance a Parentheses String](./solutions/1648-minimum-insertions-to-balance-a-parentheses-string) | Medium | [`C++`](./solutions/1648-minimum-insertions-to-balance-a-parentheses-string/cpp) | - | [Notes](./solutions/1648-minimum-insertions-to-balance-a-parentheses-string/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1692 | [Number of Ways to Reorder Array to Get Same BST](./solutions/1692-number-of-ways-to-reorder-array-to-get-same-bst) | Medium | [`C++`](./solutions/1692-number-of-ways-to-reorder-array-to-get-same-bst/cpp) | - | [Notes](./solutions/1692-number-of-ways-to-reorder-array-to-get-same-bst/notes.md) | 2026-10-25 | `2026-10-25` |
 | 1710 | [Find Servers That Handled Most Number of Requests](./solutions/1710-find-servers-that-handled-most-number-of-requests) | Medium | [`C++`](./solutions/1710-find-servers-that-handled-most-number-of-requests/cpp) | - | [Notes](./solutions/1710-find-servers-that-handled-most-number-of-requests/notes.md) | 2026-11-17 | `2026-11-17` |
@@ -168,7 +169,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-17T03:54:22.195Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:54:30.031Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout
