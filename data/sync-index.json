@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-17T03:54:30.031Z",
-  "totalProblems": 93,
-  "totalSubmissions": 104,
+  "lastUpdated": "2026-11-17T03:54:38.885Z",
+  "totalProblems": 94,
+  "totalSubmissions": 105,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -964,6 +964,18 @@
       "syncedAt": "2026-11-17T03:54:30.021Z",
       "filePath": "solutions/1631-number-of-sub-arrays-with-odd-sum/cpp/solution.cpp"
     },
+    "2197002703": {
+      "problemId": "2361",
+      "slug": "calculate-digit-sum-of-a-string",
+      "title": "Calculate Digit Sum of a String",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2197002703",
+      "contentHash": "43189fade6d9cff2354523cb32e486d094a6437fc523df1df4d17cb11d5329f6",
+      "syncedAt": "2026-11-17T03:54:38.876Z",
+      "filePath": "solutions/2361-calculate-digit-sum-of-a-string/cpp/solution.cpp"
+    },
     "rank-scores-a592f06bef0a": {
       "problemId": "0178",
       "slug": "rank-scores",
@@ -1542,6 +1554,21 @@
       "lastSyncedAt": "2026-10-25T10:45:18.571Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "2361": {
+      "id": "2361",
+      "title": "Calculate Digit Sum of a String",
+      "slug": "calculate-digit-sum-of-a-string",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-17T03:54:38.876Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-17",
       "tags": [],
       "patterns": []
     },

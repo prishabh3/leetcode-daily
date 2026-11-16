@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887670)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887679)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887670)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887679)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-93-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-94-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **93**
-- **Total Accepted Submissions**: **104**
-- **Repository Solutions & Historical Versions**: **104** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **94**
+- **Total Accepted Submissions**: **105**
+- **Repository Solutions & Historical Versions**: **105** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **81** |
+| 🟡 Medium | **82** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `86` |
+| C++ | `87` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [2361. Calculate Digit Sum of a String](./solutions/2361-calculate-digit-sum-of-a-string) | Medium | C++ | [solution.cpp](./solutions/2361-calculate-digit-sum-of-a-string/cpp/solution.cpp) |
 | [1631. Number of Sub-arrays With Odd Sum](./solutions/1631-number-of-sub-arrays-with-odd-sum) | Medium | C++ | [solution.cpp](./solutions/1631-number-of-sub-arrays-with-odd-sum/cpp/solution.cpp) |
 | [3644. Minimum Positive Sum Subarray ](./solutions/3644-minimum-positive-sum-subarray) | Medium | C++ | [solution.cpp](./solutions/3644-minimum-positive-sum-subarray/cpp/solution.cpp) |
 | [3674. Count Non-Decreasing Subarrays After K Operations](./solutions/3674-count-non-decreasing-subarrays-after-k-operations) | Medium | C++ | [solution.cpp](./solutions/3674-count-non-decreasing-subarrays-after-k-operations/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [4147. Minimum Cost to Acquire Required Items](./solutions/4147-minimum-cost-to-acquire-required-items) | Medium | C++ | [solution.cpp](./solutions/4147-minimum-cost-to-acquire-required-items/cpp/solution.cpp) |
 | [4041. Climbing Stairs II](./solutions/4041-climbing-stairs-ii) | Medium | C++ | [solution.cpp](./solutions/4041-climbing-stairs-ii/cpp/solution.cpp) |
 | [1710. Find Servers That Handled Most Number of Requests](./solutions/1710-find-servers-that-handled-most-number-of-requests) | Medium | C++ | [solution.cpp](./solutions/1710-find-servers-that-handled-most-number-of-requests/cpp/solution.cpp) |
-| [1396. Count Servers that Communicate](./solutions/1396-count-servers-that-communicate) | Medium | C++ | [solution.cpp](./solutions/1396-count-servers-that-communicate/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (93)</strong></summary>
+<summary><strong>View All Tracked Problems (94)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -116,6 +116,7 @@ _No topic tags recorded yet._
 | 1882 | [Process Tasks Using Servers](./solutions/1882-process-tasks-using-servers) | Medium | [`C++`](./solutions/1882-process-tasks-using-servers/cpp) | - | [Notes](./solutions/1882-process-tasks-using-servers/notes.md) | 2026-11-07 | `2026-11-09` |
 | 2012 | [Process Tasks Using Servers](./solutions/2012-process-tasks-using-servers) | Medium | [`C++`](./solutions/2012-process-tasks-using-servers/cpp) | - | [Notes](./solutions/2012-process-tasks-using-servers/notes.md) | 2026-11-17 | `2026-11-17` |
 | 2210 | [Find Target Indices After Sorting Array](./solutions/2210-find-target-indices-after-sorting-array) | Medium | [`C++`](./solutions/2210-find-target-indices-after-sorting-array/cpp) | - | [Notes](./solutions/2210-find-target-indices-after-sorting-array/notes.md) | 2026-10-25 | `2026-10-25` |
+| 2361 | [Calculate Digit Sum of a String](./solutions/2361-calculate-digit-sum-of-a-string) | Medium | [`C++`](./solutions/2361-calculate-digit-sum-of-a-string/cpp) | - | [Notes](./solutions/2361-calculate-digit-sum-of-a-string/notes.md) | 2026-11-17 | `2026-11-17` |
 | 2392 | [Successful Pairs of Spells and Potions](./solutions/2392-successful-pairs-of-spells-and-potions) | Medium | [`Python 3`](./solutions/2392-successful-pairs-of-spells-and-potions/python3) | - | [Notes](./solutions/2392-successful-pairs-of-spells-and-potions/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2418 | [Minimum Sum of Squared Difference](./solutions/2418-minimum-sum-of-squared-difference) | Medium | [`C++`](./solutions/2418-minimum-sum-of-squared-difference/cpp) | - | [Notes](./solutions/2418-minimum-sum-of-squared-difference/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2496 | [Count Days Spent Together](./solutions/2496-count-days-spent-together) | Medium | [`C++`](./solutions/2496-count-days-spent-together/cpp) | - | [Notes](./solutions/2496-count-days-spent-together/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -169,7 +170,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-17T03:54:30.031Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:54:38.885Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "2361",
+  "title": "Calculate Digit Sum of a String",
+  "slug": "calculate-digit-sum-of-a-string",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:54:38.879Z",
+  "lastSyncedAt": "2026-11-17T03:54:38.876Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/2361-calculate-digit-sum-of-a-string/cpp/solution.cpp",
+      "submissionId": "2197002703",
+      "contentHash": "43189fade6d9cff2354523cb32e486d094a6437fc523df1df4d17cb11d5329f6",
+      "syncedAt": "2026-11-17T03:54:38.876Z",
+      "runtime": "0 ms",
+      "memory": "9 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
