@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **87** (🟢 Easy: **33** • 🟡 Medium: **39** • 🔴 Hard: **15**) • Ranking: `#1935969`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887679)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1794887688)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887679)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1794887688)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-94-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-95-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **94**
-- **Total Accepted Submissions**: **105**
-- **Repository Solutions & Historical Versions**: **105** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **95**
+- **Total Accepted Submissions**: **107**
+- **Repository Solutions & Historical Versions**: **107** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **82** |
+| 🟡 Medium | **83** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `87` |
+| C++ | `88` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [2879. Minimum Changes to Make K Semi-palindromes](./solutions/2879-minimum-changes-to-make-k-semi-palindromes) | Medium | C++ | [solution.cpp](./solutions/2879-minimum-changes-to-make-k-semi-palindromes/cpp/solution.cpp) |
 | [2361. Calculate Digit Sum of a String](./solutions/2361-calculate-digit-sum-of-a-string) | Medium | C++ | [solution.cpp](./solutions/2361-calculate-digit-sum-of-a-string/cpp/solution.cpp) |
 | [1631. Number of Sub-arrays With Odd Sum](./solutions/1631-number-of-sub-arrays-with-odd-sum) | Medium | C++ | [solution.cpp](./solutions/1631-number-of-sub-arrays-with-odd-sum/cpp/solution.cpp) |
 | [3644. Minimum Positive Sum Subarray ](./solutions/3644-minimum-positive-sum-subarray) | Medium | C++ | [solution.cpp](./solutions/3644-minimum-positive-sum-subarray/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [3372. Longest Strictly Increasing or Strictly Decreasing Subarray](./solutions/3372-longest-strictly-increasing-or-strictly-decreasing-subarray) | Medium | C++ | [solution.cpp](./solutions/3372-longest-strictly-increasing-or-strictly-decreasing-subarray/cpp/solution.cpp) |
 | [4147. Minimum Cost to Acquire Required Items](./solutions/4147-minimum-cost-to-acquire-required-items) | Medium | C++ | [solution.cpp](./solutions/4147-minimum-cost-to-acquire-required-items/cpp/solution.cpp) |
 | [4041. Climbing Stairs II](./solutions/4041-climbing-stairs-ii) | Medium | C++ | [solution.cpp](./solutions/4041-climbing-stairs-ii/cpp/solution.cpp) |
-| [1710. Find Servers That Handled Most Number of Requests](./solutions/1710-find-servers-that-handled-most-number-of-requests) | Medium | C++ | [solution.cpp](./solutions/1710-find-servers-that-handled-most-number-of-requests/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (94)</strong></summary>
+<summary><strong>View All Tracked Problems (95)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -123,6 +123,7 @@ _No topic tags recorded yet._
 | 2747 | [Count Zero Request Servers](./solutions/2747-count-zero-request-servers) | Medium | [`C++`](./solutions/2747-count-zero-request-servers/cpp) | - | [Notes](./solutions/2747-count-zero-request-servers/notes.md) | 2026-11-06 | `2026-11-08` |
 | 2833 | [Count Zero Request Servers](./solutions/2833-count-zero-request-servers) | Medium | [`C++`](./solutions/2833-count-zero-request-servers/cpp) | - | [Notes](./solutions/2833-count-zero-request-servers/notes.md) | 2026-11-17 | `2026-11-17` |
 | 2844 | [Sum of Squares of Special Elements ](./solutions/2844-sum-of-squares-of-special-elements) | Medium | [`C++`](./solutions/2844-sum-of-squares-of-special-elements/cpp) | - | [Notes](./solutions/2844-sum-of-squares-of-special-elements/notes.md) | 2026-10-25 | `2026-10-25` |
+| 2879 | [Minimum Changes to Make K Semi-palindromes](./solutions/2879-minimum-changes-to-make-k-semi-palindromes) | Medium | [`C++`](./solutions/2879-minimum-changes-to-make-k-semi-palindromes/cpp) | - | [Notes](./solutions/2879-minimum-changes-to-make-k-semi-palindromes/notes.md) | 2026-11-17 | `2026-11-17` |
 | 3105 | [Longest Strictly Increasing or Strictly Decreasing Subarray](./solutions/3105-longest-strictly-increasing-or-strictly-decreasing-subarray) | Easy | [`C++`](./solutions/3105-longest-strictly-increasing-or-strictly-decreasing-subarray/cpp) | - | [Notes](./solutions/3105-longest-strictly-increasing-or-strictly-decreasing-subarray/notes.md) | 2026-11-12 | `2026-11-14` |
 | 3139 | [Subarrays Distinct Element Sum of Squares II](./solutions/3139-subarrays-distinct-element-sum-of-squares-ii) | Medium | [`C++`](./solutions/3139-subarrays-distinct-element-sum-of-squares-ii/cpp) | - | [Notes](./solutions/3139-subarrays-distinct-element-sum-of-squares-ii/notes.md) | 2026-10-25 | `2026-10-25` |
 | 3153 | [Apply Operations on Array to Maximize Sum of Squares](./solutions/3153-apply-operations-on-array-to-maximize-sum-of-squares) | Medium | [`C++`](./solutions/3153-apply-operations-on-array-to-maximize-sum-of-squares/cpp) | - | [Notes](./solutions/3153-apply-operations-on-array-to-maximize-sum-of-squares/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -170,7 +171,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-17T03:54:38.885Z`_
+_Last synchronized via LC-Sync: `2026-11-17T03:54:48.512Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

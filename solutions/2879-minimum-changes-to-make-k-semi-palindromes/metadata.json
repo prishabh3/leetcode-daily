@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "2879",
+  "title": "Minimum Changes to Make K Semi-palindromes",
+  "slug": "minimum-changes-to-make-k-semi-palindromes",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-17T03:54:48.505Z",
+  "lastSyncedAt": "2026-11-17T03:54:48.502Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/2879-minimum-changes-to-make-k-semi-palindromes/cpp/solution.cpp",
+      "submissionId": "2197703185",
+      "contentHash": "1fd6e9c773554198b0bcf73a7dcb7762240dd539ef8770a50afe3a5d34a205b0",
+      "syncedAt": "2026-11-17T03:54:48.502Z",
+      "runtime": "170 ms",
+      "memory": "15.9 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-19",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

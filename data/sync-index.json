@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-17T03:54:38.885Z",
-  "totalProblems": 94,
-  "totalSubmissions": 105,
+  "lastUpdated": "2026-11-17T03:54:48.512Z",
+  "totalProblems": 95,
+  "totalSubmissions": 107,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -976,6 +976,30 @@
       "syncedAt": "2026-11-17T03:54:38.876Z",
       "filePath": "solutions/2361-calculate-digit-sum-of-a-string/cpp/solution.cpp"
     },
+    "2197701439": {
+      "problemId": "2879",
+      "slug": "minimum-changes-to-make-k-semi-palindromes",
+      "title": "Minimum Changes to Make K Semi-palindromes",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "sub-2197701439",
+      "submissionId": "2197701439",
+      "contentHash": "1fd6e9c773554198b0bcf73a7dcb7762240dd539ef8770a50afe3a5d34a205b0",
+      "syncedAt": "2026-11-17T03:54:48.502Z",
+      "filePath": "solutions/2879-minimum-changes-to-make-k-semi-palindromes/history/2197701439/solution.cpp"
+    },
+    "2197703185": {
+      "problemId": "2879",
+      "slug": "minimum-changes-to-make-k-semi-palindromes",
+      "title": "Minimum Changes to Make K Semi-palindromes",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2197703185",
+      "contentHash": "1fd6e9c773554198b0bcf73a7dcb7762240dd539ef8770a50afe3a5d34a205b0",
+      "syncedAt": "2026-11-17T03:54:48.502Z",
+      "filePath": "solutions/2879-minimum-changes-to-make-k-semi-palindromes/cpp/solution.cpp"
+    },
     "rank-scores-a592f06bef0a": {
       "problemId": "0178",
       "slug": "rank-scores",
@@ -1659,6 +1683,21 @@
       "lastSyncedAt": "2026-10-25T10:43:57.350Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "2879": {
+      "id": "2879",
+      "title": "Minimum Changes to Make K Semi-palindromes",
+      "slug": "minimum-changes-to-make-k-semi-palindromes",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 2,
+      "lastSyncedAt": "2026-11-17T03:54:48.502Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-17",
       "tags": [],
       "patterns": []
     },
