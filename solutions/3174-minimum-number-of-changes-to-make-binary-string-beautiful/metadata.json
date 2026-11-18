@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "3174",
+  "title": "Minimum Number of Changes to Make Binary String Beautiful",
+  "slug": "minimum-number-of-changes-to-make-binary-string-beautiful",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-19T03:09:47.446Z",
+  "lastSyncedAt": "2026-11-19T03:09:47.443Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/3174-minimum-number-of-changes-to-make-binary-string-beautiful/cpp/solution.cpp",
+      "submissionId": "2198362659",
+      "contentHash": "43ec3667220743d51461372d182ad41f41615352b5ab427a0f7004b01056c89a",
+      "syncedAt": "2026-11-19T03:09:47.443Z",
+      "runtime": "1 ms",
+      "memory": "13.5 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-21",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}
