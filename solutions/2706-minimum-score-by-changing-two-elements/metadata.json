@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "2706",
+  "title": "Minimum Score by Changing Two Elements",
+  "slug": "minimum-score-by-changing-two-elements",
+  "url": "",
+  "difficulty": "Unknown",
+  "tags": [],
+  "patterns": [],
+  "firstTrackedAt": "2026-11-19T03:09:55.413Z",
+  "lastSyncedAt": "2026-11-19T03:09:55.411Z",
+  "solutions": {
+    "cpp/solution": {
+      "language": "cpp",
+      "approachName": "solution",
+      "filePath": "solutions/2706-minimum-score-by-changing-two-elements/cpp/solution.cpp",
+      "submissionId": "2199050395",
+      "contentHash": "db4de1f4ca80cd9101c3d8d8f0b52421b8e1673651131fde6380a632508711a9",
+      "syncedAt": "2026-11-19T03:09:55.411Z",
+      "runtime": "16 ms",
+      "memory": "38 MB",
+      "rawPlatformLanguage": "cpp"
+    }
+  },
+  "confidenceRating": 3,
+  "reviewHistory": [],
+  "nextReviewDate": "2026-11-21",
+  "reviewsCount": 0,
+  "failedRecallCount": 0,
+  "verifiedComplexity": false,
+  "rawPlatformLanguage": "cpp"
+}

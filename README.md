@@ -11,10 +11,10 @@
 - **Total Solved on LeetCode**: **89** (🟢 Easy: **33** • 🟡 Medium: **41** • 🔴 Hard: **15**) • Ranking: `#1905305`
 
 ### 📈 Account Statistics
-[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1795057787)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/rishxxbh?theme=dark&font=Roboto&v=1795057795)](https://leetcode.com/u/rishxxbh/)
 
 ### 🔥 Submission Activity Heatmap
-[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1795057787)](https://leetcode.com/u/rishxxbh/)
+[![LeetCode Heatmap](https://leetcard.jacoblin.cool/rishxxbh?ext=heatmap&theme=dark&v=1795057795)](https://leetcode.com/u/rishxxbh/)
 
 _External card caching notice: JacobLinCool and GitHub Camo cache card graphics for 1–4 hours. Local repository records below are updated immediately upon every sync._
 
@@ -24,23 +24,23 @@ _External card caching notice: JacobLinCool and GitHub Camo cache card graphics 
   <img src="./assets/progress.svg" alt="LC-Sync Progress" width="450" />
 </p>
 
-[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-96-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
+[![Problems Tracked](https://img.shields.io/badge/Problems%20Tracked-97-blue)]() [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-orange?logo=leetcode)](https://leetcode.com/u/rishxxbh/) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/prishabh3)
 
-- **Distinct Problems Tracked**: **96**
-- **Total Accepted Submissions**: **108**
-- **Repository Solutions & Historical Versions**: **108** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
+- **Distinct Problems Tracked**: **97**
+- **Total Accepted Submissions**: **109**
+- **Repository Solutions & Historical Versions**: **109** • [GitHub Solutions Repo](https://github.com/prishabh3/leetcode-daily)
 
 ### 🎯 Difficulty Breakdown
 | Difficulty | Solved |
 | :--- | :--- |
 | 🟢 Easy | **10** |
-| 🟡 Medium | **84** |
+| 🟡 Medium | **85** |
 | 🔴 Hard | **2** |
 
 ### 💻 Language Distribution
 | Language | Solved Problems |
 | :--- | :--- |
-| C++ | `89` |
+| C++ | `90` |
 | SQL | `4` |
 | Python 3 | `3` |
 
@@ -57,6 +57,7 @@ _No topic tags recorded yet._
 
 | Problem | Difficulty | Language | Solution |
 | :--- | :-: | :--- | :--- |
+| [2706. Minimum Score by Changing Two Elements](./solutions/2706-minimum-score-by-changing-two-elements) | Medium | C++ | [solution.cpp](./solutions/2706-minimum-score-by-changing-two-elements/cpp/solution.cpp) |
 | [3174. Minimum Number of Changes to Make Binary String Beautiful](./solutions/3174-minimum-number-of-changes-to-make-binary-string-beautiful) | Medium | C++ | [solution.cpp](./solutions/3174-minimum-number-of-changes-to-make-binary-string-beautiful/cpp/solution.cpp) |
 | [2879. Minimum Changes to Make K Semi-palindromes](./solutions/2879-minimum-changes-to-make-k-semi-palindromes) | Medium | C++ | [solution.cpp](./solutions/2879-minimum-changes-to-make-k-semi-palindromes/cpp/solution.cpp) |
 | [2361. Calculate Digit Sum of a String](./solutions/2361-calculate-digit-sum-of-a-string) | Medium | C++ | [solution.cpp](./solutions/2361-calculate-digit-sum-of-a-string/cpp/solution.cpp) |
@@ -64,10 +65,9 @@ _No topic tags recorded yet._
 | [3644. Minimum Positive Sum Subarray ](./solutions/3644-minimum-positive-sum-subarray) | Medium | C++ | [solution.cpp](./solutions/3644-minimum-positive-sum-subarray/cpp/solution.cpp) |
 | [3674. Count Non-Decreasing Subarrays After K Operations](./solutions/3674-count-non-decreasing-subarrays-after-k-operations) | Medium | C++ | [solution.cpp](./solutions/3674-count-non-decreasing-subarrays-after-k-operations/cpp/solution.cpp) |
 | [3372. Longest Strictly Increasing or Strictly Decreasing Subarray](./solutions/3372-longest-strictly-increasing-or-strictly-decreasing-subarray) | Medium | C++ | [solution.cpp](./solutions/3372-longest-strictly-increasing-or-strictly-decreasing-subarray/cpp/solution.cpp) |
-| [4147. Minimum Cost to Acquire Required Items](./solutions/4147-minimum-cost-to-acquire-required-items) | Medium | C++ | [solution.cpp](./solutions/4147-minimum-cost-to-acquire-required-items/cpp/solution.cpp) |
 
 <details>
-<summary><strong>View All Tracked Problems (96)</strong></summary>
+<summary><strong>View All Tracked Problems (97)</strong></summary>
 
 | # | Title | Difficulty | Languages | Topics | Notes | Date Solved | Next Revision |
 | :-: | :--- | :-: | :--- | :--- | :-: | :-: | :-: |
@@ -120,6 +120,7 @@ _No topic tags recorded yet._
 | 2392 | [Successful Pairs of Spells and Potions](./solutions/2392-successful-pairs-of-spells-and-potions) | Medium | [`Python 3`](./solutions/2392-successful-pairs-of-spells-and-potions/python3) | - | [Notes](./solutions/2392-successful-pairs-of-spells-and-potions/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2418 | [Minimum Sum of Squared Difference](./solutions/2418-minimum-sum-of-squared-difference) | Medium | [`C++`](./solutions/2418-minimum-sum-of-squared-difference/cpp) | - | [Notes](./solutions/2418-minimum-sum-of-squared-difference/notes.md) | 2026-10-25 | `2026-10-25` |
 | 2496 | [Count Days Spent Together](./solutions/2496-count-days-spent-together) | Medium | [`C++`](./solutions/2496-count-days-spent-together/cpp) | - | [Notes](./solutions/2496-count-days-spent-together/notes.md) | 2026-10-25 | `2026-10-25` |
+| 2706 | [Minimum Score by Changing Two Elements](./solutions/2706-minimum-score-by-changing-two-elements) | Medium | [`C++`](./solutions/2706-minimum-score-by-changing-two-elements/cpp) | - | [Notes](./solutions/2706-minimum-score-by-changing-two-elements/notes.md) | 2026-11-19 | `2026-11-19` |
 | 2747 | [Count Zero Request Servers](./solutions/2747-count-zero-request-servers) | Medium | [`C++`](./solutions/2747-count-zero-request-servers/cpp) | - | [Notes](./solutions/2747-count-zero-request-servers/notes.md) | 2026-11-06 | `2026-11-08` |
 | 2833 | [Count Zero Request Servers](./solutions/2833-count-zero-request-servers) | Medium | [`C++`](./solutions/2833-count-zero-request-servers/cpp) | - | [Notes](./solutions/2833-count-zero-request-servers/notes.md) | 2026-11-17 | `2026-11-17` |
 | 2844 | [Sum of Squares of Special Elements ](./solutions/2844-sum-of-squares-of-special-elements) | Medium | [`C++`](./solutions/2844-sum-of-squares-of-special-elements/cpp) | - | [Notes](./solutions/2844-sum-of-squares-of-special-elements/notes.md) | 2026-10-25 | `2026-10-25` |
@@ -172,7 +173,7 @@ _No topic tags recorded yet._
 
 ---
 
-_Last synchronized via LC-Sync: `2026-11-19T03:09:47.451Z`_
+_Last synchronized via LC-Sync: `2026-11-19T03:09:55.420Z`_
 <!-- lc-sync:end -->
 
 ### 📂 Repository Layout

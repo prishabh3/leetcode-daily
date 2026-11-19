@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "lastUpdated": "2026-11-19T03:09:47.451Z",
-  "totalProblems": 96,
-  "totalSubmissions": 108,
+  "lastUpdated": "2026-11-19T03:09:55.420Z",
+  "totalProblems": 97,
+  "totalSubmissions": 109,
   "submissions": {
     "1794703316": {
       "problemId": "1612",
@@ -1012,6 +1012,18 @@
       "syncedAt": "2026-11-19T03:09:47.443Z",
       "filePath": "solutions/3174-minimum-number-of-changes-to-make-binary-string-beautiful/cpp/solution.cpp"
     },
+    "2199050395": {
+      "problemId": "2706",
+      "slug": "minimum-score-by-changing-two-elements",
+      "title": "Minimum Score by Changing Two Elements",
+      "difficulty": "Medium",
+      "language": "cpp",
+      "approachName": "solution",
+      "submissionId": "2199050395",
+      "contentHash": "db4de1f4ca80cd9101c3d8d8f0b52421b8e1673651131fde6380a632508711a9",
+      "syncedAt": "2026-11-19T03:09:55.411Z",
+      "filePath": "solutions/2706-minimum-score-by-changing-two-elements/cpp/solution.cpp"
+    },
     "rank-scores-a592f06bef0a": {
       "problemId": "0178",
       "slug": "rank-scores",
@@ -1650,6 +1662,21 @@
       "lastSyncedAt": "2026-10-25T10:45:55.103Z",
       "confidenceRating": 3,
       "nextReviewDate": "2026-10-25",
+      "tags": [],
+      "patterns": []
+    },
+    "2706": {
+      "id": "2706",
+      "title": "Minimum Score by Changing Two Elements",
+      "slug": "minimum-score-by-changing-two-elements",
+      "difficulty": "Medium",
+      "languages": [
+        "cpp"
+      ],
+      "approachesCount": 1,
+      "lastSyncedAt": "2026-11-19T03:09:55.411Z",
+      "confidenceRating": 3,
+      "nextReviewDate": "2026-11-19",
       "tags": [],
       "patterns": []
     },
